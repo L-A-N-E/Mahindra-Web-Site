@@ -1,8 +1,7 @@
-// Import React
-import { Outlet } from "react-router-dom";
+import { Outlet } from "react-router-dom";  // Import Dependencie React Router Dom
+import Nav from "./components/Nav"  // Import Nav
+import Footer from "./components/Footer"  // Import Footer
 
-import Nav from "./components/Nav"
-import Footer from "./components/Footer"
 
 function App() {
 

@@ -1,14 +1,10 @@
-// Imports
-import { StrictMode } from 'react'
+import { StrictMode } from 'react' 
 import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from "react-router-dom"
-
-// App Import
-import App from './App.jsx'
-
-// Routes Imports
-import Error from "./routes/Error";
-import Home from "./routes/Home"; 
+import { createBrowserRouter, RouterProvider } from "react-router-dom" // Import Dependencie React Router Dom
+import App from './App.jsx' // Import App
+import Error from "./routes/Error"; // Import Error
+import Home from "./routes/Home";  // Import Home
+import GlobalStyle from "./styles/GlobalStyle"; // Import Global Style
 
 
 // Creating Routes
@@ -33,5 +29,6 @@ const router = createBrowserRouter ([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router = {router} />
+    <GlobalStyle />
   </StrictMode>,
 )

@@ -1,8 +1,10 @@
 import React from 'react'
+import { NavStyle } from '../styles/NavStyle'
 
 const Nav = () => {
   return (
     <>
+    <NavStyle>
         <header>
             {/* Left (Logo Mahindra) */}
             <div>
@@ -35,6 +37,7 @@ const Nav = () => {
                 </nav>
             </div>
         </header>
+    </NavStyle>
     </>
   )
 }
