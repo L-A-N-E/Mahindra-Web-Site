@@ -18,12 +18,12 @@ const Nav = () => {
         <NavStyle>
             <header>
                 {/* Left (Logo Mahindra) */}
-                <div>
+                <div id='left-nav'>
                     <img src="#" alt="Logo Mahindra" />
                 </div>
 
                 {/* Right (Nav Desktop and Nav Mobile)*/}
-                <div>
+                <div id='right-nav'>
                     {/* Nav Desktop */}
                     <nav id='nav-desktop'>
                         <ul>
@@ -31,6 +31,14 @@ const Nav = () => {
                             <li><a href="">{t('about')}</a></li>
                             <li><a href="">{t('pilots')}</a></li>
                             <li><a href="">{t('ecotracer')}</a></li>
+                            <li id='content-lng'>
+                                <button>{t('language')}</button>
+                                <ul>
+                                    <button onClick={() => changeLanguage('en')}>{t('english')}</button>
+                                    <button onClick={() => changeLanguage('pt')}>{t('portuguese')}</button>
+                                    <button onClick={() => changeLanguage('es')}>{t('spanish')}</button>
+                                </ul>                            
+                            </li>
                         </ul>
                     </nav>
 
