@@ -14,7 +14,7 @@ const Nav = () => {
             {/* Right (Nav Desktop and Nav Mobile)*/}
             <div>
                 {/* Nav Desktop */}
-                <nav>
+                <nav id='nav-desktop'>
                     <ul>
                         <li><a href="">Home</a></li>
                         <li><a href="">About</a></li>
@@ -27,7 +27,7 @@ const Nav = () => {
                 <div><img src="" alt="" /></div>
 
                 {/* Nav Mobile */}
-                <nav>
+                <nav id='nav-mobile'>
                     <ul>
                         <li><a href="">Home</a></li>
                         <li><a href="">About</a></li>

@@ -4,8 +4,11 @@ export const NavStyle = styled.header `
 
     header {
         width: 100%;
-        height: 60px;
         background-color: #EDEDED;
+    }
+
+    #nav-mobile {
+        display:none;
     }
 
 `
