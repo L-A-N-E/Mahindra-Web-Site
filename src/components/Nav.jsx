@@ -1,0 +1,42 @@
+import React from 'react'
+
+const Nav = () => {
+  return (
+    <>
+        <header>
+            {/* Left (Logo Mahindra) */}
+            <div>
+                <img src="#" alt="Logo Mahindra" />
+            </div>
+
+            {/* Right (Nav Desktop and Nav Mobile)*/}
+            <div>
+                {/* Nav Desktop */}
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Pilots</a></li>
+                        <li><a href="">Ecotracer</a></li>
+                    </ul>
+                </nav>
+
+                {/* Menu Mobile */}
+                <div><img src="" alt="" /></div>
+
+                {/* Nav Mobile */}
+                <nav>
+                    <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Pilots</a></li>
+                        <li><a href="">Ecotracer</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </>
+  )
+}
+
+export default Nav
