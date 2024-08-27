@@ -5,7 +5,7 @@ import App from './App.jsx' // Import App
 import Error from "./routes/Error"; // Import Error
 import Home from "./routes/Home";  // Import Home
 import GlobalStyle from "./styles/GlobalStyle"; // Import Global Style
-
+import './i18n'; // Change Language
 
 // Creating Routes
 const router = createBrowserRouter ([
