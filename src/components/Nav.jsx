@@ -20,10 +20,14 @@ const Nav = () => {
     };
     const handleMouseLeave = () => {
         setShowLanguages(false);
+        setShowMobile(false);
     };
 
     // Show Mobile
     const [showMobile, setShowMobile] = useState(false);
+    const toggleMenu = () => {
+        setShowMobile(!showMobile);
+    };
     
 
     return (
@@ -61,11 +65,15 @@ const Nav = () => {
                             </ul>
                         </nav>
 
-                        {/* Menu Mobile */}
-                        <div><img src="" alt="" /></div>
+                        {/* Menu Hambúrguer (Mobile) */}
+                        <div id="hamburger-menu" onClick={toggleMenu}>
+                            <div className={showMobile ? "bar open" : "bar"}></div>
+                            <div className={showMobile ? "bar open" : "bar"}></div>
+                            <div className={showMobile ? "bar open" : "bar"}></div>
+                        </div>
 
                         {/* Nav Mobile */}
-                        <nav id='nav-mobile'>
+                        <nav id='nav-mobile' className={showMobile ? "open" : ""}>
                             <ul>
                                 <li><a href="#">{t('home')}</a></li>
                                 <li><a href="#">{t('about')}</a></li>

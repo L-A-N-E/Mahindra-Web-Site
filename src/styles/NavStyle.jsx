@@ -87,11 +87,86 @@ export const NavStyle = styled.header `
                 }
             }
 
-            /* Nav Mobile */
-            #nav-mobile {
-                display:none;
+            /* Menu Hamburguer */
+            #hamburger-menu {
+                display: none;
+                flex-direction: column;
+                justify-content: space-around;
+                width: 100%;
+                height: 30px;
+                cursor: pointer;
+
+                 /* Icon Hamburguer */
+                .bar {
+                    width: 100%;
+                    height: 4px;
+                    background-color: #fff;
+                    transition: 0.3s;
+                }
+
+                /* Animation */
+                .bar.open:nth-child(1) {
+                    transform: rotate(45deg) translate(8px, 8px);
+                    background-color: #ff0000;
+                }
+
+                .bar.open:nth-child(2) {
+                    opacity: 0;
+                }
+
+                .bar.open:nth-child(3) {
+                    transform: rotate(-45deg) translate(6px, -6px);
+                    background-color: #ff0000;
+                }
             }
-        }
+
+            /* Menu Mobile */
+            #nav-mobile {
+                display: none;
+                flex-direction: column;
+                background-color: #171717;
+                position: absolute;
+                top: 69px; 
+                right: 0;
+                width: 50vw;
+                height: 100vh;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+                z-index: 1000;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+
+                    li{
+                        padding: 15px;
+
+                        a {
+                            text-decoration: none;
+                            color: #EDEDED;
+                            display: block;
+                            width: 100%;
+                            text-transform: uppercase;
+                        }
+                    }
+
+                    button {
+                        background: transparent;
+                        color: #fff;
+                        border: none;
+                        padding-left: 1rem;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+            
+            /* Show Menu Mobile Options */
+            #nav-mobile.open {
+                display: flex;
+            }
+
+
+        } 
     }
 
 
@@ -99,16 +174,43 @@ export const NavStyle = styled.header `
 
     /* Responsive */
 
+    /* Tablet */
     @media (max-width:1000px) {
         header {
             padding: 0 2rem 0 2rem;
+
+            #right-nav {
+                width: 30px;
+
+                #nav-desktop {
+                    display: none;
+                }
+
+                #hamburger-menu {
+                    display: flex;
+                }
+            }   
         }
-
-        #nav-desktop {
-            display: none;
-        }
-
-
     }
 
+    /* Mobile */
+    @media (max-width:300px) {
+        header {
+            #left-nav {
+                img {
+                    height: 20px;
+                }
+            }
+
+            #right-nav {
+                #nav-mobile {
+                    width: 100vw;
+                    
+                    ul {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
 `
