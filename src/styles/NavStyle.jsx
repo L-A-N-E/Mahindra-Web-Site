@@ -4,16 +4,14 @@ export const NavStyle = styled.header `
 
     /* Header */
     header {
-        width: 100%;
-        height: 70px;
-        background-color: #EDEDED;
         display: flex;
         justify-content: space-between;
-        padding: 0 4rem 0 4rem;
+        background-color: #161616;
+        padding: 0rem 2rem;
+        height: 70px;
+        width:100%;
 
-        /* Div Left */
         #left-nav {
-            height: 70px;
             display: flex;
             align-items: center;
         }
@@ -27,38 +25,59 @@ export const NavStyle = styled.header `
             /* Nav Desktop */
             #nav-desktop {
                 width: 100%;
+                position: relative;
 
                 ul {
                     list-style: none;
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: space-evenly;
 
-
-                    li{
+                    /* Sections */
+                    li {
                        a {
                             text-decoration: none;
                             list-style: none;
                             text-transform: uppercase;
                             font-size: 14px;
-                            color: #171717
+                            color: #EDEDED
                        }
 
                        button {
+                            text-align: start;
+                            width: 100%;
                             border: none;
                             cursor: pointer;
                             text-transform: uppercase;
                             font-size: 14px;
-                            color: #171717
+                            color: #EDEDED;
+                            background-color: transparent;
+                       }
+
+                       button:hover {
+                            background-color: #353535;
                        }
                     }
 
-                    #content-lng {
+                    /* Change Language */
+                    .content-lng {
                         display:flex;
                         flex-direction: column;
 
+                        /* Options */
                         ul{
-                            display:flex;
-                            flex-direction: column; 
+                            position: absolute;
+                            top: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            z-index: 1000;
+                            background-color: #171717;
+                            margin-top: 1rem;
+                            
+                            li {
+                                button {
+                                    padding: 1rem
+                                }
+                            }
                         }
                     }
                 }
@@ -71,6 +90,11 @@ export const NavStyle = styled.header `
         }
     }
 
+
+
+
+    /* Responsive */
+
     @media (max-width:1000px) {
         header {
             padding: 0 2rem 0 2rem;
@@ -79,6 +103,8 @@ export const NavStyle = styled.header `
         #nav-desktop {
             display: none;
         }
+
+
     }
 
 `
