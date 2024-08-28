@@ -42,6 +42,10 @@ export const NavStyle = styled.header `
                             color: #EDEDED
                        }
 
+                       a::after {
+                            color: #ccc;
+                       }
+
                        button {
                             text-align: start;
                             width: 100%;

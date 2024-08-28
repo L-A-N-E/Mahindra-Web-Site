@@ -8,7 +8,6 @@ const Nav = () => {
 
     // Select Language
     const { t, i18n } = useTranslation();
-
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
@@ -16,17 +15,17 @@ const Nav = () => {
 
     // Show Options
     const [showLanguages, setShowLanguages] = useState(false);
-
     const handleMouseEnter = () => {
         setShowLanguages(true);
     };
-
     const handleMouseLeave = () => {
         setShowLanguages(false);
     };
 
     // Show Mobile
     const [showMobile, setShowMobile] = useState(false);
+    
+
     return (
         <>
             <NavStyle>
