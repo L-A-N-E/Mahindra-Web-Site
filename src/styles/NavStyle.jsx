@@ -137,6 +137,9 @@ export const NavStyle = styled.header `
                     list-style: none;
                     padding: 0;
                     margin: 0;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
 
                     li{
                         padding: 15px;
@@ -196,6 +199,7 @@ export const NavStyle = styled.header `
     /* Mobile */
     @media (max-width:300px) {
         header {
+            
             #left-nav {
                 img {
                     height: 20px;
@@ -208,6 +212,14 @@ export const NavStyle = styled.header `
                     
                     ul {
                         width: 100%;
+                        margin-top: 1rem;
+
+                        li {
+
+                            a {
+                                text-align: center;
+                            }
+                        }
                     }
                 }
             }
