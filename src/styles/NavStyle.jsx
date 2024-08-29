@@ -34,32 +34,30 @@ export const NavStyle = styled.header `
 
                     /* Sections */
                     li {
-                       a {
+                        a {
                             text-decoration: none;
                             list-style: none;
                             text-transform: uppercase;
                             font-size: 14px;
-                            color: #EDEDED
-                       }
-
-                       a::after {
-                            color: #ccc;
-                       }
-
-                       button {
-                            text-align: start;
-                            width: 100%;
-                            border: none;
-                            cursor: pointer;
-                            text-transform: uppercase;
-                            font-size: 14px;
                             color: #EDEDED;
-                            background-color: transparent;
-                       }
+                            position: relative;
+                            display: inline-block;
+                        }
 
-                       button:hover {
-                            background-color: #353535;
-                       }
+                        a::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            bottom: -3px;
+                            width: 0;
+                            height: 2px;
+                            background-color: #ff0000;
+                            transition: width 0.3s ease-in-out;
+                        }
+
+                        a:hover::after {
+                            width: 100%;
+                        }
                     }
 
                     /* Change Language */
@@ -79,7 +77,19 @@ export const NavStyle = styled.header `
                             
                             li {
                                 button {
+                                    text-align: start;
+                                    width: 100%;
+                                    border: none;
+                                    cursor: pointer;
+                                    text-transform: uppercase;
+                                    font-size: 14px;
+                                    color: #EDEDED;
+                                    background-color: transparent;
                                     padding: 1rem
+                                }
+
+                                button:hover {
+                                    background-color: #353535;
                                 }
                             }
                         }
