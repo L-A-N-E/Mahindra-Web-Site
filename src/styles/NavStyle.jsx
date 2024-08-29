@@ -5,22 +5,28 @@ export const NavStyle = styled.header `
     /* Header */
     header {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
         background-color: #161616;
         padding: 0rem 2rem;
-        height: 70px;
+        height: 50px;
         width:100%;
 
+        /* Nav Left */
         #left-nav {
             display: flex;
             align-items: center;
+            width: 40%;
+
+            img {
+                height: 20px;
+            }
         }
 
         /* Div Right */
         #right-nav {
             display: flex;
             align-items: center;
-            width: 50%;
+            width: 40%;
 
             /* Nav Desktop */
             #nav-desktop {
@@ -39,19 +45,20 @@ export const NavStyle = styled.header `
                             text-decoration: none;
                             list-style: none;
                             text-transform: uppercase;
-                            font-size: 14px;
+                            font-size: 12px;
                             color: #EDEDED;
                             position: relative;
                             display: inline-block;
                         }
 
+                        /* Effect Hover */
                         a::after {
                             content: '';
                             position: absolute;
                             left: 0;
                             bottom: -3px;
                             width: 0;
-                            height: 2px;
+                            height: 1px;
                             background-color: #ff0000;
                             transition: width 0.3s ease-in-out;
                         }
@@ -74,7 +81,7 @@ export const NavStyle = styled.header `
                             flex-direction: column;
                             z-index: 1000;
                             background-color: #171717;
-                            margin-top: 1rem;
+                            margin-top: 0.9rem;
                             
                             li {
                                 
@@ -84,7 +91,7 @@ export const NavStyle = styled.header `
                                     border: none;
                                     cursor: pointer;
                                     text-transform: uppercase;
-                                    font-size: 14px;
+                                    font-size: 12px;
                                     color: #EDEDED;
                                     background-color: transparent;
                                     padding: 1rem
@@ -114,9 +121,10 @@ export const NavStyle = styled.header `
                     height: 4px;
                     background-color: #fff;
                     transition: 0.3s;
+                    border-radius: 15px;
                 }
 
-                /* Animation */
+                /* Animation Open and Close*/
                 .bar.open:nth-child(1) {
                     transform: rotate(45deg) translate(8px, 8px);
                     background-color: #ff0000;
@@ -138,7 +146,7 @@ export const NavStyle = styled.header `
                 flex-direction: column;
                 background-color: #171717;
                 position: absolute;
-                top: 69px; 
+                top: 49px; 
                 right: 0;
                 width: 50vw;
                 height: 100vh;
@@ -192,6 +200,7 @@ export const NavStyle = styled.header `
     /* Tablet */
     @media (max-width:1000px) {
         header {
+            justify-content: space-between;
             padding: 0 2rem 0 2rem;
 
             #right-nav {
