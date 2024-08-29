@@ -32,8 +32,9 @@ export const NavStyle = styled.header `
                     display: flex;
                     justify-content: space-evenly;
 
-                    /* Sections */
+                    /* Sections Home */
                     li {
+
                         a {
                             text-decoration: none;
                             list-style: none;
@@ -76,6 +77,7 @@ export const NavStyle = styled.header `
                             margin-top: 1rem;
                             
                             li {
+                                
                                 button {
                                     text-align: start;
                                     width: 100%;
