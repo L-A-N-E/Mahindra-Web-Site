@@ -6,7 +6,7 @@ export const NavStyle = styled.header `
     header {
         display: flex;
         justify-content: space-around;
-        background-color: #161616;
+        background-color: #171717;
         padding: 0rem 2rem;
         height: 50px;
         width:100%;
@@ -118,7 +118,7 @@ export const NavStyle = styled.header `
                  /* Icon Hamburguer */
                 .bar {
                     width: 100%;
-                    height: 4px;
+                    height: 1px;
                     background-color: #fff;
                     transition: 0.3s;
                     border-radius: 15px;
@@ -144,14 +144,15 @@ export const NavStyle = styled.header `
             #nav-mobile {
                 display: none;
                 flex-direction: column;
-                background-color: #171717;
+                background-color: #17171792;
                 position: absolute;
                 top: 49px; 
                 right: 0;
                 width: 50vw;
                 height: 100vh;
-                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.625);
+                backdrop-filter: blur(10px);
+                z-index: 100;
 
                 ul {
                     list-style: none;
@@ -170,6 +171,7 @@ export const NavStyle = styled.header `
                             display: block;
                             width: 100%;
                             text-transform: uppercase;
+                            z-index: 1000;
                         }
                     }
 
@@ -179,6 +181,7 @@ export const NavStyle = styled.header `
                         border: none;
                         padding-left: 1rem;
                         text-transform: uppercase;
+                        z-index: 1000;
                     }
                 }
             }
