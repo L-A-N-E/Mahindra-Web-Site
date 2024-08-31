@@ -123,7 +123,7 @@ export const FooterStyle = styled.footer `
                 .container-logo {
                     align-items: center;
                     img {
-                        width: 80%;
+                        width: 200px;
                     }
                 }
             }
