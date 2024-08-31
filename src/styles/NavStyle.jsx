@@ -6,7 +6,7 @@ export const NavStyle = styled.header `
     header {
         display: flex;
         justify-content: space-around;
-        background-color: #171717;
+        background-color: #000;
         padding: 0rem 2rem;
         height: 50px;
         width:100%;
@@ -80,7 +80,7 @@ export const NavStyle = styled.header `
                             display: flex;
                             flex-direction: column;
                             z-index: 1000;
-                            background-color: #171717;
+                            background-color: #030303;
                             margin-top: 0.9rem;
                             
                             li {
@@ -98,7 +98,7 @@ export const NavStyle = styled.header `
                                 }
 
                                 button:hover {
-                                    background-color: #353535;
+                                    background-color: #0c0c0c;
                                 }
                             }
                         }

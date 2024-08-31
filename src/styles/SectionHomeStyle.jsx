@@ -7,6 +7,7 @@ import banner4 from '../assets/home/banners/banner-4.png';
 export const SectionHomeStyle = styled.section `
 
     section {
+        background-color: #000;
 
         .banner-welcome {
             width: 100%;

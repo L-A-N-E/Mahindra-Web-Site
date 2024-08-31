@@ -64,13 +64,19 @@ const Footer = () => {
                   {/* Items */}
                   <div className='item-footer'>
                     <img className='arrow-rotation' src={arrowFooter} alt="" />
-                    <h4>Pilots</h4>
+                    <h4>About</h4>
                   </div>
 
                   {/* Items */}
                   <div className='item-footer'>
                     <img className='arrow-rotation' src={arrowFooter} alt="" />
-                    <h4>Pilots</h4>
+                    <h4>Contact</h4>
+                  </div>
+
+                  {/* Items */}
+                  <div className='item-footer'>
+                    <img className='arrow-rotation' src={arrowFooter} alt="" />
+                    <h4>Fia</h4>
                   </div>
 
                   
