@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import banner1 from '../assets/home/banners/banner-1.png';
 import banner2 from '../assets/home/banners/banner-2-editada.png';
+import banner3 from '../assets/home/banners/banner-3.png';
+import banner4 from '../assets/home/banners/banner-4.png';
 
 export const SectionHomeStyle = styled.section `
 
@@ -11,7 +13,7 @@ export const SectionHomeStyle = styled.section `
             height: 90vh;
 
             .b1 {
-                background-image: url(${banner1});
+                background-image: url(${banner3});
                 background-position: center;
                 background-size: cover;
             }
@@ -23,7 +25,15 @@ export const SectionHomeStyle = styled.section `
             }
 
             .b3 {
-                background-color: #744b4b;
+                background-image: url(${banner1});
+                background-position: center;
+                background-size: cover;
+            }
+
+            .b4 {
+                background-image: url(${banner4});
+                background-position: center;
+                background-size: cover;
             }
 
             .banner {
@@ -50,6 +60,8 @@ export const SectionHomeStyle = styled.section `
             }
         }
     }
+
+
 
     .swiper-button-prev {
         transition: ease-in-out 0.2s;
