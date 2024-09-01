@@ -1,3 +1,14 @@
 p {
-    background-position: end;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-clip: content-box;
+
+    text-align: justify;
+    text-transform: uppercase;
+    font-weight: 300;
+    border: none;
+    border-radius: 10px;
+
+    text-decoration: dotted;
 }
