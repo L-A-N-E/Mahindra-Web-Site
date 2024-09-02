@@ -1,6 +1,6 @@
 import React from 'react'
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
-
+import { Link } from 'react-router-dom';
 import { FooterStyle } from '../styles/FooterStyle';
 import arrowFooter from '../assets/footer/arrow.svg'
 
@@ -68,18 +68,20 @@ const Footer = () => {
                   </div>
 
                   {/* Items */}
+                  <Link to='/login'>
                   <div className='item-footer'>
                     <img className='arrow-rotation' src={arrowFooter} alt="" />
-                    <h4>Contact</h4>
+                    <h4>Login</h4>
                   </div>
+                  </Link>
 
                   {/* Items */}
+                  <Link to='/sign-up'>
                   <div className='item-footer'>
                     <img className='arrow-rotation' src={arrowFooter} alt="" />
-                    <h4>Fia</h4>
+                    <h4>Sign-Up</h4>
                   </div>
-
-                  
+                  </Link>           
                 </div>
               </div>
             </div>

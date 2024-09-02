@@ -6,3 +6,5 @@ npm install styled-components   // estilização
 npm install i18next react-i18next i18next-http-backend i18next-browser-languagedetector     // trocar idioma
 
 npm install swiper  // swiper slides
+
+npm install firebase // banco de dados

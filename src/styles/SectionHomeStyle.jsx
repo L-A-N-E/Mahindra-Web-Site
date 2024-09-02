@@ -11,7 +11,7 @@ export const SectionHomeStyle = styled.section `
 
         .banner-welcome {
             width: 100%;
-            height: 90vh;
+            height: 95vh;
 
             .b1 {
                 background-image: url(${banner3});
