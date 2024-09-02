@@ -56,7 +56,7 @@ export const FooterStyle = styled.footer `
                         position: relative;
                         display: inline-block;
                         font-weight: 300;
-                     }
+                    }
 
                     /* Effect Hover Line */
                     h4::after {
@@ -113,7 +113,7 @@ export const FooterStyle = styled.footer `
             grid-template-rows: auto auto; 
             padding: 2rem 0;
 
-           
+        
             .position-logo {
                 grid-column: 1 / -1; 
                 grid-row: 1 / 2; 

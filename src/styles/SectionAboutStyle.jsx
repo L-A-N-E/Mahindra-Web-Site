@@ -53,7 +53,7 @@ export const SectionAboutStyle = styled.section `
 
                     button:hover {
                     background-position: left bottom;
-                    }
+                }
 
 
             }

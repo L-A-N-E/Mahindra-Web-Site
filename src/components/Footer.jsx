@@ -68,7 +68,7 @@ const Footer = () => {
                   </div>
 
                   {/* Items */}
-                  <Link to='/login'>
+                  <Link to='/login' className='txt-none'>
                   <div className='item-footer'>
                     <img className='arrow-rotation' src={arrowFooter} alt="" />
                     <h4>Login</h4>
@@ -76,7 +76,7 @@ const Footer = () => {
                   </Link>
 
                   {/* Items */}
-                  <Link to='/sign-up'>
+                  <Link to='/sign-up' className='txt-none'>
                   <div className='item-footer'>
                     <img className='arrow-rotation' src={arrowFooter} alt="" />
                     <h4>Sign-Up</h4>
@@ -88,7 +88,6 @@ const Footer = () => {
 
             {/* Right Footer */}
             <div id='footer-right'>
-               
             </div>
         </footer>
       </FooterStyle>
