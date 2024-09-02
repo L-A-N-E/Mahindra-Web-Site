@@ -28,7 +28,7 @@ const SectionLogin = () => {
                                 <a href="/" class="forgot-password">Forgot your password?</a>
                                 <button type="submit">Login</button>
                             </form>
-                            <p>Don't have an account? <button>Sign-Up</button></p>
+                            <p>Don't have an account? <button><a href="/sign-up">Sign-Up</a></button></p>
                         </div>
 
                         {/* End */}
