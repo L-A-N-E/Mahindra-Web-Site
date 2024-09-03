@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { NavStyle } from '../styles/NavStyle';
 import { useTranslation } from 'react-i18next';
-
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 
 const Nav = () => {    

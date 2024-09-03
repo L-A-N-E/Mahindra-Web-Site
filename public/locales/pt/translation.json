@@ -10,12 +10,17 @@
     "pilots": "Pilotos",
     "ecotracer": "Ecotracer",
 
+    "welcome":"Bem vindo!",
     "welcome-back":"Bem vindo de volta!",
     "forgot-password":"Esqueceu sua Senha?",
     "account":"Não possui uma conta?",
     "signup":"Cadastre-se",
+    "login":"Login",
     "login-google":"Login com Google",
+    "signup-with-google":"Cadrastre-se com Google",
 
     "username":"Usuário",
-    "password":"Senha"
+    "email":"Email",
+    "password":"Senha",
+    "repeat-password":"Repetir Senha"
 }

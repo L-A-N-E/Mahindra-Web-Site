@@ -10,12 +10,17 @@
     "pilots": "Corredores",
     "ecotracer": "Ecotracer",
 
+    "welcome":"Bienvenido!",
     "welcome-back":"Bienvenido de nuevo!",
     "forgot-password":"¿Olvidaste tu contraseña?",
     "account":"¿No tienes una cuenta?",
     "signup":"Registrarse",
+    "login":"Login",
     "login-google": "Login con Google",
+    "signup-with-google":"Regístrate con Google",
 
     "username":"Usuario",
-    "password":"Contraseña"
+    "email": "Email",
+    "password":"Contraseña",
+    "repeat-password": "Repetir Contraseña"
 }

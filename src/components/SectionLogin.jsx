@@ -25,7 +25,7 @@ const SectionLogin = () => {
                         {/* Top */}
                         <div className='top-acc'>
                             <img src={LogoMahindra} alt="" />
-                            <h2>Welcome Back!</h2>
+                            <h2>{t('welcome-back')}</h2>
                         </div>
 
                         {/* Mid */}
@@ -34,7 +34,7 @@ const SectionLogin = () => {
                                 <input type="text" name="username" placeholder={t('username')} required/>
                                 <input type="password" name="password" placeholder={t('password')} required/>
                                 <a href="/" class="forgot-password">{t('forgot-password')}</a>
-                                <button type="submit">Login</button>
+                                <button type="submit">{t('login')}</button>
                             </form>
                             <p>{t('account')} <button><a href="/sign-up">{t('signup')}</a></button></p>
                         </div>

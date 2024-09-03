@@ -12,12 +12,17 @@
     "rise":"Rise",
     "and race":"and Race",
 
+    "welcome":"Welcome!",
     "welcome-back":"Welcome Back!",
     "forgot-password": "Forgot your password?",
     "account":"Don't have an account?",
-    "signup":"Sign Up",
+    "signup":"Sign-Up",
+    "login":"Login",
     "login-google":"Login with Google",
+    "signup-with-google":"Sign-Up with Google",
 
     "username":"Username",
-    "password":"Password"
+    "email":"Email",
+    "password":"Password",
+    "repeat-password":"Repeat Password"
 }
