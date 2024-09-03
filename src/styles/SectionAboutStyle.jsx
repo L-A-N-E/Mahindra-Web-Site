@@ -9,33 +9,35 @@ export const SectionAboutStyle = styled.section `
         height: 90vh;
         display: flex;
         align-items: center;
-        background-image: url(${backgroundAbout});
+        justify-content: center;
+        /* background-image: url(${backgroundAbout}); */
+        background-color: ${Colors.off_white};
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
 
         #about-container {
-            width: 40%;
-            height: 100%;
+            width: 50%;
+            height: 50%;
             display: flex;
             align-items: center;
-            padding:  2rem 0 2rem 2rem;
 
             #about-content {
                 display: flex;
                 flex-direction: column;
-                gap: 0.5rem;
+                align-items: center;
+                gap: 2rem;
 
                 h1 {
+                    font-family: "Archivo Black", sans-serif;
                     color: ${Colors.red_1};
-                    font-size: ${Font.txt_30};
+                    font-size: ${Font.txt_50};
                     text-transform: uppercase;
-                    font-weight: 200;
                 }
 
                 p {
                     font-size: ${Font.txt_14};
-                    text-align: justify;
+                    text-align: center;
                 }
 
                 a {
@@ -57,12 +59,11 @@ export const SectionAboutStyle = styled.section `
                 }
 
                     
-                button:hover {
-                    background-position: left bottom;
-                }
+                    button:hover {
+                        background-position: left bottom;
+                    }
                 }
                 
-
 
             }
 
