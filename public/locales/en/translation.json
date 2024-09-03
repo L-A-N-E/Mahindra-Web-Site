@@ -10,5 +10,14 @@
     "ecotracer": "Ecotracer",
 
     "rise":"Rise",
-    "and race":"and Race"
+    "and race":"and Race",
+
+    "welcome-back":"Welcome Back!",
+    "forgot-password": "Forgot your password?",
+    "account":"Don't have an account?",
+    "signup":"Sign Up",
+    "login-google":"Login with Google",
+
+    "username":"Username",
+    "password":"Password"
 }
