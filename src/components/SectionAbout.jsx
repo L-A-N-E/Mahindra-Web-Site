@@ -18,9 +18,9 @@ const SectionAbout = () => {
           <div id='about-container'>
             {/* Content */}
             <div id='about-content'>
-              <h1>About</h1>
+              <h1>{t('about')}</h1>
               <p>{t('text-about')}</p>
-              <a href="https://www.mahindraracing.com/" target="_blank"><button>Read More</button></a>    
+              <a href="https://www.mahindraracing.com/" target="_blank"><button>{t('read-more')}</button></a>    
             </div>
           </div>
         </section>

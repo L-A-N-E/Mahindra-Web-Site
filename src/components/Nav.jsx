@@ -35,7 +35,7 @@ const Nav = () => {
                 <header>
                     {/* Left (Logo Mahindra) */}
                     <div id='left-nav'>
-                        <a href="https://www.mahindraracing.com/"><img src={logoMahindra} alt="Logo Mahindra" /></a>
+                        <a href="https://www.mahindraracing.com/" target="_blank"><img src={logoMahindra} alt="Logo Mahindra" /></a>
                     </div>
 
                     {/* Right (Nav Desktop and Nav Mobile) */}
