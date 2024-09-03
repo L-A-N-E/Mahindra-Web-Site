@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-
-import bgFooter from '../assets/footer/bg.png'
+import styled from 'styled-components'; //Styled Components
+import Colors from '../constant/Colors'; //Var Colors
+import Font from '../constant/Font'; //Var Fonts
+import bgFooter from '../assets/footer/bg.png' //Background Footer
 
 
 export const FooterStyle = styled.footer `
@@ -8,8 +9,8 @@ export const FooterStyle = styled.footer `
     footer {
         height: 400px;
         width: 100%;
-        color:#fff;
-        font-size: 12px;
+        color: ${Colors.white};
+        font-size: ${Font.txt_12};
         text-transform: uppercase;
         display: flex;
         background-image:url(${bgFooter});
@@ -51,8 +52,8 @@ export const FooterStyle = styled.footer `
                         text-decoration: none;
                         list-style: none;
                         text-transform: uppercase;
-                        font-size: 12px;
-                        color: #EDEDED;
+                        font-size: ${Font.txt_12};
+                        color: ${Colors.off_white};
                         position: relative;
                         display: inline-block;
                         font-weight: 300;
@@ -66,7 +67,7 @@ export const FooterStyle = styled.footer `
                         bottom: -3px;
                         width: 0;
                         height: 1px;
-                        background-color: #ff0000;
+                        background-color: ${Colors.red_1};
                         transition: width 0.3s ease-in-out;
                     }
 

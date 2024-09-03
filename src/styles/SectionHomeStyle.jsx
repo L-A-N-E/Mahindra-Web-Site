@@ -1,13 +1,15 @@
-import styled from 'styled-components';
-import banner1 from '../assets/home/banners/banner-1.png';
-import banner2 from '../assets/home/banners/banner-2-editada.png';
-import banner3 from '../assets/home/banners/banner-3.png';
-import banner4 from '../assets/home/banners/banner-4.png';
+import styled from 'styled-components'; //Styled Components
+import Colors from '../constant/Colors'; //Var Colors 
+import Font from '../constant/Font'; //Var Fonts
+import banner1 from '../assets/home/banners/banner-1.png'; //Banner 1 Section
+import banner2 from '../assets/home/banners/banner-2-editada.png'; //Banner 2 Section
+import banner3 from '../assets/home/banners/banner-3.png'; //Banner 3 Section
+import banner4 from '../assets/home/banners/banner-4.png'; //Banner 4 Section
 
 export const SectionHomeStyle = styled.section `
 
     section {
-        background-color: #000;
+        background-color: ${Colors.black};
 
         .banner-welcome {
             width: 100%;
@@ -44,18 +46,18 @@ export const SectionHomeStyle = styled.section `
             }
 
             .txt-center-home {
+                color: ${Colors.white};
                 text-transform: uppercase;
                 text-align: center;
-                color: #fff;
-                text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.918);
+                text-shadow: 2px 2px 10px ${Colors.shadow};
 
                 #txt-rise {
-                    font-size: 4.6rem;
+                    font-size: ${Font.txt_70};
                     font-weight: 700;
                 }
 
                 #txt-race {
-                    font-size: 2rem;
+                    font-size: ${Font.txt_30};
                     font-weight: 600;
                 }
             }
@@ -65,26 +67,26 @@ export const SectionHomeStyle = styled.section `
 
 
     .swiper-button-prev {
+        color: ${Colors.off_white};
         transition: ease-in-out 0.2s;
-        color: #EDEDED;
     }
 
     .swiper-button-prev:hover {
+        color: ${Colors.red_1};
         transition: ease-in-out 0.3s;
-        color: #f50000b8;
     }
 
     .swiper-button-disabled {
-        color: #fff;
+        color: ${Colors.white};
     }
 
     .swiper-button-next {
+        color: ${Colors.white};
         transition: ease-in-out 0.2s;
-        color: #fff;
     }
 
     .swiper-button-next:hover {
+        color: ${Colors.red_1};
         transition: ease-in-out 0.3s;
-        color: #f50000b8;
     }
 `

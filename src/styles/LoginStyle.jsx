@@ -1,5 +1,7 @@
-import styled from 'styled-components';
-import Background from '../assets/home/banners/banner-3.png'
+import styled from 'styled-components'; //Styled Components
+import Colors from '../constant/Colors'; //Var Colors 
+import Font from '../constant/Font';  //Var Fonts
+import Background from '../assets/home/banners/banner-3.png' //Background Section
 
 export const LoginStyle = styled.section `
 
@@ -19,7 +21,7 @@ export const LoginStyle = styled.section `
         
         /* Div Right */
         #right-login {
-            background-color: #000000;
+            background-color: ${Colors.black};
             height: 100%;
             width: 60%;
             display: flex;
@@ -48,9 +50,9 @@ export const LoginStyle = styled.section `
                     }
                     
                     h2 {
-                        color: #fff;
+                        color: ${Colors.white};
                         font-weight: 300;
-                        font-size: 20px;
+                        font-size: ${Font.txt_20};
                     }
                 }
                 
@@ -74,39 +76,39 @@ export const LoginStyle = styled.section `
                         input {
                             width: 100%;
                             background-color: transparent;
-                            border: 1px solid #fff;
+                            border: 1px solid ${Colors.white};
                             border-radius: 40px;
                             padding: 1rem 2rem;
                         }
                         
                         /* Placeholder */
                         ::placeholder {
-                            color: #ffffff
+                            color: ${Colors.white}
                         }
                         
                         /* Forgot Password */
                         a {
                             text-decoration: none;
-                            color: #ffffff;
+                            color: ${Colors.white};
                             transition: all 0.3s;
                         }
                         
                         a:hover {
-                            color: #c9c9c9
+                            color: ${Colors.white_hover}
                         }
                         
                         /* Button Login */
                         button {
                             font-weight: 700;
                             text-transform: uppercase;
-                            background-color: #ff0000;
-                            color: #fff;
+                            background-color: ${Colors.red_1};
+                            color: ${Colors.white};
                             border: none;
                             border-radius: 10px;
                             width: 100%;
                             padding: 1rem 3rem;
                             cursor: pointer;
-                            background-image: linear-gradient(to left, #ff0000 50%, #880000 50%);
+                            background-image: linear-gradient(to left, ${Colors.red_1} 50%, ${Colors.red_hover} 50%);
                             background-size: 200% 100%;
                             background-position: right bottom;
                             transition: background-position 0.5s ease-in-out;
@@ -119,7 +121,7 @@ export const LoginStyle = styled.section `
                         
                         /* Dont Have Account */
                         p {
-                            color: #ffffff;
+                            color: ${Colors.white};
                             
                             /* Link To Sign-Up */
                             button {
@@ -128,14 +130,14 @@ export const LoginStyle = styled.section `
                                 cursor: pointer;
                                 
                                 a {
-                                    font-size: 16px;
+                                    font-size: ${Font.txt_16};
                                     text-decoration: none;
-                                    color: #fff;
+                                    color: ${Colors.white};
                                     transition: all 0.3s;
                                 }
                                 
                                 a:hover {
-                                    color: #c9c9c9
+                                    color: ${Colors.white_hover}
                                 }
                         }
                     }
@@ -152,15 +154,15 @@ export const LoginStyle = styled.section `
                         align-items: center;
                         font-weight: 500;
                         text-transform: uppercase;
-                        background-color: #ffffff;
-                        color: #171717;
-                        font-size: 12px;
+                        background-color: ${Colors.white};
+                        color: ${Colors.dark_gray};
+                        font-size: ${Font.txt_12};
                         border: none;
                         border-radius: 10px;
                         width: 100%;
                         padding: 0.4rem 1rem;
                         cursor: pointer;
-                        background-image: linear-gradient(to left, #ffffff 50%, #ababab 50%);
+                        background-image: linear-gradient(to left, ${Colors.white} 50%, ${Colors.white_hover} 50%);
                         background-size: 200% 100%;
                         background-position: right bottom;
                         transition: background-position 0.5s ease-in-out;

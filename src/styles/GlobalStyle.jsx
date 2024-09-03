@@ -1,9 +1,11 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components'; //Global Styles
 
 const GlobalStyle = createGlobalStyle `
 
+    // Import Font
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+    // Reset
     *{
         margin: 0;
         padding: 0;
@@ -11,8 +13,10 @@ const GlobalStyle = createGlobalStyle `
         font-family: "Montserrat", sans-serif;
     }
 
+    // Reset Link
     .txt-none {
         text-decoration: none;
+        
     }
 `
 

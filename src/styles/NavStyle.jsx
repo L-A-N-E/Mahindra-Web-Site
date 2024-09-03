@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled from 'styled-components'; //Styled Components
+import Colors from '../constant/Colors'; //Var Colors 
+import Font from '../constant/Font'; //Var Fonts
 
 export const NavStyle = styled.header `
 
@@ -6,7 +8,7 @@ export const NavStyle = styled.header `
     header {
         display: flex;
         justify-content: space-around;
-        background-color: #000;
+        background-color: ${Colors.black};
         padding: 0rem 2rem;
         height: 50px;
         width:100%;
@@ -45,8 +47,8 @@ export const NavStyle = styled.header `
                             text-decoration: none;
                             list-style: none;
                             text-transform: uppercase;
-                            font-size: 12px;
-                            color: #EDEDED;
+                            font-size: ${Font.txt_12};
+                            color: ${Colors.off_white};
                             position: relative;
                             display: inline-block;
                         }
@@ -59,7 +61,7 @@ export const NavStyle = styled.header `
                             bottom: -3px;
                             width: 0;
                             height: 1px;
-                            background-color: #ff0000;
+                            background-color: ${Colors.red_1};
                             transition: width 0.3s ease-in-out;
                         }
 
@@ -80,7 +82,7 @@ export const NavStyle = styled.header `
                             display: flex;
                             flex-direction: column;
                             z-index: 1000;
-                            background-color: #030303;
+                            background-color: ${Colors.black};
                             margin-top: 0.9rem;
                             
                             li {
@@ -91,14 +93,14 @@ export const NavStyle = styled.header `
                                     border: none;
                                     cursor: pointer;
                                     text-transform: uppercase;
-                                    font-size: 12px;
-                                    color: #EDEDED;
+                                    font-size: ${Font.txt_12};
+                                    color: ${Colors.off_white};
                                     background-color: transparent;
                                     padding: 1rem
                                 }
 
                                 button:hover {
-                                    background-color: #0c0c0c;
+                                    background-color: ${Colors.dark_gray};
                                 }
                             }
                         }
@@ -119,7 +121,7 @@ export const NavStyle = styled.header `
                 .bar {
                     width: 100%;
                     height: 1px;
-                    background-color: #fff;
+                    background-color: ${Colors.white};
                     transition: 0.3s;
                     border-radius: 15px;
                 }
@@ -127,7 +129,7 @@ export const NavStyle = styled.header `
                 /* Animation Open and Close*/
                 .bar.open:nth-child(1) {
                     transform: rotate(45deg) translate(8px, 8px);
-                    background-color: #ff0000;
+                    background-color: ${Colors.red_1};
                 }
 
                 .bar.open:nth-child(2) {
@@ -136,7 +138,7 @@ export const NavStyle = styled.header `
 
                 .bar.open:nth-child(3) {
                     transform: rotate(-45deg) translate(6px, -6px);
-                    background-color: #ff0000;
+                    background-color: ${Colors.red_1};
                 }
             }
 
@@ -144,13 +146,13 @@ export const NavStyle = styled.header `
             #nav-mobile {
                 display: none;
                 flex-direction: column;
-                background-color: #17171792;
+                background-color: ${Colors.bg_mobile};
                 position: absolute;
                 top: 49px; 
                 right: 0;
                 width: 50vw;
                 height: 100vh;
-                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.625);
+                box-shadow: 0px 8px 16px ${Colors.shadow};
                 backdrop-filter: blur(10px);
                 z-index: 100;
 
@@ -166,22 +168,24 @@ export const NavStyle = styled.header `
                         padding: 15px;
 
                         a {
-                            text-decoration: none;
-                            color: #EDEDED;
-                            display: block;
                             width: 100%;
-                            text-transform: uppercase;
+                            display: block;
                             z-index: 1000;
+                            color: ${Colors.off_white};
+                            text-decoration: none;
+                            text-transform: uppercase;
+                            font-size: ${Font.txt_12};
                         }
                     }
 
                     button {
-                        background: transparent;
-                        color: #fff;
-                        border: none;
-                        padding-left: 1rem;
-                        text-transform: uppercase;
                         z-index: 1000;
+                        padding-left: 1rem;
+                        border: none;
+                        background: transparent;
+                        color: ${Colors.white};
+                        font-size: ${Font.txt_12};
+                        text-transform: uppercase;
                     }
                 }
             }
