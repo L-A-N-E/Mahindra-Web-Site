@@ -26,20 +26,20 @@ const SectionSignUp = () => {
                     <div className='container-acc'>
                         {/* Top */}
                         <div className='top-acc'>
-                            <img src={LogoMahindra} alt="" />
+                            <img src={LogoMahindra} alt="Logo Mahindra" />
                             <h2>{t('welcome')}</h2>
                         </div>
 
                         {/* Mid */}
                         <div className='mid-acc'>
-                            <form action="/login" method="POST">
+                            <form action="/sign-up" method="POST">
                                 <input type="text" name="username" placeholder={t('username')} required/>
                                 <input type="text" name="email" placeholder={t('email')} required/>
                                 <input type="password" name="password" placeholder={t('password')} required/>
                                 <input type="password" name="repeat-password" placeholder={t('repeat-password')} required/>
                                 <button type="submit">{t('signup')}</button>
                             </form>
-                            <p>Have an account? <button><Link to ='/login'>{t('Login')}</Link></button></p>
+                            <p>{t('have-an-account')} <button><Link to ='/login'>{t('Login')}</Link></button></p>
                         </div>
 
                         {/* End */}
