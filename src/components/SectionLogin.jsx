@@ -1,8 +1,13 @@
-import React from 'react'
+// Importando dependencias
+import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { LoginStyleSignUp } from '../styles/LoginStyle';
+import { use } from 'i18next';
+// Importando imagens
 import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../assets/login/logo-google.svg'
+// Importando funções
+import { googleSignIn, handleAuthentication } from '../utils/authUtils';
 
 const SectionLogin = () => {
     // Select Language
@@ -11,6 +16,16 @@ const SectionLogin = () => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
+
+    const [user, setUser] = useState(null);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [isLogin, setIsLogin] = useState(true);
+
+    const onLoginPress = (event) => {
+        event.preventDefault();
+        handleAuthentication(email, password, isLogin, user);
+      };
 
     return (
         <>
@@ -30,10 +45,10 @@ const SectionLogin = () => {
 
                         {/* Mid */}
                         <div className='mid-acc'>
-                            <form action="/login">
-                                <input type="text" name="username" placeholder={t('username')} required/>
-                                <input type="password" name="password" placeholder={t('password')} required/>
-                                <a href="/" class="forgot-password">{t('forgot-password')}</a>
+                            <form action="/login" onSubmit={onLoginPress} >
+                                <input type="text" name="username" placeholder={t('username')} value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                                <input type="password" name="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                                <a href="/" className="forgot-password">{t('forgot-password')}</a>
                                 <button type="submit">{t('login')}</button>
                             </form>
                             <p>{t('account')} <button><a href="/sign-up">{t('signup')}</a></button></p>
@@ -42,7 +57,7 @@ const SectionLogin = () => {
                         {/* End */}
                         <div className='end-acc'>
                             <div>
-                                <button><img src={LogoGoogle} alt="#" />{t('login-google')}</button>
+                                <button onClick={googleSignIn}><img src={LogoGoogle} alt="#"/>{t('login-google')}</button>
                             </div>
                         </div>
                         
