@@ -39,7 +39,7 @@ const SectionSignUp = () => {
                                 <input type="password" name="repeat-password" placeholder={t('repeat-password')} required/>
                                 <button type="submit">{t('signup')}</button>
                             </form>
-                            <p>Have an account? <button><Link to ='/login'>Login</Link></button></p>
+                            <p>Have an account? <button><Link to ='/login'>{t('Login')}</Link></button></p>
                         </div>
 
                         {/* End */}
