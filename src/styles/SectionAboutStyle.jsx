@@ -38,7 +38,8 @@ export const SectionAboutStyle = styled.section `
                     text-align: justify;
                 }
 
-                button {
+                a {
+                    button {
                     width: 200px;
                     padding: 1rem 3rem;
                     background-color: ${Colors.red_1};
@@ -59,6 +60,8 @@ export const SectionAboutStyle = styled.section `
                 button:hover {
                     background-position: left bottom;
                 }
+                }
+                
 
 
             }
