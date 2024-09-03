@@ -14,18 +14,18 @@ const SectionLogin = () => {
 
     return (
         <>
-        <LoginStyle>
+        <LoginStyleSignUp>
             <section>
                 {/* Left */}
-                <div id='left-login'></div>
+                <div id='left-login-sign-up'></div>
 
                 {/* Right */}
-                <div id='right-login'>
+                <div id='right-login-sign-up'>
                     <div className='container-acc'>
                         {/* Top */}
                         <div className='top-acc'>
                             <img src={LogoMahindra} alt="" />
-                            <h2>{t('welcome-back')}</h2>
+                            <h2>Welcome Back!</h2>
                         </div>
 
                         {/* Mid */}
@@ -49,7 +49,7 @@ const SectionLogin = () => {
                     </div>
                 </div>
             </section>
-        </LoginStyle>
+        </LoginStyleSignUp>
         </>
     )
 }
