@@ -25,5 +25,10 @@
     "username":"Username",
     "email":"Email",
     "password":"Password",
-    "repeat-password":"Repeat Password"
+    "repeat-password":"Repeat Password",
+
+    "rights":"@ - All Rights Reserved",
+    "mobile-app":"Mobile App",
+    "races":"Races"
+    
 }

@@ -23,5 +23,9 @@
     "username":"Usuário",
     "email":"Email",
     "password":"Senha",
-    "repeat-password":"Repetir Senha"
+    "repeat-password":"Repetir Senha",
+
+    "rights":"@ - Todos os Direitos Reservados",
+    "mobile-app":"Aplicativo Mobile",
+    "races":"Corridas"
 }

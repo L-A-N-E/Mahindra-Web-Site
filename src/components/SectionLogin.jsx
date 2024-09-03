@@ -1,8 +1,8 @@
 // Importando dependencias
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { LoginStyleSignUp } from '../styles/LoginStyle';
 import { use } from 'i18next';
+import { LoginStyleSignUp } from '../styles/LoginStyle';
 // Importando imagens
 import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../assets/login/logo-google.svg'
