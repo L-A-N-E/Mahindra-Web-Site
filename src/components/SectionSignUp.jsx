@@ -45,7 +45,7 @@ const SectionSignUp = () => {
                     <div className='container-acc'>
                         {/* Top */}
                         <div className='top-acc'>
-                            <img src={LogoMahindra} alt="" />
+                            <img src={LogoMahindra} alt="Logo Mahindra" />
                             <h2>{t('welcome')}</h2>
                         </div>
 
@@ -56,9 +56,10 @@ const SectionSignUp = () => {
                                 <input type="text" name="email" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)}  required/>
                                 <input type="password" name="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)}  required/>
                                 <input type="password" name="repeat-password" placeholder={t('repeat-password')} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}  required/>
+
                                 <button type="submit">{t('signup')}</button>
                             </form>
-                            <p>Have an account? <button><Link to ='/login'>Login</Link></button></p>
+                            <p>{t('have-an-account')} <button><Link to ='/login'>{t('Login')}</Link></button></p>
                         </div>
 
                         {/* End */}
