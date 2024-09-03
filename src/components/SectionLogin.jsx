@@ -7,7 +7,7 @@ import { use } from 'i18next';
 import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../assets/login/logo-google.svg'
 // Importando funções
-import { handleAuthentication } from '../utils/authUtils';
+import { googleSignIn, handleAuthentication } from '../utils/authUtils';
 
 const SectionLogin = () => {
     // Select Language
@@ -57,7 +57,7 @@ const SectionLogin = () => {
                         {/* End */}
                         <div className='end-acc'>
                             <div>
-                                <button><img src={LogoGoogle} alt="#" />{t('login-google')}</button>
+                                <button onClick={googleSignIn}><img src={LogoGoogle} alt="#"/>{t('login-google')}</button>
                             </div>
                         </div>
                         
