@@ -8,5 +8,14 @@
     "home": "Inicio",
     "about": "Sobre",
     "pilots": "Corredores",
-    "ecotracer": "Ecotracer"
+    "ecotracer": "Ecotracer",
+
+    "welcome-back":"Bienvenido de nuevo!",
+    "forgot-password":"¿Olvidaste tu contraseña?",
+    "account":"¿No tienes una cuenta?",
+    "signup":"Registrarse",
+    "login-google": "Login con Google",
+
+    "username":"Usuario",
+    "password":"Contraseña"
 }
