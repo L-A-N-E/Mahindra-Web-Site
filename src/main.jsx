@@ -4,6 +4,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom" // Import
 import App from './App.jsx' // Import App
 import Error from "./routes/Error"; // Import Error
 import Home from "./routes/Home";  // Import Home
+import SignUp from './routes/SignUp';
+import Login from './routes/Login';
+
 import GlobalStyle from "./styles/GlobalStyle"; // Import Global Style
 import './i18n'; // Change Language
 
@@ -17,9 +20,20 @@ const router = createBrowserRouter ([
 
     // Second
     children:[
+      // Page Home
       {
         path: '/',
         element: <Home/>
+      },
+      // Page Sign Up
+      {
+        path: '/sign-up',
+        element: <SignUp/>
+      },
+      // Page Login
+      {
+        path: '/login',
+        element: <Login/>
       }
     ]
   }

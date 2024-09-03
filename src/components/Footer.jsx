@@ -1,6 +1,6 @@
 import React from 'react'
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
-
+import { Link } from 'react-router-dom';
 import { FooterStyle } from '../styles/FooterStyle';
 import arrowFooter from '../assets/footer/arrow.svg'
 
@@ -64,23 +64,30 @@ const Footer = () => {
                   {/* Items */}
                   <div className='item-footer'>
                     <img className='arrow-rotation' src={arrowFooter} alt="" />
-                    <h4>Pilots</h4>
+                    <h4>About</h4>
                   </div>
 
                   {/* Items */}
+                  <Link to='/login' className='txt-none'>
                   <div className='item-footer'>
                     <img className='arrow-rotation' src={arrowFooter} alt="" />
-                    <h4>Pilots</h4>
+                    <h4>Login</h4>
                   </div>
+                  </Link>
 
-                  
+                  {/* Items */}
+                  <Link to='/sign-up' className='txt-none'>
+                  <div className='item-footer'>
+                    <img className='arrow-rotation' src={arrowFooter} alt="" />
+                    <h4>Sign-Up</h4>
+                  </div>
+                  </Link>           
                 </div>
               </div>
             </div>
 
             {/* Right Footer */}
             <div id='footer-right'>
-               
             </div>
         </footer>
       </FooterStyle>
