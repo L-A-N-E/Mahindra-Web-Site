@@ -3,7 +3,7 @@ import Colors from '../constant/Colors'; //Var Colors
 import Font from '../constant/Font';  //Var Fonts
 import Background from '../assets/home/banners/banner-3.png' //Background Section
 
-export const LoginStyle = styled.section `
+export const LoginStyleSignUp = styled.section `
 
     section {
         height: 100vh;
@@ -11,7 +11,7 @@ export const LoginStyle = styled.section `
         display: flex;
 
         /* Div Left */
-        #left-login {
+        #left-login-sign-up {
             background-image: url(${Background});
             background-position: center;
             background-size: cover;
@@ -20,7 +20,7 @@ export const LoginStyle = styled.section `
         }
         
         /* Div Right */
-        #right-login {
+        #right-login-sign-up {
             background-color: ${Colors.black};
             height: 100%;
             width: 60%;
@@ -30,7 +30,7 @@ export const LoginStyle = styled.section `
             
             /* Content */
             .container-acc {
-                width: 60%;
+                width: 80%;
                 padding: 2rem;
                 display: flex;
                 flex-direction: column;
@@ -77,12 +77,13 @@ export const LoginStyle = styled.section `
                             width: 100%;
                             background-color: transparent;
                             border: 1px solid ${Colors.white};
+                            color: ${Colors.white};
                             border-radius: 40px;
                             padding: 1rem 2rem;
                         }
                         
                         /* Placeholder */
-                        ::placeholder {
+                        input::placeholder {
                             color: ${Colors.white}
                         }
                         
@@ -183,11 +184,11 @@ export const LoginStyle = styled.section `
 
     @media (max-width: 1000px) {
         section {
-            #left-login {
+            #left-login-sign-up {
                 display: none;
             }
 
-            #right-login {
+            #right-login-sign-up {
                 width: 100%;
 
                 .container-acc {
@@ -199,7 +200,7 @@ export const LoginStyle = styled.section `
 
     @media (max-width: 1000px) {
         section {
-            #right-login {
+            #right-login-sign-up {
 
                 .container-acc {
                     .mid-acc {

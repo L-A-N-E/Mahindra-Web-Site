@@ -1,23 +1,23 @@
 import React, {useRef} from 'react'
-import { LoginStyle } from '../styles/LoginStyle';
+import { LoginStyleSignUp } from '../styles/LoginStyle';
 import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../assets/login/logo-google.svg'
 
 const SectionLogin = () => {
     return (
         <>
-        <LoginStyle>
+        <LoginStyleSignUp>
             <section>
                 {/* Left */}
-                <div id='left-login'></div>
+                <div id='left-login-sign-up'></div>
 
                 {/* Right */}
-                <div id='right-login'>
+                <div id='right-login-sign-up'>
                     <div className='container-acc'>
                         {/* Top */}
                         <div className='top-acc'>
                             <img src={LogoMahindra} alt="" />
-                            <h2>Welcome Back!</h2>
+                            <h2>Welcome</h2>
                         </div>
 
                         {/* Mid */}
@@ -41,7 +41,7 @@ const SectionLogin = () => {
                     </div>
                 </div>
             </section>
-        </LoginStyle>
+        </LoginStyleSignUp>
         </>
     )
 }
