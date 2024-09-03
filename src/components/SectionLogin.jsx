@@ -25,7 +25,7 @@ const SectionLogin = () => {
     const onLoginPress = (event) => {
         event.preventDefault();
         handleAuthentication(email, password, isLogin, user);
-      };
+    };
 
     return (
         <>

@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next';
 import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../assets/login/logo-google.svg'
 // Importando funções
-import { handleSignUp } from '../utils/authUtils';
+import { handleSignUp,googleSignIn } from '../utils/authUtils';
 
 const SectionSignUp = () => {
 
@@ -65,7 +65,7 @@ const SectionSignUp = () => {
                         {/* End */}
                         <div className='end-acc'>
                             <div>
-                                <button><img src={LogoGoogle} alt="#" /> {t('signup-with-google')}</button>
+                                <button onClick={googleSignIn}><img src={LogoGoogle} alt="#" /> {t('signup-with-google')}</button>
                             </div>
                         </div>                        
                     </div>
