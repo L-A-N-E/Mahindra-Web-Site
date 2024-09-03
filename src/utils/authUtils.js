@@ -48,4 +48,52 @@ export const googleSignIn = (event) => {
       // Handle Errors
     });
   }
+
+// Função para fazer o cadastro
+export const handleSignUp = async (email, password, confirmPassword, username) => {
+    if (password !== confirmPassword) {
+      alert('As senhas não correspondem.');
+    }
   
+    try {
+      // Verifica se o nome de usuário já está em uso
+      const usernameExists = await checkUsernameExists(username);
+      if (usernameExists) {
+        alert('Nome de usuário já está em uso.');
+      }
+  
+      // Cria o usuário com email e senha
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const user = userCredential.user;
+      
+      // Atualiza o perfil do usuário com o nome de usuário
+      await updateProfile(user, { displayName: username });
+      
+      // Salva os dados do usuário no Firestore
+      await saveUserDataToFirestore(user.uid, username, email);
+      
+    } catch (error) {
+      alert(error.message);
+    }
+};
+
+// Checa se o usurname já existe
+export const checkUsernameExists = async (username) => {
+    try {
+      const q = query(collection(db, 'users'), where('username', '==', username));
+      const querySnapshot = await getDocs(q);
+      return !querySnapshot.empty;
+    } catch (error) {
+      alert('Não foi possível verificar o nome de usuário.');
+    }
+};
+
+// Salvar dados no banco de dados
+export const saveUserDataToFirestore = async (uid, username, email) => {
+    try {
+      const userDocRef = doc(db, 'users', uid);
+      await setDoc(userDocRef, { username, email });
+    } catch (error) {
+      alert('Não foi possível salvar os dados do usuário.');
+    }
+};
