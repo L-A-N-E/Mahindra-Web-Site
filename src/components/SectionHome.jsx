@@ -23,16 +23,15 @@ const SectionHome = () => {
         <section>
           <Swiper navigation={true} modules={[Navigation]} className="banner-welcome">
             {/* Banner 1 */}
-            <SwiperSlide className="banner b1"> 
-              <div className="txt-center-home">
-                <h1 id='txt-rise'>{t('rise')}</h1>
-                <h1 id='txt-race'>{t('and race')}</h1>
-              </div>
+            <SwiperSlide className="banner b2"> 
             </SwiperSlide>
 
             {/* Banner 2 */}
-            <SwiperSlide className="banner b2">
-              
+            <SwiperSlide className="banner b1">
+              <div div className="txt-center-home">
+                <h1 id='txt-rise'>{t('rise')}</h1>
+                <h1 id='txt-race'>{t('and race')}</h1>
+              </div>
             </SwiperSlide>
 
             {/* Banner 3 */}
