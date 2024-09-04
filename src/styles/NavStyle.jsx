@@ -7,11 +7,13 @@ export const NavStyle = styled.header `
     /* Header */
     header {
         display: flex;
+        position: fixed;
         justify-content: space-around;
         background-color: ${Colors.black};
         padding: 0rem 2rem;
         height: 50px;
         width:100%;
+        z-index: 100;
 
         /* Nav Left */
         #left-nav {

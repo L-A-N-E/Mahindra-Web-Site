@@ -27,9 +27,9 @@ const SectionSignUp = () => {
         event.preventDefault();
 
         try {
-          await handleSignUp(email, password, confirmPassword, username);
+            await handleSignUp(email, password, confirmPassword, username);
         } catch (error) {
-          console.log('Erro', error.message);
+            console.log('Erro', error.message);
         }
     };
 
@@ -45,19 +45,19 @@ const SectionSignUp = () => {
                     <div className='container-acc'>
                         {/* Top */}
                         <div className='top-acc'>
-                            <img src={LogoMahindra} alt="Logo Mahindra" />
+                            <img src={LogoMahindra} alt='Logo Mahindra' />
                             <h2>{t('welcome')}</h2>
                         </div>
 
                         {/* Mid */}
                         <div className='mid-acc' onSubmit={onSignUp} >
-                            <form action="/login" method="POST">
-                                <input type="text" name="username" placeholder={t('username')} value={username} onChange={(e) => setUsername(e.target.value)} required/>
-                                <input type="text" name="email" placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)}  required/>
-                                <input type="password" name="password" placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)}  required/>
-                                <input type="password" name="repeat-password" placeholder={t('repeat-password')} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}  required/>
+                            <form action='/login' method='POST'>
+                                <input type='text' name='username' placeholder={t('username')} value={username} onChange={(e) => setUsername(e.target.value)} required/>
+                                <input type='text' name='email' placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)}  required/>
+                                <input type='password' name='password' placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)}  required/>
+                                <input type='password' name='repeat-password' placeholder={t('repeat-password')} value={confirmPassword} onChange={(e) => setConfirmPassword(e.target.value)}  required/>
 
-                                <button type="submit">{t('signup')}</button>
+                                <button type='submit'>{t('signup')}</button>
                             </form>
                             <p>{t('have-an-account')} <button><Link to ='/login'>{t('Login')}</Link></button></p>
                         </div>
@@ -65,7 +65,7 @@ const SectionSignUp = () => {
                         {/* End */}
                         <div className='end-acc'>
                             <div>
-                                <button onClick={googleSignIn}><img src={LogoGoogle} alt="#" /> {t('signup-with-google')}</button>
+                                <button onClick={googleSignIn}><img src={LogoGoogle} alt='#' /> {t('signup-with-google')}</button>
                             </div>
                         </div>                        
                     </div>

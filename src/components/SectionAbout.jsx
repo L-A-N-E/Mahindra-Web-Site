@@ -12,7 +12,7 @@ const SectionAbout = () => {
   return (
     <>
     <SectionAboutStyle>
-        <section>
+        <section id='about'>
           {/* Container */}
           <div id='about-container'>
             {/* Content */}

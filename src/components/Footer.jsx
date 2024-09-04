@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { FooterStyle } from '../styles/FooterStyle';
 import arrowFooter from '../assets/footer/arrow.svg'
 import { useTranslation } from 'react-i18next'
-import { use } from 'i18next';
+
 
 
 
@@ -28,7 +28,7 @@ const Footer = () => {
               <div className='position-logo'>
                 {/* Container */}
                 <div className='container-logo'>
-                  <img src={logoMahindra} alt="" />
+                  <img src={logoMahindra} alt='' />
                   <h5>{t('rights')}</h5>
                   <h5>LANE</h5>
                 </div>
@@ -40,31 +40,31 @@ const Footer = () => {
                 <div className='footer-container'>
                   {/* Items */}
                   <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt="" />
+                    <img className='arrow-rotation' src={arrowFooter} alt='' />
                     <h4>{t('pilots')}</h4>
                   </div>
 
                   {/* Items */}
                   <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt="" />
+                    <img className='arrow-rotation' src={arrowFooter} alt='' />
                     <h4>Mahindra</h4>
                   </div>
 
                   {/* Items */}
                   <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt="" />
+                    <img className='arrow-rotation' src={arrowFooter} alt='' />
                     <h4>Formula E</h4>
                   </div>
 
                   {/* Items */}
                   <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt="" />
+                    <img className='arrow-rotation' src={arrowFooter} alt='' />
                     <h4>{t('mobile-app')}</h4>
                   </div>
 
                   {/* Items */}
                   <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt="" />
+                    <img className='arrow-rotation' src={arrowFooter} alt='' />
                     <h4>{t('races')}</h4>
                   </div>
                 </div>
@@ -76,14 +76,14 @@ const Footer = () => {
                 <div className='footer-container'>
                   {/* Items */}
                   <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt="" />
+                    <img className='arrow-rotation' src={arrowFooter} alt='' />
                     <h4>{t('about')}</h4>
                   </div>
 
                   {/* Items */}
                   <Link to='/sign-up' className='txt-none'>
                     <div className='item-footer'>
-                      <img className='arrow-rotation' src={arrowFooter} alt="" />
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('signup')}</h4>
                     </div>
                   </Link>           
@@ -91,7 +91,7 @@ const Footer = () => {
                   {/* Items */}
                   <Link to='/login' className='txt-none'>
                     <div className='item-footer'>
-                      <img className='arrow-rotation' src={arrowFooter} alt="" />
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('login')}</h4>
                   </div>
                   </Link>
