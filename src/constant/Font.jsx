@@ -10,7 +10,9 @@ const Font = {
     txt_50: '50px',
     txt_60: '60px',
     txt_70: '70px',
-
+    txt_08rem: '0.8rem',
+    txt_1rem: '1rem',
+    txt_2rem: '2rem'
     
 }
 

@@ -1,7 +1,7 @@
 import styled from 'styled-components'  //Styled Components
 import Colors from '../constant/Colors' //Var Colors
 import Font from '../constant/Font' //Var Fonts
-import backgroundAbout from '../assets/about/bg-2.png' //Background Section
+import backgroundAbout from '../assets/home/about/bg-2.png' //Background Section
 
 export const SectionAboutStyle = styled.section `
     section {
