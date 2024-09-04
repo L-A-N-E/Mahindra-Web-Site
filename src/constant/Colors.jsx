@@ -8,8 +8,8 @@ const Colors = {
     shadow: '#0000009f',
     white: '#ffffff',
     off_white: '#EDEDED',
-    white_hover: '#c9c9c9'
-    
+    white_hover: '#c9c9c9',
+    green: '#254D21'
 }
 
 export default Colors

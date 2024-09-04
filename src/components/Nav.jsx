@@ -1,17 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavStyle } from '../styles/NavStyle';
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 
-const Nav = () => {    
 
-    // Select Language
+const Nav = () => {
+
+     // Select Language
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
-
+    
     // Show Options
     const [showLanguages, setShowLanguages] = useState(false);
     const handleMouseEnter = () => {
@@ -21,17 +22,17 @@ const Nav = () => {
         setShowLanguages(false);
         setShowMobile(false);
     };
-
+    
     // Show Mobile
     const [showMobile, setShowMobile] = useState(false);
     const toggleMenu = () => {
         setShowMobile(!showMobile);
-    };
-    
+    }; 
 
     return (
         <>
-            <NavStyle>
+        
+        <NavStyle>
                 <header>
                     {/* Left (Logo Mahindra) */}
                     <div id='left-nav'>

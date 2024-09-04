@@ -1,6 +1,6 @@
 import styled from 'styled-components'; //Styled Components
 import Colors from '../constant/Colors'; //Var Colors 
-import Font from '../constant/Font'; //Var Fonts
+import Font from '../constant/Font'; //Var Font
 
 export const NavStyle = styled.header `
 
@@ -11,8 +11,8 @@ export const NavStyle = styled.header `
         justify-content: space-around;
         background-color: ${Colors.black};
         padding: 0rem 2rem;
-        height: 50px;
         width:100%;
+        height: 50px;
         z-index: 100;
 
         /* Nav Left */
