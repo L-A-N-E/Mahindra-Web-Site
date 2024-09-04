@@ -1,7 +1,6 @@
 import React from 'react'
 import { SectionAboutStyle } from '../styles/SectionAboutStyle'
 import { useTranslation } from 'react-i18next'
-import { use } from 'i18next';
 
 const SectionAbout = () => {
    // Select Language
@@ -13,7 +12,7 @@ const SectionAbout = () => {
   return (
     <>
     <SectionAboutStyle>
-        <section>
+        <section id='about'>
           {/* Container */}
           <div id='about-container'>
             {/* Content */}

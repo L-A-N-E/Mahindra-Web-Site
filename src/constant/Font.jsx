@@ -1,5 +1,6 @@
 // Var Font
 const Font = {
+    // Pixel
     txt_10: '10px',
     txt_12: '12px',
     txt_14: '14px',
@@ -10,7 +11,19 @@ const Font = {
     txt_50: '50px',
     txt_60: '60px',
     txt_70: '70px',
+    // Rem
+    txt_08rem: '0.8rem',
+    txt_1rem: '1rem',
+    txt_2rem: '2rem',
+    txt_3rem: '3rem',
 
+    // Weight
+    txt_400w: '400',
+    txt_500w: '500',
+    txt_600w: '600',
+    txt_700w: '700',
+    txt_800w: '800',
+    txt_900w: '900',
     
 }
 

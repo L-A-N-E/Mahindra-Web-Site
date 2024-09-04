@@ -4,9 +4,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom" // Import
 import App from './App.jsx' // Import App
 import Error from "./routes/Error"; // Import Error
 import Home from "./routes/Home";  // Import Home
-import SignUp from './routes/SignUp';
-import Login from './routes/Login';
-
+import SignUp from './routes/SignUp'; // Import SignUp 
+import Login from './routes/Login'; // Import Login
 import GlobalStyle from "./styles/GlobalStyle"; // Import Global Style
 import './i18n'; // Change Language
 

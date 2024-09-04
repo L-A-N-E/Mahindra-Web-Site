@@ -1,17 +1,17 @@
-import React, { useState } from 'react';
-import { NavStyle } from '../styles/NavStyle';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import { NavStyle } from '../styles/NavStyle';
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 
-const Nav = () => {    
+const Nav = () => {
 
-    // Select Language
+     // Select Language
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
-
+    
     // Show Options
     const [showLanguages, setShowLanguages] = useState(false);
     const handleMouseEnter = () => {
@@ -21,21 +21,21 @@ const Nav = () => {
         setShowLanguages(false);
         setShowMobile(false);
     };
-
+    
     // Show Mobile
     const [showMobile, setShowMobile] = useState(false);
     const toggleMenu = () => {
         setShowMobile(!showMobile);
-    };
-    
+    }; 
 
     return (
         <>
-            <NavStyle>
+        
+        <NavStyle>
                 <header>
                     {/* Left (Logo Mahindra) */}
                     <div id='left-nav'>
-                        <a href="https://www.mahindraracing.com/" target="_blank"><img src={logoMahindra} alt="Logo Mahindra" /></a>
+                        <a href='https://www.mahindraracing.com/' target='_blank'><img src={logoMahindra} alt='Logo Mahindra' /></a>
                     </div>
 
                     {/* Right (Nav Desktop and Nav Mobile) */}
@@ -43,15 +43,15 @@ const Nav = () => {
                         {/* Nav Desktop */}
                         <nav id='nav-desktop'>
                             <ul>
-                                <li><a href="#">{t('home')}</a></li>
-                                <li><a href="#">{t('about')}</a></li>
-                                <li><a href="#">{t('pilots')}</a></li>
-                                <li><a href="#">{t('ecotracer')}</a></li>
+                                <li><a href='/'>{t('home')}</a></li>
+                                <li><a href='/'>{t('about')}</a></li>
+                                <li><a href='/'>{t('pilots')}</a></li>
+                                <li><a href='/'>{t('ecotracer')}</a></li>
 
                                 {/* Language */}
                                 <div className='content-lng' onMouseEnter={handleMouseEnter}>
                                     <li>
-                                        <a href="">{t('language')}</a>
+                                        <a href=''>{t('language')}</a>
                                     </li>
                                     {showLanguages && (
                                         <ul onMouseLeave={handleMouseLeave}>
@@ -65,24 +65,24 @@ const Nav = () => {
                         </nav>
 
                         {/* Menu Hambúrguer (Mobile) */}
-                        <div id="hamburger-menu" onClick={toggleMenu}>
-                            <div className={showMobile ? "bar open" : "bar"}></div>
-                            <div className={showMobile ? "bar open" : "bar"}></div>
-                            <div className={showMobile ? "bar open" : "bar"}></div>
+                        <div id='hamburger-menu' onClick={toggleMenu}>
+                            <div className={showMobile ? 'bar open' : 'bar'}></div>
+                            <div className={showMobile ? 'bar open' : 'bar'}></div>
+                            <div className={showMobile ? 'bar open' : 'bar'}></div>
                         </div>
 
                         {/* Nav Mobile */}
-                        <nav id='nav-mobile' className={showMobile ? "open" : ""}>
+                        <nav id='nav-mobile' className={showMobile ? 'open' : ''}>
                             <ul>
-                                <li><a href="#">{t('home')}</a></li>
-                                <li><a href="#">{t('about')}</a></li>
-                                <li><a href="#">{t('pilots')}</a></li>
-                                <li><a href="#">{t('ecotracer')}</a></li>
+                                <li><a href='#'>{t('home')}</a></li>
+                                <li><a href='#'>{t('about')}</a></li>
+                                <li><a href='#'>{t('pilots')}</a></li>
+                                <li><a href='#'>{t('ecotracer')}</a></li>
 
                                 {/* Language */}
                                 <div className='content-lng' onMouseEnter={handleMouseEnter}>
                                     <li>
-                                        <a href="">{t('language')}</a>
+                                        <p>{t('language')}</p>
                                     </li>
                                     {showLanguages && (
                                         <ul onMouseLeave={handleMouseLeave}>
