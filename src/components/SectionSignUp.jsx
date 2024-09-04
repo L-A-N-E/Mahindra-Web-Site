@@ -25,12 +25,7 @@ const SectionSignUp = () => {
 
     const onSignUp = async (event) => {
         event.preventDefault();
-
-        try {
-          await handleSignUp(email, password, confirmPassword, username);
-        } catch (error) {
-          console.log('Erro', error.message);
-        }
+        handleSignUp(email, password, confirmPassword, username, t);
     };
 
     return (
