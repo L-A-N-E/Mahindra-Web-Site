@@ -2,7 +2,6 @@ import React from 'react'
 import { useTranslation } from 'react-i18next';
 import { SectionEcotracerStyle } from '../styles/SectionEcotracerStyle'
 
-
 const SectionEcotracer = () => {
 
     // Select Language

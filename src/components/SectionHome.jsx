@@ -6,7 +6,6 @@ import 'swiper/css/navigation';
 import 'swiper/css'
 import { SectionHomeStyle } from '../styles/SectionHomeStyle'
 
-
 const SectionHome = () => {
 
   // Select Language

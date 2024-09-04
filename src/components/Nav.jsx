@@ -3,7 +3,6 @@ import { useTranslation } from 'react-i18next';
 import { NavStyle } from '../styles/NavStyle';
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 
-
 const Nav = () => {
 
      // Select Language

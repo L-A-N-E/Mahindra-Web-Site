@@ -5,11 +5,6 @@ import { FooterStyle } from '../styles/FooterStyle';
 import arrowFooter from '../assets/footer/arrow.svg'
 import { useTranslation } from 'react-i18next'
 
-
-
-
-
-
 const Footer = () => {
   // Select Language
   const { t, i18n } = useTranslation();
