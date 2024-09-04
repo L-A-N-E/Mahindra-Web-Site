@@ -1,7 +1,7 @@
 import styled from 'styled-components'  //Styled Components
 import Colors from '../constant/Colors' //Var Colors
 import Font from '../constant/Font' //Var Fonts
-import backgroundAbout from '../assets/about/bg.png' //Background Section
+import backgroundAbout from '../assets/about/bg-2.png' //Background Section
 
 export const SectionAboutStyle = styled.section `
     section {
@@ -10,8 +10,8 @@ export const SectionAboutStyle = styled.section `
         display: flex;
         align-items: center;
         justify-content: center;
-        /* background-image: url(${backgroundAbout}); */
-        background-color: ${Colors.off_white};
+        background-image: url(${backgroundAbout});
+        backface-visibility: 0.5;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
