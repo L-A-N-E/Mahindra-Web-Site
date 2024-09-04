@@ -25,9 +25,13 @@
     "password":"Contraseña",
     "repeat-password": "Repetir Contraseña",
 
-    "rights":"@ - Todos Los Derechos Reservados",
+    "rights":"@ - 2024 - Todos Los Derechos Reservados",
     "mobile-app":"Aplicación Móvil",
     "races":"Carreras",
+    "car":"Coche",
+    "mahindra":"Mahindra",
+    "formula-e":"Formula E",
+    "fia":"FIA",
 
     "text-about":"Mahindra Racing es un equipo innovador que brilla en la Fórmula E, la principal competición de coches eléctricos. Desde 2011, el equipo combina tecnología avanzada y pasión por las carreras para ofrecer actuaciones impresionantes, mientras promueve un futuro más sostenible. Con pilotos talentosos y un compromiso con la innovación, Mahindra Racing está redefiniendo el automovilismo y acelerando hacia un mundo más verde.",
     "read-more":"Leer Más"

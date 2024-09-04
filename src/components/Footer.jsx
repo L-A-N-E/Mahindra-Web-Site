@@ -29,53 +29,70 @@ const Footer = () => {
                 </div>
               </div>
 
-              {/* Content 1 */}
+              {/* Column 1 */}
               <div className='position-item'>
-                {/* Container */}
+
+                {/* Items */}
                 <div className='footer-container'>
-                  {/* Items */}
-                  <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt='' />
-                    <h4>{t('pilots')}</h4>
-                  </div>
+
+                  {/* Races */}
+                  <Link to='/' className='txt-none'>
+                    <div className='item-footer'>
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
+                      <h4>{t('races')}</h4>
+                    </div>
+                  </Link>
+
+                  {/* Car */}
+                  <Link to='/' className='txt-none'>
+                    <div className='item-footer'>
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
+                      <h4>{t('car')}</h4>
+                    </div>
+                  </Link>
+
 
                   {/* Items */}
-                  <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt='' />
-                    <h4>Mahindra</h4>
-                  </div>
+                  <Link to='/' className='txt-none'>
+                    <div className='item-footer'>
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
+                      <h4>{t('mahindra')}</h4>
+                    </div>
+                  </Link>
 
-                  {/* Items */}
-                  <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt='' />
-                    <h4>Formula E</h4>
-                  </div>
+                  {/* Formula E */}
+                  <Link to='/' className='txt-none'>
+                    <div className='item-footer'>
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
+                      <h4>{t('formula-e')}</h4>
+                    </div>
+                  </Link>
 
-                  {/* Items */}
-                  <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt='' />
-                    <h4>{t('mobile-app')}</h4>
-                  </div>
-
-                  {/* Items */}
-                  <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt='' />
-                    <h4>{t('races')}</h4>
-                  </div>
+                  {/* FIA */}
+                  <Link to='/' className='txt-none'>
+                    <div className='item-footer'>
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
+                      <h4>{t('fia')}</h4>
+                    </div>
+                  </Link>
                 </div>
               </div>
 
-              {/* Content 2 */}
+              {/* Column 2 */}
               <div className='position-item'>
-                {/* Container */}
-                <div className='footer-container'>
-                  {/* Items */}
-                  <div className='item-footer'>
-                    <img className='arrow-rotation' src={arrowFooter} alt='' />
-                    <h4>{t('about')}</h4>
-                  </div>
 
-                  {/* Items */}
+                {/* Items */}
+                <div className='footer-container'>
+
+                  {/* App Mobile */}
+                  <Link to='/mobile-app' className='txt-none'>
+                    <div className='item-footer'>
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
+                      <h4>{t('mobile-app')}</h4>
+                    </div>
+                  </Link>
+
+                  {/* Sign Up */}
                   <Link to='/sign-up' className='txt-none'>
                     <div className='item-footer'>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
@@ -83,12 +100,12 @@ const Footer = () => {
                     </div>
                   </Link>           
 
-                  {/* Items */}
+                  {/* Login */}
                   <Link to='/login' className='txt-none'>
                     <div className='item-footer'>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('login')}</h4>
-                  </div>
+                    </div>
                   </Link>
                 </div>
               </div>
