@@ -1,9 +1,13 @@
 import { signOut, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth, db } from '../firebase/firebase';
 import { doc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const MySwal = withReactContent(Swal);
 
 // Função de autenticação
-export const handleAuthentication = async (email, password, isLogin, user) => {
+export const handleAuthentication = async (email, password, isLogin, user, t) => {
     try {
       console.log('Iniciando autenticação com:', email);
       if (user) {
@@ -12,20 +16,40 @@ export const handleAuthentication = async (email, password, isLogin, user) => {
       } else {
         if (isLogin) {
           await signInWithEmailAndPassword(auth, email, password);
-          console.log('Usuário logado com sucesso');
+          MySwal.fire({
+            title: t('title-sucess'),
+            icon:'sucess',
+            text: t('text-sucess'),
+            color:'#fff',
+            background:'#171717',
+            confirmButtonColor:'#E51635'
+          })
         } else {
           await createUserWithEmailAndPassword(auth, email, password);
-          console.log('Usuário registrado com sucesso');
+          MySwal.fire({
+            title: t('title-register-sucess'),
+            icon:'sucess',
+            text: t('text-register-sucess'),
+            color:'#fff',
+            background:'#171717',
+            confirmButtonColor:'#E51635'
+          })
         }
       }
     } catch (error) {
-      throw new Error(error.message); 
+      MySwal.fire({
+        title: t('title-error'),
+        icon:'error',
+        text: error.message,
+        color:'#fff',
+        background:'#171717',
+        confirmButtonColor:'#E51635'
+      }) 
     }
   };
 
 // Google Sign-In
-export const googleSignIn = (event) => {
-    event.preventDefault();
+export const googleSignIn = (t) => {
     const provider = new GoogleAuthProvider();
   
     signInWithPopup(auth, provider).then((result) => {
@@ -34,9 +58,15 @@ export const googleSignIn = (event) => {
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      console.log(result);
-      console.log(credential);
-      console.log("Usuário logado com sucesso!")
+      
+      MySwal.fire({
+        title: t('title-sucess'),
+        icon:'success',
+        text: user.displayName + t('text-sucess'),
+        color:'#fff',
+        background:'#171717',
+        confirmButtonColor:'#E51635'
+      })
     }).catch((error) => {
       // Handle Errors here.
       const errorCode = error.code;
@@ -46,45 +76,88 @@ export const googleSignIn = (event) => {
       // The AuthCredential type that was used.
       const credential = GoogleAuthProvider.credentialFromError(error);
       // Handle Errors
+      MySwal.fire({
+        title: t('title-error'),
+        icon:'error',
+        text: error.message,
+        color:'#fff',
+        background:'#171717',
+        confirmButtonColor:'#E51635'
+      })
     });
   }
 
 // Função para fazer o cadastro
-export const handleSignUp = async (email, password, confirmPassword, username) => {
-    if (password !== confirmPassword) {
-      alert('As senhas não correspondem.');
-    }
+export const handleSignUp = async (email, password, confirmPassword, username, t) => {
+  if (password !== confirmPassword) {
+    MySwal.fire({
+      title: t('title-error'),
+      icon: 'error',
+      text: t('text-error-password'),
+      color: '#fff',
+      background: '#171717',
+      confirmButtonColor: '#E51635'
+    });
+    return; // Adiciona um retorno para garantir que o restante da função não será executado
+  }
   
-    try {
-      // Verifica se o nome de usuário já está em uso
-      const usernameExists = await checkUsernameExists(username);
-      if (usernameExists) {
-        alert('Nome de usuário já está em uso.');
-      }
-  
-      // Cria o usuário com email e senha
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
-      
-      // Atualiza o perfil do usuário com o nome de usuário
-      await updateProfile(user, { displayName: username });
-      
-      // Salva os dados do usuário no Firestore
-      await saveUserDataToFirestore(user.uid, username, email);
-      
-    } catch (error) {
-      alert(error.message);
+  try {
+    // Verifica se o nome de usuário já está em uso
+    const usernameExists = await checkUsernameExists(username);
+    if (usernameExists) {
+      MySwal.fire({
+        title: t('title-error'),
+        icon: 'error',
+        text: t('text-error-user'),
+        color: '#fff',
+        background: '#171717',
+        confirmButtonColor: '#E51635'
+      });
+      return; // Adiciona um retorno para garantir que o restante da função não será executado
     }
+
+    // Cria o usuário com email e senha
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
+    
+    // Atualiza o perfil do usuário com o nome de usuário
+    await updateProfile(user, { displayName: username });
+    
+    // Salva os dados do usuário no Firestore
+    await saveUserDataToFirestore(user.uid, username, email);
+    MySwal.fire({
+      title: t('title-register-sucess'),
+      icon:'sucess',
+      text: t('text-register-sucess'),
+      color:'#fff',
+      background:'#171717',
+      confirmButtonColor:'#E51635'
+    })
+    
+  } catch (error) {
+    MySwal.fire({
+      title: t('title-error'),
+      icon: 'error',
+      text: error.message,
+      color: '#fff',
+      background: '#171717',
+      confirmButtonColor: '#E51635'
+    });
+  }
 };
 
-// Checa se o usurname já existe
+
+    
+
+
+// Checa se o username já existe
 export const checkUsernameExists = async (username) => {
     try {
       const q = query(collection(db, 'users'), where('username', '==', username));
       const querySnapshot = await getDocs(q);
       return !querySnapshot.empty;
     } catch (error) {
-      alert('Não foi possível verificar o nome de usuário.');
+      console.log('Não foi possível verificar o nome de usuário.');
     }
 };
 
@@ -94,6 +167,6 @@ export const saveUserDataToFirestore = async (uid, username, email) => {
       const userDocRef = doc(db, 'users', uid);
       await setDoc(userDocRef, { username, email });
     } catch (error) {
-      alert('Não foi possível salvar os dados do usuário.');
+      console.log('Não foi possível salvar os dados do usuário.');
     }
 };

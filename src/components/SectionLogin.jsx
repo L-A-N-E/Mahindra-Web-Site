@@ -20,8 +20,13 @@ const SectionLogin = () => {
 
     const onLoginPress = (event) => {
         event.preventDefault();
-        handleAuthentication(email, password, isLogin, user);
+        handleAuthentication(email, password, isLogin, user, t);
     };
+
+    const handleSignInWithPopUp = (event) => {
+        event.preventDefault();
+        googleSignIn(t)
+    }
 
     return (
         <>
@@ -41,6 +46,7 @@ const SectionLogin = () => {
 
                         {/* Mid */}
                         <div className='mid-acc'>
+
                             <form action='/login' onSubmit={onLoginPress} >
                                 <input type='text' name='username' placeholder={t('username')} value={email} onChange={(e) => setEmail(e.target.value)} required/>
                                 <input type='password' name='password' placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} required/>
@@ -53,7 +59,7 @@ const SectionLogin = () => {
                         {/* End */}
                         <div className='end-acc'>
                             <div>
-                                <button onClick={googleSignIn}><img src={LogoGoogle} alt='#'/>{t('login-google')}</button>
+                                <button onClick={handleSignInWithPopUp}><img src={LogoGoogle} alt="#"/>{t('login-google')}</button>
                             </div>
                         </div>
                         
