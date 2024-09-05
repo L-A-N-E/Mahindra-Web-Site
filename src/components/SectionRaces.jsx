@@ -1,17 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import { SectionRacesStyle } from '../styles/SectionRacesStyle'
+import { useTranslation } from 'react-i18next'
+import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
+
+import { SectionRacesStyle } from '../styles/SectionRacesStyle'
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
-
 const SectionRaces = () => {
     const [races, setRaces] = useState([]);
+    const { t, i18n } = useTranslation();
 
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+        setShowLanguages(false);
+    };
     useEffect(() => {
         fetch('http://localhost:5000/races')
         .then((response) => response.json())
@@ -24,7 +30,7 @@ const SectionRaces = () => {
             <section>
                 {/* Title */}
                 <div id='title-race'>   
-                    <h1>Circuitos</h1>
+                    <h1>{t('races')}</h1>
                 </div>
 
                 <Swiper
