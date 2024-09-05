@@ -1,13 +1,16 @@
 import { StrictMode } from 'react' 
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom" // Import Dependencie React Router Dom
-import App from './App.jsx' // Import App
-import Error from "./routes/Error"; // Import Error
-import Home from "./routes/Home";  // Import Home
-import SignUp from './routes/SignUp'; // Import SignUp 
-import Login from './routes/Login'; // Import Login
 import GlobalStyle from "./styles/GlobalStyle"; // Import Global Style
-import './i18n'; // Change Language
+import './i18n' // Change Language
+import App from './App.jsx' // Import App
+import Error from "./routes/Error" // Import Error
+import Home from "./routes/Home"  // Import Home
+import SignUp from './routes/SignUp' // Import SignUp 
+import Login from './routes/Login' // Import Login
+import Races from './routes/Races.jsx' // Import Races
+import Car from './routes/Car.jsx' // Import Car
+import AppMobile from './routes/AppMobile.jsx' // Import App Mobile
 
 // Creating Routes
 const router = createBrowserRouter ([
@@ -33,6 +36,21 @@ const router = createBrowserRouter ([
       {
         path: '/login',
         element: <Login/>
+      },
+      // Page Races
+      {
+        path: '/races',
+        element: <Races/>
+      },
+      // Page Car
+      {
+        path: '/car',
+        element: <Car/>
+      },
+      // Page App Mobile
+      {
+        path: '/app-mobile',
+        element: <AppMobile/>
       }
     ]
   }
