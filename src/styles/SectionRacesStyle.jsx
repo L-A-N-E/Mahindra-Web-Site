@@ -7,6 +7,7 @@ export const SectionRacesStyle = styled.section `
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100dvh;
         background: #400000;
         background: -webkit-linear-gradient(316deg, #400000 0%, #cc0000 100%);
         background: linear-gradient(316deg, #400000 0%, #cc0000 100%);
