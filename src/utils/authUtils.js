@@ -3,8 +3,10 @@ import { auth, db } from '../firebase/firebase';
 import { doc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import { useNavigate } from 'react-router-dom';
 
 const MySwal = withReactContent(Swal);
+
 
 // Função de autenticação
 export const handleAuthentication = async (email, password, isLogin, user, t) => {
@@ -24,6 +26,7 @@ export const handleAuthentication = async (email, password, isLogin, user, t) =>
             background:'#171717',
             confirmButtonColor:'#E51635'
           })
+
         } else {
           await createUserWithEmailAndPassword(auth, email, password);
           MySwal.fire({
@@ -51,14 +54,12 @@ export const handleAuthentication = async (email, password, isLogin, user, t) =>
 // Google Sign-In
 export const googleSignIn = (t) => {
     const provider = new GoogleAuthProvider();
-  
     signInWithPopup(auth, provider).then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      
       MySwal.fire({
         title: t('title-sucess'),
         icon:'success',
@@ -67,6 +68,7 @@ export const googleSignIn = (t) => {
         background:'#171717',
         confirmButtonColor:'#E51635'
       })
+      saveUserDataToFirestore(user.uid, user.displayName, user.email)
     }).catch((error) => {
       // Handle Errors here.
       const errorCode = error.code;
