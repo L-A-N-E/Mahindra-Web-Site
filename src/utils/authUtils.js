@@ -3,13 +3,12 @@ import { auth, db } from '../firebase/firebase';
 import { doc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-import { useNavigate } from 'react-router-dom';
+
 
 const MySwal = withReactContent(Swal);
 
-
 // Função de autenticação
-export const handleAuthentication = async (email, password, isLogin, user, t) => {
+export const handleAuthentication = async (email, password, isLogin, user, t, navigate) => {
     try {
       console.log('Iniciando autenticação com:', email);
       if (user) {
@@ -25,7 +24,11 @@ export const handleAuthentication = async (email, password, isLogin, user, t) =>
             color:'#fff',
             background:'#171717',
             confirmButtonColor:'#E51635'
-          })
+          }).then((result) => {
+            if (result.isConfirmed) {
+              //Recarrega a página
+              window.location.href='/';
+            }})
 
         } else {
           await createUserWithEmailAndPassword(auth, email, password);
@@ -36,7 +39,11 @@ export const handleAuthentication = async (email, password, isLogin, user, t) =>
             color:'#fff',
             background:'#171717',
             confirmButtonColor:'#E51635'
-          })
+          }).then((result) => {
+            if (result.isConfirmed) {
+              //Recarrega a página
+              window.location.href='/';
+            }})
         }
       }
     } catch (error) {
@@ -52,7 +59,7 @@ export const handleAuthentication = async (email, password, isLogin, user, t) =>
   };
 
 // Google Sign-In
-export const googleSignIn = (t) => {
+export const googleSignIn = (t, navigate) => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider).then((result) => {
       // This gives you a Google Access Token. You can use it to access the Google API.
@@ -60,6 +67,7 @@ export const googleSignIn = (t) => {
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
+      saveUserDataToFirestore(user.uid, user.displayName, user.email)
       MySwal.fire({
         title: t('title-sucess'),
         icon:'success',
@@ -67,8 +75,11 @@ export const googleSignIn = (t) => {
         color:'#fff',
         background:'#171717',
         confirmButtonColor:'#E51635'
-      })
-      saveUserDataToFirestore(user.uid, user.displayName, user.email)
+      }).then((result) => {
+        if (result.isConfirmed) {
+          //Recarrega a página
+          window.location.href='/';
+        }})
     }).catch((error) => {
       // Handle Errors here.
       const errorCode = error.code;
@@ -90,7 +101,7 @@ export const googleSignIn = (t) => {
   }
 
 // Função para fazer o cadastro
-export const handleSignUp = async (email, password, confirmPassword, username, t) => {
+export const handleSignUp = async (email, password, confirmPassword, username, t, navigate) => {
   if (password !== confirmPassword) {
     MySwal.fire({
       title: t('title-error'),
@@ -134,7 +145,11 @@ export const handleSignUp = async (email, password, confirmPassword, username, t
       color:'#fff',
       background:'#171717',
       confirmButtonColor:'#E51635'
-    })
+    }).then((result) => {
+      if (result.isConfirmed) {
+        //Recarrega a página
+        window.location.href='/';
+      }})
     
   } catch (error) {
     MySwal.fire({
