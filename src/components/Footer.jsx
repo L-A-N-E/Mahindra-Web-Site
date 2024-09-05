@@ -37,7 +37,7 @@ const Footer = () => {
                 <div className='footer-container'>
 
                   {/* Races */}
-                  <Link to='/' className='txt-none'>
+                  <Link to='/races' className='txt-none' onClick={() => window.location.href = '/races'}>
                     <div className='item-footer'>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('races')}</h4>
@@ -45,7 +45,7 @@ const Footer = () => {
                   </Link>
 
                   {/* Car */}
-                  <Link to='/' className='txt-none'>
+                  <Link to='/car' className='txt-none' onClick={() => window.location.href = '/car'}>
                     <div className='item-footer'>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('car')}</h4>
@@ -53,7 +53,7 @@ const Footer = () => {
                   </Link>
 
 
-                  {/* Items */}
+                  {/* Mahindra */}
                   <Link to='/' className='txt-none'>
                     <div className='item-footer'>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
@@ -86,7 +86,7 @@ const Footer = () => {
                 <div className='footer-container'>
 
                   {/* App Mobile */}
-                  <Link to='/mobile-app' className='txt-none'>
+                  <Link to='/mobile-app' className='txt-none' onClick={() => window.location.href = '/app-mobile'}>
                     <div className='item-footer'>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('mobile-app')}</h4>
