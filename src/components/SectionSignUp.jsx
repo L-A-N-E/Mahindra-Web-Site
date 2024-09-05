@@ -5,9 +5,11 @@ import { useTranslation } from 'react-i18next';
 import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../assets/login/logo-google.svg'
 import { handleSignUp,googleSignIn } from '../utils/authUtils';
+import { useNavigate } from 'react-router-dom';
 
 const SectionSignUp = () => {
 
+    const navigate = useNavigate();
     // Select Language
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
@@ -22,7 +24,7 @@ const SectionSignUp = () => {
 
     const onSignUp = async (event) => {
         event.preventDefault();
-        handleSignUp(email, password, confirmPassword, username, t);
+        handleSignUp(email, password, confirmPassword, username, t, navigate);
     };
 
     return (
