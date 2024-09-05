@@ -36,8 +36,9 @@ export const SectionAboutStyle = styled.section `
                 }
 
                 p {
-                    font-size: ${Font.txt_14};
+                    font-size: ${Font.txt_20};
                     text-align: center;
+                    
                 }
 
                 a {

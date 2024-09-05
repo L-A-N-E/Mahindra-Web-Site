@@ -4,30 +4,34 @@ import { LoginStyleSignUp } from '../styles/LoginStyle';
 import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../assets/login/logo-google.svg'
 import { googleSignIn, handleAuthentication } from '../utils/authUtils';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const SectionLogin = () => {
+    const navigate = useNavigate();
     // Select Language
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
-
+    
     const [user, setUser] = useState(null);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(true);
-
+    
     const onLoginPress = (event) => {
         event.preventDefault();
-        handleAuthentication(email, password, isLogin, user, t);
+        handleAuthentication(email, password, isLogin, user, t, navigate);
     };
-
+    
     const handleSignInWithPopUp = (event) => {
         event.preventDefault();
-        googleSignIn(t)
+        googleSignIn(t, navigate)
     }
-
+    
     return (
         <>
         <LoginStyleSignUp>

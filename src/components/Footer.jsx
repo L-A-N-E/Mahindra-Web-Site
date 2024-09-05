@@ -11,7 +11,8 @@ const Footer = () => {
   const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
       setShowLanguages(false);
-  };
+    };
+    
   return (
     <>
     <FooterStyle>
@@ -93,7 +94,7 @@ const Footer = () => {
                   </Link>
 
                   {/* Sign Up */}
-                  <Link to='/sign-up' className='txt-none'>
+                  <Link to='/sign-up' className='txt-none' onClick={() => window.location.href = '/sign-up'}>
                     <div className='item-footer'>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('signup')}</h4>
@@ -101,7 +102,7 @@ const Footer = () => {
                   </Link>           
 
                   {/* Login */}
-                  <Link to='/login' className='txt-none'>
+                  <Link to='/login' className='txt-none' onClick={() => window.location.href = '/login'}>
                     <div className='item-footer'>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('login')}</h4>
