@@ -46,5 +46,8 @@
     "text-error-user":"Username is already taken",
 
     "title-register-sucess":"Account Created",
-    "text-register-sucess":"User registered successfully"
+    "text-register-sucess":"User registered successfully",
+
+    "title-ecotracer":"Why",
+    "text-ecotracer":"Formula E is an innovative motorsport category that combines speed and technology with a deep commitment to sustainability. Since its inception, Formula E has been leading the transition towards a cleaner and greener future in motorsport, exclusively using electric cars powered by renewable energy. In addition to providing exciting races on urban circuits around the world, the category aims to promote the development of sustainable technologies, encourage the use of electric vehicles, and reduce carbon emissions on the planet. Formula E is not just about racing; it's about driving a sustainable and accessible future for everyone."
 }

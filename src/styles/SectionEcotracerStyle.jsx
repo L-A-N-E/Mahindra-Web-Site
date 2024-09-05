@@ -47,6 +47,7 @@ export const SectionEcotracerStyle = styled.section `
 
             .p-eco {
                 p {
+                    font-size: ${Font.txt_20};
                     text-align: justify;
                 }
             }

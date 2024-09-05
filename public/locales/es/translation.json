@@ -44,5 +44,9 @@
     "text-error-user":"Nombre de usuario ya está en uso",
 
     "title-register-sucess":"Cuenta creada",
-    "text-register-sucess":"Usuario registrado con éxito"
+    "text-register-sucess":"Usuario registrado con éxito",
+
+    "title-ecotracer":"¿Por qué",
+    "text-ecotracer":"La Fórmula E es una categoría innovadora del automovilismo que combina velocidad y tecnología con un profundo compromiso con la sostenibilidad. Desde su creación, la Fórmula E ha liderado la transición hacia un futuro más limpio y verde en los deportes de motor, utilizando exclusivamente coches eléctricos alimentados por energía renovable. Además de ofrecer carreras emocionantes en circuitos urbanos alrededor del mundo, la categoría busca promover el desarrollo de tecnologías sostenibles, incentivar el uso de vehículos eléctricos y reducir las emisiones de carbono en el planeta. La Fórmula E no se trata solo de competir, sino de impulsar un futuro sostenible y accesible para todos."
+    
 }
