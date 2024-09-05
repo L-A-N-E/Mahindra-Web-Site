@@ -18,12 +18,12 @@ const SectionPilots = () => {
             <section>
                 {/* Pilot 1 */}
                 <div className='pilot-1 background-pilots'>
-                    <Link className='btn-pilots color-1 txt-none'><button className='txt-btn-pilots color-1'>Edoardo Mortara</button></Link>
+                    <a href='https://www.mahindraracing.com/drivers/edoardo-mortara' className='btn-pilots color-1 txt-none' target='_blank'><button className='txt-btn-pilots color-1'>Edoardo Mortara</button></a>
                 </div>
 
                 {/* Pilot 2 */}
                 <div className='pilot-2 background-pilots'>
-                    <Link className='btn-pilots color-2 txt-none'><button className='txt-btn-pilots color-2'>Nicky De Vries</button></Link>
+                    <a href='https://www.mahindraracing.com/drivers/nyck-de-vries' className='btn-pilots color-2 txt-none' target='_blank'><button className='txt-btn-pilots color-2'>Nyck De Vries</button></a>
                 </div>
             </section>
         </SectionPilotsStyle>
