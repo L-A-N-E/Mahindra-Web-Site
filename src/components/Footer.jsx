@@ -11,7 +11,8 @@ const Footer = () => {
   const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
       setShowLanguages(false);
-  };
+    };
+    
   return (
     <>
     <FooterStyle>
