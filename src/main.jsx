@@ -8,9 +8,11 @@ import Error from "./routes/Error" // Import Error
 import Home from "./routes/Home"  // Import Home
 import SignUp from './routes/SignUp' // Import SignUp 
 import Login from './routes/Login' // Import Login
-import Races from './routes/Races.jsx' // Import Races
-import Car from './routes/Car.jsx' // Import Car
-import AppMobile from './routes/AppMobile.jsx' // Import App Mobile
+import Races from './routes/Races' // Import Races
+import Car from './routes/Car' // Import Car
+import AppMobile from './routes/AppMobile' // Import App Mobile
+import Pilot_1 from './routes/Pilot_1' // Import Pilot 1
+import Pilot_2 from './routes/Pilot_2' // Import Pilot 2
 
 // Creating Routes
 const router = createBrowserRouter ([
@@ -51,6 +53,16 @@ const router = createBrowserRouter ([
       {
         path: '/app-mobile',
         element: <AppMobile/>
+      },
+      // Page Pilot Edoardo Mortara
+      {
+        path: '/edoardo-mortara',
+        element: <Pilot_1/>
+      },
+      // Page Pilot Nick De Vries
+      {
+        path: '/nicky-de-vries',
+        element: <Pilot_2/>
       }
     ]
   }
