@@ -4,6 +4,7 @@ import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 import { SectionRacesStyle } from '../styles/SectionRacesStyle'
+import Arrow from '../assets/footer/arrow.svg'
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
@@ -77,9 +78,15 @@ const SectionRaces = () => {
                                 </div>
 
                                 {/* Position End */}
-                                <div className='mid-card'>
-                                    <div>
+                                <div className='end-card'>
+                                    <div className='city'>
                                         <h1>{race.city}</h1>
+                                    </div>
+
+                                    <div className='btn-card'>
+                                        <button>
+                                            <img className='arrow-rotation' src={Arrow} alt="" />View
+                                        </button>
                                     </div>
                                 </div>
                             </div>

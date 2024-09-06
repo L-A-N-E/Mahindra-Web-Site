@@ -77,6 +77,24 @@ export const NavStyle = styled.header `
                         display:flex;
                         flex-direction: column;
 
+                        /* LI Language */
+                        .lgn-li {
+                            display:flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 100%;
+                            gap: 0.3rem;
+                        }
+
+                        /* Effect Rotation Arrow */
+                        .arrow-rotation {
+                            transition: transform 0.3s ease-in-out;
+                        }
+
+                        &:hover .arrow-rotation {
+                            transform: rotate(90deg);
+                        }
+
                         /* Options */
                         ul{
                             position: absolute;
