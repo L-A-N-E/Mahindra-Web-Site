@@ -184,6 +184,16 @@ export const NavStyle = styled.header `
                     flex-direction: column;
                     gap: 1rem;
 
+                    .content-lng {
+                        .lgn-li {
+                            display: flex;
+                            gap: 0.3rem;
+                            text-transform: uppercase;
+                            font-size: ${Font.txt_12};
+                            color: ${Colors.off_white};
+                        }
+                    }
+
                     li{
                         padding: 15px;
 

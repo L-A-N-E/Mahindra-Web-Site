@@ -83,7 +83,8 @@ const Nav = () => {
 
                                 {/* Language */}
                                 <div className='content-lng' onMouseEnter={handleMouseEnter}>
-                                    <li>
+                                    <li className='lgn-li'>
+                                        <img src={Arrow} alt="" />
                                         <p>{t('language')}</p>
                                     </li>
                                     {showLanguages && (
