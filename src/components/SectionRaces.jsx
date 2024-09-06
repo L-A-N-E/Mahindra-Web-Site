@@ -84,9 +84,8 @@ const SectionRaces = () => {
                                     </div>
 
                                     <div className='btn-card'>
-                                        <button>
-                                            <img className='arrow-rotation' src={Arrow} alt="" />View
-                                        </button>
+                                        <img className='arrow-rotation' src={Arrow} alt="" />
+                                        <button>View</button>
                                     </div>
                                 </div>
                             </div>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Font from '../constant/Font'
 import Colors from '../constant/Colors'
 
-import Background from '../assets/home/banners/banner-3.png'
+import Background from '../assets/races/country/Mexico.svg'
 
 export const SectionRacesStyle = styled.section `
     
@@ -98,25 +98,48 @@ export const SectionRacesStyle = styled.section `
                         background: linear-gradient(328deg, rgba(23,23,23,1) 0%, rgba(71,71,71,1) 50%, rgba(23,23,23,1) 100%);
                         
                         .city {
-                            h1 {
-                                font-weight: ${Font.txt_900w};
-                                text-transform: uppercase;
+                                h1 {
                                 font-size: ${Font.txt_3rem};
                                 color: ${Colors.white};
+                                text-align: center;
+                                text-transform: uppercase;
                             }
                         }
 
                         .btn-card {
+                            display: flex;
+                            gap: 0.3rem;
+                            cursor:pointer;
+
                             button {
+                                cursor:pointer;
                                 background: transparent;
                                 border: none;
-                                display: flex;
-                                align-items: center;
-                                height: 100%;
-                                gap: 0.3rem;
-                                color: ${Colors.white};
-                                cursor: pointer;
+                                text-decoration: none;
+                                list-style: none;
                                 text-transform: uppercase;
+                                font-size: ${Font.txt_12};
+                                color: ${Colors.off_white};
+                                position: relative;
+                                display: inline-block;
+                                font-weight: 300;
+                                transition: all 0.3s;
+                            }
+
+                            /* Effect Hover Line */
+                            button::after {
+                                content: '';
+                                position: absolute;
+                                left: 0;
+                                bottom: -3px;
+                                width: 0;
+                                height: 1px;
+                                background-color: ${Colors.red_1};
+                                transition: width 0.3s ease-in-out;
+                            }
+
+                            button:hover::after {
+                                width: 100%;
                             }
 
                             /* Effect Rotation Arrow */

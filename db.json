@@ -4,6 +4,7 @@
         "city": "Mexico", 
         "data":"Jan 13, 2024", 
         "country":"/src/assets/races/country/Mexico.svg", 
+        "bg-txt":"/src/assets/races/country/Mexico.svg", 
         "race_track":"/src/assets/races/race-track/Mexico.svg",
         "name":"Autódromo Hermanos Rodríguez" },
 
@@ -11,6 +12,7 @@
         "city": "Diriyah", 
         "data":"Jan 26, 2024", 
         "country":"/src/assets/races/country/Saudi-Arabia.svg", 
+        "bg-txt":"/src/assets/races/country/Saudi-Arabia.svg", 
         "race_track":"/src/assets/races/race-track/Al-Diriyah.svg",
         "name":"Diriyah Street Circuit" },
 
@@ -18,6 +20,7 @@
         "city": "Diriyah", 
         "data":"Jan 27, 2024", 
         "country":"/src/assets/races/country/Saudi-Arabia.svg", 
+        "bg-txt":"/src/assets/races/country/Saudi-Arabia.svg", 
         "race_track":"/src/assets/races/race-track/Al-Diriyah.svg",
         "name":"Diriyah Street Circuit" },
 
@@ -25,6 +28,7 @@
         "city": "Sao Paulo", 
         "data":"Mar 16, 2024", 
         "country":"/src/assets/races/country/Brazil.svg",
+        "bg-txt":"/src/assets/races/country/Brazil.svg",
         "race_track":"/src/assets/races/race-track/Sao-Paulo.svg",
         "name":"Anhembi Sambadrome Circuit" },
 
@@ -32,6 +36,7 @@
         "city": "Tokio", 
         "data":"Mar 30, 2024", 
         "country":"/src/assets/races/country/Japan.svg", 
+        "bg-txt":"/src/assets/races/country/Japan.svg", 
         "race_track":"/src/assets/races/race-track/Tokio.svg",
         "name":"Tokio Street Circuit" },
 
@@ -39,6 +44,7 @@
         "city": "Misano", 
         "data":"Apr 13, 2024", 
         "country":"/src/assets/races/country/Italy.svg", 
+        "bg-txt":"/src/assets/races/country/Italy.svg", 
         "race_track":"/src/assets/races/race-track/Misano.svg",
         "name":"Misano World Circuit Marco Simoncelli" },
 
@@ -46,6 +52,7 @@
         "city": "Misano", 
         "data":"Apr 14, 2024", 
         "country":"/src/assets/races/country/Italy.svg", 
+        "bg-txt":"/src/assets/races/country/Italy.svg", 
         "race_track":"/src/assets/races/race-track/Misano.svg",
         "name":"Misano World Circuit Marco Simoncelli" },
 
@@ -53,6 +60,7 @@
         "city": "Monaco", 
         "data":"Apr 27, 2024", 
         "country":"/src/assets/races/country/Monaco.svg", 
+        "bg-txt":"/src/assets/races/country/Monaco.svg", 
         "race_track":"/src/assets/races/race-track/Monaco.svg",
         "name":"Circuito de Rua de Mônaco" },
 
@@ -60,6 +68,7 @@
         "city": "Berlim",
         "data":"May 11, 2024", 
         "country":"/src/assets/races/country/Germany.svg", 
+        "bg-txt":"/src/assets/races/country/Germany.svg", 
         "race_track":"/src/assets/races/race-track/Berlim.svg",
         "name":"Tempelhof Airport Street Circuit" },
 
@@ -67,6 +76,7 @@
         "city": "Berlim", 
         "data":"May 12, 2024", 
         "country":"/src/assets/races/country/Germany.svg", 
+        "bg-txt":"/src/assets/races/country/Germany.svg", 
         "race_track":"/src/assets/races/race-track/Berlim.svg",
         "name":"Tempelhof Airport Street Circuit" },
 
@@ -74,6 +84,7 @@
         "city": "Shangai", 
         "data":"May 25, 2024", 
         "country":"/src/assets/races/country/China.svg", 
+        "bg-txt":"/src/assets/races/country/China.svg", 
         "race_track":"/src/assets/races/race-track/Shangai.svg",
         "name":"Shangai Street Circuit" },
 
@@ -81,6 +92,7 @@
         "city": "Shangai", 
         "data":"May 26, 2024", 
         "country":"/src/assets/races/country/China.svg", 
+        "bg-txt":"/src/assets/races/country/China.svg", 
         "race_track":"/src/assets/races/race-track/Shangai.svg",
         "name":"Shangai Street Circuit" },
         
@@ -88,6 +100,7 @@
         "city": "Portland", 
         "data":"Jun 29, 2024", 
         "country":"/src/assets/races/country/United-States.svg", 
+        "bg-txt":"/src/assets/races/country/United-States.svg", 
         "race_track":"/src/assets/races/race-track/Portland.svg",
         "name":"Portland International Raceway" },
 
@@ -95,6 +108,7 @@
         "city": "Portland",
         "data":"Jun 30, 2024", 
         "country":"/src/assets/races/country/United-States.svg", 
+        "bg-txt":"/src/assets/races/country/United-States.svg", 
         "race_track":"/src/assets/races/race-track/Portland.svg",
         "name":"Portland International Raceway" },
 
@@ -102,6 +116,7 @@
         "city": "London", 
         "data":"Jul 20, 2024", 
         "country":"/src/assets/races/country/United-Kingdom.svg",
+        "bg-txt":"/src/assets/races/country/United-Kingdom.svg",
         "race_track":"/src/assets/races/race-track/London.svg",
         "name":"ExCeL London Street Circuit" },
 
@@ -109,6 +124,7 @@
         "city": "London", 
         "data":"Jul 21, 2024", 
         "country":"/src/assets/races/country/United-Kingdom.svg", 
+        "bg-txt":"/src/assets/races/country/United-Kingdom.svg", 
         "race_track":"/src/assets/races/race-track/London.svg",
         "name":"ExCeL London Street Circuit" }
     ]
