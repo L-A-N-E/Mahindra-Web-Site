@@ -29,9 +29,7 @@ const SectionRaces = () => {
         <SectionRacesStyle>
             <section>
                 {/* Title */}
-                <div id='title-race'>   
-                    <h1>{t('races')}</h1>
-                </div>
+
 
                 <Swiper
                     effect={'coverflow'}
@@ -55,18 +53,35 @@ const SectionRaces = () => {
                     }}
                     modules={[EffectCoverflow, Pagination, Navigation]}
                 >
+                    {/* Slides */}
                     {races.map((race) => (
                         <SwiperSlide key={race.id}>
-                            <div className="container-info">
-                                <div className="img-flag">
-                                    <img src={race.country} alt={`${race.city} Flag`} />
+                            {/* Main */}
+                            <div className='main-card'>
+                                {/* Position Top */}
+                                <div className='top-card'>
+                                    {/* Info */}
+                                    <div className='info-card'>
+
+                                        {/* Flag */}
+                                        <div className='flag-card'>
+                                            <img className='flag' src={race.country} alt={`${race.city} Flag`} />
+                                        </div>
+
+                                        {/* Name & Data */}
+                                        <div className='name-data'>
+                                            <h3 className='data'>{race.data}</h3>
+                                            <h3 className='name'>{race.name}</h3>
+                                        </div>
+                                    </div>
                                 </div>
-                                <h3>{race.city}</h3>
-                                <h2>{race.name}</h2>
-                                <p>{race.data}</p>
-                            </div>
-                            <div className="container-img">
-                                <img src={race.race_track} alt={`Circuit ${race.name}`} className='img-circuit' />
+
+                                {/* Position End */}
+                                <div className='mid-card'>
+                                    <div>
+                                        <h1>{race.city}</h1>
+                                    </div>
+                                </div>
                             </div>
                         </SwiperSlide>
                     ))}
