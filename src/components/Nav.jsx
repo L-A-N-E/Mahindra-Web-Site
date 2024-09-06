@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { NavStyle } from '../styles/NavStyle';
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
+import Arrow from '../assets/footer/arrow.svg'
 
 const Nav = () => {
 
@@ -50,7 +51,8 @@ const Nav = () => {
 
                                 {/* Language */}
                                 <div className='content-lng' onMouseEnter={handleMouseEnter}>
-                                    <li>
+                                    <li className='lgn-li'>
+                                        <img className='arrow-rotation' src={Arrow} alt='' />
                                         <a href=''>{t('language')}</a>
                                     </li>
                                     {showLanguages && (
@@ -81,7 +83,8 @@ const Nav = () => {
 
                                 {/* Language */}
                                 <div className='content-lng' onMouseEnter={handleMouseEnter}>
-                                    <li>
+                                    <li className='lgn-li'>
+                                        <img src={Arrow} alt="" />
                                         <p>{t('language')}</p>
                                     </li>
                                     {showLanguages && (
