@@ -83,7 +83,7 @@ const SectionRaces = () => {
                                         <img src={race.txt} alt={`${race.city} Flag`} />
                                     </div>
                                     {/* Link */}
-                                    <Link to={`/race-track/${race.slug}`}>
+                                    <Link to={`/race-track/${race.slug}`} className='txt-none'>
                                         <div className='btn-card'>
                                             <img className='arrow-rotation' src={Arrow} alt="" />
                                             <button>View</button>
