@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Font from '../constant/Font'
 import Colors from '../constant/Colors'
 
-import Background from '../assets/races/country/Mexico.svg'
+import Background from '../assets/home/banners/banner-teste.png'
 
 export const SectionRacesStyle = styled.section `
     
@@ -12,7 +12,8 @@ export const SectionRacesStyle = styled.section `
         justify-content: center;
         gap: 1.2rem;
         height: 110dvh;
-        background-color: ${Colors.dark_gray};
+        background-image: url(${Background});
+        background-position: bottom;
         
         /* Title */
         #title-race {
@@ -98,12 +99,13 @@ export const SectionRacesStyle = styled.section `
                         background: linear-gradient(328deg, rgba(23,23,23,1) 0%, rgba(71,71,71,1) 50%, rgba(23,23,23,1) 100%);
                         
                         .city {
-                                h1 {
-                                font-size: ${Font.txt_3rem};
-                                color: ${Colors.white};
-                                text-align: center;
-                                text-transform: uppercase;
-                            }
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                                img {
+                                    width: 80%;
+                                }
                         }
 
                         .btn-card {

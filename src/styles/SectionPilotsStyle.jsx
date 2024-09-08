@@ -99,7 +99,7 @@ export const SectionPilotsStyle = styled.section`
 };
 
 /* Response Mobile */
-@media (max-width: 440px){
+@media (max-width: 600px){
 
     section {
         display: flex;
