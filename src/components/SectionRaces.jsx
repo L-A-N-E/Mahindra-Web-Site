@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -63,12 +64,10 @@ const SectionRaces = () => {
                                 <div className='top-card'>
                                     {/* Info */}
                                     <div className='info-card'>
-
                                         {/* Flag */}
                                         <div className='flag-card'>
                                             <img className='flag' src={race.country} alt={`${race.city} Flag`} />
                                         </div>
-
                                         {/* Name & Data */}
                                         <div className='name-data'>
                                             <h3 className='data'>{race.data}</h3>
@@ -79,14 +78,17 @@ const SectionRaces = () => {
 
                                 {/* Position End */}
                                 <div className='end-card'>
+                                    {/* Title */}
                                     <div className='city'>
                                         <img src={race.txt} alt={`${race.city} Flag`} />
                                     </div>
-
-                                    <div className='btn-card'>
-                                        <img className='arrow-rotation' src={Arrow} alt="" />
-                                        <button>View</button>
-                                    </div>
+                                    {/* Link */}
+                                    <Link to={`/race-track/${race.slug}`}>
+                                        <div className='btn-card'>
+                                            <img className='arrow-rotation' src={Arrow} alt="" />
+                                            <button>View</button>
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
                         </SwiperSlide>
