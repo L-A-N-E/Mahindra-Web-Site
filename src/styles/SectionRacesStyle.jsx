@@ -99,12 +99,13 @@ export const SectionRacesStyle = styled.section `
                         background: linear-gradient(328deg, rgba(23,23,23,1) 0%, rgba(71,71,71,1) 50%, rgba(23,23,23,1) 100%);
                         
                         .city {
-                                h1 {
-                                font-size: ${Font.txt_3rem};
-                                color: ${Colors.white};
-                                text-align: center;
-                                text-transform: uppercase;
-                            }
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: center;
+                                img {
+                                    width: 80%;
+                                }
                         }
 
                         .btn-card {

@@ -1,8 +1,8 @@
 import styled from 'styled-components'; //Styled Components
 import Colors from '../constant/Colors'; //Var Colors 
 import Font from '../constant/Font'; //Var Fonts
-import banner1 from '../assets/home/banners/banner-1.png'; //Banner 1 Section
-import banner2 from '../assets/home/banners/banner-2-editada.png'; //Banner 2 Section
+import banner1 from '../assets/home/banners/banner-1.png'; //Banner 2 Section
+import banner2 from '../assets/home/banners/banner-2.png'; //Banner 1 Section
 import banner3 from '../assets/home/banners/banner-3.png'; //Banner 3 Section
 import banner4 from '../assets/home/banners/banner-4.png'; //Banner 4 Section
 
@@ -14,9 +14,10 @@ export const SectionHomeStyle = styled.section `
         .banner-welcome {
             width: 100%;
             height: 100dvh;
+            cursor: grab;
 
             .b1 {
-                background-image: url(${banner3});
+                background-image: url(${banner1});
                 background-position: center;
                 background-size: cover;
             }
@@ -28,7 +29,7 @@ export const SectionHomeStyle = styled.section `
             }
 
             .b3 {
-                background-image: url(${banner1});
+                background-image: url(${banner3});
                 background-position: center;
                 background-size: cover;
             }

@@ -6,7 +6,8 @@
         "country":"/src/assets/races/country/Mexico.svg", 
         "bg-txt":"/src/assets/races/country/Mexico.svg", 
         "race_track":"/src/assets/races/race-track/Mexico.svg",
-        "name":"Autódromo Hermanos Rodríguez" },
+        "name":"Autódromo Hermanos Rodríguez",
+        "txt":"/src/assets/races/text/Mexico.png"},
 
         { "id": 2, 
         "city": "Diriyah", 
@@ -14,7 +15,8 @@
         "country":"/src/assets/races/country/Saudi-Arabia.svg", 
         "bg-txt":"/src/assets/races/country/Saudi-Arabia.svg", 
         "race_track":"/src/assets/races/race-track/Al-Diriyah.svg",
-        "name":"Diriyah Street Circuit" },
+        "name":"Diriyah Street Circuit",
+        "txt":"/src/assets/races/text/Diriyah.png"},
 
         { "id": 3, 
         "city": "Diriyah", 
@@ -22,15 +24,17 @@
         "country":"/src/assets/races/country/Saudi-Arabia.svg", 
         "bg-txt":"/src/assets/races/country/Saudi-Arabia.svg", 
         "race_track":"/src/assets/races/race-track/Al-Diriyah.svg",
-        "name":"Diriyah Street Circuit" },
+        "name":"Diriyah Street Circuit",
+        "txt":"/src/assets/races/text/Diriyah.png"},
 
         { "id": 4, 
-        "city": "Sao Paulo", 
+        "city": "São Paulo", 
         "data":"Mar 16, 2024", 
         "country":"/src/assets/races/country/Brazil.svg",
         "bg-txt":"/src/assets/races/country/Brazil.svg",
         "race_track":"/src/assets/races/race-track/Sao-Paulo.svg",
-        "name":"Anhembi Sambadrome Circuit" },
+        "name":"Anhembi Sambadrome Circuit",
+        "txt":"/src/assets/races/text/Sao Paulo.png"},
 
         { "id": 5, 
         "city": "Tokio", 
@@ -38,7 +42,8 @@
         "country":"/src/assets/races/country/Japan.svg", 
         "bg-txt":"/src/assets/races/country/Japan.svg", 
         "race_track":"/src/assets/races/race-track/Tokio.svg",
-        "name":"Tokio Street Circuit" },
+        "name":"Tokio Street Circuit",
+        "txt":"/src/assets/races/text/Tokio.png"},
 
         { "id": 6, 
         "city": "Misano", 
@@ -46,7 +51,8 @@
         "country":"/src/assets/races/country/Italy.svg", 
         "bg-txt":"/src/assets/races/country/Italy.svg", 
         "race_track":"/src/assets/races/race-track/Misano.svg",
-        "name":"Misano World Circuit Marco Simoncelli" },
+        "name":"Misano World Circuit Marco Simoncelli",
+        "txt":"/src/assets/races/text/Misano.png"},
 
         { "id": 7, 
         "city": "Misano", 
@@ -54,7 +60,8 @@
         "country":"/src/assets/races/country/Italy.svg", 
         "bg-txt":"/src/assets/races/country/Italy.svg", 
         "race_track":"/src/assets/races/race-track/Misano.svg",
-        "name":"Misano World Circuit Marco Simoncelli" },
+        "name":"Misano World Circuit Marco Simoncelli",
+        "txt":"/src/assets/races/text/Misano.png"},
 
         { "id": 8, 
         "city": "Monaco", 
@@ -62,7 +69,8 @@
         "country":"/src/assets/races/country/Monaco.svg", 
         "bg-txt":"/src/assets/races/country/Monaco.svg", 
         "race_track":"/src/assets/races/race-track/Monaco.svg",
-        "name":"Circuito de Rua de Mônaco" },
+        "name":"Circuito de Rua de Mônaco",
+        "txt":"/src/assets/races/text/Monaco.png"},
 
         { "id": 9, 
         "city": "Berlim",
@@ -70,15 +78,17 @@
         "country":"/src/assets/races/country/Germany.svg", 
         "bg-txt":"/src/assets/races/country/Germany.svg", 
         "race_track":"/src/assets/races/race-track/Berlim.svg",
-        "name":"Tempelhof Airport Street Circuit" },
-
+        "name":"Tempelhof Airport Street Circuit",
+        "txt":"/src/assets/races/text/Berlim.png"},
+        
         { "id": 10, 
         "city": "Berlim", 
         "data":"May 12, 2024", 
         "country":"/src/assets/races/country/Germany.svg", 
         "bg-txt":"/src/assets/races/country/Germany.svg", 
         "race_track":"/src/assets/races/race-track/Berlim.svg",
-        "name":"Tempelhof Airport Street Circuit" },
+        "name":"Tempelhof Airport Street Circuit",
+        "txt":"/src/assets/races/text/Berlim.png"},
 
         { "id": 11, 
         "city": "Shangai", 
@@ -86,7 +96,8 @@
         "country":"/src/assets/races/country/China.svg", 
         "bg-txt":"/src/assets/races/country/China.svg", 
         "race_track":"/src/assets/races/race-track/Shangai.svg",
-        "name":"Shangai Street Circuit" },
+        "name":"Shangai Street Circuit",
+        "txt":"/src/assets/races/text/Shangai.png"},
 
         { "id": 12, 
         "city": "Shangai", 
@@ -94,7 +105,8 @@
         "country":"/src/assets/races/country/China.svg", 
         "bg-txt":"/src/assets/races/country/China.svg", 
         "race_track":"/src/assets/races/race-track/Shangai.svg",
-        "name":"Shangai Street Circuit" },
+        "name":"Shangai Street Circuit",
+        "txt":"/src/assets/races/text/Shangai.png"},
         
         { "id": 13, 
         "city": "Portland", 
@@ -102,7 +114,8 @@
         "country":"/src/assets/races/country/United-States.svg", 
         "bg-txt":"/src/assets/races/country/United-States.svg", 
         "race_track":"/src/assets/races/race-track/Portland.svg",
-        "name":"Portland International Raceway" },
+        "name":"Portland International Raceway",
+        "txt":"/src/assets/races/text/Portland.png"},
 
         { "id": 14, 
         "city": "Portland",
@@ -110,7 +123,8 @@
         "country":"/src/assets/races/country/United-States.svg", 
         "bg-txt":"/src/assets/races/country/United-States.svg", 
         "race_track":"/src/assets/races/race-track/Portland.svg",
-        "name":"Portland International Raceway" },
+        "name":"Portland International Raceway",
+        "txt":"/src/assets/races/text/Portland.png"},
 
         { "id": 15, 
         "city": "London", 
@@ -118,7 +132,8 @@
         "country":"/src/assets/races/country/United-Kingdom.svg",
         "bg-txt":"/src/assets/races/country/United-Kingdom.svg",
         "race_track":"/src/assets/races/race-track/London.svg",
-        "name":"ExCeL London Street Circuit" },
+        "name":"ExCeL London Street Circuit",
+        "txt":"/src/assets/races/text/London.png"},
 
         { "id": 16, 
         "city": "London", 
@@ -126,6 +141,7 @@
         "country":"/src/assets/races/country/United-Kingdom.svg", 
         "bg-txt":"/src/assets/races/country/United-Kingdom.svg", 
         "race_track":"/src/assets/races/race-track/London.svg",
-        "name":"ExCeL London Street Circuit" }
+        "name":"ExCeL London Street Circuit",
+        "txt":"/src/assets/races/text/London.png"}
     ]
 }

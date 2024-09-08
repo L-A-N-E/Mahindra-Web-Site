@@ -80,7 +80,7 @@ const SectionRaces = () => {
                                 {/* Position End */}
                                 <div className='end-card'>
                                     <div className='city'>
-                                        <h1>{race.city}</h1>
+                                        <img src={race.txt} alt={`${race.city} Flag`} />
                                     </div>
 
                                     <div className='btn-card'>
