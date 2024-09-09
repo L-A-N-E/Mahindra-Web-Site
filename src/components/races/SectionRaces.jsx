@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { SectionRacesStyle } from '../styles/SectionRacesStyle'
-import Arrow from '../assets/footer/arrow.svg'
+import { SectionRacesStyle } from '../../styles/SectionRacesStyle'
+import Arrow from '../../assets/footer/arrow.svg'
 
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'

@@ -1,5 +1,5 @@
 import React from 'react';
-import SectionRaces from '../components/SectionRaces';
+import SectionRaces from '../components/races/SectionRaces';
 
 const Races = () => {
 

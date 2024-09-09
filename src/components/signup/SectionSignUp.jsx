@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoginStyleSignUp } from '../styles/LoginStyle'
+import { LoginSignUpStyle } from '../../styles/LoginSignUpStyle';
 import { useTranslation } from 'react-i18next';
-import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'
-import LogoGoogle from '../assets/login/logo-google.svg'
-import { handleSignUp,googleSignIn } from '../utils/authUtils';
+import LogoMahindra from '../../assets/header/logo/mahindra-logo-new.svg'
+import LogoGoogle from '../../assets/login_signup/logo-google.svg'
+import { handleSignUp,googleSignIn } from '../../utils/authUtils';
 import { useNavigate } from 'react-router-dom';
 
 const SectionSignUp = () => {
@@ -29,7 +29,7 @@ const SectionSignUp = () => {
 
     return (
         <>
-        <LoginStyleSignUp>
+        <LoginSignUpStyle>
             <section>
                 {/* Left */}
                 <div id='left-login-sign-up'></div>
@@ -65,7 +65,7 @@ const SectionSignUp = () => {
                     </div>
                 </div>
             </section>
-        </LoginStyleSignUp>
+        </LoginSignUpStyle>
         </>
     )
 }

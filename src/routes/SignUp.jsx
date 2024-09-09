@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionSignUp from '../components/SectionSignUp'
+import SectionSignUp from '../components/signup/SectionSignUp'
 
 const SignUp = () => {
   return (
