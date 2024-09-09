@@ -1,9 +1,9 @@
 import styled from 'styled-components'; //Styled Components
 import Colors from '../constant/Colors'; //Var Colors 
 import Font from '../constant/Font';  //Var Fonts
-import Background from '../assets/home/banners/banner-3.png' //Background Section
+import Background from '../assets/login_signup/background.png' //Background Section
 
-export const LoginStyleSignUp = styled.section `
+export const LoginSignUpStyle = styled.section `
 
     section {
         height: 100vh;
