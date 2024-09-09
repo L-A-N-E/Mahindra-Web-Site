@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionLogin from '../components/SectionLogin'
+import SectionLogin from '../components/login/SectionLogin'
 
 const Login = () => {
 

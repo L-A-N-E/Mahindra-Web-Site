@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { SectionPilotsStyle } from '../styles/SectionPilotsStyle';
+import { SectionPilotsStyle } from '../../styles/SectionPilotsStyle';
 import { Link } from 'react-router-dom';
 
 const SectionPilots = () => {

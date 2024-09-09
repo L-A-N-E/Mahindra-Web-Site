@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Navigation } from 'swiper/modules';
 import 'swiper/css/navigation';
 import 'swiper/css'
-import { SectionHomeStyle } from '../styles/SectionHomeStyle'
+import { SectionHomeStyle } from '../../styles/SectionHomeStyle'
 
 const SectionHome = () => {
 

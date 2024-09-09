@@ -1,5 +1,5 @@
 import React from 'react'
-import { SectionAboutStyle } from '../styles/SectionAboutStyle'
+import { SectionAboutStyle } from '../../styles/SectionAboutStyle'
 import { useTranslation } from 'react-i18next'
 
 const SectionAbout = () => {
