@@ -8,6 +8,7 @@ export const LoadingStyle = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 999999999;
 
     .loader {
         width: 8vmax;

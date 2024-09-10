@@ -1,18 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { NavStyle } from '../styles/NavStyle';
-import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
-import Arrow from '../assets/footer/arrow.svg'
+import { Container, NavClose, NavOpen, OpenButton, ArrowIcon, NavTop, NavMid, NavBottom, Logo } from '../styles/NavStyle'; // Importando os componentes estilizados
+import Arrow from '../assets/footer/arrow.svg'; // Supondo que Arrow é uma imagem
+import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'; // Supondo que esta seja a logo1
 
 const Nav = () => {
+    const [isOpen, setIsOpen] = useState(false);
 
-     // Select Language
+    const toggleNav = () => {
+        setIsOpen(!isOpen);
+    };
+
+    // Select Language
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
-    
+
     // Show Options
     const [showLanguages, setShowLanguages] = useState(false);
     const handleMouseEnter = () => {
@@ -22,85 +28,64 @@ const Nav = () => {
         setShowLanguages(false);
         setShowMobile(false);
     };
-    
-    // Show Mobile
-    const [showMobile, setShowMobile] = useState(false);
-    const toggleMenu = () => {
-        setShowMobile(!showMobile);
-    }; 
 
     return (
-        <>
-        
-        <NavStyle>
-                <header>
-                    {/* Left (Logo Mahindra) */}
-                    <div id='left-nav'>
-                        <a href='https://www.mahindraracing.com/' target='_blank'><img src={logoMahindra} alt='Logo Mahindra' /></a>
-                    </div>
+        <Container>
+            {/* Menu lateral (NavMenu) */}
+            <NavClose isOpen={isOpen}>
+                <OpenButton onClick={toggleNav}>
+                    <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow" />
+                </OpenButton>
+            </NavClose>
 
-                    {/* Right (Nav Desktop and Nav Mobile) */}
-                    <div id='right-nav'>
-                        {/* Nav Desktop */}
-                        <nav id='nav-desktop'>
-                            <ul>
-                                <li><a href='/'>{t('home')}</a></li>
-                                <li><a href='/'>{t('about')}</a></li>
-                                <li><a href='/'>{t('pilots')}</a></li>
-                                <li><a href='/'>{t('ecotracer')}</a></li>
+            {/* Menu de navegação principal (NavStyle) */}
+            <NavOpen isOpen={isOpen}>
 
-                                {/* Language */}
-                                <div className='content-lng' onMouseEnter={handleMouseEnter}>
-                                    <li className='lgn-li'>
-                                        <img className='arrow-rotation' src={Arrow} alt='' />
-                                        <a href=''>{t('language')}</a>
-                                    </li>
-                                    {showLanguages && (
-                                        <ul onMouseLeave={handleMouseLeave}>
-                                            <li><button onClick={() => changeLanguage('en')}>{t('english')}</button></li>
-                                            <li><button onClick={() => changeLanguage('pt')}>{t('portuguese')}</button></li>
-                                            <li><button onClick={() => changeLanguage('es')}>{t('spanish')}</button></li>
-                                        </ul>
-                                    )}
-                                </div>
-                            </ul>
-                        </nav>
+                {/* Seção Topo */}
+                <NavTop>
+                    {/* Botão para fechar o menu */}
+                    <OpenButton onClick={toggleNav}>
+                        <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow" />
+                    </OpenButton>
 
-                        {/* Menu Hambúrguer (Mobile) */}
-                        <div id='hamburger-menu' onClick={toggleMenu}>
-                            <div className={showMobile ? 'bar open' : 'bar'}></div>
-                            <div className={showMobile ? 'bar open' : 'bar'}></div>
-                            <div className={showMobile ? 'bar open' : 'bar'}></div>
+                    {/* Logo */}
+                    <Logo src={LogoMahindra} alt="Logo" />
+                </NavTop>
+
+                {/* Seção do Meio */}
+                <NavMid>
+                    <ul>
+                        {/* Language */}
+                        <div className='content-lng' onClick={handleMouseEnter}>
+                            <li className='lgn-li'>
+                                <img src={Arrow} alt="Arrow" />
+                                <li>Language</li>
+                            </li>
+                            {showLanguages && (
+                                <ul>
+                                    <li><Link>English</Link></li>
+                                    <li><Link>Portuguese</Link></li>
+                                    <li><Link>Spanish</Link></li>
+                                </ul>
+                            )}
                         </div>
 
-                        {/* Nav Mobile */}
-                        <nav id='nav-mobile' className={showMobile ? 'open' : ''}>
-                            <ul>
-                                <li><a href='#'>{t('home')}</a></li>
-                                <li><a href='#'>{t('about')}</a></li>
-                                <li><a href='#'>{t('pilots')}</a></li>
-                                <li><a href='#'>{t('ecotracer')}</a></li>
+                        {/* Others Links */}
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/services">Services</Link></li>
+                        <li><Link to="/portfolio">Portfolio</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/faq">FAQ</Link></li>
+                        
+                    </ul>
+                </NavMid>
 
-                                {/* Language */}
-                                <div className='content-lng' onMouseEnter={handleMouseEnter}>
-                                    <li className='lgn-li'>
-                                        <img src={Arrow} alt="" />
-                                        <p>{t('language')}</p>
-                                    </li>
-                                    {showLanguages && (
-                                        <ul onMouseLeave={handleMouseLeave}>
-                                            <li><button onClick={() => changeLanguage('en')}>{t('english')}</button></li>
-                                            <li><button onClick={() => changeLanguage('pt')}>{t('portuguese')}</button></li>
-                                            <li><button onClick={() => changeLanguage('es')}>{t('spanish')}</button></li>
-                                        </ul>
-                                    )}
-                                </div>
-                            </ul>
-                        </nav>
-                    </div>
-                </header>
-            </NavStyle>
-        </>
+                {/* Seção Inferior */}
+                <NavBottom />
+            </NavOpen>
+        </Container>
     );
 };
 
