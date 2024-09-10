@@ -20,9 +20,9 @@ export const FooterStyle = styled.footer `
         /* Div Left */
         #footer-left {
             display: flex;
-            width: 50%;
+            width: 70%;
             align-items: center;
-            justify-content: space-around;
+            justify-content: space-evenly;
 
             .position-logo {
                 .container-logo{
@@ -93,7 +93,7 @@ export const FooterStyle = styled.footer `
 
 /* Responsive for Tablets */
 
-@media (max-width:1000px) {
+@media (max-width:1100px) {
     footer {
         #footer-left {
             width: 100%;

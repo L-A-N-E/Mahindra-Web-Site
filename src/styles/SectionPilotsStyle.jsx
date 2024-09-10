@@ -16,7 +16,7 @@ export const SectionPilotsStyle = styled.section`
 
         /* Background */
         .background-pilots {
-            background-position: center;
+            background-position: top;
             background-size: cover;
             display: flex;
             align-items: end;
@@ -83,7 +83,7 @@ export const SectionPilotsStyle = styled.section`
     }
 
 /* Response Tablet */
-@media (max-width: 900px){
+@media (max-width: 1000px){
     section {
         height: 60dvh;
 
@@ -99,7 +99,7 @@ export const SectionPilotsStyle = styled.section`
 };
 
 /* Response Mobile */
-@media (max-width: 600px){
+@media (max-width: 1100px){
 
     section {
         display: flex;
