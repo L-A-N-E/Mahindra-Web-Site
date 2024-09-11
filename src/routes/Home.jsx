@@ -3,12 +3,10 @@ import SectionHome from '../components/home/SectionHome';
 import SectionAbout from '../components/home/SectionAbout';
 import SectionPilots from '../components/home/SectionPilots';
 import SectionEcotracer from '../components/home/SectionEcotracer';
-import {HomeStyle} from '../styles/HomeStyle'
 
 const Home = () => {
   return (
     <>
-    <HomeStyle>
       {/* Section Home */}
       <SectionHome />
       {/* Section About */}
@@ -17,7 +15,6 @@ const Home = () => {
       <SectionPilots />
       {/* Section Ecotracer */}
       <SectionEcotracer />
-    </HomeStyle>
     </>
   )
 }

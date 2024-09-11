@@ -5,147 +5,122 @@ import bgFooter from '../assets/footer/bg.png' //Background Footer
 
 
 export const FooterStyle = styled.footer `
+    display: flex;
+    height: 400px;
+    width: 100%;
+    color: ${Colors.white};
+    font-size: ${Font.txt_12};
+    text-transform: uppercase;
+    background-image:url(${bgFooter});
+    background-position: center;
+    background-size: cover;
+`
+export const FooterLeft = styled.div `
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-evenly;
 
-    footer {
-        height: 400px;
+    @media (max-width:1100px) {
         width: 100%;
-        color: ${Colors.white};
-        font-size: ${Font.txt_12};
+    }
+
+    @media (max-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto auto; 
+        padding: 2rem 0;
+        gap: 1rem;
+    }
+`
+
+export const FooterRight = styled.div `
+    background: transparent;
+    `
+
+export const FooterPosition = styled.div `
+    display: flex;
+    align-items: start;
+    height: 30%;
+
+    @media (max-width: 600px) {
+        grid-column: 1 / -1; 
+        grid-row: 1 / 2; 
+        text-align: center;
+        padding: 1rem;
+    }
+`
+export const FooterInfo = styled.div `
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media (max-width: 600px) {
+        width: 100%;
+        align-items: center;
+        img {
+            width: 200px;
+        }
+    }
+`
+
+
+export const FooterColumn = styled.div  `
+    display: flex;
+    align-items: start;
+    height: 30%;
+
+    @media (max-width: 600px) {
+        height: 100%;
+        justify-content: space-around;
+    }
+
+`
+
+export const FooterContainerItems = styled.div `
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+`
+
+export const FooterItems = styled.div `
+    display: flex;
+    gap: 0.3rem;
+    cursor:pointer;
+
+    h4 {
+        text-decoration: none;
+        list-style: none;
         text-transform: uppercase;
-        display: flex;
-        background-image:url(${bgFooter});
-        background-position: center;
-        background-size: cover;
-        
-        /* Div Left */
-        #footer-left {
-            display: flex;
-            width: 70%;
-            align-items: center;
-            justify-content: space-evenly;
+        font-size: ${Font.txt_12};
+        color: ${Colors.off_white};
+        position: relative;
+        display: inline-block;
+        font-weight: 300;
+    }
 
-            .position-logo {
-                .container-logo{
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.5rem;
-                }
-            }
-
-            .position-item {
-                display: flex;
-                align-items: start;
-                height: 30%;
-                
-                .footer-container {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 1rem;
-                }
-
-                .item-footer {
-                    display: flex;
-                    gap: 0.3rem;
-                    cursor:pointer;
-
-                    h4 {
-                        text-decoration: none;
-                        list-style: none;
-                        text-transform: uppercase;
-                        font-size: ${Font.txt_12};
-                        color: ${Colors.off_white};
-                        position: relative;
-                        display: inline-block;
-                        font-weight: 300;
-                    }
-
-                    /* Effect Hover Line */
-                    h4::after {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        bottom: -3px;
-                        width: 0;
-                        height: 1px;
-                        background-color: ${Colors.red_1};
-                        transition: width 0.3s ease-in-out;
-                    }
-
-                    h4:hover::after {
-                        width: 100%;
-                    }
-
-                    /* Effect Rotation Arrow */
-                    .arrow-rotation {
-                        transition: transform 0.3s ease-in-out;
-                    }
-
-                    &:hover .arrow-rotation {
-                        transform: rotate(90deg);
-                    }
-                }
-
-            }
+        /* Effect Hover Line */
+        h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0;
+            height: 1px;
+            background-color: ${Colors.red_1};
+            transition: width 0.3s ease-in-out;
         }
 
-    }
-    
-
-/* Responsive for Tablets */
-
-@media (max-width:1100px) {
-    footer {
-        #footer-left {
+        h4:hover::after {
             width: 100%;
         }
-        #footer-right {
-            display: none;
+
+        /* Effect Rotation Arrow */
+        .arrow-rotation {
+            transition: transform 0.3s ease-in-out;
         }
-    }
-}
 
-/* Responsive for Mobile */
-
-@media (max-width: 500px) {
-    footer {
-        #footer-left {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            grid-template-rows: auto auto; 
-            padding: 2rem 0;
-
-        
-            .position-logo {
-                grid-column: 1 / -1; 
-                grid-row: 1 / 2; 
-                text-align: center;
-                padding: 1rem;
-
-                .container-logo {
-                    align-items: center;
-                    img {
-                        width: 200px;
-                    }
-                }
-            }
-
-            .position-item {
-                height: 100%;
-                justify-content: space-around;
-            }
-
-            .position-item:nth-child(2) {
-                grid-column: 1 / 2;
-                grid-row: 2 / 3;
-            }
-
-            .position-item:nth-child(1) {
-                grid-column: 2 / 3;
-                grid-row: 2 / 3;
-            }
+        &:hover .arrow-rotation {
+            transform: rotate(90deg);
         }
-    }
-
-}
-
 `
