@@ -62,7 +62,7 @@ export const LoginSignUpStyle = styled.section `
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 1rem;
+                    gap: 2rem;
                     
                     /* Forms Login */
                     form {
@@ -76,16 +76,20 @@ export const LoginSignUpStyle = styled.section `
                         input {
                             width: 100%;
                             background-color: transparent;
-                            border: 1px solid ${Colors.white};
+                            border:none;
+                            border-bottom: 1px solid ${Colors.white};
                             color: ${Colors.white};
-                            border-radius: 40px;
                             padding: 1rem 2rem;
+                            outline:none;
+                            font-size:${Font.txt_12};
+                            letter-spacing:1.5px;
                         }
                         
                         /* Placeholder */
                         input::placeholder {
                             color: ${Colors.white}
                         }
+                        
                         
                         /* Forgot Password */
                         a {
@@ -113,6 +117,7 @@ export const LoginSignUpStyle = styled.section `
                             background-size: 200% 100%;
                             background-position: right bottom;
                             transition: background-position 0.5s ease-in-out;
+                            margin-top:1.3rem;
                         }
                         
                         button:hover {
