@@ -31,7 +31,7 @@ const router = createBrowserRouter ([
       {path: '/race-track', element: <RaceTrack/>,
 
         children: [
-          {path: '/race-track/:slug', element: <RacesTracks/>}
+          {path: '/race-track/:slug', element: <RacesTracks/>} // Races Tracks
         ]},
 
       {path: '/car', element: <Car/>}, // Car
