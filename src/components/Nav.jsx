@@ -79,12 +79,12 @@ const Nav = () => {
                         <div className='content-lng' onClick={handleMouseEnter} ref={menuRef}>
                             <li className='lgn-li'>
                                 <img src={Arrow} alt="Arrow" />
-                                <li>Language</li>
+                                <li>{t("language")}</li>
                             </li>
                             <ul className='lgn-link'>
-                                <li><Link>English</Link></li>
-                                <li><Link>Portuguese</Link></li>
-                                <li><Link>Spanish</Link></li>
+                                <li><Link>{t("english")}</Link></li>
+                                <li><Link>{t("portuguese")}</Link></li>
+                                <li><Link>{t("spanish")}</Link></li>
                             </ul>
                         </div>
 

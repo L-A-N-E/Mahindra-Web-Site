@@ -118,7 +118,7 @@ export const NavMid = styled.div`
             }
             /* Transicao e movimento suave */
             .lgn-link{
-                margin: 10px 0 0 20px;
+                margin: 20px 0 0 20px;
                 visibility: ${({showLanguages}) => (showLanguages ?'visible' : 'hidden')};
                 opacity: ${({ showLanguages }) => (showLanguages ? '1' : '0')}; 
                 transform: ${({ showLanguages }) => (showLanguages ? 'translateY(0)' : 'translateY(-10px)')}; 
