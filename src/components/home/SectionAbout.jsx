@@ -1,5 +1,5 @@
 import React from 'react'
-import { SectionAboutStyle } from '../../styles/SectionAboutStyle'
+import { SectionAboutStyle, AboutContainer, AboutContent} from '../../styles/SectionAboutStyle'
 import { useTranslation } from 'react-i18next'
 
 const SectionAbout = () => {
@@ -12,17 +12,15 @@ const SectionAbout = () => {
   return (
     <>
     <SectionAboutStyle>
-        <section id='about'>
           {/* Container */}
-          <div id='about-container'>
+          <AboutContainer>
             {/* Content */}
-            <div id='about-content'>
+            <AboutContent>
               <h1>{t('about')}</h1>
               <p>{t('text-about')}</p>
               <a href="https://www.mahindraracing.com/" target="_blank"><button>{t('read-more')}</button></a>    
-            </div>
-          </div>
-        </section>
+            </AboutContent>
+          </AboutContainer>
       </SectionAboutStyle>
     </>
   )

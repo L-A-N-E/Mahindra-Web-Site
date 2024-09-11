@@ -45,7 +45,7 @@ const Nav = () => {
             {/* Menu lateral (NavMenu) */}
             <NavClose isOpen={isOpen}>
                 <OpenButton onClick={toggleNav}>
-                    <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow" />
+                    <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow"/>
                 </OpenButton>
             </NavClose>
 
@@ -56,7 +56,7 @@ const Nav = () => {
                 <NavTop>
                     {/* Botão para fechar o menu */}
                     <OpenButton onClick={toggleNav}>
-                        <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow" />
+                        <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow"/>
                     </OpenButton>
 
                     {/* Logo */}
@@ -67,11 +67,13 @@ const Nav = () => {
                 <NavMid showLanguages={showLanguages}>
                     <ul>
                         {/* Others Links */}
-                        <li><Link to="/">{t("home")}</Link></li>
-                        <li><Link to="/about">{t("about")}</Link></li>
-                        <li><Link to="/services">Services</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
+
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/app-mobile">App Mobile</Link></li>
+                        <li><Link to="/edoardo-mortara">Edoardo Mortara</Link></li>
+                        <li><Link to="/nicky-de-vries">Nicky de Vries</Link></li>
+                        <li><Link to="/services">Races</Link></li>
+                        <li><Link to="/car">Car</Link></li>
                         <li><Link to="/faq">FAQ</Link></li>
                         
                         {/* Language */}

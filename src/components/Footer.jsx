@@ -1,7 +1,7 @@
 import React from 'react'
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 import { Link } from 'react-router-dom';
-import { FooterStyle } from '../styles/FooterStyle';
+import { FooterStyle, FooterLeft, FooterRight, FooterPosition, FooterInfo, FooterColumn, FooterContainerItems, FooterItems } from '../styles/FooterStyle';
 import arrowFooter from '../assets/footer/arrow.svg'
 import { useTranslation } from 'react-i18next'
 
@@ -16,107 +16,113 @@ const Footer = () => {
   return (
     <>
     <FooterStyle>
-        <footer>
+
             {/* Left Footer */}
-            <div id='footer-left'>
+            <FooterLeft>
               
               {/* Logo */}
-              <div className='position-logo'>
-                {/* Container */}
-                <div className='container-logo'>
-                  <img src={logoMahindra} alt='' />
-                  <h5>{t('rights')}</h5>
-                  <h5>LANE</h5>
-                </div>
-              </div>
+              <FooterPosition>  
+
+                {/* Info */}
+                <FooterInfo>
+                    <img src={logoMahindra} alt='' />
+                    <h5>{t('rights')}</h5>
+                    <h5>LANE</h5>
+                </FooterInfo>
+
+              </FooterPosition>
 
               {/* Column 1 */}
-              <div className='position-item'>
+              <FooterColumn>
 
                 {/* Items */}
-                <div className='footer-container'>
+                <FooterContainerItems>
 
                   {/* Races */}
                   <Link to='/races' className='txt-none' onClick={() => window.location.href = '/races'}>
-                    <div className='item-footer'>
+                    <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('races')}</h4>
-                    </div>
+                    </FooterItems>
                   </Link>
 
                   {/* Car */}
                   <Link to='/car' className='txt-none' onClick={() => window.location.href = '/car'}>
-                    <div className='item-footer'>
+                    <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('car')}</h4>
-                    </div>
+                    </FooterItems>
                   </Link>
 
 
                   {/* Mahindra */}
                   <Link to='/' className='txt-none'>
-                    <div className='item-footer'>
+                    <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('mahindra')}</h4>
-                    </div>
+                    </FooterItems>
                   </Link>
 
                   {/* Formula E */}
                   <Link to='/' className='txt-none'>
-                    <div className='item-footer'>
+                    <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('formula-e')}</h4>
-                    </div>
+                    </FooterItems>
                   </Link>
 
                   {/* FIA */}
                   <Link to='/' className='txt-none'>
-                    <div className='item-footer'>
+                    <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('fia')}</h4>
-                    </div>
+                    </FooterItems>
                   </Link>
-                </div>
-              </div>
+
+                </FooterContainerItems>
+
+              </FooterColumn>
 
               {/* Column 2 */}
-              <div className='position-item'>
+              <FooterColumn>
 
                 {/* Items */}
-                <div className='footer-container'>
+                <FooterContainerItems>
 
                   {/* App Mobile */}
                   <Link to='/mobile-app' className='txt-none' onClick={() => window.location.href = '/app-mobile'}>
-                    <div className='item-footer'>
+                    <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('mobile-app')}</h4>
-                    </div>
+                    </FooterItems>
                   </Link>
 
                   {/* Sign Up */}
                   <Link to='/sign-up' className='txt-none' onClick={() => window.location.href = '/sign-up'}>
-                    <div className='item-footer'>
+                    <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('signup')}</h4>
-                    </div>
+                    </FooterItems>
                   </Link>           
 
                   {/* Login */}
                   <Link to='/login' className='txt-none' onClick={() => window.location.href = '/login'}>
-                    <div className='item-footer'>
+                    <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('login')}</h4>
-                    </div>
+                    </FooterItems>
                   </Link>
-                </div>
-              </div>
-            </div>
+
+                </FooterContainerItems>
+
+              </FooterColumn>
+
+            </FooterLeft>
 
             {/* Right Footer */}
-            <div id='footer-right'>
-            </div>
-        </footer>
-      </FooterStyle>
+            <FooterRight/>
+
+    </FooterStyle>
     </>
   )
 }
