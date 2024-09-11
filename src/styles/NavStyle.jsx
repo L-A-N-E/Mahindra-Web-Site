@@ -29,6 +29,7 @@ export const NavClose = styled.div`
     transform: ${({ isOpen }) => (isOpen ? 'translateX(-60px)' : 'translateX(0)')};
 `;
 
+
 // Menu Open
 export const NavOpen = styled.nav`
     position: fixed;
@@ -46,6 +47,15 @@ export const NavOpen = styled.nav`
     z-index: 9999;
     `;
 
+
+// Arrow
+export const ArrowIcon = styled.img`
+    width: 20px;
+    height: auto;
+    transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+    transition: transform 0.3s ease-in-out;
+`;
+
 // Logo Mahindra
 export const Logo = styled.img`
     height: 20px;
@@ -60,13 +70,6 @@ export const OpenButton = styled.button`
     cursor: pointer;
 `;
 
-// Arrow
-export const ArrowIcon = styled.img`
-    width: 20px;
-    height: auto;
-    transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
-    transition: transform 0.3s ease-in-out;
-`;
 
 // Section Top
 export const NavTop = styled.div`

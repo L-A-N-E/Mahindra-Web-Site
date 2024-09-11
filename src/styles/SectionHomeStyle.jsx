@@ -7,14 +7,12 @@ import banner3 from '../assets/home/banners/banner-3.png'; //Banner 3 Section
 import banner4 from '../assets/home/banners/banner-4.png'; //Banner 4 Section
 
 export const SectionHomeStyle = styled.section `
-
-    section {
         background-color: ${Colors.black};
 
-        .banner-welcome {
+        .swiper {
             width: 100%;
             height: 100dvh;
-            cursor: grab;
+            
 
             .b1 {
                 background-image: url(${banner1});
@@ -39,55 +37,35 @@ export const SectionHomeStyle = styled.section `
                 background-position: center;
                 background-size: cover;
             }
-
-            .banner {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
-
-            .txt-center-home {
-                color: ${Colors.white};
-                text-transform: uppercase;
-                text-align: center;
-                text-shadow: 2px 2px 10px ${Colors.shadow};
-
-                #txt-rise {
-                    font-size: ${Font.txt_70};
-                    font-weight: 700;
-                }
-
-                #txt-race {
-                    font-size: ${Font.txt_30};
-                    font-weight: 600;
-                }
-            }
         }
-    }
 
+
+
+    .swiper-pagination-bullet{
+        background-color: ${Colors.red_1};
+        transition: ease-in-out 0.2s;
+    }
+    
 
 
     .swiper-button-prev {
-        color: ${Colors.off_white};
-        transition: ease-in-out 0.2s;
+        display: none;
     }
 
     .swiper-button-prev:hover {
-        color: ${Colors.red_1};
-        transition: ease-in-out 0.3s;
+        display: none;
     }
 
     .swiper-button-disabled {
-        color: ${Colors.white};
+        display: none;
     }
 
     .swiper-button-next {
-        color: ${Colors.white};
-        transition: ease-in-out 0.2s;
+
+        display: none;
     }
 
     .swiper-button-next:hover {
-        color: ${Colors.red_1};
-        transition: ease-in-out 0.3s;
+        display: none;
     }
 `
