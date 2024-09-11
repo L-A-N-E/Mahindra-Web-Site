@@ -81,9 +81,9 @@ const Nav = () => {
                                 <li>{t("language")}</li>
                             </li>
                             <ul className='lgn-link'>
-                                <li onClick={() => changeLanguage('en')}><Link>{t("english")}</Link></li>
-                                <li onClick={() => changeLanguage('pt')}><Link>{t("portuguese")}</Link></li>
-                                <li onClick={() => changeLanguage('es')}><Link>{t("spanish")}</Link></li>
+                                <li onClick={() => changeLanguage('en')}><a>{t("english")}</a></li>
+                                <li onClick={() => changeLanguage('pt')}><a>{t("portuguese")}</a></li>
+                                <li onClick={() => changeLanguage('es')}><a>{t("spanish")}</a></li>
                             </ul>
                         </div>
 
