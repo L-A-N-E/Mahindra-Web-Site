@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Container, NavClose, NavOpen, OpenButton, ArrowIcon, NavTop, NavMid, NavBottom, Logo } from '../styles/NavStyle'; // Importando os componentes estilizados
@@ -21,13 +21,24 @@ const Nav = () => {
 
     // Show Options
     const [showLanguages, setShowLanguages] = useState(false);
+    const menuRef = useRef(null);
+
+    // Alterna o estado showLanguages quando o menu é clicado
     const handleMouseEnter = () => {
-        setShowLanguages(true);
+        setShowLanguages(prevState => !prevState);
     };
-    const handleMouseLeave = () => {
-        setShowLanguages(false);
-        setShowMobile(false);
+
+    // Verifica se o clique foi fora do elemento referenciado. Se for, oculta o menu.
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setShowLanguages(false);
+        }
     };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     return (
         <Container>
@@ -53,24 +64,10 @@ const Nav = () => {
                 </NavTop>
 
                 {/* Seção do Meio */}
-                <NavMid>
+                <NavMid showLanguages={showLanguages}>
                     <ul>
-                        {/* Language */}
-                        <div className='content-lng' onClick={handleMouseEnter}>
-                            <li className='lgn-li'>
-                                <img src={Arrow} alt="Arrow" />
-                                <li>Language</li>
-                            </li>
-                            {showLanguages && (
-                                <ul>
-                                    <li><Link>English</Link></li>
-                                    <li><Link>Portuguese</Link></li>
-                                    <li><Link>Spanish</Link></li>
-                                </ul>
-                            )}
-                        </div>
-
                         {/* Others Links */}
+
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/app-mobile">App Mobile</Link></li>
                         <li><Link to="/edoardo-mortara">Edoardo Mortara</Link></li>
@@ -79,6 +76,19 @@ const Nav = () => {
                         <li><Link to="/car">Car</Link></li>
                         <li><Link to="/faq">FAQ</Link></li>
                         
+                        {/* Language */}
+                        <div className='content-lng' onClick={handleMouseEnter} ref={menuRef}>
+                            <li className='lgn-li'>
+                                <img src={Arrow} alt="Arrow" />
+                                <li>{t("language")}</li>
+                            </li>
+                            <ul className='lgn-link'>
+                                <li onClick={() => changeLanguage('en')}><a>{t("english")}</a></li>
+                                <li onClick={() => changeLanguage('pt')}><a>{t("portuguese")}</a></li>
+                                <li onClick={() => changeLanguage('es')}><a>{t("spanish")}</a></li>
+                            </ul>
+                        </div>
+
                     </ul>
                 </NavMid>
 

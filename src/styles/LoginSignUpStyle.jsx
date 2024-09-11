@@ -62,7 +62,7 @@ export const LoginSignUpStyle = styled.section `
                     display: flex;
                     flex-direction: column;
                     align-items: center;
-                    gap: 1rem;
+                    gap: 2rem;
                     
                     /* Forms Login */
                     form {
@@ -70,16 +70,18 @@ export const LoginSignUpStyle = styled.section `
                         display: flex;
                         flex-direction: column;
                         align-items: center;
-                        gap: 1rem;
+                        gap: 1.5rem;
                         
                         /* Username & Password */
                         input {
                             width: 100%;
                             background-color: transparent;
-                            border: 1px solid ${Colors.white};
+                            border:none;
+                            border-bottom: 1px solid ${Colors.white};
                             color: ${Colors.white};
-                            border-radius: 40px;
                             padding: 1rem 2rem;
+                            outline:none;
+                            letter-spacing:1.3px;
                         }
                         
                         /* Placeholder */
@@ -92,6 +94,7 @@ export const LoginSignUpStyle = styled.section `
                             text-decoration: none;
                             color: ${Colors.white};
                             transition: all 0.3s;
+                            margin-top:1rem;
                         }
                         
                         a:hover {
@@ -113,6 +116,7 @@ export const LoginSignUpStyle = styled.section `
                             background-size: 200% 100%;
                             background-position: right bottom;
                             transition: background-position 0.5s ease-in-out;
+                            margin-top:1rem;
                         }
                         
                         button:hover {
