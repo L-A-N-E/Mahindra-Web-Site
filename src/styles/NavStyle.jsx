@@ -123,6 +123,7 @@ export const NavMid = styled.div`
                 opacity: ${({ showLanguages }) => (showLanguages ? '1' : '0')}; 
                 transform: ${({ showLanguages }) => (showLanguages ? 'translateY(0)' : 'translateY(-10px)')}; 
                 transition: opacity 0.3s ease, transform 0.3s ease;
+                cursor:pointer;
             }
         }
     }
