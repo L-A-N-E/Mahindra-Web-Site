@@ -64,7 +64,7 @@ const Nav = () => {
                 </NavTop>
 
                 {/* Seção do Meio */}
-                <NavMid>
+                <NavMid showLanguages={showLanguages}>
                     <ul>
                         {/* Others Links */}
                         <li><Link to="/">Home</Link></li>
@@ -81,13 +81,11 @@ const Nav = () => {
                                 <img src={Arrow} alt="Arrow" />
                                 <li>Language</li>
                             </li>
-                            {showLanguages && (
-                                <ul>
-                                    <li><Link>English</Link></li>
-                                    <li><Link>Portuguese</Link></li>
-                                    <li><Link>Spanish</Link></li>
-                                </ul>
-                            )}
+                            <ul className='lgn-link'>
+                                <li><Link>English</Link></li>
+                                <li><Link>Portuguese</Link></li>
+                                <li><Link>Spanish</Link></li>
+                            </ul>
                         </div>
 
                     </ul>
