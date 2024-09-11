@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Colors from '../constant/Colors'; // Variáveis de cores
 import Font from '../constant/Font'; // Variáveis de fonte
+import Arrow from '../assets/footer/arrow.svg';
 
 // Container Main
 export const Container = styled.div`
@@ -98,31 +99,59 @@ export const NavMid = styled.div`
                 gap: 10px;
                 align-items: center;
                 cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                /* Efeito apenas da setinha ao passar o mouse */
+                &:hover img {
+                    transform: rotate(90deg);
+                }
+                li{
+                    color: ${Colors.off_white};
+                    text-transform:uppercase;
+                    font-size: ${Font.txt_14};
+                }
 
                 img{
                     transition: ease 0.2s;
                     transform: ${({showLanguages}) => (showLanguages ?'rotate(90deg)' : 'rotate(0deg)')};
                 }
             }
-
+            /* Transicao e movimento suave */
             .lgn-link{
                 margin: 10px 0 0 20px;
                 visibility: ${({showLanguages}) => (showLanguages ?'visible' : 'hidden')};
+                opacity: ${({ showLanguages }) => (showLanguages ? '1' : '0')}; 
+                transform: ${({ showLanguages }) => (showLanguages ? 'translateY(0)' : 'translateY(-10px)')}; 
+                transition: opacity 0.3s ease, transform 0.3s ease;
             }
         }
     }
-
     a {
         text-decoration: none;
         list-style: none;
         text-transform: uppercase;
-        font-size: ${Font.txt_12};
+        font-size: ${Font.txt_14};
         color: ${Colors.off_white};
         position: relative;            
         display: inline-block;
         font-weight: 300;
+        transition: all 0.3s ease-in-out;
+        padding-left:12px;
     }
-
+    /* Usa a seta como imagem, oculta por padrão e move a seta para a esquerda do texto */
+    a::before {
+        content: url(${Arrow}); 
+        position: absolute;
+        left: 0;
+        opacity: 0; 
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: translateX(-10px); 
+    }
+    /* Exibe a seta ao fazer um hover e a seta volta a sua posicao original */
+    a:hover::before {
+        opacity: 1;
+        transform: translateX(0); 
+    }
     /* Effect Hover Line */
     a::after {
         content: '';
@@ -134,7 +163,6 @@ export const NavMid = styled.div`
         background-color: ${Colors.red_1};
         transition: width 0.3s ease-in-out;
     }
-
     a:hover::after {
         width: 100%;
     }
@@ -143,7 +171,6 @@ export const NavMid = styled.div`
     .arrow-rotation {
         transition: transform 0.3s ease-in-out;
     }
-
     &:hover .arrow-rotation {
         transform: rotate(90deg);
     }
