@@ -1,7 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { SectionPilotsStyle } from '../../styles/SectionPilotsStyle';
+import { SectionPilotsStyle, PilotsBackground, ButtonPilots } from '../../styles/SectionPilotsStyle';
 import { Link } from 'react-router-dom';
+
+import Arrow from '../../assets/footer/arrow.svg'
 
 const SectionPilots = () => {
 
@@ -15,17 +17,25 @@ const SectionPilots = () => {
     return (
         <>
         <SectionPilotsStyle>
-            <section>
                 {/* Pilot 1 */}
-                <div className='pilot-1 background-pilots'>
-                    <a href='https://www.mahindraracing.com/drivers/edoardo-mortara' className='btn-pilots color-1 txt-none' target='_blank'><button className='txt-btn-pilots color-1'>Edoardo Mortara</button></a>
-                </div>
+                <PilotsBackground className='pilot-1'>
+                    <a href='https://www.mahindraracing.com/drivers/edoardo-mortara' className='btn-pilots txt-none' target='_blank'>
+                        <ButtonPilots className='color-1'>
+                            <img src={Arrow} alt="Arrow" />
+                            Edoardo Mortara
+                        </ButtonPilots>
+                    </a>
+                </PilotsBackground>
 
                 {/* Pilot 2 */}
-                <div className='pilot-2 background-pilots'>
-                    <a href='https://www.mahindraracing.com/drivers/nyck-de-vries' className='btn-pilots color-2 txt-none' target='_blank'><button className='txt-btn-pilots color-2'>Nyck De Vries</button></a>
-                </div>
-            </section>
+                <PilotsBackground className='pilot-2'>
+                    <a href='https://www.mahindraracing.com/drivers/nyck-de-vries' className='btn-pilots txt-none' target='_blank'>
+                        <ButtonPilots className='color-2'>
+                            <img src={Arrow} alt="Arrow" />
+                            Nicky de Vries
+                        </ButtonPilots>
+                    </a>
+                </PilotsBackground>
         </SectionPilotsStyle>
         </>
     )

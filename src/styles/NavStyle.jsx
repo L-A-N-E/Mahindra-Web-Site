@@ -20,11 +20,13 @@ export const NavClose = styled.div`
     width: 60px;
     height: 100dvh;
     background-color: ${Colors.black};
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10000;
     transition: transform 0.3s ease-in-out;
+    transition: all 0.5s;
     
     /* Empurra para a esquerda quando o menu está aberto */
     transform: ${({ isOpen }) => (isOpen ? 'translateX(-60px)' : 'translateX(0)')};
@@ -96,6 +98,7 @@ export const NavMid = styled.div`
         /* Change Language */
         .content-lng {
             display: flex;
+            gap: 1rem;
             flex-direction: column;
             .lgn-li {
                 display: flex;
@@ -121,7 +124,7 @@ export const NavMid = styled.div`
             }
             /* Transicao e movimento suave */
             .lgn-link{
-                margin: 20px 0 0 20px;
+                margin: 0 0 0 10px;
                 visibility: ${({showLanguages}) => (showLanguages ?'visible' : 'hidden')};
                 opacity: ${({ showLanguages }) => (showLanguages ? '1' : '0')}; 
                 transform: ${({ showLanguages }) => (showLanguages ? 'translateY(0)' : 'translateY(-10px)')}; 
