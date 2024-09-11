@@ -93,11 +93,21 @@ export const NavMid = styled.div`
         .content-lng {
             display: flex;
             flex-direction: column;
-
             .lgn-li {
                 display: flex;
+                gap: 10px;
                 align-items: center;
+                cursor: pointer;
 
+                img{
+                    transition: ease 0.2s;
+                    transform: ${({showLanguages}) => (showLanguages ?'rotate(90deg)' : 'rotate(0deg)')};
+                }
+            }
+
+            .lgn-link{
+                margin: 10px 0 0 20px;
+                visibility: ${({showLanguages}) => (showLanguages ?'visible' : 'hidden')};
             }
         }
     }
