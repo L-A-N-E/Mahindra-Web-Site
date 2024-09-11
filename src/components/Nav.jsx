@@ -67,10 +67,9 @@ const Nav = () => {
                 <NavMid showLanguages={showLanguages}>
                     <ul>
                         {/* Others Links */}
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/">{t("home")}</Link></li>
+                        <li><Link to="/about">{t("about")}</Link></li>
                         <li><Link to="/services">Services</Link></li>
-                        <li><Link to="/portfolio">Portfolio</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                         <li><Link to="/blog">Blog</Link></li>
                         <li><Link to="/faq">FAQ</Link></li>
@@ -82,9 +81,9 @@ const Nav = () => {
                                 <li>{t("language")}</li>
                             </li>
                             <ul className='lgn-link'>
-                                <li><Link>{t("english")}</Link></li>
-                                <li><Link>{t("portuguese")}</Link></li>
-                                <li><Link>{t("spanish")}</Link></li>
+                                <li onClick={() => changeLanguage('en')}><Link>{t("english")}</Link></li>
+                                <li onClick={() => changeLanguage('pt')}><Link>{t("portuguese")}</Link></li>
+                                <li onClick={() => changeLanguage('es')}><Link>{t("spanish")}</Link></li>
                             </ul>
                         </div>
 
