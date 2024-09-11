@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Container, NavClose, NavOpen, OpenButton, ArrowIcon, NavTop, NavMid, NavBottom, Logo } from '../styles/NavStyle'; // Importando os componentes estilizados
@@ -21,13 +21,24 @@ const Nav = () => {
 
     // Show Options
     const [showLanguages, setShowLanguages] = useState(false);
+    const menuRef = useRef(null);
+
+    // Alterna o estado showLanguages quando o menu é clicado
     const handleMouseEnter = () => {
-        setShowLanguages(true);
+        setShowLanguages(prevState => !prevState);
     };
-    const handleMouseLeave = () => {
-        setShowLanguages(false);
-        setShowMobile(false);
+
+    // Verifica se o clique foi fora do elemento referenciado. Se for, oculta o menu.
+    const handleClickOutside = (event) => {
+        if (menuRef.current && !menuRef.current.contains(event.target)) {
+            setShowLanguages(false);
+        }
     };
+
+    useEffect(() => {
+        document.addEventListener('mousedown', handleClickOutside);
+        return () => document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
 
     return (
         <Container>
@@ -55,8 +66,17 @@ const Nav = () => {
                 {/* Seção do Meio */}
                 <NavMid>
                     <ul>
+                        {/* Others Links */}
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/services">Services</Link></li>
+                        <li><Link to="/portfolio">Portfolio</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/blog">Blog</Link></li>
+                        <li><Link to="/faq">FAQ</Link></li>
+                        
                         {/* Language */}
-                        <div className='content-lng' onClick={handleMouseEnter}>
+                        <div className='content-lng' onClick={handleMouseEnter} ref={menuRef}>
                             <li className='lgn-li'>
                                 <img src={Arrow} alt="Arrow" />
                                 <li>Language</li>
@@ -70,15 +90,6 @@ const Nav = () => {
                             )}
                         </div>
 
-                        {/* Others Links */}
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About</Link></li>
-                        <li><Link to="/services">Services</Link></li>
-                        <li><Link to="/portfolio">Portfolio</Link></li>
-                        <li><Link to="/contact">Contact</Link></li>
-                        <li><Link to="/blog">Blog</Link></li>
-                        <li><Link to="/faq">FAQ</Link></li>
-                        
                     </ul>
                 </NavMid>
 
