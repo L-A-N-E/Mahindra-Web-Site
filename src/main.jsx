@@ -16,16 +16,8 @@ import Pilot_2 from './routes/Pilot_2' // Import Pilot 2
 
 import Races from './routes/Races' // Import Races
 import RaceTrack from './routes/RaceTrack.jsx'
-import Mexico from './routes/RaceTrack/Mexico.jsx'
-import Diriyah from './routes/RaceTrack/Diriyah.jsx'
-import SaoPaulo from './routes/RaceTrack/SaoPaulo.jsx'
-import Tokio from './routes/RaceTrack/Tokio.jsx'
-import Misano from './routes/RaceTrack/Misano.jsx'
-import Monaco from './routes/RaceTrack/Monaco.jsx'
-import Berlim from './routes/RaceTrack/Berlim.jsx'
-import Shangai from './routes/RaceTrack/Shangai.jsx'
-import Portland from './routes/RaceTrack/Portland.jsx'
-import London from './routes/RaceTrack/London.jsx'
+import RacesTracks from './routes/races_track/RacesTracks.jsx'
+
 
 // Creating Routes
 const router = createBrowserRouter ([
@@ -39,16 +31,7 @@ const router = createBrowserRouter ([
       {path: '/race-track', element: <RaceTrack/>,
 
         children: [
-          {path: '/race-track/autodromo-hermanos-rodriguez', element: <Mexico/>},
-          {path: '/race-track/diriyah-street-circuit', element: <Diriyah/>},
-          {path: '/race-track/anhembi-sambadrome-circuit', element: <SaoPaulo/>},
-          {path: '/race-track/tokio-street-circuit', element: <Tokio/>},
-          {path: '/race-track/misano-world-circuit-marco-simoncelli', element: <Misano/>},
-          {path: '/race-track/circuito-de-rua-de-monaco', element: <Monaco/>},
-          {path: '/race-track/tempelhof-airport-street-circuit', element: <Berlim/>},
-          {path: '/race-track/shangai-street-circuit', element: <Shangai/>},
-          {path: '/race-track/portland-international-raceway', element: <Portland/>},
-          {path: '/race-track/excel-london-street-circuit', element: <London/>}
+          {path: '/race-track/:slug', element: <RacesTracks/>} // Races Tracks
         ]},
 
       {path: '/car', element: <Car/>}, // Car
