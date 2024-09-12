@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
-import { SectionEcotracerStyle } from '../../styles/SectionEcotracerStyle'
+import { SectionEcotracerStyle, EcotracerLeft, EcotracerRight, EcotracerTitle} from '../../styles/SectionEcotracerStyle'
 
 const SectionEcotracer = () => {
 
@@ -14,24 +14,22 @@ const SectionEcotracer = () => {
     return (
         <>
         <SectionEcotracerStyle>
-            <section id='ecotracer'>
                 {/* Left Image */}
-                <div id='left-eco'></div>
+                <EcotracerLeft></EcotracerLeft>
 
                 {/* Right Text */}
-                <div id='right-eco'>
+                <EcotracerRight>
                     {/* Title */}
-                    <div className='title-eco'>
+                    <EcotracerTitle>
                         <h1>{t('title-ecotracer')}</h1>
                         <h2>Ecotracer?</h2>
-                    </div>
+                    </EcotracerTitle>
 
                     {/* Paragraph */}
                     <div className='p-eco'>
                         <p>{t('text-ecotracer')}</p>
                     </div>
-                </div>
-            </section>
+                </EcotracerRight>
         </SectionEcotracerStyle>
         </>
     )

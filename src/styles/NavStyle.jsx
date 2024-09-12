@@ -173,14 +173,6 @@ export const NavMid = styled.div`
     a:hover::after {
         width: 100%;
     }
-
-    /* Effect Rotation Arrow */
-    .arrow-rotation {
-        transition: transform 0.3s ease-in-out;
-    }
-    &:hover .arrow-rotation {
-        transform: rotate(90deg);
-    }
 `;
 
 // Section Bottom
