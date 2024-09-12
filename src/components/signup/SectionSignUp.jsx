@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoginSignUpStyle } from '../../styles/LoginSignUpStyle';
+import { LoginSignUpStyle, LoginSignUpLeft, LoginSignUpRight, LoginSignUpContainer, LoginSignUpTop, LoginSignUpMid, LoginSignUpBottom} from '../../styles/LoginSignUpStyle';
 import { useTranslation } from 'react-i18next';
 import LogoMahindra from '../../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../../assets/login_signup/logo-google.svg'
@@ -30,22 +30,21 @@ const SectionSignUp = () => {
     return (
         <>
         <LoginSignUpStyle>
-            <section>
                 {/* Left */}
-                <div id='left-login-sign-up'></div>
+                <LoginSignUpLeft></LoginSignUpLeft>
 
                 {/* Right */}
-                <div id='right-login-sign-up'>
-                    <div className='container-acc'>
+                <LoginSignUpRight>
+                    <LoginSignUpContainer>
                         {/* Top */}
-                        <div className='top-acc'>
+                        <LoginSignUpTop>
                             <img src={LogoMahindra} alt='Logo Mahindra' />
                             <h2>{t('welcome')}</h2>
-                        </div>
+                        </LoginSignUpTop>
 
                         {/* Mid */}
-                        <div className='mid-acc' onSubmit={onSignUp} >
-                            <form action='/login' method='POST'>
+                        <LoginSignUpMid>
+                            <form action='/login' method='POST' onSubmit={onSignUp}>
                                 <input type='text' name='username' placeholder={t('username')} value={username} onChange={(e) => setUsername(e.target.value)} required/>
                                 <input type='text' name='email' placeholder={t('email')} value={email} onChange={(e) => setEmail(e.target.value)}  required/>
                                 <input type='password' name='password' placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)}  required/>
@@ -54,17 +53,14 @@ const SectionSignUp = () => {
                                 <button type='submit'>{t('signup')}</button>
                             </form>
                             <p>{t('have-an-account')} <button><Link to ='/login'>{t('Login')}</Link></button></p>
-                        </div>
+                        </LoginSignUpMid>
 
                         {/* End */}
-                        <div className='end-acc'>
-                            <div>
+                        <LoginSignUpBottom>
                                 <button onClick={googleSignIn}><img src={LogoGoogle} alt='#' /> {t('signup-with-google')}</button>
-                            </div>
-                        </div>                        
-                    </div>
-                </div>
-            </section>
+                        </LoginSignUpBottom>                        
+                    </LoginSignUpContainer>
+                </LoginSignUpRight>
         </LoginSignUpStyle>
         </>
     )

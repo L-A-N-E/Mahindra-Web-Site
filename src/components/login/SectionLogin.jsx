@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { LoginSignUpStyle } from '../../styles/LoginSignUpStyle';
+import { LoginSignUpStyle, LoginSignUpLeft, LoginSignUpRight, LoginSignUpContainer, LoginSignUpTop, LoginSignUpMid, LoginSignUpBottom} from '../../styles/LoginSignUpStyle';
 import LogoMahindra from '../../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../../assets/login_signup/logo-google.svg'
 import { googleSignIn, handleAuthentication } from '../../utils/authUtils';
@@ -35,22 +35,20 @@ const SectionLogin = () => {
     return (
         <>
         <LoginSignUpStyle>
-            <section>
                 {/* Left */}
-                <div id='left-login-sign-up'></div>
+                <LoginSignUpLeft></LoginSignUpLeft>
 
                 {/* Right */}
-                <div id='right-login-sign-up'>
-                    <div className='container-acc'>
+                <LoginSignUpRight>
+                    <LoginSignUpContainer>
                         {/* Top */}
-                        <div className='top-acc'>
+                        <LoginSignUpTop>
                             <img src={LogoMahindra} alt='' />
                             <h2>{t('welcome-back')}</h2>
-                        </div>
+                        </LoginSignUpTop>
 
                         {/* Mid */}
-                        <div className='mid-acc'>
-
+                        <LoginSignUpMid>
                             <form action='/login' onSubmit={onLoginPress} >
                                 <input type='text' name='username' placeholder={t('username')} value={email} onChange={(e) => setEmail(e.target.value)} required/>
                                 <input type='password' name='password' placeholder={t('password')} value={password} onChange={(e) => setPassword(e.target.value)} required/>
@@ -58,18 +56,15 @@ const SectionLogin = () => {
                                 <button type='submit'>{t('login')}</button>
                             </form>
                             <p>{t('account')} <button><a href='/sign-up'>{t('signup')}</a></button></p>
-                        </div>
+                        </LoginSignUpMid>
 
                         {/* End */}
-                        <div className='end-acc'>
-                            <div>
+                        <LoginSignUpBottom>
                                 <button onClick={handleSignInWithPopUp}><img src={LogoGoogle} alt="#"/>{t('login-google')}</button>
-                            </div>
-                        </div>
+                        </LoginSignUpBottom>
                         
-                    </div>
-                </div>
-            </section>
+                    </LoginSignUpContainer>
+                </LoginSignUpRight>
         </LoginSignUpStyle>
         </>
     )
