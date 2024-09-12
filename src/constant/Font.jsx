@@ -1,5 +1,9 @@
 // Var Font
 const Font = {
+    // Font Family
+    txt_Mont: '',
+    txt_Bebas: '"Bebas Neue", system-ui',
+
     // Pixel
     txt_10: '10px',
     txt_12: '12px',
@@ -18,6 +22,9 @@ const Font = {
     txt_3rem: '3rem',
 
     // Weight
+    txt_100w: '100',
+    txt_200w: '200',
+    txt_300w: '300',
     txt_400w: '400',
     txt_500w: '500',
     txt_600w: '600',

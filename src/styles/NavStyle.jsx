@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Colors from '../constant/Colors'; // Variáveis de cores
-import Font from '../constant/Font'; // Variáveis de fonte
-import Arrow from '../assets/footer/arrow.svg';
+import styled from 'styled-components'; // Styled Components
+import Colors from '../constant/Colors'; // Var Colors
+import Font from '../constant/Font'; // Var Fonts
+import Arrow from '../assets/footer/arrow.svg'; // Arrow
 
 // Container Main
 export const Container = styled.div`
@@ -20,11 +20,13 @@ export const NavClose = styled.div`
     width: 60px;
     height: 100dvh;
     background-color: ${Colors.black};
+    backdrop-filter: blur(10px);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 10000;
     transition: transform 0.3s ease-in-out;
+    transition: all 0.5s;
     
     /* Empurra para a esquerda quando o menu está aberto */
     transform: ${({ isOpen }) => (isOpen ? 'translateX(-60px)' : 'translateX(0)')};
@@ -96,6 +98,7 @@ export const NavMid = styled.div`
         /* Change Language */
         .content-lng {
             display: flex;
+            gap: 1rem;
             flex-direction: column;
             .lgn-li {
                 display: flex;
@@ -121,7 +124,7 @@ export const NavMid = styled.div`
             }
             /* Transicao e movimento suave */
             .lgn-link{
-                margin: 20px 0 0 20px;
+                margin: 0 0 0 10px;
                 visibility: ${({showLanguages}) => (showLanguages ?'visible' : 'hidden')};
                 opacity: ${({ showLanguages }) => (showLanguages ? '1' : '0')}; 
                 transform: ${({ showLanguages }) => (showLanguages ? 'translateY(0)' : 'translateY(-10px)')}; 
@@ -130,6 +133,7 @@ export const NavMid = styled.div`
             }
         }
     }
+
     a {
         text-decoration: none;
         list-style: none;
@@ -167,16 +171,9 @@ export const NavMid = styled.div`
         background-color: ${Colors.red_1};
         transition: width 0.3s ease-in-out;
     }
+
     a:hover::after {
         width: 100%;
-    }
-
-    /* Effect Rotation Arrow */
-    .arrow-rotation {
-        transition: transform 0.3s ease-in-out;
-    }
-    &:hover .arrow-rotation {
-        transform: rotate(90deg);
     }
 `;
 
