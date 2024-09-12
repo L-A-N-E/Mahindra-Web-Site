@@ -44,6 +44,7 @@ const Nav = () => {
         <Container>
             {/* Menu lateral (NavMenu) */}
             <NavClose isOpen={isOpen}>
+                {/* Button to Open Menu */}
                 <OpenButton onClick={toggleNav}>
                     <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow"/>
                 </OpenButton>
@@ -54,7 +55,7 @@ const Nav = () => {
 
                 {/* Seção Topo */}
                 <NavTop>
-                    {/* Botão para fechar o menu */}
+                    {/* Button to Close Menu */}
                     <OpenButton onClick={toggleNav}>
                         <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow"/>
                     </OpenButton>
@@ -72,9 +73,8 @@ const Nav = () => {
                         <li><Link to="/app-mobile">App Mobile</Link></li>
                         <li><Link to="/edoardo-mortara">Edoardo Mortara</Link></li>
                         <li><Link to="/nicky-de-vries">Nicky de Vries</Link></li>
-                        <li><Link to="/services">Races</Link></li>
+                        <li><Link to="/races">Races</Link></li>
                         <li><Link to="/car">Car</Link></li>
-                        <li><Link to="/faq">FAQ</Link></li>
                         
                         {/* Language */}
                         <div className='content-lng' ref={menuRef} onMouseLeave={handleMouseEnter}>

@@ -19,22 +19,12 @@ const SectionPilots = () => {
         <SectionPilotsStyle>
                 {/* Pilot 1 */}
                 <PilotsBackground className='pilot-1'>
-                    <a href='https://www.mahindraracing.com/drivers/edoardo-mortara' className='btn-pilots txt-none' target='_blank'>
-                        <ButtonPilots className='color-1'>
-                            <img src={Arrow} alt="Arrow" />
-                            Edoardo Mortara
-                        </ButtonPilots>
-                    </a>
+                        <ButtonPilots className='color-1'>Edoardo Mortara</ButtonPilots>
                 </PilotsBackground>
 
                 {/* Pilot 2 */}
                 <PilotsBackground className='pilot-2'>
-                    <a href='https://www.mahindraracing.com/drivers/nyck-de-vries' className='btn-pilots txt-none' target='_blank'>
-                        <ButtonPilots className='color-2'>
-                            <img src={Arrow} alt="Arrow" />
-                            Nicky de Vries
-                        </ButtonPilots>
-                    </a>
+                        <ButtonPilots className='color-2'>Nicky de Vries</ButtonPilots>
                 </PilotsBackground>
         </SectionPilotsStyle>
         </>

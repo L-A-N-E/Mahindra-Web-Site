@@ -56,22 +56,25 @@ export const PilotsBackground = styled.div`
 `
 
 export const ButtonPilots = styled.button`
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    width: 100%;
-    padding: 1.5rem 3rem;
-    font-size: ${Font.txt_16};
-    font-weight:${Font.txt_600w};
-    text-transform: uppercase;
-    background-color: ${Colors.off_white};
+    width: 70%;
+    margin-bottom: 2rem;
+    padding: 1rem 5rem;
+    background-color: ${Colors.red_1};
+    background-image: linear-gradient(to left, ${Colors.red_1} 50%, ${Colors.red_hover} 50%);
+    background-position: right bottom;
+    background-size: 200% 100%;
     border: none;
-    border-radius: 40px;
-    color: ${Colors.red_1};
+    border-radius: 10px;
+    color: ${Colors.white};
     cursor: pointer;
+    font-size: ${Font.txt_16};
+    font-weight: ${Font.txt_500w};
+    text-transform: uppercase;
+    transition: background-position 0.5s ease-in-out;
+    
+    &:hover {
+        background-position: left bottom;
+    }
 
     @media (max-width: 1000px) {
         padding: 1rem 1.5rem;

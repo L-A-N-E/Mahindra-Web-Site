@@ -1,7 +1,7 @@
 import React from 'react'
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 import { Link } from 'react-router-dom';
-import { FooterStyle, FooterLeft, FooterRight, FooterPosition, FooterInfo, FooterColumn, FooterContainerItems, FooterItems } from '../styles/FooterStyle';
+import { FooterStyle, FooterContent, FooterColumnInfo, FooterInfo, FooterColumn, FooterContainerItems, FooterItems } from '../styles/FooterStyle';
 import arrowFooter from '../assets/footer/arrow.svg'
 import { useTranslation } from 'react-i18next'
 
@@ -18,10 +18,10 @@ const Footer = () => {
     <FooterStyle>
 
             {/* Left Footer */}
-            <FooterLeft>
+            <FooterContent>
               
               {/* Logo */}
-              <FooterPosition>  
+              <FooterColumnInfo>  
 
                 {/* Info */}
                 <FooterInfo>
@@ -30,7 +30,7 @@ const Footer = () => {
                     <h5>LANE</h5>
                 </FooterInfo>
 
-              </FooterPosition>
+              </FooterColumnInfo>
 
               {/* Column 1 */}
               <FooterColumn>
@@ -117,11 +117,7 @@ const Footer = () => {
 
               </FooterColumn>
 
-            </FooterLeft>
-
-            {/* Right Footer */}
-            <FooterRight/>
-
+            </FooterContent>
     </FooterStyle>
     </>
   )

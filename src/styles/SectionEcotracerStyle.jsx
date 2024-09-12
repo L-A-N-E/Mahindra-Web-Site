@@ -45,12 +45,14 @@ export const EcotracerTitle = styled.div`
     flex-direction: column;
 
     h1 {
-        font-weight: ${Font.txt_900w};
+        text-transform: uppercase;
+        font-weight: ${Font.txt_400w};
         font-size: ${Font.txt_3rem};
         color: ${Colors.dark_gray};
     }
 
     h2 {
+        text-transform: uppercase;
         font-weight: ${Font.txt_900w};
         font-size: ${Font.txt_3rem};
         color: ${Colors.green}

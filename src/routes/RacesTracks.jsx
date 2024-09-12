@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 // Importando telas
-import Loading from "../../components/Loading"; 
-import Error from "../Error"; 
+import Loading from "../components/Loading"; 
+import Error from "./Error"; 
 
 const RaceTrack = () => {
     // Hook useParams - Acessa os parâmetros de URL, neste caso, o slug

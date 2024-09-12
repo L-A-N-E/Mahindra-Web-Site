@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import Colors from '../constant/Colors'; // Variáveis de cores
-import Font from '../constant/Font'; // Variáveis de fonte
-import Arrow from '../assets/footer/arrow.svg';
+import styled from 'styled-components'; // Styled Components
+import Colors from '../constant/Colors'; // Var Colors
+import Font from '../constant/Font'; // Var Fonts
+import Arrow from '../assets/footer/arrow.svg'; // Arrow
 
 // Container Main
 export const Container = styled.div`
@@ -133,6 +133,7 @@ export const NavMid = styled.div`
             }
         }
     }
+
     a {
         text-decoration: none;
         list-style: none;
@@ -170,6 +171,7 @@ export const NavMid = styled.div`
         background-color: ${Colors.red_1};
         transition: width 0.3s ease-in-out;
     }
+
     a:hover::after {
         width: 100%;
     }

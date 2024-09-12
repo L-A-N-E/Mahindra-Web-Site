@@ -39,9 +39,9 @@ export const AboutContent = styled.section`
     gap: 2rem;
 
         h1 {
-            font-family: "Archivo Black", sans-serif;
             color: ${Colors.red_1};
-            font-size: ${Font.txt_50};
+            font-size: ${Font.txt_60};
+            font-weight:${Font.txt_800w};
             text-transform: uppercase;
         }
                 
@@ -54,26 +54,26 @@ export const AboutContent = styled.section`
 
             a {
                 button {
-                width: 200px;
-                padding: 1rem 3rem;
-                background-color: ${Colors.red_1};
-                background-image: linear-gradient(to left, ${Colors.red_1} 50%, ${Colors.red_hover} 50%);
-                background-position: right bottom;
-                background-size: 200% 100%;
-                border: none;
-                border-radius: 10px;
-                color: ${Colors.white};
-                cursor: pointer;
-                font-size: ${Font.txt_12};
-                font-weight: 700;
-                text-transform: uppercase;
-                transition: background-position 0.5s ease-in-out;
-            }
+                    width: 200px;
+                    padding: 1rem 3rem;
+                    background-color: ${Colors.red_1};
+                    background-image: linear-gradient(to left, ${Colors.red_1} 50%, ${Colors.red_hover} 50%);
+                    background-position: right bottom;
+                    background-size: 200% 100%;
+                    border: none;
+                    border-radius: 10px;
+                    color: ${Colors.white};
+                    cursor: pointer;
+                    font-size: ${Font.txt_12};
+                    font-weight: ${Font.txt_400w};
+                    text-transform: uppercase;
+                    transition: background-position 0.5s ease-in-out;
+                }
 
-                    
-            button:hover {
-                background-position: left bottom;
-            }
+    
+                button:hover {
+                    background-position: left bottom;
+                }
         }
 
     @media (max-width: 700px) {

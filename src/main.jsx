@@ -16,7 +16,7 @@ import Pilot_2 from './routes/Pilot_2' // Import Pilot 2
 
 import Races from './routes/Races' // Import Races
 import RaceTrack from './routes/RaceTrack.jsx'
-import RacesTracks from './routes/races_track/RacesTracks.jsx'
+import RacesTracks from './routes/RacesTracks.jsx'
 
 
 // Creating Routes
