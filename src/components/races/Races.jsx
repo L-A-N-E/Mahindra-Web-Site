@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-import { SectionRacesStyle } from '../../styles/SectionRacesStyle'
+import { RaceStyle, RaceContainer, RaceTop, RaceInfo, RaceFlag, RaceNameData, RaceBottom, RaceMainText, RaceSeeMore, RaceButton} from '../../styles/RacesStyle'
 import Arrow from '../../assets/footer/arrow.svg'
 
 import 'swiper/css'
@@ -28,11 +28,8 @@ const SectionRaces = () => {
 
     return (
         <>
-        <SectionRacesStyle>
-            <section>
+        <RaceStyle>
                 {/* Title */}
-
-
                 <Swiper
                     effect={'coverflow'}
                     grabCursor={true}
@@ -59,43 +56,42 @@ const SectionRaces = () => {
                     {races.map((race) => (
                         <SwiperSlide key={race.id}>
                             {/* Main */}
-                            <div className='main-card'>
-                                {/* Position Top */}
-                                <div className='top-card'>
+                            <RaceContainer>
+                                {/* Div Top */}
+                                <RaceTop>
                                     {/* Info */}
-                                    <div className='info-card'>
+                                    <RaceInfo>
                                         {/* Flag */}
-                                        <div className='flag-card'>
+                                        <RaceFlag>
                                             <img className='flag' src={race.country} alt={`${race.city} Flag`} />
-                                        </div>
+                                        </RaceFlag>
                                         {/* Name & Data */}
-                                        <div className='name-data'>
+                                        <RaceNameData>
                                             <h3 className='data'>{race.data}</h3>
                                             <h3 className='name'>{race.name}</h3>
-                                        </div>
-                                    </div>
-                                </div>
+                                        </RaceNameData>
+                                    </RaceInfo>
+                                </RaceTop>
 
-                                {/* Position End */}
-                                <div className='end-card'>
+                                {/* Div Bottom */}
+                                <RaceBottom>
                                     {/* Title */}
-                                    <div className='city'>
+                                    <RaceMainText>
                                         <img src={race.txt} alt={`${race.city} Flag`} />
-                                    </div>
+                                    </RaceMainText>
                                     {/* Link */}
                                     <Link to={`/race-track/${race.slug}`} className='txt-none'>
-                                        <div className='btn-card'>
+                                        <RaceSeeMore>
                                             <img className='arrow-rotation' src={Arrow} alt="" />
-                                            <button>View</button>
-                                        </div>
+                                            <RaceButton>View</RaceButton>
+                                        </RaceSeeMore>
                                     </Link>
-                                </div>
-                            </div>
+                                </RaceBottom>
+                            </RaceContainer>
                         </SwiperSlide>
                     ))}
                 </Swiper>
-            </section>
-        </SectionRacesStyle>
+        </RaceStyle>
         </>
     );
 };
