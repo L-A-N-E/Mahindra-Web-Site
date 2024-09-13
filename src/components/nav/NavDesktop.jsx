@@ -1,11 +1,11 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Container, NavClose, NavOpen, OpenButton, ArrowIcon, NavTop, NavMid, NavBottom, Logo } from '../styles/NavStyle'; // Importando os componentes estilizados
-import Arrow from '../assets/footer/arrow.svg'; // Supondo que Arrow é uma imagem
-import LogoMahindra from '../assets/header/logo/mahindra-logo-new.svg'; // Supondo que esta seja a logo1
+import { NavDesktopClose, NavDesktopOpen, OpenButton, ArrowIcon, NavTop, NavMid, NavBottom, Logo } from '../../styles/NavStyle'; // Importando os componentes estilizados
+import Arrow from '../../assets/footer/arrow.svg'; // Supondo que Arrow é uma imagem
+import LogoMahindra from '../../assets/header/logo/mahindra-logo-new.svg'; // Supondo que esta seja a logo1
 
-const Nav = () => {
+const NavDesktop = () => {
     // Open Menu
     const [isOpen, setIsOpen] = useState(true);
     const toggleNav = () => {
@@ -41,17 +41,17 @@ const Nav = () => {
     }, []);
 
     return (
-        <Container>
+        <>
             {/* Menu lateral (NavMenu) */}
-            <NavClose isOpen={isOpen}>
+            <NavDesktopClose isOpen={isOpen}>
                 {/* Button to Open Menu */}
                 <OpenButton onClick={toggleNav}>
                     <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow"/>
                 </OpenButton>
-            </NavClose>
+            </NavDesktopClose>
 
             {/* Menu de navegação principal (NavStyle) */}
-            <NavOpen isOpen={isOpen}>
+            <NavDesktopOpen isOpen={isOpen}>
 
                 {/* Seção Topo */}
                 <NavTop>
@@ -68,7 +68,6 @@ const Nav = () => {
                 <NavMid showLanguages={showLanguages}>
                     <ul>
                         {/* Others Links */}
-
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/app-mobile">App Mobile</Link></li>
                         <li><Link to="/edoardo-mortara">Edoardo Mortara</Link></li>
@@ -94,9 +93,9 @@ const Nav = () => {
 
                 {/* Seção Inferior */}
                 <NavBottom />
-            </NavOpen>
-        </Container>
+            </NavDesktopOpen>
+        </>
     );
 };
 
-export default Nav;
+export default NavDesktop;

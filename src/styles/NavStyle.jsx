@@ -3,17 +3,30 @@ import Colors from '../constant/Colors'; // Var Colors
 import Font from '../constant/Font'; // Var Fonts
 import Arrow from '../assets/footer/arrow.svg'; // Arrow
 
-// Container Main
+// Container Principal Nav
 export const Container = styled.div`
     width: auto;
     display: flex;
     position: fixed;
     height: 100dvh;
     z-index: 1000;
+
+    /* Mobile */
+    @media (max-width: 750px) {
+        height: 80px;
+        width: 100%;
+    }
 `;
 
-// Menu Close
-export const NavClose = styled.div`
+// export const NavMobileClose = styled.div`
+//     display: none;
+//     @media (max-width: 750px) {
+//         display: flex;
+//     }
+// `
+
+// Menu Desktop Fechado
+export const NavDesktopClose = styled.div`
     position: fixed;
     top: 0;
     left: 0;
@@ -27,14 +40,17 @@ export const NavClose = styled.div`
     z-index: 10000;
     transition: transform 0.3s ease-in-out;
     transition: all 0.5s;
-    
     /* Empurra para a esquerda quando o menu está aberto */
     transform: ${({ isOpen }) => (isOpen ? 'translateX(-60px)' : 'translateX(0)')};
+
+    @media (max-width: 750px) {
+        display: none;
+    }
+
 `;
 
-
-// Menu Open
-export const NavOpen = styled.nav`
+// Menu Desktop Aberto
+export const NavDesktopOpen = styled.nav`
     position: fixed;
     top: 0;
     left: 0; 
@@ -48,8 +64,11 @@ export const NavOpen = styled.nav`
     transform: ${({ isOpen }) => (isOpen ? 'translateX(0)' : 'translateX(-100%)')};
     transition: transform 0.3s ease-in-out;
     z-index: 9999;
-    `;
 
+    @media (max-width: 750px) {
+        display: none;
+    }
+`;
 
 // Arrow
 export const ArrowIcon = styled.img`
@@ -72,7 +91,6 @@ export const OpenButton = styled.button`
     padding: 10px;
     cursor: pointer;
 `;
-
 
 // Section Top
 export const NavTop = styled.div`
@@ -181,4 +199,3 @@ export const NavMid = styled.div`
 export const NavBottom = styled.div`
     height: 50px;
 `;
-
