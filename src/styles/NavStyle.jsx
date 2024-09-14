@@ -18,13 +18,6 @@ export const Container = styled.div`
     }
 `;
 
-// export const NavMobileClose = styled.div`
-//     display: none;
-//     @media (max-width: 750px) {
-//         display: flex;
-//     }
-// `
-
 // Menu Desktop Fechado
 export const NavDesktopClose = styled.div`
     position: fixed;
@@ -198,4 +191,159 @@ export const NavMid = styled.div`
 // Section Bottom
 export const NavBottom = styled.div`
     height: 50px;
+`;
+
+
+// Mobile
+export const NavMobileClose = styled.div`
+    display: none;
+    @media (max-width: 750px) {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        background-color: ${Colors.black};
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        transition: transform 0.3s ease-in-out;
+        transition: all 0.5s;
+        /* Empurra para a esquerda quando o menu está aberto */
+        transform: ${({ isOpen }) => (isOpen ? 'translateY(-80px)' : 'translateY(0)')};
+    }
+`
+
+export const NavMobileOpen = styled.nav`
+    display: none;
+    @media (max-width: 750px) {
+        position: fixed;
+        width: 100%;
+        height: 80px;
+        background-color: ${Colors.black};
+        color: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-120px)')};
+        transition: transform 0.3s ease-in-out;
+    }
+`;
+
+// Trocar o icone por um menu hamburguer e X dependendo do close ou open e ver se adiciona 
+// export const ArrowIcon = styled.img`
+//     width: 20px;
+//     height: auto;
+//     transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+//     transition: transform 0.3s ease-in-out;
+// `;
+
+export const NavTopMobile = styled.div`
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    padding: 10px;
+`;
+
+export const NavMidMobile = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-direction: row; 
+        gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+        
+        /* Change Language */
+        .content-lng {
+            display: flex;
+            gap: 1rem;
+            margin-top: 70px;
+            flex-direction: column;
+            position: relative;
+
+            /* Adiciona background quando o menu está aberto */
+            background-color: ${({ showLanguages }) => (showLanguages ? `${Colors.black}` : 'transparent')};
+            padding: ${({ showLanguages }) => (showLanguages ? '10px' : '0')};
+            border-radius: ${({ showLanguages }) => (showLanguages ? '8px' : '0')};
+            transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+
+            .lgn-li {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                li {
+                    color: ${Colors.off_white};
+                    text-transform: uppercase;
+                    font-size: ${Font.txt_14};
+                }
+
+                img {
+                    transition: ease 0.2s;
+                    transform: ${({ showLanguages }) => (showLanguages ? 'rotate(90deg)' : 'rotate(0deg)')};
+                }
+            }
+
+            /* Transição suave e movimento dos links de idioma */
+            .lgn-link {
+                display:block;
+                visibility: ${({ showLanguages }) => (showLanguages ? 'visible' : 'hidden')};
+                opacity: ${({ showLanguages }) => (showLanguages ? '1' : '0')}; 
+                transform: ${({ showLanguages }) => (showLanguages ? 'translateY(0)' : 'translateY(-10px)')}; 
+                transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+                cursor: pointer;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: ${Font.txt_14};
+        color: ${Colors.off_white};
+        position: relative;            
+        display: inline-block;
+        font-weight: 300;
+        transition: all 0.3s ease-in-out;
+        padding-left: 12px;
+    }
+
+    /* Usa a seta como imagem, oculta por padrão e move a seta para a esquerda do texto */
+    a::before {
+        content: url(${Arrow}); 
+        position: absolute;
+        left: 0;
+        opacity: 0; 
+        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transform: translateX(-10px); 
+    }
+
+    /* Exibe a seta ao fazer um hover e a seta volta a sua posição original */
+    a:hover::before {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+
+    /* Effect Hover Line */
+    a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 1px;
+        background-color: ${Colors.red_1};
+        transition: width 0.3s ease-in-out;
+    }
+
+    a:hover::after {
+        width: 100%;
+    }
 `;
