@@ -11,7 +11,7 @@
             "txt":"/src/assets/races/text/Mexico.png",
             "slug":"autodromo-hermanos-rodriguez",
             "length": 4.304,
-            "max-velocity": 235, 
+            "max_velocity": 235, 
             "laps": 40
         },
         {
@@ -25,7 +25,7 @@
             "txt":"/src/assets/races/text/Diriyah.png",
             "slug":"diriyah-street-circuit",
             "length": 2.495,
-            "max-velocity": 220,
+            "max_velocity": 220,
             "laps": 35
         },
         {
@@ -39,7 +39,7 @@
             "txt":"/src/assets/races/text/Diriyah.png",
             "slug":"diriyah-street-circuit",
             "length": 2.495,
-            "max-velocity": 220,
+            "max_velocity": 220,
             "laps": 35
         },
         {
@@ -53,7 +53,7 @@
             "txt":"/src/assets/races/text/Sao Paulo.png",
             "slug":"anhembi-sambadrome-circuit",
             "length": 4.309,
-            "max-velocity": 240,
+            "max_velocity": 240,
             "laps": 45
         },
         {
@@ -67,7 +67,7 @@
             "txt":"/src/assets/races/text/Tokio.png",
             "slug":"tokio-street-circuit",
             "length": 3.276,
-            "max-velocity": 230,
+            "max_velocity": 230,
             "laps": 38
         },
         {
@@ -81,7 +81,7 @@
             "txt":"/src/assets/races/text/Misano.png",
             "slug":"misano-world-circuit-marco-simoncelli",
             "length": 4.226,
-            "max-velocity": 225,
+            "max_velocity": 225,
             "laps": 42
         },
         {
@@ -95,7 +95,7 @@
             "txt":"/src/assets/races/text/Misano.png",
             "slug":"misano-world-circuit-marco-simoncelli",
             "length": 4.226,
-            "max-velocity": 225,
+            "max_velocity": 225,
             "laps": 42
         },
         {
@@ -109,7 +109,7 @@
             "txt":"/src/assets/races/text/Monaco.png",
             "slug":"circuito-de-rua-de-monaco",
             "length": 3.337,
-            "max-velocity": 215,
+            "max_velocity": 215,
             "laps": 39
         },
         {
@@ -123,7 +123,7 @@
             "txt":"/src/assets/races/text/Berlim.png",
             "slug":"tempelhof-airport-street-circuit",
             "length": 2.355,
-            "max-velocity": 210,
+            "max_velocity": 210,
             "laps": 37
         },
         {
@@ -137,7 +137,7 @@
             "txt":"/src/assets/races/text/Berlim.png",
             "slug":"tempelhof-airport-street-circuit",
             "length": 2.355,
-            "max-velocity": 210,
+            "max_velocity": 210,
             "laps": 37
         },
         {
@@ -151,7 +151,7 @@
             "txt":"/src/assets/races/text/Shangai.png",
             "slug":"shangai-street-circuit",
             "length": 5.451,
-            "max-velocity": 245,
+            "max_velocity": 245,
             "laps": 44
         },
         {
@@ -165,7 +165,7 @@
             "txt":"/src/assets/races/text/Shangai.png",
             "slug":"shangai-street-circuit",
             "length": 5.451,
-            "max-velocity": 245,
+            "max_velocity": 245,
             "laps": 44
         },
         {
@@ -179,41 +179,41 @@
             "txt":"/src/assets/races/text/Portland.png",
             "slug":"portland-international-raceway",
             "length": 3.167,
-            "max-velocity": 228,
+            "max_velocity": 228,
             "laps": 36
         },
         {
             "id": 14, 
-            "city": "Roma", 
-            "data":"Jul 13, 2024", 
-            "country":"/src/assets/races/country/Italy.svg", 
-            "bg-txt":"/src/assets/races/country/Italy.svg", 
-            "race_track":"/src/assets/races/race-track/Roma.svg",
-            "name":"Circuito Cittadino dell EUR",
-            "txt":"/src/assets/races/text/Roma.png",
-            "slug":"circuito-cittadino-dell-EUR",
-            "length": 3.385,
-            "max-velocity": 220,
-            "laps": 37
+            "city": "Portland", 
+            "data":"Jul 30, 2024", 
+            "country":"/src/assets/races/country/United-States.svg", 
+            "bg-txt":"/src/assets/races/country/United-States.svg", 
+            "race_track":"/src/assets/races/race-track/Portland.svg",
+            "name":"Portland International Raceway",
+            "txt":"/src/assets/races/text/Portland.png",
+            "slug":"portland-international-raceway",
+            "length": 3.167,
+            "max_velocity": 228,
+            "laps": 36
         },
         {
             "id": 15, 
             "city": "Roma", 
-            "data":"Jul 14, 2024", 
-            "country":"/src/assets/races/country/Italy.svg", 
-            "bg-txt":"/src/assets/races/country/Italy.svg", 
-            "race_track":"/src/assets/races/race-track/Roma.svg",
-            "name":"Circuito Cittadino dell EUR",
-            "txt":"/src/assets/races/text/Roma.png",
-            "slug":"circuito-cittadino-dell-EUR",
-            "length": 3.385,
-            "max-velocity": 220,
-            "laps": 37
+            "data":"Jul 20, 2024", 
+            "country":"/src/assets/races/country/United-Kingdom.svg",
+            "bg-txt":"/src/assets/races/country/United-Kingdom.svg", 
+            "race_track":"/src/assets/races/race-track/London.svg",
+            "name":"London ExCeL Circuit",
+            "txt":"/src/assets/races/text/London.png",
+            "slug":"london-excel-circuit",
+            "length": 2.252,
+            "max_velocity": 218,
+            "laps": 30
         },
         {
             "id": 16, 
             "city": "London", 
-            "data":"Jul 20, 2024", 
+            "data":"Jul 21, 2024", 
             "country":"/src/assets/races/country/United-Kingdom.svg", 
             "bg-txt":"/src/assets/races/country/United-Kingdom.svg", 
             "race_track":"/src/assets/races/race-track/London.svg",
@@ -221,7 +221,7 @@
             "txt":"/src/assets/races/text/London.png",
             "slug":"london-excel-circuit",
             "length": 2.252,
-            "max-velocity": 218,
+            "max_velocity": 218,
             "laps": 30
         }
     ]

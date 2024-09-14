@@ -1,5 +1,6 @@
 // Importando depdencias
 import React, { useEffect, useState } from 'react';
+import { RaceTrackStyle, RaceTrackContent, RaceTrackCenter, RaceTrackCity, RaceTrackCircuit, RaceTrackAboutInfo, RaceTrackTextInfo, RaceTrackContainerPilots, RaceTrackCardsRight } from '../styles/RacesTrackStyle'
 import { useParams } from 'react-router-dom';
 // Importando telas
 import Loading from "../components/Loading"; 
@@ -55,9 +56,59 @@ const RaceTrack = () => {
     }
 
     return (
-        <div>
-            <h1>{trackInfo.name}</h1>
-        </div>
+        <>
+        <RaceTrackStyle>
+            {/* Conteudo Principal */}
+            <RaceTrackContent>
+
+                {/* Organizar Conteudo */}
+                <RaceTrackCenter>
+
+                    {/* Titulo */}
+                    <RaceTrackCity>
+                        <h1>{trackInfo.name}</h1>
+                    </RaceTrackCity>
+
+                    {/* Circuito Imagem */}
+                    <RaceTrackCircuit>
+                        <img src={trackInfo.race_track} alt={`${trackInfo.city} Flag`} />
+                    </RaceTrackCircuit>
+
+                    {/* Informações Sobre a Pista */}
+                    <RaceTrackAboutInfo>
+                        {/* Tamanho do Circuito */}
+                        <RaceTrackTextInfo>
+                            <h1>Length</h1>
+                            <p>{trackInfo.length} M</p>
+                        </RaceTrackTextInfo>
+
+                        {/* Velocidade Maxima Alcançada */}
+                        <RaceTrackTextInfo>
+                            <h1>Max Velocity</h1>
+                            <p>{trackInfo.max_velocity} KM/H</p>
+                        </RaceTrackTextInfo>
+
+                        {/* Numero de Voltas */}
+                        <RaceTrackTextInfo>
+                            <h1>Laps</h1>
+                            <p>{trackInfo.laps}</p>
+                        </RaceTrackTextInfo>
+                    </RaceTrackAboutInfo>
+
+                </RaceTrackCenter>
+            </RaceTrackContent>
+
+            {/* Coluna Direita */}
+            <RaceTrackContainerPilots>
+                {/* Card Edoardo Mortara */}
+                <RaceTrackCardsRight className='card-1'>
+                </RaceTrackCardsRight>
+                {/* Card Nicky de Vries */}
+                <RaceTrackCardsRight className='card-2'>
+                </RaceTrackCardsRight>
+            </RaceTrackContainerPilots>
+        </RaceTrackStyle>
+        </>
     );
 };
 

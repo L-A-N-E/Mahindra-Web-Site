@@ -81,35 +81,3 @@ export const ButtonPilots = styled.button`
         font-size: ${Font.txt_12};
     }
 `;
-
-
-
-        // /* Response Tablet */
-        // @media (max-width: 1000px){
-        // section {
-        // height: 60dvh;
-
-        // .btn-pilots {
-        //     height: 50px;
-        //     width: 65%;
-
-        //     .txt-btn-pilots {
-        //         font-size: ${Font.txt_08rem};
-        //     }
-        // }
-        // }
-        // };
-
-        // /* Response Mobile */
-        // @media (max-width: 1100px){
-
-        // section {
-        // display: flex;
-        // flex-direction: column-reverse;
-        // height: 100dvh;
-
-        // .background-pilots {
-        //     height: 100%;
-        // }
-        // }
-        // }
