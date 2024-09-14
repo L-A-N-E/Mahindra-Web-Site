@@ -18,6 +18,7 @@ const Font = {
     // Rem
     txt_08rem: '0.8rem',
     txt_1rem: '1rem',
+    txt_1_5rem: '1.5rem',
     txt_2rem: '2rem',
     txt_3rem: '3rem',
 
