@@ -196,7 +196,7 @@ export const NavBottom = styled.div`
 
 // Mobile
 export const NavMobileClose = styled.div`
-    display: none;
+    
     @media (max-width: 750px) {
         position: fixed;
         width: 100%;
@@ -230,21 +230,32 @@ export const NavMobileOpen = styled.nav`
 `;
 
 // Trocar o icone por um menu hamburguer e X dependendo do close ou open e ver se adiciona 
-// export const ArrowIcon = styled.img`
-//     width: 20px;
-//     height: auto;
-//     transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
-//     transition: transform 0.3s ease-in-out;
-// `;
+export const XIcon = styled.img`
+    width: 20px;
+    height: auto;
+    transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+    transition: transform 0.3s ease-in-out;
+`;
+
+export const HamburguerIcon = styled.img`
+    width: 20px;
+    height: auto;
+    transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+    transition: transform 0.3s ease-in-out;
+`;
 
 export const NavTopMobile = styled.div`
     display: flex;
-    align-items: left;
-    justify-content: space-between;
+    align-items: center; 
+    justify-content: center; 
     padding: 10px;
+
 `;
 
 export const NavMidMobile = styled.div`
+@media(max-width:600px){
+    display: none;
+}
     display: flex;
     justify-content: center;
     align-items: center;
@@ -252,20 +263,18 @@ export const NavMidMobile = styled.div`
     ul {
         display: flex;
         align-items: center;
+        justify-content: center;
         flex-direction: row; 
         gap: 1.5rem;
         list-style: none;
         padding: 0;
-        
-        /* Change Language */
+
         .content-lng {
             display: flex;
             gap: 1rem;
             margin-top: 70px;
             flex-direction: column;
             position: relative;
-
-            /* Adiciona background quando o menu está aberto */
             background-color: ${({ showLanguages }) => (showLanguages ? `${Colors.black}` : 'transparent')};
             padding: ${({ showLanguages }) => (showLanguages ? '10px' : '0')};
             border-radius: ${({ showLanguages }) => (showLanguages ? '8px' : '0')};
@@ -285,18 +294,17 @@ export const NavMidMobile = styled.div`
                 }
 
                 img {
-                    transition: ease 0.2s;
+                    transition: transform 0.2s ease;
                     transform: ${({ showLanguages }) => (showLanguages ? 'rotate(90deg)' : 'rotate(0deg)')};
                 }
             }
 
-            /* Transição suave e movimento dos links de idioma */
             .lgn-link {
-                display:block;
+                display: block;
                 visibility: ${({ showLanguages }) => (showLanguages ? 'visible' : 'hidden')};
                 opacity: ${({ showLanguages }) => (showLanguages ? '1' : '0')}; 
                 transform: ${({ showLanguages }) => (showLanguages ? 'translateY(0)' : 'translateY(-10px)')}; 
-                transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+                transition: opacity 0.3s ease, transform 0.3s ease;
                 cursor: pointer;
             }
         }
@@ -311,27 +319,24 @@ export const NavMidMobile = styled.div`
         position: relative;            
         display: inline-block;
         font-weight: 300;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease;
         padding-left: 12px;
     }
 
-    /* Usa a seta como imagem, oculta por padrão e move a seta para a esquerda do texto */
     a::before {
         content: url(${Arrow}); 
         position: absolute;
         left: 0;
         opacity: 0; 
-        transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        transition: opacity 0.3s ease, transform 0.3s ease;
         transform: translateX(-10px); 
     }
 
-    /* Exibe a seta ao fazer um hover e a seta volta a sua posição original */
     a:hover::before {
         opacity: 1;
         transform: translateX(0); 
     }
 
-    /* Effect Hover Line */
     a::after {
         content: '';
         position: absolute;
@@ -340,10 +345,118 @@ export const NavMidMobile = styled.div`
         width: 0;
         height: 1px;
         background-color: ${Colors.red_1};
-        transition: width 0.3s ease-in-out;
+        transition: width 0.3s ease;
     }
 
     a:hover::after {
         width: 100%;
     }
+
+`;
+
+export const NavMidMobileMini = styled.div`
+display:none;
+@media(max-width:600px){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row; 
+        gap: 1.5rem;
+        list-style: none;
+        padding: 0;
+
+        .content-lng {
+            display: flex;
+            gap: 1rem;
+            margin-top: 70px;
+            flex-direction: column;
+            position: relative;
+            background-color: ${({ showLanguages }) => (showLanguages ? `${Colors.black}` : 'transparent')};
+            padding: ${({ showLanguages }) => (showLanguages ? '10px' : '0')};
+            border-radius: ${({ showLanguages }) => (showLanguages ? '8px' : '0')};
+            transition: background-color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+
+            .lgn-li {
+                display: flex;
+                gap: 10px;
+                align-items: center;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                li {
+                    color: ${Colors.off_white};
+                    text-transform: uppercase;
+                    font-size: ${Font.txt_14};
+                }
+
+                img {
+                    transition: transform 0.2s ease;
+                    transform: ${({ showLanguages }) => (showLanguages ? 'rotate(90deg)' : 'rotate(0deg)')};
+                }
+            }
+
+            .lgn-link {
+                display: block;
+                visibility: ${({ showLanguages }) => (showLanguages ? 'visible' : 'hidden')};
+                opacity: ${({ showLanguages }) => (showLanguages ? '1' : '0')}; 
+                transform: ${({ showLanguages }) => (showLanguages ? 'translateY(0)' : 'translateY(-10px)')}; 
+                transition: opacity 0.3s ease, transform 0.3s ease;
+                cursor: pointer;
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        list-style: none;
+        text-transform: uppercase;
+        font-size: ${Font.txt_14};
+        color: ${Colors.off_white};
+        position: relative;            
+        display: inline-block;
+        font-weight: 300;
+        transition: all 0.3s ease;
+        padding-left: 12px;
+    }
+
+    a::before {
+        content: url(${Arrow}); 
+        position: absolute;
+        left: 0;
+        opacity: 0; 
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        transform: translateX(-10px); 
+    }
+
+    a:hover::before {
+        opacity: 1;
+        transform: translateX(0); 
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        width: 0;
+        height: 1px;
+        background-color: ${Colors.red_1};
+        transition: width 0.3s ease;
+    }
+
+    a:hover::after {
+        width: 100%;
+    }
+}
+`;
+
+
+// Section Bottom
+export const NavBottomMobile = styled.div`
+    width: 60px;
 `;

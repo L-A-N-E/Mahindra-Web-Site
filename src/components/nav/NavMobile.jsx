@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { NavMobileClose, NavMobileOpen, OpenButton, ArrowIcon, NavTopMobile, NavMidMobile, NavBottom, Logo } from '../../styles/NavStyle'; // Importando os componentes estilizados
+import { NavMobileClose, NavMobileOpen, OpenButton, XIcon, NavTopMobile, NavMidMobile, NavMidMobileMini, NavBottomMobile, Logo } from '../../styles/NavStyle'; // Importando os componentes estilizados
 import Arrow from '../../assets/footer/arrow.svg'; // Supondo que Arrow é uma imagem
 import LogoMahindra from '../../assets/header/logo/mahindra-logo-new.svg'; // Supondo que esta seja a logo1
 
@@ -46,31 +46,31 @@ const NavMobile = () => {
             <NavMobileClose isOpen={isOpen}>
                 {/* Button to Open Menu */}
                 <OpenButton onClick={toggleNav}>
-                    {/* Logo  add o icone do menu de abrir*/}
+                    {/* Logo  add o icone do menu de abrir, o elemento HamburguerIcon esta feito ja! e dps os botoes do sign up e login*/}
                     <Logo src={LogoMahindra} isOpen={isOpen} alt="Logo"/>
                 </OpenButton>
+                    <button>sign-up</button>
+                    <button>login</button>
             </NavMobileClose>
 
-            {/* Menu de navegação principal (NavStyle) */}
+            {/* Menu de navegação principal*/}
             <NavMobileOpen isOpen={isOpen}>
-                {/* Seção Topo */}
                 <NavTopMobile>
-                    {/* Button to Close Menu - add o icone de fechar */}
+                    {/* Button to Close Menu*/}
                     <OpenButton onClick={toggleNav}>
-                        <ArrowIcon isOpen={isOpen} src={Arrow} alt="Arrow"/>
+                        <XIcon isOpen={isOpen} src={Arrow} alt="Arrow"/>
                     </OpenButton>
                 </NavTopMobile>
 
                 {/* Seção do Meio */}
                 <NavMidMobile showLanguages={showLanguages}>
                     <ul>
-                        {/* Others Links */}
+                        {/* Links */}
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/app-mobile">App</Link></li>
                         <li><Link to="/edoardo-mortara">Edoardo</Link></li>
                         <li><Link to="/nicky-de-vries">Nicky</Link></li>
                         <li><Link to="/races">Races</Link></li>
-                        <li><Link to="/car">Car</Link></li>
                         
                         {/* Language */}
                         <div className='content-lng' ref={menuRef} onMouseLeave={handleMouseEnter}>
@@ -86,9 +86,27 @@ const NavMobile = () => {
                         </div>
                     </ul>
                 </NavMidMobile>
-
-                {/* Seção Inferior */}
-                <NavBottom />
+                <NavMidMobileMini showLanguages={showLanguages}>
+                    <ul>
+                        {/* Links */}
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/app-mobile">App</Link></li>
+                        <li><Link to="/races">Races</Link></li>
+                        {/* Language */}
+                        <div className='content-lng' ref={menuRef} onMouseLeave={handleMouseEnter}>
+                            <li className='lgn-li' onMouseEnter={handleMouseEnter}>
+                                <img src={Arrow} alt="Arrow" />
+                                <li>{t("language")}</li>
+                            </li>
+                            <ul className='lgn-link'>
+                                <li onClick={() => changeLanguage('en')}><a>{t("english")}</a></li>
+                                <li onClick={() => changeLanguage('pt')}><a>{t("portuguese")}</a></li>
+                                <li onClick={() => changeLanguage('es')}><a>{t("spanish")}</a></li>
+                            </ul>
+                        </div>
+                    </ul>
+                </NavMidMobileMini>
+                <NavBottomMobile/>
             </NavMobileOpen>
         </>
     );
