@@ -76,6 +76,7 @@ const RaceTrack = () => {
 
                     {/* Informações Sobre a Pista */}
                     <RaceTrackAboutInfo>
+
                         {/* Tamanho do Circuito */}
                         <RaceTrackTextInfo>
                             <h1>Length</h1>
@@ -93,16 +94,18 @@ const RaceTrack = () => {
                             <h1>Laps</h1>
                             <p>{trackInfo.laps}</p>
                         </RaceTrackTextInfo>
+                        
                     </RaceTrackAboutInfo>
-
                 </RaceTrackCenter>
             </RaceTrackContent>
 
             {/* Coluna Direita */}
             <RaceTrackContainerPilots>
+
                 {/* Card Edoardo Mortara */}
                 <RaceTrackCardsRight className='card-1'>
                 </RaceTrackCardsRight>
+
                 {/* Card Nicky de Vries */}
                 <RaceTrackCardsRight className='card-2'>
                 </RaceTrackCardsRight>

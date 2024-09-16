@@ -87,11 +87,13 @@ export const RaceTrackContainerPilots = styled.div `
     .card-1 {
         background-image: url(${Pilot1});
         background-size: cover;
+        background-position: center;
     }
     
     .card-2 {
         background-image: url(${Pilot2});
         background-size: cover;
+        background-position: center;
     }
 
     @media (max-width: 1000px){
