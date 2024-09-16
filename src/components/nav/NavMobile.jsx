@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { NavMobileClose, NavMobileOpen, OpenButton, XIcon, NavTopMobile, NavMidMobile, NavMidMobileMini, NavBottomMobile, Logo } from '../../styles/NavStyle'; // Importando os componentes estilizados
+import { NavMobileClose, NavMobileOpen, OpenButton, XIcon, HamburguerIcon, NavTopMobile, NavMidMobile, NavMidMobileMini, NavBottomMobile, Logo, SignUpButton, LoginButton } from '../../styles/NavStyle'; // Importando os componentes estilizados
 import Arrow from '../../assets/footer/arrow.svg'; // Supondo que Arrow é uma imagem
+import X from '../../assets/header/buttons/remove.png';
+import MenuIcon from '../../assets/header/buttons/menu.png';
 import LogoMahindra from '../../assets/header/logo/mahindra-logo-new.svg'; // Supondo que esta seja a logo1
 
 const NavMobile = () => {
@@ -46,11 +48,11 @@ const NavMobile = () => {
             <NavMobileClose isOpen={isOpen}>
                 {/* Button to Open Menu */}
                 <OpenButton onClick={toggleNav}>
-                    {/* Logo  add o icone do menu de abrir, o elemento HamburguerIcon esta feito ja! e dps os botoes do sign up e login*/}
-                    <Logo src={LogoMahindra} isOpen={isOpen} alt="Logo"/>
+                    <HamburguerIcon isOpen={isOpen} src={MenuIcon} alt="Menu"/>
                 </OpenButton>
-                    <button>sign-up</button>
-                    <button>login</button>
+                    <Logo src={LogoMahindra} alt="Logo"/>
+                    <SignUpButton><Link to={'/sign-up'}><button class='sig'>Sign-Up</button></Link></SignUpButton>
+                    <LoginButton><Link to={'/login'}><button class='log'>Login</button></Link></LoginButton>
             </NavMobileClose>
 
             {/* Menu de navegação principal*/}
@@ -58,7 +60,7 @@ const NavMobile = () => {
                 <NavTopMobile>
                     {/* Button to Close Menu*/}
                     <OpenButton onClick={toggleNav}>
-                        <XIcon isOpen={isOpen} src={Arrow} alt="Arrow"/>
+                        <XIcon isOpen={isOpen} src={X} alt="X"/>
                     </OpenButton>
                 </NavTopMobile>
 
@@ -90,7 +92,6 @@ const NavMobile = () => {
                     <ul>
                         {/* Links */}
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/app-mobile">App</Link></li>
                         <li><Link to="/races">Races</Link></li>
                         {/* Language */}
                         <div className='content-lng' ref={menuRef} onMouseLeave={handleMouseEnter}>
