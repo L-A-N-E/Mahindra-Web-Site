@@ -6,7 +6,12 @@ import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
 const Nav = () => {
     const [showOptionsLanguage, setShowOptionsLanguage] = useState(false)
+    const [showMenu, setShowMenu] = useState(false);
 
+    const handleToggle = () => {
+        setShowMenu(!showMenu);
+    };
+    
     return (
         <>
         <NavStyle>
@@ -61,14 +66,14 @@ const Nav = () => {
             </NavDesktop>
 
             {/* Menu Hamburguer */}
-            <NavMenu>
+            <NavMenu onClick={handleToggle} >
                 <span></span>
                 <span></span>
                 <span></span>
             </NavMenu>
 
             {/* Mobile */}
-            <NavMobile>
+            {showMenu && (<NavMobile>
                 <NavItemsMobile>
                     <ul>
                         <Link className='txt-none'>
@@ -117,7 +122,7 @@ const Nav = () => {
                         <li>Login</li>
                     </Link>
                 </div>
-            </NavMobile>
+            </NavMobile>)}
 
         </NavStyle>
         </>

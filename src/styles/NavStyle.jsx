@@ -8,7 +8,7 @@ export const NavStyle = styled.header`
     position: fixed;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     width: 100%;
     height: 70px;
     z-index: 1000;
@@ -63,7 +63,37 @@ export const NavDesktopLanguages = styled.div `
 `
 
 export const NavMenu = styled.div `
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 
+    span {
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        transition: 0.3s;
+    }
+
+    @media (max-width: 900px) {
+        display: flex;
+    }
+
+    ${({ showMenu }) =>
+    showMenu &&
+    `
+        span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        span:nth-child(2) {
+            opacity: 0;
+        }
+
+        span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+    `}
 `
 
 export const NavMobile = styled.div `
@@ -72,7 +102,7 @@ export const NavMobile = styled.div `
     @media (max-width: 900px){
         display: flex;
     }
-    `
+`
 
 
 
