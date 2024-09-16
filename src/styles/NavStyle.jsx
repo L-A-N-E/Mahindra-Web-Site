@@ -228,17 +228,88 @@ export const NavMobileOpen = styled.nav`
         transition: transform 0.3s ease-in-out;
     }
 `;
+// #ff1f1f
+// #801010
+export const LoginButton = styled.button`
+background-color:transparent;
+border:none;
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 800;
+    margin: 0 10px;
+    width: 150px;
+    padding: 10px 0;
+    box-shadow: 0 0 5px #ff1f1f;
+    transition: 0.4s;
+}
 
-// Trocar o icone por um menu hamburguer e X dependendo do close ou open e ver se adiciona 
+.log {
+    color: #fff;
+    background-color: #ff1f1f;
+    border: 1px solid #ff1f1f;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+button:hover {
+    color: white;
+    width:;
+    box-shadow: 0 0 5px #801010;
+    background-color: #801010;
+    border:#801010;
+}
+`
+
+export const SignUpButton = styled.button`
+@media(max-width:620px){
+    display:none;
+}
+margin-left:1rem;
+background-color:transparent;
+border:none;
+button {
+    cursor: pointer;
+    border: 0;
+    border-radius: 4px;
+    font-weight: 800;
+    margin: 0 10px;
+
+    width: 150px;
+    padding: 10px 0;
+    box-shadow: 0 0 5px  #ff1f1f;
+    transition: 0.4s;
+}
+
+.sig {
+    color: #fff;
+    background-color:  #ff1f1f;
+    border: 1px solid  #ff1f1f;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+button:hover {
+    color: white;
+    width:;
+    box-shadow: 0 0 10px #801010;
+    background-color: #801010;
+    border:#801010;
+}
+
+`
+
+// icone
 export const XIcon = styled.img`
-    width: 20px;
+    width: 30px;
     height: auto;
     transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
     transition: transform 0.3s ease-in-out;
 `;
 
 export const HamburguerIcon = styled.img`
-    width: 20px;
+    width: 40px;
     height: auto;
     transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
     transition: transform 0.3s ease-in-out;
@@ -249,7 +320,6 @@ export const NavTopMobile = styled.div`
     align-items: center; 
     justify-content: center; 
     padding: 10px;
-
 `;
 
 export const NavMidMobile = styled.div`
