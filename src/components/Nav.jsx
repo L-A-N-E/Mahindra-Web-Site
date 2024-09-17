@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import { NavStyle, NavLogo, NavDesktop, NavItemsDesktop, NavItemsEffect, NavDesktopLanguages, NavMenu, NavMobile, NavItemsMobile, NavMobileLanguages} from '../styles/NavStyle'
+import { NavStyle, NavLogo, NavDesktop, NavItemsDesktop, NavItemsEffect, NavDesktopLanguages, HamburgerMenu,NavMenu, NavMobile, NavItemsMobile, NavMobileLanguages} from '../styles/NavStyle'
 import Arrow from '../assets/footer/arrow.svg'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
@@ -72,11 +72,13 @@ const Nav = () => {
             </NavDesktop>
 
             {/* Menu Hamburguer */}
-            <NavMenu onClick={handleToggle} >
-                <span></span>
-                <span></span>
-                <span></span>
-            </NavMenu>
+            <HamburgerMenu>
+                <NavMenu onClick={handleToggle} showMenu={showMenu}>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </NavMenu>
+            </HamburgerMenu>
 
             {/* Mobile */}
             {showMenu && (<NavMobile>
