@@ -1,6 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { SectionPilotsStyle, PilotsBackground, ButtonPilots } from '../../styles/SectionPilotsStyle';
+import { SectionPilotsStyle, Pilots} from '../../styles/SectionPilotsStyle';
 import { Link } from 'react-router-dom';
 
 import Arrow from '../../assets/footer/arrow.svg'
@@ -18,14 +18,16 @@ const SectionPilots = () => {
         <>
         <SectionPilotsStyle>
                 {/* Pilot 1 */}
-                <PilotsBackground className='pilot-1'>
-                        <ButtonPilots className='color-1'>Edoardo Mortara</ButtonPilots>
-                </PilotsBackground>
+                <Link to = '/edoardo-mortara'   className='pilot-1'>
+                    <Pilots>
+                    </Pilots>
+                </Link>
 
                 {/* Pilot 2 */}
-                <PilotsBackground className='pilot-2'>
-                        <ButtonPilots className='color-2'>Nicky de Vries</ButtonPilots>
-                </PilotsBackground>
+                <Link to = '/nyck-de-vries' className='pilot-2'>
+                    <Pilots>
+                    </Pilots>
+                </Link>
         </SectionPilotsStyle>
         </>
     )

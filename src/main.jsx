@@ -37,7 +37,7 @@ const router = createBrowserRouter ([
       {path: '/car', element: <Car/>}, // Car
       {path: '/app-mobile', element: <AppMobile/>}, // App Mobile
       {path: '/edoardo-mortara', element: <Pilot_1/>}, // Edoardo Mortara
-      {path: '/nicky-de-vries', element: <Pilot_2/>} // Nicky de Vries
+      {path: '/nyck-de-vries', element: <Pilot_2/>} // Nyck de Vries
     ]}
 ])
 

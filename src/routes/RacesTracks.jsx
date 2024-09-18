@@ -106,7 +106,7 @@ const RaceTrack = () => {
                 <RaceTrackCardsRight className='card-1'>
                 </RaceTrackCardsRight>
 
-                {/* Card Nicky de Vries */}
+                {/* Card Nyck de Vries */}
                 <RaceTrackCardsRight className='card-2'>
                 </RaceTrackCardsRight>
             </RaceTrackContainerPilots>
