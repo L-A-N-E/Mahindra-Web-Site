@@ -30,7 +30,7 @@ export const NavDesktop = styled.div `
     }
 `
 
-export const NavItemsDesktop = styled.div `
+export const NavItemsDesktop = styled.nav `
     display: flex;
     width: 100%;
     height: 100%;
@@ -93,8 +93,7 @@ export const NavItemsEffect = styled.ul `
 
 
 export const NavDesktopLanguages = styled.div `
-    display: flex;
-    flex-direction: column;
+    cursor: pointer;
 
     .language {
         display: flex;
@@ -106,16 +105,20 @@ export const NavDesktopLanguages = styled.div `
     }
 
     .language-options {
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        background-color: white;
+        width: 100px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
 
         li {
-            position: relative; 
-            display: inline-block;
-            list-style: none;
-            font-size: ${Font.txt_12};
-            text-transform: uppercase;
-            color: ${Colors.white};
+            cursor: pointer;
+            padding: 2rem 1rem;
         }
     }
 `

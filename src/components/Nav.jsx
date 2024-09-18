@@ -57,13 +57,13 @@ const Nav = () => {
                                 <li>Language</li>
                             </NavItemsEffect>
 
-                        {showOptionsLanguage &&(
-                            <ul className='language-options' onMouseLeave={()=> setShowOptionsLanguage(false)}>
-                                <li onClick={()=> setShowOptionsLanguage(false)}>English</li>
-                                <li onClick={()=> setShowOptionsLanguage(false)}>Portuguese</li>
-                                <li onClick={()=> setShowOptionsLanguage(false)}>Spanish</li>
-                            </ul>
-                        )}
+                            {showOptionsLanguage &&(
+                                <ul className='language-options' onMouseLeave={()=> setShowOptionsLanguage(false)}>
+                                    <li onClick={()=> setShowOptionsLanguage(false)}>English</li>
+                                    <li onClick={()=> setShowOptionsLanguage(false)}>Portuguese</li>
+                                    <li onClick={()=> setShowOptionsLanguage(false)}>Spanish</li>
+                                </ul>
+                            )}
                         </NavDesktopLanguages>
                     </ul>
                 </NavItemsDesktop>
