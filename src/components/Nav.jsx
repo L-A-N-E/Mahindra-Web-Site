@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import { NavStyle, NavLogo, NavDesktop, NavItemsDesktop, NavItemsEffect, NavDesktopLanguages, HamburgerMenu,NavMenu, NavMobile, NavItemsMobile, NavMobileLanguages} from '../styles/NavStyle'
+import { NavStyle, NavLogo, NavDesktop, NavItemsDesktop, NavItemsEffect, NavDesktopLanguages, NavHamburgerMenu,NavMenu, NavMobile, NavItemsMobile, NavMobileLanguages} from '../styles/NavStyle'
 import Arrow from '../assets/footer/arrow.svg'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
@@ -57,13 +57,13 @@ const Nav = () => {
                                 <li>Language</li>
                             </NavItemsEffect>
 
-                        {showOptionsLanguage &&(
-                            <ul className='language-options' onMouseLeave={()=> setShowOptionsLanguage(false)}>
-                                <li onClick={()=> setShowOptionsLanguage(false)}>English</li>
-                                <li onClick={()=> setShowOptionsLanguage(false)}>Portuguese</li>
-                                <li onClick={()=> setShowOptionsLanguage(false)}>Spanish</li>
-                            </ul>
-                        )}
+                            {showOptionsLanguage &&(
+                                <ul className='language-options' onMouseLeave={()=> setShowOptionsLanguage(false)}>
+                                    <li onClick={()=> setShowOptionsLanguage(false)}>English</li>
+                                    <li onClick={()=> setShowOptionsLanguage(false)}>Portuguese</li>
+                                    <li onClick={()=> setShowOptionsLanguage(false)}>Spanish</li>
+                                </ul>
+                            )}
                         </NavDesktopLanguages>
                     </ul>
                 </NavItemsDesktop>
@@ -72,13 +72,13 @@ const Nav = () => {
             </NavDesktop>
 
             {/* Menu Hamburguer */}
-            <HamburgerMenu>
+            <NavHamburgerMenu>
                 <NavMenu onClick={handleToggle} showMenu={showMenu}>
                     <span></span>
                     <span></span>
                     <span></span>
                 </NavMenu>
-            </HamburgerMenu>
+            </NavHamburgerMenu>
 
             {/* Mobile */}
             {showMenu && (<NavMobile>

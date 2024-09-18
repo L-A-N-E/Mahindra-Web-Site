@@ -30,7 +30,7 @@ export const NavDesktop = styled.div `
     }
 `
 
-export const NavItemsDesktop = styled.div `
+export const NavItemsDesktop = styled.nav `
     display: flex;
     width: 100%;
     height: 100%;
@@ -93,9 +93,9 @@ export const NavItemsEffect = styled.ul `
 
 
 export const NavDesktopLanguages = styled.div `
-    display: flex;
-    flex-direction: column;
+    cursor: pointer;
 
+    /* Idioma Selecionado */
     .language {
         display: flex;
 
@@ -105,22 +105,36 @@ export const NavDesktopLanguages = styled.div `
         }
     }
 
+    /* Menu de Opções Idioma */
     .language-options {
+        position: absolute;
+        top: 100%;
+        right: 5%;
+        width: auto;
+        list-style: none;
         display: flex;
         flex-direction: column;
+        background-color: ${Colors.black};
 
+        /* Opções */
         li {
-            position: relative; 
-            display: inline-block;
-            list-style: none;
+            width: 100%;
+            cursor: pointer;
+            padding: 1rem 1rem;
+            text-align: start;
+            color: ${Colors.white};
             font-size: ${Font.txt_12};
             text-transform: uppercase;
-            color: ${Colors.white};
+        
+            &:hover {
+                background-color: #313131;
+            }
         }
     }
 `
 
-export const HamburgerMenu = styled.div`
+// Menu Hamburguer
+export const NavHamburgerMenu = styled.div`
     display: none;
 
     @media (max-width: 900px) {
@@ -129,11 +143,11 @@ export const HamburgerMenu = styled.div`
     }
 `;
 
+// Criando Menu Hamburguer
 export const NavMenu = styled.div`
     display: none;
     flex-direction: column;
     gap: 5px;
-
 
     span {
         width: 25px;
@@ -146,8 +160,8 @@ export const NavMenu = styled.div`
         display: flex;
     }
 
-    ${({ showMenu }) =>
-        showMenu &&
+    /* Animação Abrir e Fechar Menu Hamburguer */
+    ${({ showMenu }) => showMenu &&
         `
         span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
@@ -156,7 +170,7 @@ export const NavMenu = styled.div`
             opacity: 0;
         }
         span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
+            transform: rotate(-45deg) translate(7px, -6px);
         }
     `}
 `;

@@ -47,14 +47,14 @@ export const EcotracerTitle = styled.div`
     h1 {
         text-transform: uppercase;
         font-weight: ${Font.txt_400w};
-        font-size: ${Font.txt_3rem};
+        font-size: ${Font.txt_2rem};
         color: ${Colors.dark_gray};
     }
 
     h2 {
         text-transform: uppercase;
         font-weight: ${Font.txt_900w};
-        font-size: ${Font.txt_3rem};
+        font-size: ${Font.txt_2rem};
         color: ${Colors.green}
     }
 
