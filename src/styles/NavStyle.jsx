@@ -95,6 +95,7 @@ export const NavItemsEffect = styled.ul `
 export const NavDesktopLanguages = styled.div `
     cursor: pointer;
 
+    /* Idioma Selecionado */
     .language {
         display: flex;
 
@@ -104,26 +105,36 @@ export const NavDesktopLanguages = styled.div `
         }
     }
 
+    /* Menu de Opções Idioma */
     .language-options {
         position: absolute;
         top: 100%;
         right: 5%;
-        background-color: white;
-        width: 100px;
+        width: auto;
         list-style: none;
-        padding: 0;
-        margin: 0;
         display: flex;
         flex-direction: column;
+        background-color: ${Colors.black};
 
+        /* Opções */
         li {
+            width: 100%;
             cursor: pointer;
-            padding: 2rem 1rem;
+            padding: 1rem 1rem;
+            text-align: start;
+            color: ${Colors.white};
+            font-size: ${Font.txt_12};
+            text-transform: uppercase;
+        
+            &:hover {
+                background-color: #313131;
+            }
         }
     }
 `
 
-export const HamburgerMenu = styled.div`
+// Menu Hamburguer
+export const NavHamburgerMenu = styled.div`
     display: none;
 
     @media (max-width: 900px) {
@@ -132,11 +143,11 @@ export const HamburgerMenu = styled.div`
     }
 `;
 
+// Criando Menu Hamburguer
 export const NavMenu = styled.div`
     display: none;
     flex-direction: column;
     gap: 5px;
-
 
     span {
         width: 25px;
@@ -149,8 +160,8 @@ export const NavMenu = styled.div`
         display: flex;
     }
 
-    ${({ showMenu }) =>
-        showMenu &&
+    /* Animação Abrir e Fechar Menu Hamburguer */
+    ${({ showMenu }) => showMenu &&
         `
         span:nth-child(1) {
             transform: rotate(45deg) translate(5px, 5px);
@@ -159,7 +170,7 @@ export const NavMenu = styled.div`
             opacity: 0;
         }
         span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
+            transform: rotate(-45deg) translate(7px, -6px);
         }
     `}
 `;
