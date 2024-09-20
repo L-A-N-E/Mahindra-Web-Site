@@ -9,4 +9,4 @@ const Pilot = () => {
     )
 }
 
-export default Pilot 
+export default Pilot
