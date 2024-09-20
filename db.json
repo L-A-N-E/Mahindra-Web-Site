@@ -224,5 +224,23 @@
             "max_velocity": 218,
             "laps": 30
         }
+    ],
+
+    "pilots": [
+        {
+            "id": 1,
+            "slug":"nyck-de-vries",
+            "name": "Nyck de Vries",
+            "wins": 5,
+            "races": 11
+        },
+
+        {
+            "id": 2,
+            "slug":"edoardo-mortara",
+            "name": "Edoardo Mortara",
+            "wins": 3,
+            "races": 12
+        }
     ]
 }

@@ -62,6 +62,6 @@ export const SectionPilotsStyle = styled.section`
     }
 `
 
-export const Pilots = styled.div`
+export const PilotsCard = styled.div`
     display: flex;
 `;
