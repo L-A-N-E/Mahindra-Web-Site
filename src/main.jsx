@@ -9,14 +9,13 @@ import Error from "./routes/Error" // Import Error
 import Home from "./routes/Home"  // Import Home
 import SignUp from './routes/SignUp' // Import SignUp 
 import Login from './routes/Login' // Import Login
-import Car from './routes/Car' // Import Car
 import AppMobile from './routes/AppMobile' // Import App Mobile
-import Pilot_1 from './routes/Pilot_1' // Import Pilot 1
-import Pilot_2 from './routes/Pilot_2' // Import Pilot 2
+import Pilot from './routes/Pilot.jsx' // Import Pilots
 
 import Races from './routes/Races' // Import Races
 import RaceTrack from './routes/RaceTrack.jsx'
 import RacesTracks from './routes/RacesTracks.jsx'
+import Pilots from './routes/Pilots.jsx'
 
 
 // Creating Routes
@@ -34,10 +33,13 @@ const router = createBrowserRouter ([
           {path: '/race-track/:slug', element: <RacesTracks/>} // Races Tracks
         ]},
 
-      {path: '/car', element: <Car/>}, // Car
+      {path: '/pilots', element: <Pilot/>, 
+        
+        children: [
+          {path: '/pilots/:slug', element: <Pilots/>}
+        ]},
+
       {path: '/app-mobile', element: <AppMobile/>}, // App Mobile
-      {path: '/edoardo-mortara', element: <Pilot_1/>}, // Edoardo Mortara
-      {path: '/nyck-de-vries', element: <Pilot_2/>} // Nyck de Vries
     ]}
 ])
 

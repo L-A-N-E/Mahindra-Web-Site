@@ -13,13 +13,13 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 const SectionRaces = () => {
-    const [races, setRaces] = useState([]);
     const { t, i18n } = useTranslation();
-
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
+
+    const [races, setRaces] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/races')
         .then((response) => response.json())
