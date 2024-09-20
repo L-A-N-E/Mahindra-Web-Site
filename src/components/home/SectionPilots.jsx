@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SectionPilotsStyle, PilotsCard} from '../../styles/SectionPilotsStyle';
+import { SectionPilotsStyle, PilotsContainer, PilotsCard} from '../../styles/SectionPilotsStyle';
 import { Link } from 'react-router-dom';
+import EdoardoMortara from '../../assets/home/pilots/pilot-1.png'
+import NyckdeVries from '../../assets/home/pilots/pilot-2.png'
 
-import Arrow from '../../assets/footer/arrow.svg'
 
 const SectionPilots = () => {
 
@@ -26,17 +27,25 @@ const SectionPilots = () => {
     return (
         <>
             <SectionPilotsStyle>
+                <PilotsContainer>
                     {/* Pilot 1 */}
-                    <Link to='pilots/edoardo-mortara' className='pilot-1'>
-                        <PilotsCard>
-                        </PilotsCard>
-                    </Link>
+                    <PilotsCard>
+                        <Link to='pilots/edoardo-mortara'>
+                            <div>
+                                <img src={EdoardoMortara} alt="Edoardo Mortara" />
+                            </div>
+                        </Link>
+                    </PilotsCard>
 
                     {/* Pilot 2 */}
-                    <Link to='pilots/nyck-de-vries' className='pilot-2'>
-                        <PilotsCard>
-                        </PilotsCard>
-                    </Link>
+                    <PilotsCard>
+                        <Link to='pilots/nyck-de-vries'>
+                            <div>
+                                <img src={NyckdeVries} alt="Nyck de Vries" />
+                            </div>
+                        </Link>
+                    </PilotsCard>
+                </PilotsContainer>
             </SectionPilotsStyle>
         </>
     )

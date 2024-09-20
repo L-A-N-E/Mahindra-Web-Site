@@ -20,6 +20,7 @@ const GlobalStyle = createGlobalStyle `
     // Scrollbar
     ::-webkit-scrollbar {
         width: 5px;
+        height: 5px;
     }
 
     // Scrollbar Color 

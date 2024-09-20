@@ -80,21 +80,3 @@ export const AboutContent = styled.section`
         gap: 1.3rem;
     }   
 `
-
-
-
-// @media (max-width: 700px) {
-//     section {
-//         height: 100vh;
-
-//         #about-container{
-//             width: 100%;
-//             padding:  2rem;
-
-//             #about-content {
-//                 align-items: center;
-//                 gap: 1.3rem;
-//             }
-//         }
-//     }
-// }

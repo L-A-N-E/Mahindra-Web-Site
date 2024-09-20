@@ -6,62 +6,34 @@ import Colors from '../constant/Colors';
 import Font from '../constant/Font';
 
 export const SectionPilotsStyle = styled.section`
-    height: 100dvh;
+    height: auto;
     width: 100%;
-    display: grid;
-    background-color: ${Colors.black};
-    grid-template-areas: 
-    'pilot-1 pilot-2';
-    
-    .pilot-1 {
-        grid-area: pilot-1;
-        background-image: url(${Pilot_1});
-        background-size: cover;
-        opacity: 0.8;
-        transition: all 300ms ease-in-out;
-
-        &:hover {
-            opacity: 1;
-        }
-    }
-    
-    .pilot-2{
-        grid-area: pilot-2;
-        background-image: url(${Pilot_2});
-        background-size: cover;
-        opacity: 0.8;
-        transition: all 300ms ease-in-out;
-    
-        &:hover {
-            opacity: 1;
-        }
-    }
-
-    @media (max-width: 1000px) {
-        height: 65dvh;
-
-        .pilot-1{
-            background-position: center;
-        }
-        
-        .pilot-2{
-            background-position: center;
-        }
-    }
-    
-    
-    @media (max-width: 600px) {
-        grid-template-areas: 
-        'pilot-1'
-        'pilot-2';
-        height: 150dvh;
-    }
-
-    @media (max-width: 500px) {
-        height: 150dvh;
-    }
+    display: flex;
+    justify-content: center;
+    background-color: ${Colors.off_white};
 `
 
+export const PilotsContainer = styled.div`
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+    @media (max-width: 900px) {
+        grid-template-columns: 1fr;
+    }
+`
 export const PilotsCard = styled.div`
-    display: flex;
+    div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+        }
+    }
 `;
