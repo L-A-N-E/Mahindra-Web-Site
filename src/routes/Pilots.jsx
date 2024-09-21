@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { PilotsStyle, PilotsContent, PilotImage, PilotInfo } from '../styles/PilotsStyle'
 import Loading from '../components/Loading'
 import { useParams } from 'react-router-dom';
 import Error from '../routes/Error'
@@ -54,7 +55,19 @@ const Pilots = () => {
 
     return (
         <>
-            <h1>{pilotInfo.name}</h1>
+        <PilotsStyle>
+            <PilotsContent>
+                <PilotImage>
+                    <img src={pilotInfo.image} alt={pilotInfo.name} />
+                </PilotImage>
+
+                <PilotInfo>
+                    <h1>{pilotInfo.name}</h1>
+                    <p>Wins: {pilotInfo.wins}</p>
+                    <p>Races: {pilotInfo.races}</p>
+                </PilotInfo>
+            </PilotsContent>
+        </PilotsStyle>
         </>
     )
 }

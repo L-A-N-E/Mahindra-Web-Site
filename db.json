@@ -231,6 +231,7 @@
             "id": 1,
             "slug":"nyck-de-vries",
             "name": "Nyck de Vries",
+            "image":"/src/assets/pilots/nyck-de-vries.png",
             "wins": 5,
             "races": 11
         },
@@ -239,6 +240,7 @@
             "id": 2,
             "slug":"edoardo-mortara",
             "name": "Edoardo Mortara",
+            "image":"/src/assets/pilots/edoardo-mortara.png",
             "wins": 3,
             "races": 12
         }
