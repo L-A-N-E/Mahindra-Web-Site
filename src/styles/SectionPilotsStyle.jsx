@@ -5,6 +5,7 @@ import Pilot_2 from '../assets/home/pilots/pilot-2.png';
 import Colors from '../constant/Colors';
 import Font from '../constant/Font';
 
+// Seção Pilotos
 export const SectionPilotsStyle = styled.section`
     height: auto;
     width: 100%;
@@ -13,6 +14,7 @@ export const SectionPilotsStyle = styled.section`
     background-color: ${Colors.off_white};
 `
 
+// Container
 export const PilotsContainer = styled.div`
     width: 100%;
     display: grid;
@@ -22,6 +24,8 @@ export const PilotsContainer = styled.div`
         grid-template-columns: 1fr;
     }
 `
+
+// Card Pilotos
 export const PilotsCard = styled.div`
     div {
         width: 100%;
@@ -33,7 +37,7 @@ export const PilotsCard = styled.div`
         img {
             width: 100%;
             height: 100%;
-            z-index: 1000;
+            z-index: 100;
         }
     }
 `;
