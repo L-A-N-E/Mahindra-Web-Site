@@ -1,16 +1,27 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { NavStyle, NavLogo, NavDesktop, NavItemsDesktop, NavItemsEffect, NavDesktopLanguages, NavHamburgerMenu,NavMenu, NavMobile, NavItemsMobile, NavMobileLanguages} from '../styles/NavStyle'
 import Arrow from '../assets/footer/arrow.svg'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
 const Nav = () => {
-    const [showOptionsLanguage, setShowOptionsLanguage] = useState(false)
-    const [showMenu, setShowMenu] = useState(false);
 
+    // Language Options
+    const [showOptionsLanguage, setShowOptionsLanguage] = useState(false)
+
+    // Menu Mobile
+    const [showMenu, setShowMenu] = useState(false);
     const handleToggle = () => {
         setShowMenu(!showMenu);
     };
+
+    // Change Language
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     
     return (
         <>
@@ -29,7 +40,7 @@ const Nav = () => {
                         <Link className='txt-none'>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
-                                <li>Home</li>
+                                <Link className='txt-none' to = '/'><li>home</li></Link>
                             </NavItemsEffect>
                         </Link>
                 
@@ -37,7 +48,7 @@ const Nav = () => {
                         <Link className='txt-none'>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
-                                <li>Races</li>
+                                <Link className='txt-none' to= '/races'><li>{t('races')}</li></Link>
                             </NavItemsEffect>
                         </Link>
 
@@ -45,7 +56,7 @@ const Nav = () => {
                         <Link className='txt-none'>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
-                                <li>Mobile App</li>
+                                <Link className='txt-none' to='/mobile-app'><li>{t('mobile-app')}</li></Link>
                             </NavItemsEffect>
                         </Link>
                         
@@ -54,14 +65,14 @@ const Nav = () => {
 
                             <NavItemsEffect className='language' onMouseEnter={()=> setShowOptionsLanguage(true)}>
                                 <img src={Arrow} alt="Arrow" />
-                                <li>Language</li>
+                                <li>{t('language')}</li>
                             </NavItemsEffect>
 
                             {showOptionsLanguage &&(
                                 <ul className='language-options' onMouseLeave={()=> setShowOptionsLanguage(false)}>
-                                    <li onClick={()=> setShowOptionsLanguage(false)}>English</li>
-                                    <li onClick={()=> setShowOptionsLanguage(false)}>Portuguese</li>
-                                    <li onClick={()=> setShowOptionsLanguage(false)}>Spanish</li>
+                                    <button onClick={()=> {setShowOptionsLanguage(false); changeLanguage('en')}}>English</button>
+                                    <button onClick={()=> {setShowOptionsLanguage(false); changeLanguage('pt')}}>Portuguese</button>
+                                    <button onClick={()=> {setShowOptionsLanguage(false); changeLanguage('es')}}>Spanish</button>
                                 </ul>
                             )}
                         </NavDesktopLanguages>
@@ -84,24 +95,24 @@ const Nav = () => {
             {showMenu && (<NavMobile>
                 <NavItemsMobile>
                     <ul>
-                        <Link className='txt-none'>
+                        <Link className='txt-none' to='/'>
                             <li>Home</li>
                         </Link>
                 
-                        <Link className='txt-none'>
+                        <Link className='txt-none' to='/races'>
                             <li>Races</li>
                         </Link>
 
-                        <Link className='txt-none'>
+                        <Link className='txt-none' to='/mobile-app'>
                             <li>App Mobile</li>
                         </Link>
 
 
-                        <Link className='txt-none'>
+                        <Link className='txt-none' to='/sign-up'>
                             <li>Sing-Up</li>
                         </Link>
                         
-                        <Link className='txt-none'>
+                        <Link className='txt-none' to=''>
                             <li>Login</li>
                         </Link>
                         
@@ -112,9 +123,9 @@ const Nav = () => {
                             </ul>
                         {showOptionsLanguage &&(
                             <ul onClick={()=> setShowOptionsLanguage(false)}>
-                                <li onClick={()=> setShowOptionsLanguage(false)}><Link>English</Link></li>
-                                <li onClick={()=> setShowOptionsLanguage(false)}><Link>Portuguese</Link></li>
-                                <li onClick={()=> setShowOptionsLanguage(false)}><Link>Spanish</Link></li>
+                                <button onClick={()=> setShowOptionsLanguage(false)}>English</button>
+                                <button onClick={()=> setShowOptionsLanguage(false)}>Portuguese</button>
+                                <button onClick={()=> setShowOptionsLanguage(false)}>Spanish</button>
                             </ul>
                         )}
                         </NavMobileLanguages>

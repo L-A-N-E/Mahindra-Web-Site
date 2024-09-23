@@ -8,7 +8,7 @@ const Pilots = () => {
     // Hook useParams - Acessa os parâmetros de URL, neste caso, o slug
     const { slug } = useParams();
 
-    // Hook useState - Gerencia o estado dos dados da pista, carregamento e erros
+    // Hook useState - Gerencia o estado dos dados do piloto, carregamento e erros
     const [pilotInfo, setPilotInfo] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null)
@@ -32,7 +32,7 @@ const Pilots = () => {
                 if (data.length > 0) {
                     setPilotInfo(data[0]);
                 } else{
-                    setError('Nenhuma pista encontrada');
+                    setError('Nenhuma piloto encontrado');
                 }
             } catch (error) {
                 setError(error.message);

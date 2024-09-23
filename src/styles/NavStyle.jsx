@@ -117,7 +117,7 @@ export const NavDesktopLanguages = styled.div `
         background-color: ${Colors.black};
 
         /* Opções */
-        li {
+        button {
             width: 100%;
             cursor: pointer;
             padding: 1rem 1rem;
@@ -125,6 +125,8 @@ export const NavDesktopLanguages = styled.div `
             color: ${Colors.white};
             font-size: ${Font.txt_12};
             text-transform: uppercase;
+            background-color: ${Colors.black};
+            border: none;
         
             &:hover {
                 background-color: #313131;
