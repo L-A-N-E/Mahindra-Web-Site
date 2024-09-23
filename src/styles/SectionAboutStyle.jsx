@@ -1,7 +1,7 @@
 import styled from 'styled-components'  //Styled Components
 import Colors from '../constant/Colors' //Var Colors
 import Font from '../constant/Font' //Var Fonts
-import backgroundAbout from '../assets/home/about/bg-teste.png' //Background Section
+import backgroundAbout from '../assets/home/about/teste.png' //Background Section
 
 export const SectionAboutStyle = styled.section `
     width: 100%;
@@ -10,7 +10,7 @@ export const SectionAboutStyle = styled.section `
     align-items: center;
     justify-content: center;
     background-image: url(${backgroundAbout});
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 
@@ -40,7 +40,7 @@ export const AboutContent = styled.section`
 
         h1 {
             color: ${Colors.red_1};
-            font-size: ${Font.txt_60};
+            font-size: ${Font.txt_40};
             font-weight:${Font.txt_800w};
             text-transform: uppercase;
         }
@@ -54,7 +54,7 @@ export const AboutContent = styled.section`
 
             a {
                 button {
-                    width: 200px;
+                    width: 100%;
                     padding: 1rem 3rem;
                     background-color: ${Colors.red_1};
                     background-image: linear-gradient(to left, ${Colors.red_1} 50%, ${Colors.red_hover} 50%);

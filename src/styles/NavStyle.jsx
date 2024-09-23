@@ -20,6 +20,18 @@ export const NavLogo = styled.div `
     img {
         height: 30px;
     }
+
+    @media (max-width: 900px){
+        img {
+            height: 25px;
+        }
+    }
+
+    @media (max-width: 400px){
+        img {
+            height: 15px;
+        }
+    }
 `
 
 export const NavDesktop = styled.div `
