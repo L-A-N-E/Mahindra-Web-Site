@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Colors from '../constant/Colors';
 
 export const PilotsStyle = styled.main `
-    height: 100dvh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,28 +10,47 @@ export const PilotsStyle = styled.main `
 `
 
 export const PilotsContent = styled.div `
-    width: 80%;
+    width: 100%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     color:${Colors.white};
+    padding: 0 2rem;
+
+    @media (max-width: 700px) {
+        flex-direction: column;
+        gap: 2rem;
+    }
 `
 
 export const PilotImage = styled.div `
-    width: 60%;
+    width: 50%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${Colors.red_1};
-    clip-path: polygon(30% 0%, 100% 0%, 75% 100%, 5% 100%);
 
     img {
-        height: 70%;
+        width: 70%;
+        
+        @media (max-width: 700px) {
+            width: 100%;
+        }
     }
 `
 
 export const PilotInfo = styled.div `
-    width:40%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+    padding: 2rem 1rem;
+    p {
+        text-align: justify;
+    }
+
+    @media (max-width: 700px) {
+        width: 90%;
+    }
 `

@@ -27,8 +27,10 @@
 
     "rights":"@ - 2024 - Todos os Direitos Reservados",
     "mobile-app":"Aplicativo Mobile",
-    "races":"Circuitos",
+    "races":"Corridas",
+    "circuit":"Circuito",
     "car":"Carro",
+    "win":"Vitórias",
     "mahindra":"Mahindra",
     "formula-e":"Formula E",
     "fia":"FIA",
@@ -47,5 +49,8 @@
     "text-register-sucess":"Usuário registrado com sucesso",
 
     "title-ecotracer":"Por que",
-    "text-ecotracer":"A Fórmula E é uma categoria inovadora do automobilismo que combina velocidade e tecnologia com um compromisso profundo com a sustentabilidade. Desde sua criação, a Fórmula E tem liderado a transição para um futuro mais limpo e verde nos esportes a motor, utilizando exclusivamente carros elétricos alimentados por energia renovável. Além de proporcionar corridas emocionantes em circuitos urbanos ao redor do mundo, a categoria visa promover o desenvolvimento de tecnologias sustentáveis, incentivar o uso de veículos elétricos e reduzir as emissões de carbono no planeta. A Fórmula E não é apenas sobre competir, mas sobre impulsionar um futuro sustentável e acessível para todos."
+    "text-ecotracer":"A Fórmula E é uma categoria inovadora do automobilismo que combina velocidade e tecnologia com um compromisso profundo com a sustentabilidade. Desde sua criação, a Fórmula E tem liderado a transição para um futuro mais limpo e verde nos esportes a motor, utilizando exclusivamente carros elétricos alimentados por energia renovável. Além de proporcionar corridas emocionantes em circuitos urbanos ao redor do mundo, a categoria visa promover o desenvolvimento de tecnologias sustentáveis, incentivar o uso de veículos elétricos e reduzir as emissões de carbono no planeta. A Fórmula E não é apenas sobre competir, mas sobre impulsionar um futuro sustentável e acessível para todos.",
+
+    "edoardo-mortara": "Edoardo Mortara (Genebra, 12 de janeiro de 1987) é um automobilista nascido em Genebra, na Suíça que atualmente compete na Fórmula E pela equipe Mahindra Racing.",
+    "nyck-de-vries":"Nyck de Vries (Sneek, 6 de fevereiro de 1995) é um piloto de automóveis neerlandês que atualmente compete na Fórmula E pela equipe Mahindra Racing. Ele atuou na Fórmula 1 pela equipe AlphaTauri em 2023. Ele já estreou na Fórmula 1 pela primeira vez em setembro de 2022, marcando dois pontos pela Williams no Grande Prêmio da Itália de 2022 substituindo Alexander Albon devido a crise de apendicite. Depois de 10 corridas na temporada 2023 ele foi demitido da AlphaTauri por não gerar muito resultado para equipe."
 }

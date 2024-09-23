@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { PilotsStyle, PilotsContent, PilotImage, PilotInfo } from '../styles/PilotsStyle'
 import Loading from '../components/Loading'
+import { useTranslation } from 'react-i18next';
 import { useParams } from 'react-router-dom';
 import Error from '../routes/Error'
 
@@ -8,6 +9,7 @@ const Pilots = () => {
     // Hook useParams - Acessa os parâmetros de URL, neste caso, o slug
     const { slug } = useParams();
 
+    const { t, i18n } = useTranslation();
     // Hook useState - Gerencia o estado dos dados do piloto, carregamento e erros
     const [pilotInfo, setPilotInfo] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -53,6 +55,11 @@ const Pilots = () => {
         return <Error/>;
     }
 
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+
+    };
+
     return (
         <>
         <PilotsStyle>
@@ -63,8 +70,9 @@ const Pilots = () => {
 
                 <PilotInfo>
                     <h1>{pilotInfo.name}</h1>
-                    <p>Wins: {pilotInfo.wins}</p>
-                    <p>Races: {pilotInfo.races}</p>
+                    <p>{`${t('win')} : ${pilotInfo.wins}`}</p>
+                    <p>{`${t('races')} : ${pilotInfo.races}`}</p>
+                    <p>{t(pilotInfo.biography)}</p>
                 </PilotInfo>
             </PilotsContent>
         </PilotsStyle>

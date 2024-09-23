@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { NavStyle, NavLogo, NavDesktop, NavItemsDesktop, NavItemsEffect, NavDesktopLanguages, NavHamburgerMenu,NavMenu, NavMobile, NavItemsMobile, NavMobileLanguages} from '../styles/NavStyle'
+import { NavStyle, NavLogo, NavDesktop, NavItemsDesktop, NavItemsEffect, NavDesktopLanguages, NavHamburgerMenu,NavMenu, NavMobile, NavItemsMobile, NavMobileUl, NavMobileLanguages} from '../styles/NavStyle'
 import Arrow from '../assets/footer/arrow.svg'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
@@ -59,7 +59,7 @@ const Nav = () => {
                                 <Link className='txt-none' to='/mobile-app'><li>{t('mobile-app')}</li></Link>
                             </NavItemsEffect>
                         </Link>
-                        
+
                         {/* Idioma */}
                         <NavDesktopLanguages>
 
@@ -94,7 +94,7 @@ const Nav = () => {
             {/* Mobile */}
             {showMenu && (<NavMobile>
                 <NavItemsMobile>
-                    <ul>
+                    <NavMobileUl>
                         <Link className='txt-none' to='/'>
                             <li>Home</li>
                         </Link>
@@ -122,25 +122,15 @@ const Nav = () => {
                                 <li>Language</li>
                             </ul>
                         {showOptionsLanguage &&(
-                            <ul onClick={()=> setShowOptionsLanguage(false)}>
+                            <ul onClick={()=> setShowOptionsLanguage(false)} className='language-options'>
                                 <button onClick={()=> setShowOptionsLanguage(false)}>English</button>
                                 <button onClick={()=> setShowOptionsLanguage(false)}>Portuguese</button>
                                 <button onClick={()=> setShowOptionsLanguage(false)}>Spanish</button>
                             </ul>
                         )}
                         </NavMobileLanguages>
-                    </ul>
+                    </NavMobileUl>
                 </NavItemsMobile>
-
-                <div>
-                    <Link>
-                        <li>Sing-Up</li>
-                    </Link>
-                    
-                    <Link>
-                        <li>Login</li>
-                    </Link>
-                </div>
             </NavMobile>)}
 
         </NavStyle>
