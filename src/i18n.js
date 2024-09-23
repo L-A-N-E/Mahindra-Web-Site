@@ -8,11 +8,11 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    supportedLngs: ['en', 'pt', 'es'], 
-    fallbackLng: 'en', 
+    supportedLngs: ['en', 'pt', 'es'], // Idiomas suportados
+    fallbackLng: 'en', // Idioma padrão se o idioma detectado não for suportado
     debug: true,
     interpolation: {
-      escapeValue: false, 
+      escapeValue: false, // React já protege contra XSS
     },
     backend: {
       loadPath: '/locales/{{lng}}/translation.json',
