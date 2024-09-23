@@ -30,7 +30,9 @@
     "rights":"@ - 2024 - All Rights Reserved",
     "mobile-app":"Mobile App",
     "races":"Races",
+    "circuit":"Circuit",
     "car":"Car",
+    "win":"Wins",
     "mahindra":"Mahindra",
     "formula-e":"Formula E",
     "fia":"FIA",
@@ -49,5 +51,8 @@
     "text-register-sucess":"User registered successfully",
 
     "title-ecotracer":"Why",
-    "text-ecotracer":"Formula E is an innovative motorsport category that combines speed and technology with a deep commitment to sustainability. Since its inception, Formula E has been leading the transition towards a cleaner and greener future in motorsport, exclusively using electric cars powered by renewable energy. In addition to providing exciting races on urban circuits around the world, the category aims to promote the development of sustainable technologies, encourage the use of electric vehicles, and reduce carbon emissions on the planet. Formula E is not just about racing; it's about driving a sustainable and accessible future for everyone."
+    "text-ecotracer":"Formula E is an innovative motorsport category that combines speed and technology with a deep commitment to sustainability. Since its inception, Formula E has been leading the transition towards a cleaner and greener future in motorsport, exclusively using electric cars powered by renewable energy. In addition to providing exciting races on urban circuits around the world, the category aims to promote the development of sustainable technologies, encourage the use of electric vehicles, and reduce carbon emissions on the planet. Formula E is not just about racing; it's about driving a sustainable and accessible future for everyone.",
+
+    "edoardo-mortara": "Edoardo Mortara (Geneva, January 12, 1987) is a racing driver born in Geneva, Switzerland, who currently competes in Formula E for the Mahindra Racing team.",
+    "nyck-de-vries":"Nyck de Vries (Sneek, February 6, 1995) is a Dutch racing driver who has competed in various motorsport categories, including Formula E and Formula 1. He currently races for Mahindra Racing in Formula E. De Vries made his Formula 1 debut in September 2022, substituting for Alexander Albon at the Italian Grand Prix and scoring two points for Williams. In 2023, he joined AlphaTauri as a full-time Formula 1 driver, but after 10 races, he was released from the team due to underwhelming results. Throughout his career, Nyck de Vries has gained recognition for his versatility and skill in different racing series."
 }

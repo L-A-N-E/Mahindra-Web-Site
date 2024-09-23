@@ -9,18 +9,17 @@ import { useNavigate } from 'react-router-dom';
 
 
 const SectionLogin = () => {
+
+    const { t, i18n } = useTranslation();    
     const navigate = useNavigate();
-    // Select Language
-    const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-        setShowLanguages(false);
-    };
-    
     const [user, setUser] = useState(null);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(true);
+    
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
     
     const onLoginPress = (event) => {
         event.preventDefault();

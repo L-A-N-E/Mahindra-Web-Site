@@ -233,7 +233,8 @@
             "name": "Nyck de Vries",
             "image":"/src/assets/pilots/nyck-de-vries.png",
             "wins": 5,
-            "races": 11
+            "races": 11,
+            "biography":"nyck-de-vries"
         },
 
         {
@@ -242,7 +243,8 @@
             "name": "Edoardo Mortara",
             "image":"/src/assets/pilots/edoardo-mortara.png",
             "wins": 3,
-            "races": 12
+            "races": 12,
+            "biography": "edoardo-mortara"
         }
     ]
 }

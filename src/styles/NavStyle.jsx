@@ -5,7 +5,7 @@ import Arrow from '../assets/footer/arrow.svg'; // Arrow
 
 // Container Principal Nav
 export const NavStyle = styled.header`
-    position: fixed;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -121,7 +121,7 @@ export const NavDesktopLanguages = styled.div `
     .language-options {
         position: absolute;
         top: 100%;
-        right: 5%;
+        right: 4%;
         width: auto;
         list-style: none;
         display: flex;
@@ -164,8 +164,8 @@ export const NavMenu = styled.div`
     gap: 5px;
 
     span {
-        width: 25px;
-        height: 3px;
+        width: 20px;
+        height: 1.5px;
         background-color: white;
         transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
     }
@@ -178,7 +178,7 @@ export const NavMenu = styled.div`
     ${({ showMenu }) => showMenu &&
         `
         span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
+            transform: rotate(45deg) translate(3px, 3px);
         }
         span:nth-child(2) {
             opacity: 0;
@@ -203,9 +203,79 @@ export const NavMobile = styled.div `
     @media (max-width: 900px){
         display: flex;
     }
+    
+    @media (max-width: 350px){
+        width: 100%;
+    }
+`
+
+export const NavItemsMobile = styled.div `
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+    align-items: start;
+
+    @media (max-width: 350px){
+        justify-content: center;
+    }
 `
 
 
+export const NavMobileUl = styled.ul `
+    list-style: none;
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 1rem;
 
-    export const NavItemsMobile = styled.div ``
-    export const NavMobileLanguages = styled.div ``
+    li {
+        width: auto; 
+        position: relative; 
+        list-style: none;
+        font-size: ${Font.txt_12};
+        text-transform: uppercase;
+        color: ${Colors.white};
+    }
+
+    @media (max-width: 350px) {
+        margin: 0;
+        align-items: center;
+    }
+`
+
+export const NavMobileLanguages = styled.div `
+    display: flex;
+    flex-direction: column;
+
+    .language {
+        display: flex;
+        gap: 0.3rem;
+    }
+
+    .language-options {
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 0 0 1.3rem;
+        gap: 1rem;
+
+        button {
+            border: none;
+            background-color: ${Colors.black};
+            color: ${Colors.white};
+            text-align: start;
+        }
+
+    }
+
+    @media (max-width: 350px) {
+        .language-options {
+            margin: 1rem 0 0 0;
+        
+            button {
+                text-align: center;
+            }
+        }
+    }
+
+`
