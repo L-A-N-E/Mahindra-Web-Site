@@ -56,7 +56,7 @@ const Nav = () => {
                         <Link className='txt-none'>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
-                                <Link className='txt-none' to='/mobile-app'><li>{t('mobile-app')}</li></Link>
+                                <Link className='txt-none' to='/app-mobile'><li>{t('mobile-app')}</li></Link>
                             </NavItemsEffect>
                         </Link>
 
