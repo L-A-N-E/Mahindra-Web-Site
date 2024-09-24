@@ -29,6 +29,7 @@ export const TopAppMobile = styled.div`
         font-size: 90px;
         font-weight: bold;
         z-index:1;
+        text-shadow: 1px 1px white, -5px -5px #444;
     }
 
     .image-wrapper {
@@ -122,5 +123,84 @@ width:100%;
 }
 .middle-section img{
     width:60%;
+    padding:2rem;
+}
+`
+
+export const BotAppMobile = styled.div`
+width:100%;
+.final-section{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    color: #fff;
+    padding:3rem;
+}
+
+.final-section h1{
+    color: #fff;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing:2px;
+    text-shadow: 1px 1px white, -3px -3px #444;
+}
+
+.final-section h2{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing:2px;
+    text-shadow: 1px 1px white, -3px -3px #444;
+}
+
+.final-section button{
+    padding: 1em 2em;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 1000ms ease-in-out;
+    font-size: 15px;
+    position: relative;
+    overflow: hidden;
+    outline: 2px solid #000;
+    background-color:#000;
+    width:200px;
+    color:#fff;
+}
+
+.final-section button:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+    outline: 2px solid #fff;
+    box-shadow: 4px 5px 17px -4px #fff;
+    color: #000;
+}
+
+.final-section button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #fff;
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms ease-in-out;
+}
+
+.final-section button:hover::before {
+    width: 250%;  
+}
+
+.final-section-buttons{
+    display:flex;
+    flex-direction:row;
+    gap:2rem;
+    padding:25px;
 }
 `

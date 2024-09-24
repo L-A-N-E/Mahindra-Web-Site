@@ -1,11 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import image1 from '../assets/app_mobile/celularObliquo.png'
 import image2 from '../assets/app_mobile/celularSection.png'
-import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile } from '../styles/AppMobileStyle';
+import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile } from '../styles/AppMobileStyle';
+import { Link } from 'react-router-dom';
 
 import { useInView } from 'react-intersection-observer';
 
 function App() {
+
+    const handleLinkClick = (e) => {
+        e.preventDefault(); // Evita o comportamento padrão de redirecionar
+        window.open("/", "_blank"); // Abre a rota em uma nova aba
+    };
 
 const {ref:cellImage, inView:cellVisible} = useInView();
 
@@ -38,18 +44,22 @@ return (
         </ContainerArrow>
 
         <MidAppMobile>
-            <div class="middle-section">
+            <div className="middle-section">
                 <img src={image2} alt="Celular Gigante" />
             </div>
         </MidAppMobile>
 
-        <div class="final-section">
-            <h1>Faça o Download</h1>
-            <button>Login</button>
-            <button>Signup</button>
-            <h2>Baixe o APP</h2>
-            <span>NOW</span>
-        </div>
+        <BotAppMobile>
+            <div className="final-section">
+                <h1>FAÇA O DOWNLOAD</h1>
+                <div className='final-section-buttons'>
+                    <Link to={'/sign-up'} onClick= {handleLinkClick} className='txt-none link'><button>SIGN-UP</button></Link>
+                    <Link to={'/login'} onClick= {handleLinkClick} className='txt-none link'><button>LOGIN</button></Link>
+                </div>
+                <h2>BAIXE O APP</h2>
+                <h1><span>NOW</span></h1>
+            </div>
+        </BotAppMobile>
     </BackgroundAppMobile>
     </>
 );
