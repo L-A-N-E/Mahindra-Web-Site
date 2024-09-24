@@ -1,6 +1,7 @@
 import { Outlet, useLocation } from "react-router-dom";  // Import Dependencie React Router Dom
 import { useState, useEffect  } from "react";
 import Nav from "./components/Nav"  // Import Nav
+import {OutletStyle} from './styles/OutletStyle.jsx'
 import Footer from "./components/Footer"  // Import Footer
 import Loading from './components/Loading'
 
@@ -23,7 +24,9 @@ function App() {
   return (
     <>
       <Nav/>
-      {loading ? (<Loading />) : (<Outlet />)}
+        <OutletStyle>
+          {loading ? (<Loading />) : (<Outlet />)}
+        </OutletStyle>
       <Footer/>
     </>
   )
