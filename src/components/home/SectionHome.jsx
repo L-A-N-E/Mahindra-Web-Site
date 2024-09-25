@@ -1,13 +1,16 @@
 import React, {useRef } from 'react'
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { EffectFade, Pagination, Navigation } from 'swiper/modules';
+import { EffectFade, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css'
-import { SectionHomeStyle } from '../../styles/SectionHomeStyle'
+import { SectionHomeStyle, BannerLeft, BannerRight } from '../../styles/SectionHomeStyle'
 import TextLoader from '../TextLoader'
+import { ButtonBannerStyle } from '../../styles/ButtonBannerStyle'
 
+import Celular from '../../assets/home/banners/img cell.png'
 
 const SectionHome = () => {
 
@@ -46,12 +49,14 @@ const SectionHome = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[EffectFade, Pagination, Navigation]}
+        modules={[EffectFade, Pagination, Navigation, Autoplay]} // Adicionando o módulo Autoplay
         effect={'fade'}
+        // autoplay={{
+        //   delay: 10000, // Tempo em milissegundos entre as trocas de slide
+        //   disableOnInteraction: false, // Não pausar o autoplay quando o usuário interagir
+        // }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
-        onSliderFirstMove={handleTouchStart}
-        onTouchMove={handleTouchStart}
       >
         {/* Banner 1 */}
         <SwiperSlide className='b1'>
@@ -60,17 +65,32 @@ const SectionHome = () => {
 
         {/* Banner 2 */}
         <SwiperSlide className='b2'>
-          {/* Conteúdo do Banner 2 */}
+
+          {/* Esquerda */}
+          <BannerLeft>
+            <img src={Celular} alt="" />
+          </BannerLeft>
+
+          {/* Direita */}
+          <BannerRight>
+            <h1>Garanta acesso antecipado</h1>
+            <Link to='/login'>
+              <ButtonBannerStyle>Agora</ButtonBannerStyle>
+            </Link>
+          </BannerRight>
         </SwiperSlide>
 
         {/* Banner 3 */}
         <SwiperSlide className='b3'>
-          {/* Conteúdo do Banner 3 */}
-        </SwiperSlide>
-
-        {/* Banner 4 */}
-        <SwiperSlide className='b4'>
-          {/* Conteúdo do Banner 4 */}
+          <BannerLeft>
+            <img src={Celular} alt="" />
+          </BannerLeft>
+          <BannerRight>
+            <h1>Garanta acesso antecipado</h1>
+            <Link to='/login'>
+              <ButtonBannerStyle>Agora</ButtonBannerStyle>
+            </Link>
+          </BannerRight>
         </SwiperSlide>
       </Swiper>
     </SectionHomeStyle>

@@ -25,6 +25,7 @@ export const WordFixed = styled.p`
     text-transform: uppercase;
     font-weight: ${Font.txt_100w};
     font-size: ${Font.txt_3rem};
+    transition: all ease-in-out 300ms;
 `
 
 export const WordsContainer = styled.div`
@@ -54,7 +55,7 @@ export const Word = styled.p`
     text-transform: uppercase;
     color: ${Colors.red_1};
     font-size: ${Font.txt_3rem};
-    animation: ${fadeInOut} 5s ease-in-out;
+    animation: ${fadeInOut} 3000ms ease-in-out;
     padding-left: 6px;
     position: relative;
 `;

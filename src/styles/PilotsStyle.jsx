@@ -8,7 +8,7 @@ export const PilotsStyle = styled.main `
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: ${Backgrounds.background_dark_gray3};
+    background-image: ${Backgrounds.background_dark_gray_To_red};
 `
 
 export const PilotsContent = styled.div `

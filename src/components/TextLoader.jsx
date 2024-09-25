@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { LoaderContainer, WordFixed, Word, WordsContainer, Card } from '../styles/TextLoaderStyle';
 
-const words = ['Rise', 'Race', 'App Mobile', 'Experience', 'At the top'];
+const words = ['Racing', 'Rise', 'App Mobile', 'Experience', 'At the top'];
 
 const TextLoader = () => {
     const [currentWord, setCurrentWord] = useState(0);
@@ -9,7 +9,7 @@ const TextLoader = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentWord((prevWord) => (prevWord + 1) % words.length);
-        }, 5000);
+        }, 3000);
         return () => clearInterval(interval);
         }, []);
 
