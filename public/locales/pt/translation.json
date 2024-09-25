@@ -40,6 +40,7 @@
 
     "title-sucess":"Login realizado com Sucesso",
     "text-sucess":" logado pelo Google com sucesso!",
+    "text-sucess-normal":" logado com sucesso!",
 
     "title-error":"Erro no Login",
     "text-error-password":"As senhas não correspondem",
