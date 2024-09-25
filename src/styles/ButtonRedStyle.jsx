@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Colors from '../constant/Colors';
 import Font from '../constant/Font';
 
-export const ButtonBannerStyle = styled.button `
+export const ButtonRedStyle = styled.button `
     width: 10em;
     position: relative;
     height: 3.5em;

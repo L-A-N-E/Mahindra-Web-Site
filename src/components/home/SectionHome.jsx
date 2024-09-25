@@ -8,7 +8,7 @@ import 'swiper/css/navigation';
 import 'swiper/css'
 import { SectionHomeStyle, BannerLeft, BannerRight } from '../../styles/SectionHomeStyle'
 import TextLoader from '../TextLoader'
-import { ButtonBannerStyle } from '../../styles/ButtonBannerStyle'
+import { ButtonRedStyle } from '../../styles/ButtonRedStyle'
 
 import Celular from '../../assets/home/banners/img cell.png'
 
@@ -75,7 +75,7 @@ const SectionHome = () => {
           <BannerRight>
             <h1>Garanta acesso antecipado</h1>
             <Link to='/login'>
-              <ButtonBannerStyle>Agora</ButtonBannerStyle>
+              <ButtonRedStyle>Agora</ButtonRedStyle>
             </Link>
           </BannerRight>
         </SwiperSlide>
@@ -88,7 +88,7 @@ const SectionHome = () => {
           <BannerRight>
             <h1>Garanta acesso antecipado</h1>
             <Link to='/login'>
-              <ButtonBannerStyle>Agora</ButtonBannerStyle>
+              <ButtonRedStyle>Agora</ButtonRedStyle>
             </Link>
           </BannerRight>
         </SwiperSlide>

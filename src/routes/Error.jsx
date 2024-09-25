@@ -1,19 +1,20 @@
 import React from 'react'
+import { ErrorStyle, ErrorContent } from '../styles/ErrorStyle'
+import { Link } from 'react-router-dom'
+import { ButtonRedStyle } from '../styles/ButtonRedStyle'
+
 
 const Error = () => {
   return (
     <>
-        <section>
-            {/* Left */}
-            <div>
+        <ErrorStyle>
+            <ErrorContent>
                 <h1>404 - Page Not Found</h1>
-            </div>
-
-            {/* Right */}
-            <div>
-                <img src="#" alt="" />
-            </div>
-        </section>
+                <Link to='/'>
+                  <ButtonRedStyle>Back</ButtonRedStyle>
+                </Link>
+            </ErrorContent>
+        </ErrorStyle>
     </>
   )
 }
