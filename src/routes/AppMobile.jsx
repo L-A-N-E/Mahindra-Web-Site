@@ -1,9 +1,8 @@
 
 import image1 from '../assets/app_mobile/celularObliquo.png'
 import image2 from '../assets/app_mobile/celularSection.png'
-import image3 from '../assets/app_mobile/celularReto.png'
 
-import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile, TopAppMobileMediaImg } from '../styles/AppMobileStyle';
+import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile, Buttons } from '../styles/AppMobileStyle';
 import { Link } from 'react-router-dom';
 
 import { useInView } from 'react-intersection-observer';
@@ -24,7 +23,6 @@ const {ref:cellText, inView:textVisible} = useInView({
     triggerOnce:true
 });
 
-
 return (
     <>
     <BackgroundAppMobile>
@@ -41,16 +39,6 @@ return (
                         alt="Celular Oblíquo">
                         </img>
                     </div>
-                <TopAppMobileMediaImg>
-                    <div className="image-wrapper">
-                        <img
-                        className={cellVisible ? 'animate-img' : ''}
-                        ref={cellImage}
-                        src={image3}
-                        alt="Celular Oblíquo">
-                        </img>
-                    </div>
-                </TopAppMobileMediaImg>
             </div>
         </TopAppMobile>
         
@@ -133,10 +121,12 @@ return (
         <BotAppMobile>
             <div className="final-section">
                 <h1>FAÇA O DOWNLOAD</h1>
-                <div className='final-section-buttons'>
-                    <Link to={'/sign-up'} onClick= {handleLinkClickSignUp} className='txt-none link'><button>SIGN-UP</button></Link>
-                    <Link to={'/login'} onClick= {handleLinkClickLogin} className='txt-none link'><button>LOGIN</button></Link>
-                </div>
+                <Buttons>
+                    <div className='final-section-buttons'>
+                        <Link to={'/sign-up'} onClick= {handleLinkClickSignUp} className='txt-none link'><button>SIGN-UP</button></Link>
+                        <Link to={'/login'} onClick= {handleLinkClickLogin} className='txt-none link'><button>LOGIN</button></Link>
+                    </div>
+                </Buttons>
                 <h2>BAIXE O APP</h2>
                 <h1><span>NOW</span></h1>
             </div>

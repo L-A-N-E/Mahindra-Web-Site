@@ -70,42 +70,6 @@ export const TopAppMobile = styled.div`
 
 `
 
-export const TopAppMobileMediaImg = styled.div`
-.image-wrapper {
-        display: none;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 80%;
-    }
-
-    .image-wrapper img {
-        width: 60%; 
-        height: auto;
-    }
-
-    .animate-img{
-        animation: animate-image 1.5s ease-in-out;
-    }
-
-    @keyframes animate-image {
-    0% {
-        transform: translateY(400px); /* Surge debaixo */
-        opacity: 0; /* Invisível no início */
-    }
-    100% {
-        transform: translateY(0); /* Volta à posição original */
-        opacity: 1; /* Totalmente visível */
-    }
-}
-@media(max-width:1800px) {
-    .image-wrapper {
-        display: flex;
-        height:auto;
-    }
-}
-`
-
 export const ContainerArrow = styled.div`
 width:100%;
 height:auto;
@@ -301,8 +265,10 @@ width:100%;
     font-weight: bold;
     letter-spacing:2px;
 }
+`
 
-.final-section button{
+export const Buttons=styled.div`
+button{
     padding: 1em 2em;
     border: none;
     border-radius: 5px;
@@ -320,7 +286,7 @@ width:100%;
     color:#fff;
 }
 
-.final-section button:hover{
+button:hover{
     cursor:pointer;
     transform: scale(1.1);
     outline: 2px solid #fff;
@@ -328,7 +294,7 @@ width:100%;
     color: #000;
 }
 
-.final-section button::before {
+button::before {
     content: "";
     position: absolute;
     left: -50px;
@@ -341,7 +307,7 @@ width:100%;
     transition: width 1000ms ease-in-out;
 }
 
-.final-section button:hover::before {
+button:hover::before {
     width: 250%;  
 }
 
@@ -350,6 +316,4 @@ width:100%;
     flex-direction:row;
     gap:2rem;
     padding:25px;
-}
-
-`
+}`
