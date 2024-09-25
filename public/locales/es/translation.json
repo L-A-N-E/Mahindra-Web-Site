@@ -40,6 +40,7 @@
 
     "title-sucess":"Inicio de sesión realizado con éxito",
     "text-sucess":" iniciado sesión con Google con éxito!",
+    "text-sucess-normal":" iniciado sesión con éxito!",
 
     "title-error":"Error en el inicio de sesión",
     "text-error-password":"Las contraseñas no coinciden",
