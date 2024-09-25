@@ -20,7 +20,7 @@ export const handleAuthentication = async (email, password, isLogin, user, t, na
           MySwal.fire({
             title: t('title-sucess'),
             icon:'sucess',
-            text: t('text-sucess'),
+            text: t('text-sucess-normal'),
             color:'#fff',
             background:'#171717',
             confirmButtonColor:'#E51635'

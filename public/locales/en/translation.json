@@ -42,6 +42,8 @@
 
     "title-sucess":"Login Sucessful",
     "text-sucess":" logged in with Google successfully!",
+    "text-sucess-normal":" logged in successfully!",
+
 
     "title-error":"Login Error",
     "text-error-password":"Passwords do not match",
