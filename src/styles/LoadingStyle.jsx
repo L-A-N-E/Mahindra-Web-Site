@@ -12,43 +12,48 @@ export const LoadingStyle = styled.main`
     z-index: 9999;
 
     .loader {
-        width: 8vmax;
-        height: 8vmax;
-        border-right: 4px solid ${Colors.red_hover};
-        border-radius: 100%;
-        animation: spinRight 800ms linear infinite;
+        height: 2px;
+        width: 300px;
+        background: rgb(44, 44, 44);
+        position: relative;
+        overflow: hidden;
         
-        &:before, &:after {
-            content: '';
-            width: 6vmax;
-            height: 6vmax;
-            display: block;
+        .black_overlay {
+            background: linear-gradient(
+                87deg,
+                rgb(0, 0, 0) 0%,
+                rgba(0, 0, 0, 0.14) 30%,
+                rgba(0, 0, 0, 0.14) 70%,
+                rgb(0, 0, 0) 100%
+            );
             position: absolute;
-            top: calc(50% - 3vmax);
-            left: calc(50% - 3vmax);
-            border-left: 3px solid ${Colors.red_hover};
-            border-radius: 100%;
-            animation: spinLeft 800ms linear infinite;
+            inset: 0px;
         }
-    
-        &:after {
-            width: 4vmax;
-            height: 4vmax;
-            top: calc(50% - 2vmax);
-            left: calc(50% - 2vmax);
-            border: 0;
-            border-right: 2px solid ${Colors.red_hover};
-            animation: none;
+
+        .light {
+            width: 70px;
+            height: 100%;
+            position: absolute;
+            left: -20%;
+            top: 0px;
+            background: linear-gradient(
+                87deg,
+                rgba(0, 0, 0, 0) 0%,
+                ${Colors.red_1} 40%,
+                ${Colors.red_1} 60%,
+                rgba(0, 0, 0, 0) 100%
+            );
+            animation: light 1s infinite ease-in-out;
         }
-    }
 
-    @keyframes spinLeft {
-        from {transform:rotate(0deg);}
-        to {transform:rotate(720deg);}
-    }
+        @keyframes light {
+            from {
+                left: -30%;
+            }
+            to {
+                left: 100%;
+            }
+        }
 
-    @keyframes spinRight {
-        from {transform:rotate(360deg);}
-        to {transform:rotate(0deg);}
     }
 `

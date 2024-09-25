@@ -9,7 +9,7 @@ export const RaceStyle = styled.section `
     justify-content: center;
     gap: 1.2rem;
     height: 110dvh;
-    background-image: url(${Background});
+    background-image: repeating-linear-gradient(45deg, rgba(226, 226, 226,0.06) 0px, rgba(226, 226, 226,0.06) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
     background-position: bottom;
         
         /* Swiper */

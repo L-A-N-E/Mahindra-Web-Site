@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import BackgroundEcotracer from '../assets/home/ecotracer/background.png'
 import Colors from '../constant/Colors';
 import Font from '../constant/Font';
+import Backgrounds from '../constant/Backgrounds';
 
 export const SectionEcotracerStyle = styled.section `
     height: 100dvh;
@@ -28,7 +29,7 @@ export const EcotracerLeft = styled.section`
 
 export const EcotracerRight = styled.section`
     width: 60%;
-    background-color: ${Colors.off_white};
+    background: ${Backgrounds.background_white};
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -14,7 +14,7 @@ export const RaceTrackStyle = styled.main `
 // Conteudo Principal
 export const RaceTrackContent = styled.div `
     width: 100%;
-    background: radial-gradient(#131313, ${Colors.black});
+    background-image: repeating-linear-gradient(45deg, rgba(226, 226, 226,0.06) 0px, rgba(226, 226, 226,0.06) 2px,transparent 2px, transparent 4px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
     display: flex;
     align-items: center;
     justify-content: center;
