@@ -108,22 +108,12 @@ const Nav = () => {
             {showMenu && (<NavMobile>
                 <NavItemsMobile>
                     <NavMobileUl>
-                        <Link className='txt-none' to='/'>
-                            <li>Home</li>
-                        </Link>
+                        <Link className='txt-none' to='/'><li>Home</li></Link>
                 
                         <Link className='txt-none' to= '/races'><li>{t('races')}</li></Link>
-
-                        <Link className='txt-none' to='/mobile-app'><li>{t('mobile-app')}</li></Link>
-
-                        <Link className='txt-none' to='/sign-up'>
-                            <li>Sing-Up</li>
-                        </Link>
                         
-                        <Link className='txt-none' to=''>
-                            <li>Login</li>
-                        </Link>
-                        
+                        <Link className='txt-none' to= '/app-mobile'><li>{t('app-mobile')}</li></Link>
+
                         <NavMobileLanguages>
                             <ul className='language' onClick={()=> setShowOptionsLanguageMobile(!showOptionsLanguageMobile)}>
                                 <img src={Arrow} alt="Arrow" />
@@ -137,7 +127,6 @@ const Nav = () => {
                                     <button onClick={()=>{changeLanguage('es')}}>Spanish</button>
                                 </ul>
                             )}
-                        
                         </NavMobileLanguages>
                     </NavMobileUl>
                 </NavItemsMobile>

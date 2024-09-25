@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import Font from '../constant/Font'
 import Colors from '../constant/Colors'
+import Backgrounds from '../constant/Backgrounds';
 
 
 export const RaceStyle = styled.section `
@@ -9,7 +10,7 @@ export const RaceStyle = styled.section `
     justify-content: center;
     gap: 1.2rem;
     height: calc(100dvh - 70px);
-    background-color: ${Colors.dark_gray};
+    background-image: ${Backgrounds.background_dark_gray_To_red};
         
         /* Swiper */
         .swiper{
