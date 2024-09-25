@@ -103,7 +103,7 @@ const Nav = () => {
                             <li>Races</li>
                         </Link>
 
-                        <Link className='txt-none' to='/mobile-app'>
+                        <Link className='txt-none' to='/app-mobile'>
                             <li>App Mobile</li>
                         </Link>
 
