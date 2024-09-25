@@ -11,21 +11,29 @@ export const LoaderContainer = styled.div`
     color: ${Colors.white};
     font-weight: 500;
     font-size: 25px;
-    height: 40px;
     padding: 10px 10px;
     display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
     border-radius: 8px;
     text-shadow: ${Colors.shadow};
-`;
 
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
+`;
 
 
 export const WordFixed = styled.p`
     text-transform: uppercase;
     font-weight: ${Font.txt_100w};
     font-size: ${Font.txt_3rem};
-    transition: all ease-in-out 300ms;
+
+    @media (max-width: 400px) {
+        font-size: ${Font.txt_2rem};
+    }
 `
 
 export const WordsContainer = styled.div`
@@ -51,6 +59,7 @@ export const fadeInOut = keyframes`
 
 export const Word = styled.p`
     display: block;
+    text-align: center;
     font-weight: ${Font.txt_700w};
     text-transform: uppercase;
     color: ${Colors.red_1};
@@ -58,4 +67,8 @@ export const Word = styled.p`
     animation: ${fadeInOut} 3000ms ease-in-out;
     padding-left: 6px;
     position: relative;
+
+    @media (max-width: 400px) {
+        font-size: ${Font.txt_1_5rem};
+    }
 `;
