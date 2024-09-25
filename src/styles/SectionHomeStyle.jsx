@@ -11,13 +11,14 @@ export const SectionHomeStyle = styled.section `
 
         .swiper {
             width: 100%;
-            height: 100dvh;
+            height: calc(100dvh - 70px);
             
 
             .b1 {
-                background-image: url(${banner1});
-                background-position: center;
-                background-size: cover;
+                background-color: ${Colors.black};
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .b2 {
@@ -44,6 +45,7 @@ export const SectionHomeStyle = styled.section `
     .swiper-pagination-bullet{
         background-color: ${Colors.red_1};
         transition: ease-in-out 0.2s;
+        
     }
     
 

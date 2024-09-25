@@ -5,7 +5,8 @@ import Arrow from '../assets/footer/arrow.svg'; // Arrow
 
 // Container Principal Nav
 export const NavStyle = styled.header`
-    position: relative;
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -210,9 +211,9 @@ export const NavMobile = styled.div `
 `
 
 export const NavItemsMobile = styled.div `
-    display: inline-flex;
+    display: flex;
     width: 100%;
-    height: 100%;
+    height: auto;
     align-items: start;
 
     @media (max-width: 350px){
@@ -224,9 +225,9 @@ export const NavItemsMobile = styled.div `
 export const NavMobileUl = styled.ul `
     list-style: none;
     display: flex;
+    gap: 3rem;
     height: 70%;
     flex-direction: column;
-    justify-content: space-around;
     margin-left: 1rem;
 
     li {

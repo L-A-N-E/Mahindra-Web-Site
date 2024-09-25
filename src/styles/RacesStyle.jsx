@@ -1,16 +1,15 @@
 import styled from 'styled-components';
 import Font from '../constant/Font'
 import Colors from '../constant/Colors'
-import Background from '../assets/home/banners/banner-teste.png'
+
 
 export const RaceStyle = styled.section `
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
-    height: 110dvh;
-    background-image: url(${Background});
-    background-position: bottom;
+    height: calc(100dvh - 70px);
+    background-color: ${Colors.dark_gray};
         
         /* Swiper */
         .swiper{

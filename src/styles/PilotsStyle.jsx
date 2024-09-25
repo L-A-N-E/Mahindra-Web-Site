@@ -1,12 +1,14 @@
 import styled from 'styled-components';
 import Colors from '../constant/Colors';
+import Backgrounds from '../constant/Backgrounds';
+
 
 export const PilotsStyle = styled.main `
     height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: ${Colors.dark_gray};
+    background-image: ${Backgrounds.background_dark_gray3};
 `
 
 export const PilotsContent = styled.div `
