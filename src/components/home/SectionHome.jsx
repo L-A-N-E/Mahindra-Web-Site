@@ -6,6 +6,8 @@ import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css'
 import { SectionHomeStyle } from '../../styles/SectionHomeStyle'
+import TextLoader from '../TextLoader'
+
 
 const SectionHome = () => {
 
@@ -32,11 +34,11 @@ const SectionHome = () => {
           >
             {/* Banner 1 */}
             <SwiperSlide className=' b1'> 
+              <TextLoader/>
             </SwiperSlide>
 
             {/* Banner 2 */}
             <SwiperSlide className=' b2'>
-
             </SwiperSlide>
 
             {/* Banner 3 */}

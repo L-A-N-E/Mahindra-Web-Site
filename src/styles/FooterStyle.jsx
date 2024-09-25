@@ -1,7 +1,6 @@
 import styled from 'styled-components'; // Styled Components
 import Colors from '../constant/Colors'; // Var Colors
 import Font from '../constant/Font'; // Var Fonts
-import bgFooter from '../assets/footer/bg.png' // Background Footer
 
 // Footer Style
 export const FooterStyle = styled.footer `
@@ -11,9 +10,7 @@ export const FooterStyle = styled.footer `
     color: ${Colors.white};
     font-size: ${Font.txt_12};
     text-transform: uppercase;
-    background-image:url(${bgFooter});
-    background-position: center;
-    background-size: cover;
+    background-color: ${Colors.black};
 `
 
 // All Content

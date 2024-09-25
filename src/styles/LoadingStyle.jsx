@@ -2,14 +2,13 @@ import styled from 'styled-components';
 import Colors from '../constant/Colors';
 
 export const LoadingStyle = styled.main`
-    position: fixed;
     height: 100dvh;
     width: 100%;
     background-color:${Colors.black};
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 99999;
 
     .loader {
         height: 2px;
