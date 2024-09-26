@@ -91,7 +91,7 @@ const Pilots = () => {
                     <p>{`${t('win')} : ${pilotInfo.wins}`}</p>
                     <p>{`${t('races')} : ${pilotInfo.races}`}</p>
                     <p>{t(pilotInfo.biography)}</p>
-                    <ButtonRedFullStyle onClick={handleNextPilot}>Next</ButtonRedFullStyle>
+                    <ButtonRedFullStyle onClick={handleNextPilot}>{t('next')}</ButtonRedFullStyle>
                 </PilotInfo>
 
             </PilotsContent>
