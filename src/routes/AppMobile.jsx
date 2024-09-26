@@ -1,10 +1,9 @@
 
 import image1 from '../assets/app_mobile/celularObliquo.png'
 import image2 from '../assets/app_mobile/celularReto.png'
-import cursor1 from '../assets/app_mobile/cursorCar.png'
 
 
-import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile, Buttons, TopAppMobileImage} from '../styles/AppMobileStyle';
+import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile, Buttons} from '../styles/AppMobileStyle';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
 
@@ -133,9 +132,6 @@ return (
 
         <BotAppMobile>
             <div className="final-section">
-                <div class="card">
-                    <div class="shadow">⚠️ Follow traffic rules</div>
-                </div>
                 <h1>FAÇA O DOWNLOAD</h1>
                 <Buttons>
                     <div className='final-section-buttons'>

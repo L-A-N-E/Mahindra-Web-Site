@@ -19,7 +19,6 @@ export const TopAppMobile = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 100vh;
 
     }
 
@@ -43,12 +42,11 @@ export const TopAppMobile = styled.div`
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 80%;
     }
 
     .image-wrapper img {
         width: 80%; 
-        height: 100vh;
+        height: auto;
     }
 
     .animate-img{
@@ -70,9 +68,6 @@ export const TopAppMobile = styled.div`
         font-size: 50px;
     }
 }
-`
-
-export const TopAppMobileImage = styled.div`
 `
 
 export const ContainerArrow = styled.div`
@@ -256,7 +251,7 @@ width:100%;
 
 .hidden {
     display: block;
-    opacity: 0.3;
+    opacity: 0.7;
     font-size:20px;
     line-height:32px;
     transition: all 0.3s ease-in;
@@ -357,84 +352,7 @@ width:100%;
     text-wrap:nowrap;
 }
 
-.card {
-    display:flex;
-    align-items:flex-start;
-    justify-content:center;
-    width: 100%;
-    height: 120px;
-    background: #353535;
-    transform-style: preserve-3d;
-    transform: perspective(30rem) rotateX(30deg);
-    position: relative;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    margin-bottom:3rem;
-}
-
-.card::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(
-    90deg,
-    #fff 0%,
-    #fff 70%,
-    #353535 70%,
-    #353535 100%
-    );
-    background-size: 120px;
-    animation: animateRoad 0.5s linear infinite;
-}
-
-.card:hover::before {
-    animation: animateRoadReverse 0.5s linear infinite;
-}
-
-@keyframes animateRoad {
-    0% {
-        background-position: 0px;
-    }
-    100% {
-        background-position: -120px;
-    }
-}
-
-@keyframes animateRoadReverse {
-    0% {
-        background-position: -120px;
-    }
-    100% {
-        background-position: 0px;
-    }
-}
-
-.card::after {
-    content: "";
-    width: 100%;
-    height: 20px;
-    position: absolute;
-    bottom: -20px;
-    background-color: #272727;
-    transform-origin: top;
-    transform: perspective(30rem) rotateX(-30deg);
-    box-shadow: 0 10px 20px -2px #272727;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-    
-}
-.shadow {
-    color: #fff;
-    padding: 10px;
-    letter-spacing: 1px;
-    justify-content:center;
-}
-
-
+/* Efeito NOW */
 .button {
     margin: 0;
     height: auto;
@@ -444,7 +362,6 @@ width:100%;
 }
 
 .button {
-    --border-right: 1px;
     --animation-color: #000;
     --fs-size: 2em;
     letter-spacing: 3px;
@@ -484,7 +401,6 @@ width:100%;
     }
 
 }
-
 `
 
 export const Buttons=styled.div`
