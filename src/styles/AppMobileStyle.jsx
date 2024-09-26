@@ -341,7 +341,6 @@ width:100%;
 .final-section p{
     line-height:1.5;
     font-size:20px;
-    text-wrap:wrap;
 }
 
 .final-section h2{

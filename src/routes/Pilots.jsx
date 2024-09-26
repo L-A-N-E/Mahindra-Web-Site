@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { PilotsStyle, PilotsContent, PilotImage, PilotInfo } from '../styles/PilotsStyle'
 import Loading from '../components/Loading'
 import { useTranslation } from 'react-i18next';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Error from '../routes/Error'
 
 const Pilots = () => {
@@ -10,31 +10,40 @@ const Pilots = () => {
     const { slug } = useParams();
 
     const { t, i18n } = useTranslation();
+
+    // Hook useNavigate - Para navegação entre rotas
+    const navigate = useNavigate();
+
     // Hook useState - Gerencia o estado dos dados do piloto, carregamento e erros
     const [pilotInfo, setPilotInfo] = useState(null);
+    const [pilots, setPilots] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null)
 
     // Hook useEffect - Executar a função de fetch sempre que o parâmetro slug mudar, 
     // ou seja, quando o usuário clicar para ver outra informações de pista, ela atualizará as informações.
     useEffect(() => {
-        // Função para buscar informações da pista
-        const fetchPilotInfo = async () => {
+        const fetchData = async () => {
             try {
-                // Faz a requisição ao JSON usando o slug fornecido
-                const response = await fetch(`http://localhost:5000/pilots?slug=${slug}`);
-                // Verifica se conseguiu uma resposta do JSON
-                if (!response.ok) {
-                throw new Error('Erro ao buscar dados');
+                // Fetching all pilots
+                const pilotsResponse = await fetch('http://localhost:5000/pilots');
+                if (!pilotsResponse.ok) {
+                    throw new Error('Erro ao buscar dados dos pilotos');
                 }
-                // Transforma a resposta em JSON
-                const data = await response.json();
+                const pilotsData = await pilotsResponse.json();
+                setPilots(pilotsData);
+                
+                // Fetching specific pilot info
+                const pilotResponse = await fetch(`http://localhost:5000/pilots?slug=${slug}`);
+                if (!pilotResponse.ok) {
+                    throw new Error('Erro ao buscar dados do piloto');
+                }
+                const pilotData = await pilotResponse.json();
 
-                // Verifica se a data tem dados
-                if (data.length > 0) {
-                    setPilotInfo(data[0]);
-                } else{
-                    setError('Nenhuma piloto encontrado');
+                if (pilotData.length > 0) {
+                    setPilotInfo(pilotData[0]);
+                } else {
+                    setError('Nenhum piloto encontrado');
                 }
             } catch (error) {
                 setError(error.message);
@@ -43,9 +52,16 @@ const Pilots = () => {
             }
         };
 
-        fetchPilotInfo();
-
+        fetchData();
     }, [slug]);
+
+    // Função para navegar para o próximo piloto
+    const handleNextPilot = () => {
+        const currentIndex = pilots.findIndex(pilot => pilot.slug === slug); // Encontra o índice do piloto atual
+        const nextIndex = (currentIndex + 1) % pilots.length; // Calcula o índice do próximo piloto
+        const nextPilot = pilots[nextIndex]; // Obtém o próximo piloto
+        navigate(`/pilots/${nextPilot.slug}`); // Navega para a rota do próximo piloto
+    };
 
     if (loading) {
         return <Loading />;
@@ -74,6 +90,8 @@ const Pilots = () => {
                     <p>{`${t('races')} : ${pilotInfo.races}`}</p>
                     <p>{t(pilotInfo.biography)}</p>
                 </PilotInfo>
+
+                <button onClick={handleNextPilot}>Next</button> 
             </PilotsContent>
         </PilotsStyle>
         </>

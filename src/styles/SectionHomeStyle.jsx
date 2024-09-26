@@ -11,31 +11,37 @@ export const SectionHomeStyle = styled.section `
 
         .swiper {
             width: 100%;
-            height: 100dvh;
+            height: calc(100dvh - 70px);
+            cursor: grab;
+
+            &.grabbing {
+                cursor: grabbing;
+            }
             
 
             .b1 {
-                background-image: url(${banner1});
-                background-position: center;
-                background-size: cover;
+                background-color: ${Colors.black};
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
 
             .b2 {
-                background-image: url(${banner2});
-                background-position: center;
-                background-size: cover;
+                background-color: ${Colors.black};
+                display: flex;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
             }
 
             .b3 {
-                background-image: url(${banner3});
-                background-position: center;
-                background-size: cover;
-            }
-
-            .b4 {
-                background-image: url(${banner4});
-                background-position: center;
-                background-size: cover;
+                background-color: ${Colors.black};
+                display: flex;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: space-around;
             }
         }
 
@@ -44,6 +50,7 @@ export const SectionHomeStyle = styled.section `
     .swiper-pagination-bullet{
         background-color: ${Colors.red_1};
         transition: ease-in-out 0.2s;
+        
     }
     
 
@@ -67,5 +74,43 @@ export const SectionHomeStyle = styled.section `
 
     .swiper-button-next:hover {
         display: none;
+    }
+`
+
+// Left Banner
+export const BannerLeft = styled.aside `
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        height: 100%;
+    }
+
+    @media (max-width: 1000px){
+        display: none
+    }
+`
+
+// Right Banner
+export const BannerRight = styled.aside `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0 2rem;
+
+    h1 {
+        font-size: ${Font.txt_2rem};
+        color: ${Colors.white};
+        font-weight: ${Font.txt_200w};
+        text-transform: uppercase;
+        text-align: center;
+    }   
+
+    @media (max-width: 1000px){
+        width: 100%;
+        height: 100%;
     }
 `

@@ -5,7 +5,7 @@ import Background from '../assets/login_signup/background.png' //Background Sect
 
 // Login & Sign-Up
 export const LoginSignUpStyle = styled.section `        
-    height: 100vh;
+    height: calc(100dvh - 70px);
     width: 100%;
     display: flex;
 `
@@ -95,7 +95,7 @@ export const LoginSignUpMid = styled.div`
             color: ${Colors.white};
             padding: 1rem 2rem;
             outline:none;
-            letter-spacing:1.3px;
+
         }
         
         /* Placeholder */

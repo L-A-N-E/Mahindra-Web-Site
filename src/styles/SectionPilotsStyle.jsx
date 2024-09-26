@@ -20,7 +20,7 @@ export const PilotsContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 
-    @media (max-width: 900px) {
+    @media (max-width: 650px) {
         grid-template-columns: 1fr;
     }
 `

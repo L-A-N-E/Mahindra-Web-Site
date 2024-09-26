@@ -3,10 +3,11 @@ import Colors from '../constant/Colors';
 import Font from '../constant/Font';
 import Pilot1 from '../assets/home/pilots/pilot-1.png'
 import Pilot2 from '../assets/home/pilots/pilot-2.png'
+import Backgrounds from '../constant/Backgrounds';
 
 
 export const RaceTrackStyle = styled.main `
-    height:100dvh;
+    height: calc(100dvh - 70px);
     width: 100%;
     display: flex;
 `
@@ -14,7 +15,7 @@ export const RaceTrackStyle = styled.main `
 // Conteudo Principal
 export const RaceTrackContent = styled.div `
     width: 100%;
-    background: radial-gradient(#131313, ${Colors.black});
+    background-image: ${Backgrounds.background_dark_gray_To_red};
     display: flex;
     align-items: center;
     justify-content: center;
