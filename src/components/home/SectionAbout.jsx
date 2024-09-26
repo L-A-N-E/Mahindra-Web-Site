@@ -1,6 +1,9 @@
 import React from 'react'
-import { SectionAboutStyle, AboutContainer, AboutContent} from '../../styles/SectionAboutStyle'
+import { SectionAboutStyle, AboutContainer, AboutContent } from '../../styles/SectionAboutStyle'
+import { ButtonRedStyle } from '../../styles/ButtonRedStyle'
 import { useTranslation } from 'react-i18next'
+
+
 
 const SectionAbout = () => {
    // Select Language
@@ -18,7 +21,7 @@ const SectionAbout = () => {
             <AboutContent>
               <h1>{t('about')}</h1>
               <p>{t('text-about')}</p>
-              <a href="https://www.mahindraracing.com/" target="_blank"><button>{t('read-more')}</button></a>    
+              <ButtonRedStyle>AAA</ButtonRedStyle>
             </AboutContent>
           </AboutContainer>
       </SectionAboutStyle>

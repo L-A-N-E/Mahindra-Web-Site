@@ -15,12 +15,12 @@ const TextLoader = () => {
 
     return (
         <Card>
-        <LoaderContainer>
-            <WordFixed>Mahindra</WordFixed> 
-            <WordsContainer>
-                <Word key={currentWord}>{words[currentWord]}</Word>
-            </WordsContainer>
-        </LoaderContainer>
+            <LoaderContainer>
+                <WordFixed>Mahindra</WordFixed> 
+                <WordsContainer>
+                    <Word key={currentWord}>{words[currentWord]}</Word>
+                </WordsContainer>
+            </LoaderContainer>
         </Card>
     );
 };

@@ -1,7 +1,7 @@
 // Importando depdencias
 import React, { useEffect, useState } from 'react';
 import { RaceTrackStyle, RaceTrackContent, RaceTrackCenter, RaceTrackCity, RaceTrackCircuit, RaceTrackAboutInfo, RaceTrackTextInfo, RaceTrackContainerPilots, RaceTrackCardsRight } from '../styles/RacesTrackStyle'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 // Importando telas
 import Loading from "../components/Loading"; 
 import Error from "./Error"; 
@@ -103,12 +103,16 @@ const RaceTrack = () => {
             <RaceTrackContainerPilots>
 
                 {/* Card Edoardo Mortara */}
-                <RaceTrackCardsRight className='card-1'>
-                </RaceTrackCardsRight>
+                <Link to='/pilots/edoardo-mortara'>
+                    <RaceTrackCardsRight className='card-1'>
+                    </RaceTrackCardsRight>
+                </Link>
 
                 {/* Card Nyck de Vries */}
-                <RaceTrackCardsRight className='card-2'>
-                </RaceTrackCardsRight>
+                <Link to='/pilots/nyck-de-vries'>
+                    <RaceTrackCardsRight className='card-2'>
+                    </RaceTrackCardsRight>
+                </Link>
             </RaceTrackContainerPilots>
         </RaceTrackStyle>
         </>

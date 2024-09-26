@@ -62,6 +62,9 @@ export const NavItemsDesktop = styled.nav `
     }
 `
 
+export const NavDesktopUl = styled.ul `
+    
+`
 
 export const NavItemsEffect = styled.ul `
 

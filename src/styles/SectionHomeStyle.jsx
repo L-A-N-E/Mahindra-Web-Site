@@ -33,10 +33,6 @@ export const SectionHomeStyle = styled.section `
                 height: 100%;
                 display: flex;
                 justify-content: space-around;
-
-                @media (max-width: 1000px){
-                    flex-direction: column-reverse;
-                }
             }
 
             .b3 {
@@ -46,10 +42,6 @@ export const SectionHomeStyle = styled.section `
                 height: 100%;
                 display: flex;
                 justify-content: space-around;
-
-                @media (max-width: 1000px){
-                    flex-direction: column-reverse;
-                }
             }
         }
 
@@ -96,12 +88,7 @@ export const BannerLeft = styled.aside `
     }
 
     @media (max-width: 1000px){
-        width: 100%;
-        height: 50%;
-
-        img {
-            height: 100%;
-        }
+        display: none
     }
 `
 
@@ -112,6 +99,7 @@ export const BannerRight = styled.aside `
     align-items: center;
     justify-content: center;
     gap: 1rem;
+    padding: 0 2rem;
 
     h1 {
         font-size: ${Font.txt_2rem};
@@ -123,6 +111,6 @@ export const BannerRight = styled.aside `
 
     @media (max-width: 1000px){
         width: 100%;
-        height: 50%;
+        height: 100%;
     }
 `

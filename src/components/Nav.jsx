@@ -50,28 +50,28 @@ const Nav = () => {
                 <NavItemsDesktop>
                     <ul>
                         {/* Home */}
-                        <Link className='txt-none'>
+                        <li>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
                                 <Link className='txt-none' to = '/'><li>Home</li></Link>
                             </NavItemsEffect>
-                        </Link>
+                        </li>
                 
                         {/* Corridas */}
-                        <Link className='txt-none'>
+                        <li>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
                                 <Link className='txt-none' to= '/races'><li>{t('races')}</li></Link>
                             </NavItemsEffect>
-                        </Link>
+                        </li>
 
                         {/* Mobile App */}
-                        <Link className='txt-none'>
+                        <li>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
                                 <Link className='txt-none' to='/app-mobile'><li>{t('mobile-app')}</li></Link>
                             </NavItemsEffect>
-                        </Link>
+                        </li>
 
                         {/* Idioma */}
                         <NavDesktopLanguages>
