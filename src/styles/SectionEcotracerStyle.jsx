@@ -11,11 +11,6 @@ export const SectionEcotracerStyle = styled.section `
     background-image: url(${BackgroundEcotracer});
     background-position: center;
     background-size: cover;
-
-    @media (max-width: 600px) {
-        flex-direction: column;
-        height: auto;
-    }
 `
 
 export const EcotracerContent = styled.section`
