@@ -27,7 +27,7 @@
 
     "rights":"@ - 2024 - Todos Los Derechos Reservados",
     "mobile-app":"Aplicación Móvil",
-    "races":"Carreras",
+    "races":"Circuitos",
     "circuit":"Circuito",
     "car":"Coche",
     "win":"Victorias",
@@ -53,6 +53,29 @@
     "text-ecotracer":"La Fórmula E es una categoría innovadora del automovilismo que combina velocidad y tecnología con un profundo compromiso con la sostenibilidad. Desde su creación, la Fórmula E ha liderado la transición hacia un futuro más limpio y verde en los deportes de motor, utilizando exclusivamente coches eléctricos alimentados por energía renovable. Además de ofrecer carreras emocionantes en circuitos urbanos alrededor del mundo, la categoría busca promover el desarrollo de tecnologías sostenibles, incentivar el uso de vehículos eléctricos y reducir las emisiones de carbono en el planeta. La Fórmula E no se trata solo de competir, sino de impulsar un futuro sostenible y accesible para todos.",
     
     "edoardo-mortara": "Edoardo Mortara (Ginebra, 12 de enero de 1987) es un piloto de automovilismo nacido en Ginebra, Suiza, que actualmente compite en la Fórmula E con el equipo Mahindra Racing.",
-    "nyck-de-vries":"Nyck de Vries (Sneek, 6 de febrero de 1995) es un piloto de automovilismo neerlandés que actualmente compite en Fórmula E con el equipo Mahindra Racing. Compitió en la Fórmula 1 con el equipo AlphaTauri en 2023. Hizo su debut en la Fórmula 1 en septiembre de 2022, anotando dos puntos para Williams en el Gran Premio de Italia de 2022, sustituyendo a Alexander Albon debido a una crisis de apendicitis. Después de 10 carreras en la temporada 2023, fue despedido de AlphaTauri por no generar muchos resultados para el equipo."
+    "nyck-de-vries":"Nyck de Vries (Sneek, 6 de febrero de 1995) es un piloto de automovilismo neerlandés que actualmente compite en Fórmula E con el equipo Mahindra Racing. Compitió en la Fórmula 1 con el equipo AlphaTauri en 2023. Hizo su debut en la Fórmula 1 en septiembre de 2022, anotando dos puntos para Williams en el Gran Premio de Italia de 2022, sustituyendo a Alexander Albon debido a una crisis de apendicitis. Después de 10 carreras en la temporada 2023, fue despedido de AlphaTauri por no generar muchos resultados para el equipo.",
+
+    "length": "Longitud",
+    "max-velocity": "Velocidad Máxima",
+    "laps": "Vueltas",
+
+    "autodromo-hermanos-rodriguez":"Autódromo Hermanos Rodríguez",
+    "diriyah-street-circuit":"Circuito Callejero de Diriyah",
+    "anhembi-sambadrome-circuit":"Circuito del Sambódromo de Anhembi",
+    "tokio-street-circuit":"Circuito Callejero de Tokio",
+    "misano-world-circuit-marco-simoncelli":"Circuito Mundial Misano Marco Simoncelli",
+    "circuito-de-rua-de-monaco":"Circuito Callejero de Mónaco",
+    "tempelhof-airport-street-circuit":"Circuito Callejero del Aeropuerto de Tempelhof",
+    "shangai-street-circuit":"Circuito Callejero de Shanghái",
+    "portland-international-raceway":"Autódromo Internacional de Portland",
+    "london-excel-circuit":"Circuito London Excel"
+
+
+
+
+
+
+
+
 
 }

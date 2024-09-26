@@ -68,7 +68,7 @@ const SectionRaces = () => {
                                         {/* Name & Data */}
                                         <RaceNameData>
                                             <h3 className='data'>{race.data}</h3>
-                                            <h3 className='name'>{race.name}</h3>
+                                            <h3 className='name'>{t(race.slug)}</h3>
                                         </RaceNameData>
                                     </RaceInfo>
                                 </RaceTop>
