@@ -144,7 +144,12 @@ return (
                     </div>
                 </Buttons>
                 <h2>BAIXE O APP</h2>
-                <h1><span>NOW</span></h1>
+                <span>
+                    <button class="button" data-text="Awesome">
+                        <span class="actual-text">&nbsp;NOW&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;NOW&nbsp;</span>
+                    </button>
+                </span>
             </div>
         </BotAppMobile>
     </BackgroundAppMobile>

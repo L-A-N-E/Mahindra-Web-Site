@@ -435,6 +435,43 @@ width:100%;
 }
 
 
+.button {
+    margin: 0;
+    height: auto;
+    background: transparent;
+    padding: 0;
+    border: none;
+}
+
+.button {
+    --border-right: 1px;
+    --animation-color: #000;
+    --fs-size: 2em;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: var(--fs-size);
+    font-family: "Arial";
+    position: relative;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px #FFF;
+}
+.hover-text {
+    position: absolute;
+    box-sizing: border-box;
+    color: #000;
+    width: 0%;
+    inset: 0;
+    border-right: var(--border-right) solid var(--animation-color);
+    overflow: hidden;
+    transition: 0.5s;
+    -webkit-text-stroke: 4px #000;
+}
+.button:hover .hover-text {
+    width: 100%;
+    filter: drop-shadow(10px 10px 35px cyan)
+}
+
 @media(max-width:900px){
     .final-section h1{
         font-size:20px;
