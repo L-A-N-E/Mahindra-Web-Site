@@ -6,8 +6,6 @@ import LogoGoogle from '../../assets/login_signup/logo-google.svg'
 import { googleSignIn, handleAuthentication } from '../../utils/authUtils';
 import { useNavigate } from 'react-router-dom';
 
-
-
 const SectionLogin = () => {
 
     const { t, i18n } = useTranslation();    
@@ -59,7 +57,7 @@ const SectionLogin = () => {
 
                         {/* End */}
                         <LoginSignUpBottom>
-                                <button onClick={handleSignInWithPopUp}><img src={LogoGoogle} alt="#"/>{t('login-google')}</button>
+                            <button onClick={handleSignInWithPopUp}><img src={LogoGoogle} alt="#"/>{t('login-google')}</button>
                         </LoginSignUpBottom>
                         
                     </LoginSignUpContainer>

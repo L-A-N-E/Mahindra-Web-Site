@@ -1,7 +1,7 @@
 import styled from 'styled-components'  //Styled Components
 import Colors from '../constant/Colors' //Var Colors
 import Font from '../constant/Font' //Var Fonts
-import backgroundAbout from '../assets/home/about/teste.png' //Background Section
+import backgroundAbout from '../assets/home/about/background.png' //Background Section
 
 export const SectionAboutStyle = styled.section `
     width: 100%;
@@ -14,8 +14,8 @@ export const SectionAboutStyle = styled.section `
     background-repeat: no-repeat;
     background-size: cover;
 
-    @media (max-width: 700px) {
-        height: 100dvh;
+    @media (max-width: 400px) {
+        height: auto;
     }
 `
 
