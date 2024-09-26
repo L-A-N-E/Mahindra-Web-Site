@@ -70,9 +70,9 @@ const SectionHome = () => {
             <img src={TRacer} alt="TRacer APP" />
           </BannerImage>
           <BannerContent>
-            <h1>Garanta acesso antecipado ao nosso App</h1>
+            <h1>{t("acesso")}</h1>
             <Link to='/login'>
-              <ButtonRedStyle>Agora</ButtonRedStyle>
+              <ButtonRedStyle>{t('now')}</ButtonRedStyle>
             </Link>
           </BannerContent>
         </SwiperSlide>
@@ -80,9 +80,9 @@ const SectionHome = () => {
         {/* Banner 3 */}
         <SwiperSlide className='b3'>
           <BannerContent>
-            <h1>Descubra o TrackVision</h1>
+            <h1>{t("descubra")}</h1>
             <Link to='/trackvision'>
-              <ButtonRedStyle>Descobrir</ButtonRedStyle>
+              <ButtonRedStyle>{t("descubra-btn")}</ButtonRedStyle>
             </Link>
           </BannerContent>
           <BannerImage>

@@ -37,7 +37,7 @@ export const FooterContent = styled.div `
 export const FooterColumnInfo = styled.div `
     display: flex;
     align-items: start;
-    height: 30%;
+    height: auto;
     
     @media (max-width: 600px) {
         grid-column: 1 / -1; 
@@ -57,6 +57,13 @@ export const FooterInfo = styled.div `
         font-size: ${Font.txt_10};
         font-weight:${Font.txt_300w};
     }
+
+    div{
+        height:50px;
+        width:100%;
+        display:flex;
+        justify-content:center;
+    }
     
     @media (max-width: 600px) {
         width: 100%;
@@ -66,6 +73,7 @@ export const FooterInfo = styled.div `
         }
     }
     `
+
 
 // Columns Items
 export const FooterColumn = styled.div  `

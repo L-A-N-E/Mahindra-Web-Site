@@ -8,9 +8,21 @@
     "about": "About",
     "pilots": "Pilots",
     "ecotracer": "Ecotracer",
+    "now":"Now",
+    "acesso":"Ensure early access to our App",
+    "descubra":"Discover TrackVision",
+    "descubra-btn":"Discover",
 
-    "rise":"Rise",
-    "and race":"and Race",
+    "news":"News",
+    "partners":"Partners",
+    "calendar":"Calendar",
+    "driver":"Drivers",
+    "carreiras":"Careers",
+
+    "racing": "Racing",
+    "rise": "Rise",
+    "experience": "Experience",
+    "atthetop": "At the top",
 
     "welcome":"Welcome!",
     "welcome-back":"Welcome Back!",
@@ -29,7 +41,7 @@
 
     "rights":"@ - 2024 - All Rights Reserved",
     "mobile-app":"Mobile App",
-    "races":"Circuits",
+    "races":"Races",
     "circuit":"Circuit",
     "car":"Car",
     "win":"Wins",

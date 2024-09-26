@@ -9,7 +9,21 @@
     "about": "Sobre",
     "pilots": "Corredores",
     "ecotracer": "Ecotracer",
+    "now":"Ahora",
+    "acesso":"Asegura el acceso anticipado a nuestra App","descubra":"Descubre TrackVision",
+    "descubra-btn":"Descubrir",
 
+    "news":"Noticias",
+    "partners":"Socios",
+    "calendar":"Calendario",
+    "driver":"Pilotos",
+    "carreiras":"Carreras",
+
+    "racing": "Carreras",
+    "rise": "Ascenso",
+    "experience": "Experiencia",
+    "atthetop": "En la cima",
+    
     "welcome":"Bienvenido!",
     "welcome-back":"Bienvenido de nuevo!",
     "forgot-password":"¿Olvidaste tu contraseña?",
@@ -27,7 +41,7 @@
 
     "rights":"@ - 2024 - Todos Los Derechos Reservados",
     "mobile-app":"Aplicación Móvil",
-    "races":"Circuitos",
+    "races":"Carreras",
     "circuit":"Circuito",
     "car":"Coche",
     "win":"Victorias",
