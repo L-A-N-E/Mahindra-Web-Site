@@ -77,8 +77,7 @@ export const SectionHomeStyle = styled.section `
     }
 `
 
-// Left Banner
-export const BannerLeft = styled.aside `
+export const BannerImage = styled.aside `
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,8 +91,8 @@ export const BannerLeft = styled.aside `
     }
 `
 
-// Right Banner
-export const BannerRight = styled.aside `
+
+export const BannerContent = styled.aside `
     display: flex;
     flex-direction: column;
     align-items: center;

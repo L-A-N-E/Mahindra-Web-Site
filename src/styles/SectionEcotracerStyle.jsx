@@ -11,6 +11,10 @@ export const SectionEcotracerStyle = styled.section `
     background-image: url(${BackgroundEcotracer});
     background-position: center;
     background-size: cover;
+
+    @media (max-width: 400px) {
+        height: auto;
+    }
 `
 
 export const EcotracerContent = styled.section`

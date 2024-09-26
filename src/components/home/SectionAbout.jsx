@@ -1,6 +1,6 @@
 import React from 'react'
 import { SectionAboutStyle, AboutContainer, AboutContent } from '../../styles/SectionAboutStyle'
-import { ButtonRedStyle } from '../../styles/ButtonRedStyle'
+import { ButtonRedFullStyle } from '../../styles/ButtonRedFullStyle'
 import { useTranslation } from 'react-i18next'
 
 
@@ -21,6 +21,7 @@ const SectionAbout = () => {
             <AboutContent>
               <h1>{t('about')}</h1>
               <p>{t('text-about')}</p>
+              <ButtonRedFullStyle>{t('more')}</ButtonRedFullStyle>
             </AboutContent>
           </AboutContainer>
       </SectionAboutStyle>
