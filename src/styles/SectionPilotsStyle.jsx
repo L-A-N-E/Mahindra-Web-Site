@@ -1,9 +1,5 @@
 import styled from 'styled-components';
-import Pilot_1 from '../assets/home/pilots/pilot-1.png';
-import Pilot_2 from '../assets/home/pilots/pilot-2.png';
-
 import Colors from '../constant/Colors';
-import Font from '../constant/Font';
 
 // Seção Pilotos
 export const SectionPilotsStyle = styled.section`
@@ -11,7 +7,7 @@ export const SectionPilotsStyle = styled.section`
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: ${Colors.off_white};
+    background-color: ${Colors.black};
 `
 
 // Container
@@ -38,6 +34,20 @@ export const PilotsCard = styled.div`
             width: 100%;
             height: 100%;
             z-index: 100;
+            opacity: 0.5;
+            transition: all ease-in-out 300ms;
+        
+            &:hover {
+                opacity:1;
+            }
+        }
+    }
+
+    @media (max-width: 900px) {
+        div {
+            img {
+                opacity: 1;
+            }
         }
     }
 `;

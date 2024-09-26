@@ -21,7 +21,6 @@ const SectionAbout = () => {
             <AboutContent>
               <h1>{t('about')}</h1>
               <p>{t('text-about')}</p>
-              <ButtonRedStyle>AAA</ButtonRedStyle>
             </AboutContent>
           </AboutContainer>
       </SectionAboutStyle>
