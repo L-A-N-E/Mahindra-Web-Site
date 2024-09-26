@@ -68,23 +68,3 @@ export const EcotracerParagraph = styled.div`
         color: ${Colors.off_white};
     }
 `
-
-// @media (max-width: 600px){
-//         #right-eco {
-//             width: 100%;
-
-//             .title-eco {
-//                 text-align: center;
-
-//                 h1 {
-//                     font-size: ${Font.txt_2rem}
-//                 }
-
-//                 h2 {
-//                     font-size: ${Font.txt_2rem}
-//                 }
-//             }
-//         }
-//     }
-// }
-
