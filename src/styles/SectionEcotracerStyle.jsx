@@ -2,34 +2,23 @@ import styled from 'styled-components';
 import BackgroundEcotracer from '../assets/home/ecotracer/background.png'
 import Colors from '../constant/Colors';
 import Font from '../constant/Font';
-import Backgrounds from '../constant/Backgrounds';
 
 export const SectionEcotracerStyle = styled.section `
     height: 100dvh;
     width: 100%;
     display: flex;
-
-    @media (max-width: 600px) {
-        flex-direction: column;
-        height: auto;
-    }
-`
-export const EcotracerLeft = styled.section`
-    width: 40%;
+    justify-content: center;
     background-image: url(${BackgroundEcotracer});
     background-position: center;
     background-size: cover;
-    box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.35);
-    z-index: 10;
 
-    @media (max-width: 600px) {
-        display: none;
+    @media (max-width: 400px) {
+        height: auto;
     }
 `
 
-export const EcotracerRight = styled.section`
-    width: 60%;
-    background: ${Backgrounds.background_white};
+export const EcotracerContent = styled.section`
+    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,21 +32,25 @@ export const EcotracerRight = styled.section`
 
 export const EcotracerTitle = styled.div`
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 
     h1 {
         text-transform: uppercase;
-        font-weight: ${Font.txt_400w};
+        font-weight: ${Font.txt_200w};
         font-size: ${Font.txt_2rem};
-        color: ${Colors.dark_gray};
+        color: ${Colors.white};
+
+        strong {
+            text-transform: uppercase;
+            font-weight: ${Font.txt_700w};
+            font-size: ${Font.txt_2rem};
+            color: ${Colors.green}
+        }
     }
 
-    h2 {
-        text-transform: uppercase;
-        font-weight: ${Font.txt_900w};
-        font-size: ${Font.txt_2rem};
-        color: ${Colors.green}
-    }
+
 
     @media (max-width: 600px) {
         text-align: center;
@@ -75,26 +68,7 @@ export const EcotracerTitle = styled.div`
 export const EcotracerParagraph = styled.div`
     p {
         font-size: ${Font.txt_16};
-        text-align: justify;
+        text-align: center;
+        color: ${Colors.off_white};
     }
 `
-
-// @media (max-width: 600px){
-//         #right-eco {
-//             width: 100%;
-
-//             .title-eco {
-//                 text-align: center;
-
-//                 h1 {
-//                     font-size: ${Font.txt_2rem}
-//                 }
-
-//                 h2 {
-//                     font-size: ${Font.txt_2rem}
-//                 }
-//             }
-//         }
-//     }
-// }
-

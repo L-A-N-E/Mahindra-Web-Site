@@ -6,11 +6,12 @@ import { EffectFade, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css'
-import { SectionHomeStyle, BannerLeft, BannerRight } from '../../styles/SectionHomeStyle'
+import { SectionHomeStyle, BannerImage, BannerContent } from '../../styles/SectionHomeStyle'
 import TextLoader from '../TextLoader'
 import { ButtonRedStyle } from '../../styles/ButtonRedStyle'
 
-import Celular from '../../assets/home/banners/img cell.png'
+import TRacer from '../../assets/home/banners/tracer.png'
+import TrackVision from '../../assets/home/banners/trackvision.png'
 
 const SectionHome = () => {
 
@@ -51,10 +52,10 @@ const SectionHome = () => {
         navigation={true}
         modules={[EffectFade, Pagination, Navigation, Autoplay]} // Adicionando o módulo Autoplay
         effect={'fade'}
-        // autoplay={{
-        //   delay: 10000, // Tempo em milissegundos entre as trocas de slide
-        //   disableOnInteraction: false, // Não pausar o autoplay quando o usuário interagir
-        // }}
+        autoplay={{
+          delay: 10000, // Tempo em milissegundos entre as trocas de slide
+          disableOnInteraction: false, // Não pausar o autoplay quando o usuário interagir
+        }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
@@ -65,32 +66,28 @@ const SectionHome = () => {
 
         {/* Banner 2 */}
         <SwiperSlide className='b2'>
-
-          {/* Esquerda */}
-          <BannerLeft>
-            <img src={Celular} alt="" />
-          </BannerLeft>
-
-          {/* Direita */}
-          <BannerRight>
-            <h1>Garanta acesso antecipado</h1>
+          <BannerImage>
+            <img src={TRacer} alt="TRacer APP" />
+          </BannerImage>
+          <BannerContent>
+            <h1>Garanta acesso antecipado ao nosso App</h1>
             <Link to='/login'>
               <ButtonRedStyle>Agora</ButtonRedStyle>
             </Link>
-          </BannerRight>
+          </BannerContent>
         </SwiperSlide>
 
         {/* Banner 3 */}
         <SwiperSlide className='b3'>
-          <BannerLeft>
-            <img src={Celular} alt="" />
-          </BannerLeft>
-          <BannerRight>
-            <h1>Garanta acesso antecipado</h1>
-            <Link to='/login'>
-              <ButtonRedStyle>Agora</ButtonRedStyle>
+          <BannerContent>
+            <h1>Descubra o TrackVision</h1>
+            <Link to='/trackvision'>
+              <ButtonRedStyle>Descobrir</ButtonRedStyle>
             </Link>
-          </BannerRight>
+          </BannerContent>
+          <BannerImage>
+            <img src={TrackVision} alt="TrackVision IOT" />
+          </BannerImage>
         </SwiperSlide>
       </Swiper>
     </SectionHomeStyle>

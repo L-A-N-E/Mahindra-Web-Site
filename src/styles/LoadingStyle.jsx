@@ -20,10 +20,10 @@ export const LoadingStyle = styled.main`
         .black_overlay {
             background: linear-gradient(
                 87deg,
-                rgb(0, 0, 0) 0%,
+                ${Colors.black} 0%,
                 rgba(0, 0, 0, 0.14) 30%,
                 rgba(0, 0, 0, 0.14) 70%,
-                rgb(0, 0, 0) 100%
+                ${Colors.black} 100%
             );
             position: absolute;
             inset: 0px;
