@@ -4,7 +4,7 @@ import Loading from '../components/Loading'
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import Error from '../routes/Error'
-import { ButtonRedFullStyle } from '../styles/ButtonRedStyle'
+import { ButtonRedFullStyle } from '../styles/ButtonRedFullStyle'
 
 
 const Pilots = () => {

@@ -7,7 +7,6 @@ import LogoGoogle from '../../assets/login_signup/logo-google.svg'
 import { handleSignUp,googleSignIn } from '../../utils/authUtils';
 import { useNavigate } from 'react-router-dom';
 
-import WithGoogleStyle from '../WithGoogle'
 
 const SectionSignUp = () => {
 
