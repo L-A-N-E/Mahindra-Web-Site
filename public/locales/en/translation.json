@@ -25,6 +25,35 @@
     "experience": "Experience",
     "atthetop": "At the top",
 
+    "what": "What is TRacer?",
+    "desc1": "TRacer is the first app that turns the passion for Formula E into an interactive and thrilling competition.",
+    
+    "thrill": "Experience the Thrill of Formula E from Anywhere!",
+    "desc2": "With TRacer, every race matters. Follow performances in real time and watch your team shine!",
+    
+    "clubs": "Join CLUBS and Challenge the Biggest Fans!",
+    "desc3": "Form alliances or join fierce competitions. Prove your passion for Formula E and dominate the Club scene.",
+    
+    "challenge": "Enter the Race and Prove You're the Best!",
+    "desc4": "Follow Formula E in a unique way. Your drivers, your choices, your victories. Are you ready for the challenge?",
+    
+    "how": "How Does it Work?",
+
+    "howDesc1t":"Build Your Team:",
+    "howDesc1":"Choose two Formula E drivers to represent your team in each race.",
+
+    "howDesc2t":"Dynamic Scoring:",
+    "howDesc2":"Earn points based on the real-world performance of your drivers, considering wins, fastest laps, and final positions.", 
+
+    "howDesc3t":"Challenge Fans in the Club:",
+    "howDesc3":"Join group competitions called Clubs, where you compete against other users and earn rewards for your performance.",
+
+    "howDesc4t":"Global Ranking:",
+    "howDesc4":"Your points determine your position in the global ranking. Prove that you’re the biggest Formula E fan in the world!",
+
+    "download-faca":"DOWNLOAD IT",
+    "baixe":"DOWNLOAD THE APP",
+
     "welcome":"Welcome!",
     "welcome-back":"Welcome Back!",
     "forgot-password": "Forgot your password?",
@@ -42,6 +71,7 @@
 
     "rights":"@ - 2024 - All Rights Reserved",
     "mobile-app":"Mobile App",
+    "mobile-appU":"MOBILE APP",
     "races":"Races",
     "circuit":"Circuit",
     "car":"Car",

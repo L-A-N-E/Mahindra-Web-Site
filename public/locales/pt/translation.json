@@ -41,8 +41,38 @@
     "password":"Senha",
     "repeat-password":"Repetir Senha",
 
+    "what": "O que é o TRacer?",
+    "desc1": "O TRacer é o primeiro aplicativo que transforma a paixão pela Fórmula E em uma competição interativa e emocionante.",
+
+    "thrill": "Viva a Emoção da Fórmula E de Onde Estiver!",
+    "desc2": "Com o TRacer, cada corrida importa. Acompanhe as performances em tempo real e veja seu time brilhar!",
+
+    "clubs": "Junte-se aos CLUBS e Desafie os Maiores Fãs!",
+    "desc3": "Forme alianças ou entre em competições acirradas. Prove sua paixão pela Fórmula E e domine o cenário dos Clubs.",
+
+    "challenge": "Entre na Corrida e Prove que Você é o Melhor!",
+    "desc4": "Acompanhe a Fórmula E de um jeito único. Seus pilotos, suas escolhas, suas vitórias. Você está pronto para o desafio?",
+
+    "how": "Como Funciona?",
+
+    "howDesc1t": "Monte Seu Time:",
+    "howDesc1": "Escolha dois pilotos da Fórmula E para representar sua equipe a cada corrida.",
+
+    "howDesc2t": "Pontuação Dinâmica:",
+    "howDesc2": "Ganhe pontos com base no desempenho real dos seus pilotos, considerando vitórias, voltas rápidas e posições finais.",
+
+    "howDesc3t": "Desafie Fãs no Club:",
+    "howDesc3": "Participe de competições em grupo, chamados Clubs, onde você compete com outros usuários e recebe recompensas por sua performance.",
+
+    "howDesc4t": "Ranking Global:",
+    "howDesc4": "Seus pontos determinam sua posição no ranking global. Prove que você é o maior fã de Fórmula E do mundo!",
+
+    "download-faca":"FAÇA O DOWNLOAD",
+    "baixe":"BAIXE O APP",
+
     "rights":"@ - 2024 - Todos os Direitos Reservados",
     "mobile-app":"Aplicativo Mobile",
+    "mobile-appU":"APLICATIVO MOBILE",
     "races":"Corridas",
     "circuit":"Circuito",
     "car":"Carro",
