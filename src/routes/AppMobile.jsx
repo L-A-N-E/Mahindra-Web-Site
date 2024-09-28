@@ -1,4 +1,3 @@
-
 import image1 from '../assets/app_mobile/celularObliquo.png'
 import image2 from '../assets/app_mobile/celularReto.png'
 

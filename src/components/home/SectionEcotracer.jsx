@@ -19,7 +19,7 @@ const SectionEcotracer = () => {
                 <EcotracerContent>
                     {/* Title */}
                     <EcotracerTitle>
-                        <h1>{t('title-ecotracer')} <strong>Ecotracer</strong></h1>
+                        <h1>{t('title-ecotracer')} <strong>Ecotracer?</strong></h1>
                     </EcotracerTitle>
                     {/* Paragraph */}
                     <EcotracerParagraph>

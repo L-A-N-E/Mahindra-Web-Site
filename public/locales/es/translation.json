@@ -13,6 +13,7 @@
     "acesso":"Asegura el acceso anticipado a nuestra App","descubra":"Descubre TrackVision",
     "descubra-btn":"Descubrir",
     "next":"Proximo",
+    "more": "Ver Más",
 
 
     "news":"Noticias",
@@ -63,7 +64,7 @@
     "login":"Login",
     "login-google": "Login con Google",
     "signup-with-google":"Regístrate con Google",
-    "have-an-account":"¿Ya tienes una cuenta?",
+    "have-an-account":"¿Ya tienes una cuenta",
 
     "username":"Usuario",
     "email": "Email",

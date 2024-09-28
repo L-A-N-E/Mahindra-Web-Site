@@ -41,9 +41,11 @@ const Nav = () => {
         <NavStyle>
 
             {/* Logo */}
-            <NavLogo>
-                <img src={Logo} alt="" />
-            </NavLogo>
+            <Link to='/'>
+                <NavLogo>
+                    <img src={Logo} alt="" />
+                </NavLogo>
+            </Link>
 
             {/* Desktop */}
             <NavDesktop>
@@ -117,7 +119,7 @@ const Nav = () => {
                         <NavMobileLanguages>
                             <ul className='language' onClick={()=> setShowOptionsLanguageMobile(!showOptionsLanguageMobile)}>
                                 <img src={Arrow} alt="Arrow" />
-                                <li>Language</li>
+                                <li>{t('language')}</li>
                             </ul>
                         
                             {showOptionsLanguageMobile &&(

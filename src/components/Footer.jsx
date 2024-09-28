@@ -42,17 +42,8 @@ const Footer = () => {
 
                 {/* Items */}
                 <FooterContainerItems>
-
-                  {/* Races */}
-                  <Link to='/races' className='txt-none' onClick={() => window.location.href = '/races'}>
-                    <FooterItems>
-                      <img className='arrow-rotation' src={arrowFooter} alt='' />
-                      <h4>{t('races')}</h4>
-                    </FooterItems>
-                  </Link>
-
                   {/* News */}
-                  <Link to='https://www.mahindraracing.com/news' className='txt-none'>
+                  <Link to='https://www.mahindraracing.com/news' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('news')}</h4>
@@ -61,7 +52,7 @@ const Footer = () => {
 
 
                   {/* Mahindra */}
-                  <Link to='https://www.mahindraracing.com/' className='txt-none'>
+                  <Link to='https://www.mahindraracing.com/' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('mahindra')}</h4>
@@ -69,7 +60,7 @@ const Footer = () => {
                   </Link>
 
                   {/* Partners */}
-                  <Link to='https://www.mahindraracing.com/partners' className='txt-none'>
+                  <Link to='https://www.mahindraracing.com/partners' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('partners')}</h4>
@@ -87,7 +78,7 @@ const Footer = () => {
                 <FooterContainerItems>
 
                   {/* Carreiras */}
-                  <Link to='https://www.mahindraracing.com/careers' className='txt-none'>
+                  <Link to='https://www.mahindraracing.com/careers' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('carreiras')}</h4>
@@ -95,7 +86,7 @@ const Footer = () => {
                   </Link>
 
                   {/* DRIVERS */}
-                  <Link to='https://www.mahindraracing.com/drivers' className='txt-none'>
+                  <Link to='https://www.mahindraracing.com/drivers' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('driver')}</h4>
@@ -104,7 +95,7 @@ const Footer = () => {
 
 
                   {/* Calendar */}
-                  <Link to='https://www.mahindraracing.com/calendar' className='txt-none'>
+                  <Link to='https://www.mahindraracing.com/calendar' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('calendar')}</h4>
@@ -112,7 +103,7 @@ const Footer = () => {
                   </Link>
 
                   {/* FIA */}
-                  <Link to='https://www.fia.com/' className='txt-none'>
+                  <Link to='https://www.fia.com/' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>FIA</h4>
