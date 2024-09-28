@@ -1,5 +1,6 @@
 // Importando depdencias
 import React, { useEffect, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { RaceTrackStyle, RaceTrackContent, RaceTrackCenter, RaceTrackCity, RaceTrackCircuit, RaceTrackAboutInfo, RaceTrackTextInfo, RaceTrackContainerPilots, RaceTrackCardsRight } from '../styles/RacesTrackStyle'
 import { Link, useParams } from 'react-router-dom';
 // Importando telas
@@ -7,6 +8,12 @@ import Loading from "../components/Loading";
 import Error from "./Error"; 
 
 const RaceTrack = () => {
+
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     // Hook useParams - Acessa os parâmetros de URL, neste caso, o slug
     const { slug } = useParams();
 
@@ -79,19 +86,19 @@ const RaceTrack = () => {
 
                         {/* Tamanho do Circuito */}
                         <RaceTrackTextInfo>
-                            <h1>Length</h1>
+                            <h1>{t('length')}</h1>
                             <p>{trackInfo.length} M</p>
                         </RaceTrackTextInfo>
 
                         {/* Velocidade Maxima Alcançada */}
                         <RaceTrackTextInfo>
-                            <h1>Max Velocity</h1>
+                            <h1>{t('max-velocity')}</h1>
                             <p>{trackInfo.max_velocity} KM/H</p>
                         </RaceTrackTextInfo>
 
                         {/* Numero de Voltas */}
                         <RaceTrackTextInfo>
-                            <h1>Laps</h1>
+                            <h1>{t('laps')}</h1>
                             <p>{trackInfo.laps}</p>
                         </RaceTrackTextInfo>
                         

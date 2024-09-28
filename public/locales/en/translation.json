@@ -8,9 +8,51 @@
     "about": "About",
     "pilots": "Pilots",
     "ecotracer": "Ecotracer",
+    "now":"Now",
+    "acesso":"Ensure early access to our App",
+    "descubra":"Discover TrackVision",
+    "descubra-btn":"Discover",
+    "next":"Next",
 
-    "rise":"Rise",
-    "and race":"and Race",
+    "news":"News",
+    "partners":"Partners",
+    "calendar":"Calendar",
+    "driver":"Drivers",
+    "carreiras":"Careers",
+
+    "racing": "Racing",
+    "rise": "Rise",
+    "experience": "Experience",
+    "atthetop": "At the top",
+
+    "what": "What is TRacer?",
+    "desc1": "TRacer is the first app that turns the passion for Formula E into an interactive and thrilling competition.",
+    
+    "thrill": "Experience the Thrill of Formula E from Anywhere!",
+    "desc2": "With TRacer, every race matters. Follow performances in real time and watch your team shine!",
+    
+    "clubs": "Join CLUBS and Challenge the Biggest Fans!",
+    "desc3": "Form alliances or join fierce competitions. Prove your passion for Formula E and dominate the Club scene.",
+    
+    "challenge": "Enter the Race and Prove You're the Best!",
+    "desc4": "Follow Formula E in a unique way. Your drivers, your choices, your victories. Are you ready for the challenge?",
+    
+    "how": "How Does it Work?",
+
+    "howDesc1t":"Build Your Team:",
+    "howDesc1":"Choose two Formula E drivers to represent your team in each race.",
+
+    "howDesc2t":"Dynamic Scoring:",
+    "howDesc2":"Earn points based on the real-world performance of your drivers, considering wins, fastest laps, and final positions.", 
+
+    "howDesc3t":"Challenge Fans in the Club:",
+    "howDesc3":"Join group competitions called Clubs, where you compete against other users and earn rewards for your performance.",
+
+    "howDesc4t":"Global Ranking:",
+    "howDesc4":"Your points determine your position in the global ranking. Prove that you’re the biggest Formula E fan in the world!",
+
+    "download-faca":"DOWNLOAD IT",
+    "baixe":"DOWNLOAD THE APP",
 
     "welcome":"Welcome!",
     "welcome-back":"Welcome Back!",
@@ -29,6 +71,7 @@
 
     "rights":"@ - 2024 - All Rights Reserved",
     "mobile-app":"Mobile App",
+    "mobile-appU":"MOBILE APP",
     "races":"Races",
     "circuit":"Circuit",
     "car":"Car",
@@ -56,5 +99,28 @@
     "text-ecotracer":"Formula E is an innovative motorsport category that combines speed and technology with a deep commitment to sustainability. Since its inception, Formula E has been leading the transition towards a cleaner and greener future in motorsport, exclusively using electric cars powered by renewable energy. In addition to providing exciting races on urban circuits around the world, the category aims to promote the development of sustainable technologies, encourage the use of electric vehicles, and reduce carbon emissions on the planet. Formula E is not just about racing; it's about driving a sustainable and accessible future for everyone.",
 
     "edoardo-mortara": "Edoardo Mortara (Geneva, January 12, 1987) is a racing driver born in Geneva, Switzerland, who currently competes in Formula E for the Mahindra Racing team.",
-    "nyck-de-vries":"Nyck de Vries (Sneek, February 6, 1995) is a Dutch racing driver who has competed in various motorsport categories, including Formula E and Formula 1. He currently races for Mahindra Racing in Formula E. De Vries made his Formula 1 debut in September 2022, substituting for Alexander Albon at the Italian Grand Prix and scoring two points for Williams. In 2023, he joined AlphaTauri as a full-time Formula 1 driver, but after 10 races, he was released from the team due to underwhelming results. Throughout his career, Nyck de Vries has gained recognition for his versatility and skill in different racing series."
+    "nyck-de-vries":"Nyck de Vries (Sneek, February 6, 1995) is a Dutch racing driver who has competed in various motorsport categories, including Formula E and Formula 1. He currently races for Mahindra Racing in Formula E. De Vries made his Formula 1 debut in September 2022, substituting for Alexander Albon at the Italian Grand Prix and scoring two points for Williams. In 2023, he joined AlphaTauri as a full-time Formula 1 driver, but after 10 races, he was released from the team due to underwhelming results. Throughout his career, Nyck de Vries has gained recognition for his versatility and skill in different racing series.",
+    
+    "length":"Length",
+    "max-velocity":"Max Velocity",
+    "laps":"Laps",
+
+    "autodromo-hermanos-rodriguez":"Hermanos Rodríguez Autodrome",
+    "diriyah-street-circuit":"Diriyah Street Circuit",
+    "anhembi-sambadrome-circuit":"Anhembi Sambadrome Circuit",
+    "tokio-street-circuit":"Tokyo Street Circuit",
+    "misano-world-circuit-marco-simoncelli":"Misano World Circuit Marco Simoncelli",
+    "circuito-de-rua-de-monaco":"Monaco Street Circuit",
+    "tempelhof-airport-street-circuit":"Tempelhof Airport Street Circuit",
+    "shangai-street-circuit":"Shanghai Street Circuit",
+    "portland-international-raceway":"Portland International Raceway",
+    "london-excel-circuit":"London Excel Circuit"
+
+
+
+
+
+
+
+
 }

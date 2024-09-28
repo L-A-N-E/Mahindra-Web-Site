@@ -4,7 +4,7 @@ import Loading from '../components/Loading'
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import Error from '../routes/Error'
-import { ButtonRedFullStyle } from '../styles/ButtonRedStyle'
+import { ButtonRedFullStyle } from '../styles/ButtonRedFullStyle'
 
 
 const Pilots = () => {
@@ -91,7 +91,7 @@ const Pilots = () => {
                     <p>{`${t('win')} : ${pilotInfo.wins}`}</p>
                     <p>{`${t('races')} : ${pilotInfo.races}`}</p>
                     <p>{t(pilotInfo.biography)}</p>
-                    <ButtonRedFullStyle onClick={handleNextPilot}>Next</ButtonRedFullStyle>
+                    <ButtonRedFullStyle onClick={handleNextPilot}>{t('next')}</ButtonRedFullStyle>
                 </PilotInfo>
 
             </PilotsContent>

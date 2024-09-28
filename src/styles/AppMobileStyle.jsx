@@ -47,10 +47,11 @@ export const TopAppMobile = styled.div`
     .image-wrapper img {
         width: 80%; 
         height: auto;
+        opacity:0;
     }
 
     .animate-img{
-        animation: animate-image 1.5s ease-in-out;
+        animation: animate-image 1.5s ease-in-out forwards;
     }
 
     @keyframes animate-image {

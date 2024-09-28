@@ -1,4 +1,3 @@
-
 import image1 from '../assets/app_mobile/celularObliquo.png'
 import image2 from '../assets/app_mobile/celularReto.png'
 
@@ -6,8 +5,14 @@ import image2 from '../assets/app_mobile/celularReto.png'
 import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile, Buttons} from '../styles/AppMobileStyle';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
 
     const handleLinkClickLogin = (e) => {
         e.preventDefault(); // Evita o comportamento padrão de redirecionar
@@ -18,9 +23,13 @@ function App() {
         window.open("/sign-up", "_blank"); // Abre a rota em uma nova aba
     };
 
-const {ref:cellImage, inView:cellVisible} = useInView();
+const {ref:cellImage, inView:cellVisible} = useInView({
+    triggerOnce:true
+});
 
-const {ref:cellText, inView:textVisible} = useInView();
+const {ref:cellText, inView:textVisible} = useInView({
+    triggerOnce:true
+});
 
 
 return (
@@ -29,7 +38,7 @@ return (
         <TopAppMobile>
             <div className="top-section">
                 <div className="titulo-wrapper">
-                    <h1 className="titulo">MOBILE APP</h1>
+                    <h1 className="titulo">{t("mobile-appU")}</h1>
                 </div>
                     <div className="image-wrapper">
                         <img
@@ -40,24 +49,7 @@ return (
                         </img>
                     </div>
             </div>
-        </TopAppMobile>
-
-        {/* <TopAppMobileImage>
-            <div className="top-section">
-                <div className="titulo-wrapper">
-                    <h1 className="titulo">MOBILE APP</h1>
-                </div>
-                    <div className="image-wrapper">
-                        <img
-                        className={cellVisible ? 'animate-img' : ''}
-                        ref={cellImage}
-                        src={image2}
-                        alt="Celular Oblíquo">
-                        </img>
-                    </div>
-            </div>
-        </TopAppMobileImage>  */}
-        
+        </TopAppMobile>        
 
         <ContainerArrow>
             <ArrowAnimated>
@@ -78,43 +70,43 @@ return (
                 <div class="card-int">
 
                     <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText} >
-                        O que é o TRacer?
+                        {t('what')}
                         <span class="hidden">
-                        O TRacer é o primeiro aplicativo que transforma a paixão pela Fórmula E em uma competição interativa e emocionante.
+                        {t('desc1')}
                             </span>
                     </div>
 
 
                     <div className={textVisible ? 'hello text-animated-l' : 'hello'} ref={cellText} >
-                    Viva a Emoção da Fórmula E de Onde Estiver!
+                    {t('thrill')}
                         <span class="hidden">
-                        Com TRacer, cada corrida importa. Acompanhe as performances em tempo real e veja seu time brilhar!
+                        {t('desc2')}
                             </span>
                     </div>
 
                     
                     <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText}>
-                    Junte-se aos CLUBS e Desafie os Maiores Fãs!
+                    {t('clubs')}
                         <span class="hidden">
-                        Forme alianças ou entre em competições acirradas. Prove sua paixão pela Fórmula E e domine o cenário dos Clubs.
+                        {t('desc3')}
                             </span>
                     </div>
 
                     <div className={textVisible ? 'hello text-animated-l' : 'hello'} ref={cellText}>
-                    Entre na Corrida e Prove que Você é o Melhor!
+                    {t('challenge')}
                         <span class="hidden">
-                        Acompanhe a Fórmula E de um jeito único. Seus pilotos, suas escolhas, suas vitórias. Você está pronto para o desafio?
+                        {t('desc4')}
                             </span>
                     </div>
 
                     <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText}>
-                        Como Funciona?
+                    {t('how')}
                         <span class="hidden">
                         
-                            <li><strong>Monte Seu Time:</strong> Escolha dois pilotos da Fórmula E para representar sua equipe a cada corrida.</li><br />
-                            <li><strong>Pontuação Dinâmica:</strong> A cada corrida, você acumula pontos baseados no desempenho real dos pilotos, levando em conta vitórias, voltas rápidas e posições finais.</li><br />
-                            <li><strong>Desafie Fãs no Club:</strong> Participe de competições em grupo, chamados Clubs, onde você compete com outros usuários e recebe recompensas por sua performance.</li><br />
-                            <li><strong>Ranking Global:</strong> Seus pontos determinam sua posição no ranking global. Prove que você é o maior fã de Fórmula E do mundo!</li><br />
+                            <li><strong>{t('howDesc1t')}</strong> {t('howDesc1')}</li><br />
+                            <li><strong>{t('howDesc2t')}</strong> {t('howDesc2')}</li><br />
+                            <li><strong>{t('howDesc3t')}</strong> {t('howDesc3')}</li><br />
+                            <li><strong>{t('howDesc4t')}</strong> {t('howDesc4')}</li><br />
                         
                             </span>
                     </div>
@@ -132,18 +124,18 @@ return (
 
         <BotAppMobile>
             <div className="final-section">
-                <h1>FAÇA O DOWNLOAD</h1>
+                <h1>{t('download-faca')}</h1>
                 <Buttons>
                     <div className='final-section-buttons'>
-                        <Link to={'/sign-up'} onClick= {handleLinkClickSignUp} className='txt-none link'><button>SIGNUP</button></Link>
-                        <Link to={'/login'} onClick= {handleLinkClickLogin} className='txt-none link'><button>LOGIN</button></Link>
+                        <Link to={'/sign-up'} onClick= {handleLinkClickSignUp} className='txt-none link'><button>{t("signup")}</button></Link>
+                        <Link to={'/login'} onClick= {handleLinkClickLogin} className='txt-none link'><button>{t('login')}</button></Link>
                     </div>
                 </Buttons>
-                <h2>BAIXE O APP</h2>
+                <h2>{t('baixe')}</h2>
                 <span>
                     <button class="button" data-text="Awesome">
-                        <span class="actual-text">&nbsp;NOW&nbsp;</span>
-                        <span aria-hidden="true" class="hover-text">&nbsp;NOW&nbsp;</span>
+                        <span class="actual-text">&nbsp;{t("now")}&nbsp;</span>
+                        <span aria-hidden="true" class="hover-text">&nbsp;{t("now")}&nbsp;</span>
                     </button>
                 </span>
             </div>

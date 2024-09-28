@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { LoaderContainer, WordFixed, Word, WordsContainer, Card } from '../styles/TextLoaderStyle';
-
-const words = ['Racing', 'Rise', 'Experience', 'At the top'];
+import { useTranslation } from 'react-i18next';
 
 const TextLoader = () => {
+    
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+        setShowLanguages(false);
+    };
+    
+    const words = [t('racing'), t('rise'), t('experience'), t('atthetop')];
+
     const [currentWord, setCurrentWord] = useState(0);
 
     useEffect(() => {
