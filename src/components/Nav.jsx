@@ -41,9 +41,11 @@ const Nav = () => {
         <NavStyle>
 
             {/* Logo */}
-            <NavLogo>
-                <img src={Logo} alt="" />
-            </NavLogo>
+            <Link to='/'>
+                <NavLogo>
+                    <img src={Logo} alt="" />
+                </NavLogo>
+            </Link>
 
             {/* Desktop */}
             <NavDesktop>
