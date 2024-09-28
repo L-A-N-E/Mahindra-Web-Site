@@ -5,8 +5,10 @@ import Colors from "../constant/Colors";
 
 const Medias = () => {
   return (
-    <StyledWrapper>
+    <MediaStyle>
       <div className="card">
+
+        {/* Instagram */}
         <a href="https://www.instagram.com/mahindraracing" className="socialContainer containerOne">
           <svg className="socialSvg instagramSvg" viewBox="0 0 16 16">
             {" "}
@@ -14,105 +16,114 @@ const Medias = () => {
           </svg>
         </a>
 
+        {/* Facebook */}
         <a href="https://www.facebook.com/MahindraRacing" className="socialContainer containerTwo">
           <svg className="socialSvg twitterSvg" viewBox="0 0 16 16">
-  <path d="M15.117 0H.883C.396 0 0 .396 0 .883v14.235C0 15.604.396 16  .883 16h7.66v-6.8H7.05v-2.9h1.494V6.868c0-1.48.775-3.016 3.033-3.016.877 0 1.796.155 1.796.155v1.968h-1.005c-.99 0-1.31.615-1.31 1.248v1.502h2.63l-.419 2.9h-2.211V16h4.296c.487 0 .883-.396.883-.883V.883C16 .396 15.604 0 15.117 0z" />
-</svg>
-
+            <path d="M15.117 0H.883C.396 0 0 .396 0 .883v14.235C0 15.604.396 16  .883 16h7.66v-6.8H7.05v-2.9h1.494V6.868c0-1.48.775-3.016 3.033-3.016.877 0 1.796.155 1.796.155v1.968h-1.005c-.99 0-1.31.615-1.31 1.248v1.502h2.63l-.419 2.9h-2.211V16h4.296c.487 0 .883-.396.883-.883V.883C16 .396 15.604 0 15.117 0z" />
+          </svg>
         </a>
 
+        {/* LinkedIn */}
         <a href="https://www.linkedin.com/company/mahindraracing/" className="socialContainer containerThree">
           <svg className="socialSvg linkdinSvg" viewBox="0 0 448 512">
             <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" />
           </svg>
         </a>
 
+        {/* Youtube */}
         <a href="https://www.youtube.com/mahindraracing" className="socialContainer containerFour">
-        <svg className="socialSvg whatsappSvg" viewBox="0 0 16 16">
-  <path d="M8.051 0C3.6 0 0 3.56 0 8.004c0 4.444 3.6 8.004 8.051 8.004 4.45 0 8.051-3.56 8.051-8.004C16.102 3.56 12.5 0 8.051 0zm3.04 8.21l-4.22 2.54V5.67l4.22 2.54 1.235.76a.226.226 0 0 1 0 .404l-1.235.76z" />
-</svg>
+          <svg className="socialSvg whatsappSvg" viewBox="0 0 16 16">
+            <path d="M8.051 0C3.6 0 0 3.56 0 8.004c0 4.444 3.6 8.004 8.051 8.004 4.45 0 8.051-3.56 8.051-8.004C16.102 3.56 12.5 0 8.051 0zm3.04 8.21l-4.22 2.54V5.67l4.22 2.54 1.235.76a.226.226 0 0 1 0 .404l-1.235.76z" />
+          </svg>
         </a>
       </div>
-    </StyledWrapper>
+    </MediaStyle>
   );
 };
 
-const StyledWrapper = styled.div`
+const MediaStyle = styled.div`
   .card {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
-}
-
-/* for all social containers*/
-.socialContainer {
-  width: 52px;
-  height: 52px;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  transition-duration: .3s;
-  border-radius:10px;
-  border: 1px solid ${Colors.red_1};
-}
-/* instagram*/
-.containerOne:hover {
-  background-color: ${Colors.red_1};
-  transition-duration: .3s;
-  border: none;
-}
-/* twitter*/
-.containerTwo:hover {
-  background-color: ${Colors.red_1};
-  transition-duration: .3s;
-  border: none;
-}
-/* linkdin*/
-.containerThree:hover {
-  background-color: ${Colors.red_1};
-  transition-duration: .3s;
-  border: none;
-}
-/* Whatsapp*/
-.containerFour:hover {
-  background-color: ${Colors.red_1};
-  transition-duration: .3s;
-  border: none;
-}
-
-.socialContainer:active {
-  transform: scale(0.9);
-  transition-duration: .3s;
-}
-
-.socialSvg {
-  width: 17px;
-}
-
-.socialSvg path {
-  fill: #fff;
-}
-
-.socialContainer:hover .socialSvg {
-  animation: slide-in-top 0.4s both;
-}
-
-@keyframes slide-in-top {
-  0% {
-    transform: translateY(-50px);
-    opacity: 0;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.055);
   }
 
-  100% {
-    transform: translateY(0);
-    opacity: 1;
+  /* for all social containers*/
+  .socialContainer {
+    width: 52px;
+    height: 52px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition-duration: .3s;
+    border-radius:10px;
+    border: 1px solid ${Colors.red_1};
   }
+  /* Instagram */
+  .containerOne:hover {
+    background-color: ${Colors.red_1};
+    transition-duration: .3s;
+    color: ${Colors.red_1};
+    border: none;
+  }
+
+  /* Facebook */
+  .containerTwo:hover {
+    background-color: ${Colors.red_1};
+    transition-duration: .3s;
+    color: ${Colors.red_1};
+    border: none;
+  }
+
+  /* LinkedIn */
+  .containerThree:hover {
+    background-color: ${Colors.red_1};
+    transition-duration: .3s;
+    color: ${Colors.red_1};
+    border: none;
+  }
+
+  /* Youtube */
+  .containerFour:hover {
+    background-color: ${Colors.red_1};
+    transition-duration: .3s;
+    color: ${Colors.red_1};
+    border: none;
+  }
+
+  .socialContainer:active {
+    transform: scale(0.9);
+    transition-duration: .3s;
+  }
+
+  .socialSvg {
+    width: 17px;
+  }
+
+  .socialSvg path {
+    fill: ${Colors.white};
+  }
+
+  .socialContainer:hover .socialSvg {
+    animation: slide-in-top 0.4s both;
+  }
+
+  @keyframes slide-in-top {
+    0% {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
 }
 
 

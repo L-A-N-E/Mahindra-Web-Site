@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { SectionAboutStyle, AboutContainer, AboutContent } from '../../styles/SectionAboutStyle'
 import { ButtonRedFullStyle } from '../../styles/ButtonRedFullStyle'
 import { useTranslation } from 'react-i18next'
@@ -21,7 +22,9 @@ const SectionAbout = () => {
             <AboutContent>
               <h1>{t('about')}</h1>
               <p>{t('text-about')}</p>
-              <ButtonRedFullStyle>{t('more')}</ButtonRedFullStyle>
+              <Link to='https://www.mahindra.com/about-us' target='blank'>
+                <ButtonRedFullStyle>{t('more')}</ButtonRedFullStyle>
+              </Link>
             </AboutContent>
           </AboutContainer>
       </SectionAboutStyle>
