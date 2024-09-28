@@ -1,10 +1,6 @@
 import styled from 'styled-components'; //Styled Components
 import Colors from '../constant/Colors'; //Var Colors 
 import Font from '../constant/Font'; //Var Fonts
-import banner1 from '../assets/home/banners/banner-1.png'; //Banner 2 Section
-import banner2 from '../assets/home/banners/banner-2.png'; //Banner 1 Section
-import banner3 from '../assets/home/banners/banner-3.png'; //Banner 3 Section
-import banner4 from '../assets/home/banners/banner-4.png'; //Banner 4 Section
 
 export const SectionHomeStyle = styled.section `
         background-color: ${Colors.black};
@@ -77,8 +73,7 @@ export const SectionHomeStyle = styled.section `
     }
 `
 
-// Left Banner
-export const BannerLeft = styled.aside `
+export const BannerImage = styled.aside `
     display: flex;
     align-items: center;
     justify-content: center;
@@ -92,8 +87,8 @@ export const BannerLeft = styled.aside `
     }
 `
 
-// Right Banner
-export const BannerRight = styled.aside `
+
+export const BannerContent = styled.aside `
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -100,8 +100,8 @@ export const NavItemsEffect = styled.ul `
     }
 
     &:hover img {
-        left: 0; /* Movimenta a imagem para a posição original */
-        opacity: 1; /* Torna a imagem visível */
+        left: 0;
+        opacity: 1; 
     }
 `
 
@@ -145,7 +145,7 @@ export const NavDesktopLanguages = styled.div `
             border: none;
         
             &:hover {
-                background-color: #313131;
+                background-color: ${Colors.gray};
             }
         }
     }
@@ -190,6 +190,7 @@ export const NavMenu = styled.div`
   @media (max-width: 900px) {
     display: flex;
   }
+
 `;
 
 export const NavMobile = styled.div `

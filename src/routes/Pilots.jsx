@@ -4,6 +4,8 @@ import Loading from '../components/Loading'
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
 import Error from '../routes/Error'
+import { ButtonRedFullStyle } from '../styles/ButtonRedFullStyle'
+
 
 const Pilots = () => {
     // Hook useParams - Acessa os parâmetros de URL, neste caso, o slug
@@ -89,9 +91,9 @@ const Pilots = () => {
                     <p>{`${t('win')} : ${pilotInfo.wins}`}</p>
                     <p>{`${t('races')} : ${pilotInfo.races}`}</p>
                     <p>{t(pilotInfo.biography)}</p>
+                    <ButtonRedFullStyle onClick={handleNextPilot}>{t('next')}</ButtonRedFullStyle>
                 </PilotInfo>
 
-                <button onClick={handleNextPilot}>Next</button> 
             </PilotsContent>
         </PilotsStyle>
         </>

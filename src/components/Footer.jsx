@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { FooterStyle, FooterContent, FooterColumnInfo, FooterInfo, FooterColumn, FooterContainerItems, FooterItems } from '../styles/FooterStyle';
 import arrowFooter from '../assets/footer/arrow.svg'
 import { useTranslation } from 'react-i18next'
+import Medias from './Medias';
 
 const Footer = () => {
   // Select Language
@@ -28,6 +29,10 @@ const Footer = () => {
                     <img src={logoMahindra} alt='' />
                     <h5>{t('rights')}</h5>
                     <h5>LANE</h5>
+                    <div>
+                      <Medias>
+                      </Medias>
+                    </div>
                 </FooterInfo>
 
               </FooterColumnInfo>
@@ -46,36 +51,28 @@ const Footer = () => {
                     </FooterItems>
                   </Link>
 
-                  {/* Car */}
-                  <Link to='/car' className='txt-none' onClick={() => window.location.href = '/car'}>
+                  {/* News */}
+                  <Link to='https://www.mahindraracing.com/news' className='txt-none'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
-                      <h4>{t('car')}</h4>
+                      <h4>{t('news')}</h4>
                     </FooterItems>
                   </Link>
 
 
                   {/* Mahindra */}
-                  <Link to='/' className='txt-none'>
+                  <Link to='https://www.mahindraracing.com/' className='txt-none'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
                       <h4>{t('mahindra')}</h4>
                     </FooterItems>
                   </Link>
 
-                  {/* Formula E */}
-                  <Link to='/' className='txt-none'>
+                  {/* Partners */}
+                  <Link to='https://www.mahindraracing.com/partners' className='txt-none'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
-                      <h4>{t('formula-e')}</h4>
-                    </FooterItems>
-                  </Link>
-
-                  {/* FIA */}
-                  <Link to='/' className='txt-none'>
-                    <FooterItems>
-                      <img className='arrow-rotation' src={arrowFooter} alt='' />
-                      <h4>{t('fia')}</h4>
+                      <h4>{t('partners')}</h4>
                     </FooterItems>
                   </Link>
 
@@ -89,30 +86,38 @@ const Footer = () => {
                 {/* Items */}
                 <FooterContainerItems>
 
-                  {/* App Mobile */}
-                  <Link to='/mobile-app' className='txt-none' onClick={() => window.location.href = '/app-mobile'}>
+                  {/* Carreiras */}
+                  <Link to='https://www.mahindraracing.com/careers' className='txt-none'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
-                      <h4>{t('mobile-app')}</h4>
+                      <h4>{t('carreiras')}</h4>
                     </FooterItems>
                   </Link>
 
-                  {/* Sign Up */}
-                  <Link to='/sign-up' className='txt-none' onClick={() => window.location.href = '/sign-up'}>
+                  {/* DRIVERS */}
+                  <Link to='https://www.mahindraracing.com/drivers' className='txt-none'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
-                      <h4>{t('signup')}</h4>
+                      <h4>{t('driver')}</h4>
                     </FooterItems>
                   </Link>           
 
-                  {/* Login */}
-                  <Link to='/login' className='txt-none' onClick={() => window.location.href = '/login'}>
+
+                  {/* Calendar */}
+                  <Link to='https://www.mahindraracing.com/calendar' className='txt-none'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
-                      <h4>{t('login')}</h4>
+                      <h4>{t('calendar')}</h4>
                     </FooterItems>
                   </Link>
 
+                  {/* FIA */}
+                  <Link to='https://www.fia.com/' className='txt-none'>
+                    <FooterItems>
+                      <img className='arrow-rotation' src={arrowFooter} alt='' />
+                      <h4>FIA</h4>
+                    </FooterItems>
+                  </Link>
                 </FooterContainerItems>
 
               </FooterColumn>
