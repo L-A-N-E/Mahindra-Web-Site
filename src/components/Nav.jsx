@@ -99,7 +99,7 @@ const Nav = () => {
 
             {/* Menu Hamburguer */}
             <NavHamburgerMenu>
-                <NavMenu onClick={handleToggle} showMenu={showMenu}>
+                <NavMenu onClick={handleToggle} className={showMenu ? 'open' : ''}>
                     <span></span>
                     <span></span>
                     <span></span>
