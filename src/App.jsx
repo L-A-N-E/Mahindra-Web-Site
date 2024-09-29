@@ -23,11 +23,15 @@ function App() {
 
   return (
     <>
-      <Nav/>
+      {loading ? (<Loading />) : 
+      ( <>
         <OutletStyle>
-          {loading ? (<Loading />) : (<Outlet />)}
+          <Nav/>
+          <Outlet />
+          <Footer/>
         </OutletStyle>
-      <Footer/>
+        </>
+      )}
     </>
   )
 }
