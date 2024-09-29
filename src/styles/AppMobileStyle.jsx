@@ -328,14 +328,12 @@ width:100%;
     font-size: 70px;
     font-weight: bold;
     letter-spacing:2px;
-    text-wrap:nowrap;
 }
 
 .final-section h1 span{
     color:#fff;
     font-size: 70px;
     letter-spacing:5px;
-    text-wrap:nowrap;
 }
 
 
@@ -349,7 +347,6 @@ width:100%;
     font-size: 30px;
     font-weight: bold;
     letter-spacing:2px;
-    text-wrap:nowrap;
 }
 
 /* Efeito NOW */
@@ -418,7 +415,6 @@ button{
     overflow: hidden;
     outline: 2px solid #000;
     background-color:#000;
-    text-wrap:nowrap;
     width:auto;
     color:#fff;
 }
