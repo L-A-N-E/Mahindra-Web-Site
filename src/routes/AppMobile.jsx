@@ -64,15 +64,15 @@ return (
         <MidAppMobile>
             <div className="middle-section">
             <div className='card' ref={cellText}>
-                <div class="btn1"></div>
-                <div class="btn2"></div>
-                <div class="btn3"></div>
-                <div class="btn4"></div>
-                <div class="card-int">
+                <div className="btn1"></div>
+                <div className="btn2"></div>
+                <div className="btn3"></div>
+                <div className="btn4"></div>
+                <div className="card-int">
 
                     <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText} >
                         {t('what')}
-                        <span class="hidden">
+                        <span className="hidden">
                         {t('desc1')}
                             </span>
                     </div>
@@ -80,7 +80,7 @@ return (
 
                     <div className={textVisible ? 'hello text-animated-l' : 'hello'} ref={cellText} >
                     {t('thrill')}
-                        <span class="hidden">
+                        <span className="hidden">
                         {t('desc2')}
                             </span>
                     </div>
@@ -88,21 +88,21 @@ return (
                     
                     <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText}>
                     {t('clubs')}
-                        <span class="hidden">
+                        <span className="hidden">
                         {t('desc3')}
                             </span>
                     </div>
 
                     <div className={textVisible ? 'hello text-animated-l' : 'hello'} ref={cellText}>
                     {t('challenge')}
-                        <span class="hidden">
+                        <span className="hidden">
                         {t('desc4')}
                             </span>
                     </div>
 
                     <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText}>
                     {t('how')}
-                        <span class="hidden">
+                        <span className="hidden">
                         
                             <li><strong>{t('howDesc1t')}</strong> {t('howDesc1')}</li><br />
                             <li><strong>{t('howDesc2t')}</strong> {t('howDesc2')}</li><br />
@@ -113,11 +113,11 @@ return (
                     </div>
 
                 </div>
-                <div class="top">
-                    <div class="camera">
-                        <div class="int"></div>
+                <div className="top">
+                    <div className="camera">
+                        <div className="int"></div>
                     </div>
-                    <div class="speaker"></div>
+                    <div className="speaker"></div>
                 </div>
                 </div>
             </div>
@@ -134,9 +134,9 @@ return (
                 </Buttons>
                 <h2>{t('baixe')}</h2>
                 <span>
-                    <button class="button" data-text="Awesome">
-                        <span class="actual-text">&nbsp;{t("now")}&nbsp;</span>
-                        <span aria-hidden="true" class="hover-text">&nbsp;{t("now")}&nbsp;</span>
+                    <button className="button" data-text="Awesome">
+                        <span className="actual-text">&nbsp;{t("now")}&nbsp;</span>
+                        <span aria-hidden="true" className="hover-text">&nbsp;{t("now")}&nbsp;</span>
                     </button>
                 </span>
             </div>
