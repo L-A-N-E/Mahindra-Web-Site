@@ -24,11 +24,14 @@ export const RaceTrackContent = styled.div `
 
 export const RaceTrackCenter = styled.div`
     width: 80%;
-    height: 80%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+    gap: 2rem;
+
+
 `
 
 export const RaceTrackCity = styled.div`
@@ -51,8 +54,7 @@ export const RaceTrackCircuit = styled.div`
     justify-content: center;
 
     img {
-        height: 100%;
-        width: 100%;
+        width: 50%;
     }
 `
 
