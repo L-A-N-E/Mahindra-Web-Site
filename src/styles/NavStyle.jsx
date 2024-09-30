@@ -37,7 +37,7 @@ export const NavLogo = styled.div `
 
 export const NavDesktop = styled.div `
     display: flex;
-    width: 50%;
+    width: auto;
     @media (max-width: 900px){
         display: none;
     }
@@ -54,6 +54,7 @@ export const NavItemsDesktop = styled.nav `
         display: flex;
         align-items: center;
         justify-content: space-around;
+        gap: 2rem;
 
         ul {
             display: flex;
@@ -63,11 +64,10 @@ export const NavItemsDesktop = styled.nav `
 `
 
 export const NavDesktopUl = styled.ul `
-    
+    width: 100%;
 `
 
 export const NavItemsEffect = styled.ul `
-
     li {
         position: relative; 
         display: inline-block;
@@ -113,19 +113,26 @@ export const NavDesktopLanguages = styled.div `
 
     /* Idioma Selecionado */
     .language {
-        display: flex;
+    display: flex;
 
         img {
             opacity: 1;
             left: 0;
+            transition: transform 0.3s ease;
         }
     }
+
+    .language:hover img {
+        transform: rotate(90deg);
+    }
+
+
 
     /* Menu de Opções Idioma */
     .language-options {
         position: absolute;
         top: 100%;
-        right: 4%;
+        right: 0.5%;
         width: auto;
         list-style: none;
         display: flex;
@@ -163,33 +170,33 @@ export const NavHamburgerMenu = styled.div`
 
 // Criando Menu Hamburguer
 export const NavMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-
-  span {
-    width: 20px;
-    height: 1.5px;
-    background-color: white;
-    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
-  }
-
-  &.open span:nth-child(1) {
-    transform: rotate(45deg) translate(3px, 3px);
-  }
-  
-  &.open span:nth-child(2) {
-    opacity: 0;
-  }
-
-  &.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -6px);
-  }
-
-  @media (max-width: 900px) {
     display: flex;
-  }
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+
+    span {
+        width: 20px;
+        height: 1.5px;
+        background-color: white;
+        transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+    }
+
+    &.open span:nth-child(1) {
+        transform: rotate(45deg) translate(3px, 3px);
+    }
+    
+    &.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    &.open span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+
+    @media (max-width: 900px) {
+        display: flex;
+    }
 
 `;
 

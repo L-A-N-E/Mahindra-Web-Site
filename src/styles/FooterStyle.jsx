@@ -72,7 +72,13 @@ export const FooterInfo = styled.div `
             width: 200px;
         }
     }
-    `
+
+    @media (max-width: 220px) {
+        img {
+            width: 60%;
+        }
+    }
+`
 
 
 // Columns Items

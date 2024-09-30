@@ -14,7 +14,13 @@ const GlobalStyle = createGlobalStyle `
     // Reset Link
     .txt-none {
         text-decoration: none;
-        
+        text-align: center;
+    }
+
+    // Alinhar link
+    .aling-txt {
+        display: flex;
+        align-items: center;
     }
 
     // Scrollbar

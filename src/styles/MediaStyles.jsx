@@ -85,5 +85,10 @@ export const MediaStyle = styled.div`
         }
     }
 
+    @media (max-width: 300px) {
+        .card {
+            width: 80%;
+        }
+    }
 
 `;
