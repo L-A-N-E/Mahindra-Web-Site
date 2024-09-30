@@ -128,6 +128,8 @@ const Nav = () => {
                         
                         <Link className='txt-none' to= '/app-mobile'><li>{t('app-mobile')}</li></Link>
 
+                        <Link className='txt-none aling-txt ' to='/trackvision'><li>{t('trackvision')}</li></Link>
+
                         <NavMobileLanguages>
                             <ul className='language' onClick={()=> setShowOptionsLanguageMobile(!showOptionsLanguageMobile)}>
                                 <img src={Arrow} alt="Arrow" />

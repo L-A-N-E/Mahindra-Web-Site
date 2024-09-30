@@ -270,6 +270,7 @@ export const NavItemsMobile = styled.div `
 // Nav Mobile Ul
 export const NavMobileUl = styled.ul `
     list-style: none;
+    align-items: start;
     display: flex;
     gap: 3rem;
     height: 70%;
