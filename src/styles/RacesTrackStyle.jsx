@@ -15,7 +15,7 @@ export const RaceTrackStyle = styled.main `
 // Conteudo Principal
 export const RaceTrackContent = styled.div `
     width: 100%;
-    background-image: ${Backgrounds.background_dark_gray_To_red};
+    background-image: ${Backgrounds.background_dark_gray_to_red};
     display: flex;
     align-items: center;
     justify-content: center;
