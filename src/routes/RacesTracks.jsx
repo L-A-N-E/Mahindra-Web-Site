@@ -73,7 +73,7 @@ const RaceTrack = () => {
 
                     {/* Titulo */}
                     <RaceTrackCity>
-                        <h1>{trackInfo.name}</h1>
+                        <h1>{trackInfo.slug}</h1>
                     </RaceTrackCity>
 
                     {/* Circuito Imagem */}
