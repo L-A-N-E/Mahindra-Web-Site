@@ -9,50 +9,49 @@ export const LoadingStyle = styled.main`
     align-items: center;
     justify-content: center;
     z-index: 99999;
+`
 
-    .loader {
-        height: 2px;
-        width: 300px;
-        background: rgb(44, 44, 44);
-        position: relative;
-        overflow: hidden;
-        
-        .black_overlay {
-            background: linear-gradient(
-                87deg,
-                ${Colors.black} 0%,
-                rgba(0, 0, 0, 0.14) 30%,
-                rgba(0, 0, 0, 0.14) 70%,
-                ${Colors.black} 100%
-            );
-            position: absolute;
-            inset: 0px;
+export const Loader = styled.div `
+    height: 2px;
+    width: 300px;
+    background: rgb(44, 44, 44);
+    position: relative;
+    overflow: hidden;
+
+    .black_overlay {
+        background: linear-gradient(
+            87deg,
+            ${Colors.black} 0%,
+            rgba(0, 0, 0, 0.14) 30%,
+            rgba(0, 0, 0, 0.14) 70%,
+            ${Colors.black} 100%
+        );
+        position: absolute;
+        inset: 0px;
+    }
+
+    .light {
+        width: 70px;
+        height: 100%;
+        position: absolute;
+        left: -20%;
+        top: 0px;
+        background: linear-gradient(
+            87deg,
+            rgba(0, 0, 0, 0) 0%,
+            ${Colors.red_1} 40%,
+            ${Colors.red_1} 60%,
+            rgba(0, 0, 0, 0) 100%
+        );
+        animation: light 1s infinite ease-in-out;
+    }
+
+    @keyframes light {
+        from {
+            left: -30%;
         }
-
-        .light {
-            width: 70px;
-            height: 100%;
-            position: absolute;
-            left: -20%;
-            top: 0px;
-            background: linear-gradient(
-                87deg,
-                rgba(0, 0, 0, 0) 0%,
-                ${Colors.red_1} 40%,
-                ${Colors.red_1} 60%,
-                rgba(0, 0, 0, 0) 100%
-            );
-            animation: light 1s infinite ease-in-out;
+        to {
+            left: 100%;
         }
-
-        @keyframes light {
-            from {
-                left: -30%;
-            }
-            to {
-                left: 100%;
-            }
-        }
-
     }
 `

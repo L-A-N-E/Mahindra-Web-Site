@@ -1,11 +1,16 @@
+// Importando Dependencias
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { LoginSignUpStyle, LoginSignUpLeft, LoginSignUpRight, LoginSignUpContainer, LoginSignUpTop, LoginSignUpMid, LoginSignUpBottom} from '../../styles/LoginSignUpStyle';
+import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { handleSignUp,googleSignIn } from '../../utils/authUtils';
+
+// Importando Imagens
 import LogoMahindra from '../../assets/header/logo/mahindra-logo-new.svg'
 import LogoGoogle from '../../assets/login_signup/logo-google.svg'
-import { handleSignUp,googleSignIn } from '../../utils/authUtils';
-import { useNavigate } from 'react-router-dom';
+
+// Importando Styles
+import { LoginSignUpStyle, LoginSignUpLeft, LoginSignUpRight, LoginSignUpContainer, LoginSignUpTop, LoginSignUpMid, LoginSignUpBottom} from '../../styles/LoginSignUpStyle';
 
 
 const SectionSignUp = () => {

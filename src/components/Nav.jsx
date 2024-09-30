@@ -1,7 +1,12 @@
+// Importando Dependencias
 import React, {useEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+
+// Importando Styles
 import { NavStyle, NavLogo, NavDesktop, NavItemsDesktop, NavItemsEffect, NavDesktopLanguages, NavHamburgerMenu,NavMenu, NavMobile, NavItemsMobile, NavMobileUl, NavMobileLanguages} from '../styles/NavStyle'
+
+// Importando Imagens
 import Arrow from '../assets/footer/arrow.svg'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 

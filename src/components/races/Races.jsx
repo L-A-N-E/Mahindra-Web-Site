@@ -1,16 +1,20 @@
+// Importando Dependencias
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 import { EffectCoverflow, Pagination, Navigation } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-import { RaceStyle, RaceContainer, RaceTop, RaceInfo, RaceFlag, RaceNameData, RaceBottom, RaceMainText, RaceSeeMore, RaceButton} from '../../styles/RacesStyle'
-import Arrow from '../../assets/footer/arrow.svg'
-
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
+
+// Importando Styles
+import { RaceStyle, RaceContainer, RaceTop, RaceInfo, RaceFlag, RaceNameData, RaceBottom, RaceMainText, RaceSeeMore, RaceButton} from '../../styles/RacesStyle'
+
+// Importando Imagens
+import Arrow from '../../assets/footer/arrow.svg'
+
 
 const SectionRaces = () => {
     const { t, i18n } = useTranslation();

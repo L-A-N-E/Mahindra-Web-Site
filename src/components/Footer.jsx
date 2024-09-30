@@ -1,10 +1,17 @@
+// Importando Dependencias
 import React from 'react'
-import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 import { Link } from 'react-router-dom';
-import { FooterStyle, FooterContent, FooterColumnInfo, FooterInfo, FooterColumn, FooterContainerItems, FooterItems } from '../styles/FooterStyle';
-import arrowFooter from '../assets/footer/arrow.svg'
 import { useTranslation } from 'react-i18next'
+
+// Importando Styles
+import { FooterStyle, FooterContent, FooterColumnInfo, FooterInfo, FooterColumn, FooterContainerItems, FooterItems } from '../styles/FooterStyle';
+
+// Importando Componentes
 import Medias from './Medias';
+
+// Importando Imagens
+import arrowFooter from '../assets/footer/arrow.svg'
+import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 
 const Footer = () => {
   // Select Language

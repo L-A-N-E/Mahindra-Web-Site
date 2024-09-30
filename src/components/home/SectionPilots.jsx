@@ -1,10 +1,14 @@
+// Importando Dependencias
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SectionPilotsStyle, PilotsContainer, PilotsCard} from '../../styles/SectionPilotsStyle';
 import { Link } from 'react-router-dom';
+
+// Importando Styles
+import { SectionPilotsStyle, PilotsContainer, PilotsCard} from '../../styles/SectionPilotsStyle';
+
+// Importando Imagens
 import EdoardoMortara from '../../assets/home/pilots/pilot-1.png'
 import NyckdeVries from '../../assets/home/pilots/pilot-2.png'
-
 
 const SectionPilots = () => {
 

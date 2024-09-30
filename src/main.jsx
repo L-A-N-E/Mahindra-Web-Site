@@ -1,49 +1,50 @@
+// Importando Dependencias
 import { StrictMode } from 'react' 
-import { createRoot } from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from "react-router-dom" // Import Dependencie React Router Dom
-import GlobalStyle from "./styles/GlobalStyle" // Import Global Style
-import './i18n' // Change Language
-import App from './App.jsx' // Import App
-import Error from "./routes/Error" // Import Error
+import { createRoot } from 'react-dom/client' 
+import { createBrowserRouter, RouterProvider } from "react-router-dom" 
+import './i18n' 
 
-import Home from "./routes/Home"  // Import Home
-import SignUp from './routes/SignUp' // Import SignUp 
-import Login from './routes/Login' // Import Login
-import AppMobile from './routes/AppMobile' // Import App Mobile
-import Pilot from './routes/Pilot.jsx' // Import Pilots
-
-import Races from './routes/Races' // Import Races
-import RaceTrack from './routes/RaceTrack.jsx'
-import RacesTracks from './routes/RacesTracks.jsx'
+// Importando Rotas
+import App from './App.jsx' 
+import Error from "./routes/Error" 
+import Home from "./routes/Home" 
+import SignUp from './routes/SignUp' 
+import Login from './routes/Login' 
+import AppMobile from './routes/AppMobile' 
+import Pilot from './routes/Pilot.jsx' 
+import Races from './routes/Races' 
+import RaceTrack from './routes/RaceTrack.jsx' 
+import RacesTracks from './routes/RacesTracks.jsx' 
 import Pilots from './routes/Pilots.jsx'
 
+// Importando GlobalStyle
+import GlobalStyle from "./styles/GlobalStyle" 
 
-// Creating Routes
+// Criando Rotas
 const router = createBrowserRouter ([
-  {path: '/', element: <App/>,errorElement: <Error/>,
+  {path: '/', element: <App/>, errorElement: <Error/>,
 
     children:[
-      {path: '/', element: <Home/>}, // Home
-      {path: '/sign-up', element: <SignUp/>}, //Sign Up
-      {path: '/login', element: <Login/>}, // Login
-      {path: '/races', element: <Races/>,}, // Races
-      {path: '/race-track', element: <RaceTrack/>,
+      {path: '/', element: <Home/>}, 
+      {path: '/sign-up', element: <SignUp/>}, 
+      {path: '/login', element: <Login/>}, 
+      {path: '/races', element: <Races/>,}, 
 
+      {path: '/race-track', element: <RaceTrack/>,
         children: [
-          {path: '/race-track/:slug', element: <RacesTracks/>} // Races Tracks
+          {path: '/race-track/:slug', element: <RacesTracks/>} 
         ]},
 
       {path: '/pilots', element: <Pilot/>, 
-        
         children: [
-          {path: '/pilots/:slug', element: <Pilots/>}
+          {path: '/pilots/:slug', element: <Pilots/>} 
         ]},
 
-      {path: '/app-mobile', element: <AppMobile/>}, // App Mobile
+      {path: '/app-mobile', element: <AppMobile/>}, 
     ]}
 ])
 
-// Main
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <RouterProvider router = {router} />

@@ -1,3 +1,4 @@
+// Importando Dependencias
 import React, {useRef } from 'react'
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next'
@@ -6,12 +7,17 @@ import { EffectFade, Pagination, Navigation, Autoplay } from 'swiper/modules';
 import 'swiper/css/effect-fade';
 import 'swiper/css/navigation';
 import 'swiper/css'
+
+// Importando Styles
 import { SectionHomeStyle, BannerImage, BannerContent } from '../../styles/SectionHomeStyle'
-import TextLoader from '../TextLoader'
 import { ButtonRedStyle } from '../../styles/ButtonRedStyle'
 
+// Importando Imagens
 import TRacer from '../../assets/home/banners/tracer.png'
 import TrackVision from '../../assets/home/banners/trackvision.png'
+
+// Importando Componentes
+import TextLoader from '../TextLoader'
 
 const SectionHome = () => {
 
@@ -50,11 +56,10 @@ const SectionHome = () => {
           clickable: true,
         }}
         navigation={true}
-        modules={[EffectFade, Pagination, Navigation, Autoplay]} // Adicionando o módulo Autoplay
-        effect={'fade'}
+        modules={[EffectFade, Pagination, Navigation, Autoplay]}
         autoplay={{
-          delay: 10000, // Tempo em milissegundos entre as trocas de slide
-          disableOnInteraction: false, // Não pausar o autoplay quando o usuário interagir
+          delay: 10000, 
+          disableOnInteraction: false, 
         }}
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}

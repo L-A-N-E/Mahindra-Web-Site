@@ -1,9 +1,11 @@
+// Importando Dependencias
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { SectionAboutStyle, AboutContainer, AboutContent } from '../../styles/SectionAboutStyle'
-import { ButtonRedFullStyle } from '../../styles/ButtonRedFullStyle'
 import { useTranslation } from 'react-i18next'
 
+// Importando Styles
+import { ButtonRedFullStyle } from '../../styles/ButtonRedFullStyle'
+import { SectionAboutStyle, AboutContainer, AboutContent } from '../../styles/SectionAboutStyle'
 
 
 const SectionAbout = () => {

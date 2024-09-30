@@ -1,6 +1,10 @@
+// Importando Dependencias
 import React, { useState, useEffect } from 'react';
-import { LoaderContainer, WordFixed, Word, WordsContainer, Card } from '../styles/TextLoaderStyle';
 import { useTranslation } from 'react-i18next';
+
+// Importando Styles
+import { LoaderContainer, WordFixed, Word, WordsContainer, Card } from '../styles/TextLoaderStyle';
+
 
 const TextLoader = () => {
     

@@ -1,5 +1,8 @@
+// Importando Dependencias
 import React from 'react'
 import { useTranslation } from 'react-i18next';
+
+// Importando Styles
 import { SectionEcotracerStyle, EcotracerContent, EcotracerTitle, EcotracerParagraph} from '../../styles/SectionEcotracerStyle'
 
 const SectionEcotracer = () => {

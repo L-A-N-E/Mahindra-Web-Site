@@ -1,8 +1,11 @@
-import { Outlet, useLocation } from "react-router-dom";  // Import Dependencie React Router Dom
+// Importando Dependencias
+import { Outlet, useLocation } from "react-router-dom";
 import { useState, useEffect  } from "react";
-import Nav from "./components/Nav"  // Import Nav
 import {OutletStyle} from './styles/OutletStyle.jsx'
-import Footer from "./components/Footer"  // Import Footer
+
+// Importando Componentes
+import Nav from "./components/Nav"
+import Footer from "./components/Footer" 
 import Loading from './components/Loading'
 
 

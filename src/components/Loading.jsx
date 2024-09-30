@@ -1,15 +1,18 @@
+// Importando Dependencias
 import React from 'react'
-import { LoadingStyle} from '../styles/LoadingStyle'
+
+// Importando Styles
+import { LoadingStyle, Loader } from '../styles/LoadingStyle'
 
 
 const Loading = () => {
     return (
         <>
-        <LoadingStyle>
-            <div className='loader'>
+        <LoadingStyle>  
+            <Loader>
                 <div className='light'></div>
                 <div className='black_overlay'></div>
-            </div>
+            </Loader>
         </LoadingStyle>
         </>
     )
