@@ -14,7 +14,6 @@ const SectionAbout = () => {
     // React intersection observer para animacao
     const {ref:textAbout, inView:textAboutVisible} = useInView({
       triggerOnce:true,
-      threshold:0.3
     });
 
     // Função para mudar idioma
