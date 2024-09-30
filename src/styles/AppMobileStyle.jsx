@@ -345,7 +345,6 @@ export const BotAppMobile = styled.div`
         }
     }
 `
-<<<<<<< HEAD
 
 // Botões
 export const Buttons=styled.div`
@@ -403,5 +402,4 @@ button:hover::before {
     }
 }
 `
-=======
->>>>>>> 7ea88eee57b42a5b76691ca4ee73831ca0e2c1ff
+

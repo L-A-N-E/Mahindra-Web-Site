@@ -68,13 +68,9 @@ export const NavItemsDesktop = styled.nav `
     }
 `
 
-<<<<<<< HEAD
 // Nav Desktop Ul
-export const NavDesktopUl = styled.ul `    
-=======
 export const NavDesktopUl = styled.ul `
     width: 100%;
->>>>>>> 7ea88eee57b42a5b76691ca4ee73831ca0e2c1ff
 `
 
 // Nav Items Effect
@@ -179,7 +175,7 @@ export const NavHamburgerMenu = styled.div`
 
 // Criando Menu Hamburguer
 export const NavMenu = styled.div`
-<<<<<<< HEAD
+
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -207,7 +203,7 @@ span {
 @media (max-width: 900px) {
     display: flex;
 }
-=======
+
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -236,7 +232,6 @@ span {
         display: flex;
     }
 
->>>>>>> 7ea88eee57b42a5b76691ca4ee73831ca0e2c1ff
 `;
 
 // Nav Mobile
