@@ -2,7 +2,7 @@
 import image1 from '../assets/app_mobile/celularObliquo.png'
 
 // Importando os componentes
-import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile, Buttons} from '../styles/AppMobileStyle';
+import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile } from '../styles/AppMobileStyle';
 
 // Importando as dependências
 import { Link } from 'react-router-dom';
@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom';
 // Importando os Hooks
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'react-i18next';
+
+import { ButtonRedStyle } from '../styles/ButtonRedStyle'
 
 function App() {
 
@@ -44,27 +46,20 @@ return (
     <BackgroundAppMobile>
         {/* Parte de cima do mobile */}
         <TopAppMobile>
-            <div className="top-section">
-                <div className="titulo-wrapper">
-                    <h1 className="titulo">{t("mobile-appU")}</h1>
-                </div>
-                    <div className="image-wrapper">
-                        <img
-                        className={cellVisible ? 'animate-img' : ''}
-                        ref={cellImage}
-                        src={image1}
-                        alt="Celular Oblíquo">
-                        </img>
-                    </div>
+            <div className="image-wrapper">
+                <img
+                className={cellVisible ? 'animate-img' : ''}
+                ref={cellImage}
+                src={image1}
+                alt="Celular Oblíquo">
+                </img>
             </div>
         </TopAppMobile>        
 
         {/* Container  */}
         <ContainerArrow>
             <ArrowAnimated>
-                <div className="center">
-                    <div className="arrow">
-                    </div>
+                <div className="arrow">
                 </div>
             </ArrowAnimated>
         </ContainerArrow>
@@ -77,48 +72,49 @@ return (
                 <div className="btn2"></div>
                 <div className="btn3"></div>
                 <div className="btn4"></div>
-                <div className="card-int">
 
-                    <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText} >
+                <div className="card-int">
+                    <div className={textVisible ? 'hello text-animated-l padding-top' : 'hello'} ref={cellText} >
                         {t('what')}
                         <span className="hidden">
-                        {t('desc1')}
-                            </span>
+                            {t('desc1')}
+                        </span>
                     </div>
 
 
-                    <div className={textVisible ? 'hello text-animated-l' : 'hello'} ref={cellText} >
+                    <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText} >
                     {t('thrill')}
                         <span className="hidden">
-                        {t('desc2')}
-                            </span>
+                            {t('desc2')}
+                        </span>
                     </div>
 
                     
-                    <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText}>
+                    <div className={textVisible ? 'hello text-animated-l' : 'hello'} ref={cellText}>
                     {t('clubs')}
                         <span className="hidden">
-                        {t('desc3')}
+                            {t('desc3')}
+                        </span>
+                    </div>
+
+                    <div className='width-50'>
+                        <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText}>
+                        {t('challenge')}
+                            <span className="hidden">
+                                {t('desc4')}
                             </span>
+                        </div>
                     </div>
 
                     <div className={textVisible ? 'hello text-animated-l' : 'hello'} ref={cellText}>
-                    {t('challenge')}
-                        <span className="hidden">
-                        {t('desc4')}
-                            </span>
-                    </div>
-
-                    <div className={textVisible ? 'hello text-animated-r' : 'hello'} ref={cellText}>
                     {t('how')}
                         <span className="hidden">
                         
-                            <li><strong>{t('howDesc1t')}</strong> {t('howDesc1')}</li><br />
-                            <li><strong>{t('howDesc2t')}</strong> {t('howDesc2')}</li><br />
-                            <li><strong>{t('howDesc3t')}</strong> {t('howDesc3')}</li><br />
-                            <li><strong>{t('howDesc4t')}</strong> {t('howDesc4')}</li><br />
-                        
-                            </span>
+                            <li><strong className='red'>{t('howDesc1t')}</strong> <strong className='black'>{t('howDesc1')}</strong></li><br/>
+                            <li><strong className='red'>{t('howDesc2t')}</strong> <strong className='black'>{t('howDesc2')}</strong></li><br/>
+                            <li><strong className='red'>{t('howDesc3t')}</strong> <strong className='black'>{t('howDesc3')}</strong></li><br/>
+                            <li><strong className='red'>{t('howDesc4t')}</strong> <strong className='black'>{t('howDesc4')}</strong></li><br/>
+                        </span>
                     </div>
 
                 </div>
@@ -134,21 +130,14 @@ return (
 
         {/* Parte de baixo do mobile */}
         <BotAppMobile>
-            <div className="final-section">
-                <h1>{t('download-faca')}</h1>
-                <Buttons>
-                    <div className='final-section-buttons'>
-                        <Link to={'/sign-up'} onClick= {handleLinkClickSignUp} className='txt-none link'><button>{t("signup")}</button></Link>
-                        <Link to={'/login'} onClick= {handleLinkClickLogin} className='txt-none link'><button>{t('login')}</button></Link>
-                    </div>
-                </Buttons>
-                <h2>{t('baixe')}</h2>
-                <span>
-                    <button className="button" data-text="Awesome">
-                        <span className="actual-text">&nbsp;{t("now")}&nbsp;</span>
-                        <span aria-hidden="true" className="hover-text">&nbsp;{t("now")}&nbsp;</span>
-                    </button>
-                </span>
+            <h1>{t('download-faca')}</h1>   
+            <div className='final-section-buttons'>
+                <Link to={'/sign-up'} onClick= {handleLinkClickSignUp} className='txt-none link'>
+                    <ButtonRedStyle>{t("signup")}</ButtonRedStyle>
+                </Link>
+                <Link to={'/login'} onClick= {handleLinkClickLogin} className='txt-none link'>
+                    <ButtonRedStyle>{t('login')}</ButtonRedStyle>
+                </Link>
             </div>
         </BotAppMobile>
     </BackgroundAppMobile>

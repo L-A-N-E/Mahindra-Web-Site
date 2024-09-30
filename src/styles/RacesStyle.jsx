@@ -13,7 +13,7 @@ export const RaceStyle = styled.section `
     justify-content: center;
     gap: 1.2rem;
     height: calc(100dvh - 70px);
-    background-image: ${Backgrounds.background_dark_gray_To_red};
+    background-image: ${Backgrounds.background_dark_gray_to_red};
         
         /* Swiper */
         .swiper{

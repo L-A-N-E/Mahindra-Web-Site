@@ -11,7 +11,7 @@ export const PilotsStyle = styled.main `
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: ${Backgrounds.background_dark_gray_To_red};
+    background-image: ${Backgrounds.background_dark_gray_to_red};
 `
 
 // Pilotos - Conteúdo

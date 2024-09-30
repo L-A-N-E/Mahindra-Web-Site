@@ -56,6 +56,7 @@ const SectionHome = () => {
           dynamicBullets: true,
           clickable: true,
         }}
+        effect={'fade'}
         navigation={true}
         modules={[EffectFade, Pagination, Navigation, Autoplay]}
         autoplay={{

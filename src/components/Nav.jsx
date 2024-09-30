@@ -59,7 +59,7 @@ const Nav = () => {
                         <li>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
-                                <Link className='txt-none' to = '/'><li>Home</li></Link>
+                                <Link className='txt-none aling-txt' to = '/'><li>Home</li></Link>
                             </NavItemsEffect>
                         </li>
                 
@@ -67,7 +67,7 @@ const Nav = () => {
                         <li>
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
-                                <Link className='txt-none' to= '/races'><li>{t('races')}</li></Link>
+                                <Link className='txt-none aling-txt' to= '/races'><li>{t('races')}</li></Link>
                             </NavItemsEffect>
                         </li>
 
@@ -76,6 +76,14 @@ const Nav = () => {
                             <NavItemsEffect>
                                 <img src={Arrow} alt="Arrow" />
                                 <Link className='txt-none' to='/app-mobile'><li>{t('mobile-app')}</li></Link>
+                            </NavItemsEffect>
+                        </li>
+
+                        {/* TrackVision */}
+                        <li>
+                            <NavItemsEffect>
+                                <img src={Arrow} alt="Arrow" />
+                                <Link className='txt-none aling-txt ' to='/trackvision'><li>{t('trackvision')}</li></Link>
                             </NavItemsEffect>
                         </li>
 

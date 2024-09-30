@@ -75,6 +75,15 @@ export const FooterInfo = styled.div `
             width: 200px;
         }
     }
+<<<<<<< HEAD
+=======
+
+    @media (max-width: 220px) {
+        img {
+            width: 60%;
+        }
+    }
+>>>>>>> 7ea88eee57b42a5b76691ca4ee73831ca0e2c1ff
 `
 
 // Items das Colunas
