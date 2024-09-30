@@ -1,4 +1,4 @@
-// Var Font
+// Fontes
 const Font = {
     // Font Family
     txt_Mont: '',

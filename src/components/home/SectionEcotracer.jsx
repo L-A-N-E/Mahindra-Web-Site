@@ -7,7 +7,7 @@ import { SectionEcotracerStyle, EcotracerContent, EcotracerTitle, EcotracerParag
 
 const SectionEcotracer = () => {
 
-    // Select Language
+    // Função para mudar idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
@@ -18,13 +18,13 @@ const SectionEcotracer = () => {
         <>
         <SectionEcotracerStyle>
 
-                {/* Conteudo */}
+                {/* Conteúdo */}
                 <EcotracerContent>
-                    {/* Title */}
+                    {/* Título */}
                     <EcotracerTitle>
                         <h1>{t('title-ecotracer')} <strong>Ecotracer?</strong></h1>
                     </EcotracerTitle>
-                    {/* Paragraph */}
+                    {/* Parágrafo */}
                     <EcotracerParagraph>
                         <p>{t('text-ecotracer')}</p>
                     </EcotracerParagraph>

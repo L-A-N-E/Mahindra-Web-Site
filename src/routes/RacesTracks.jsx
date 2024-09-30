@@ -1,14 +1,20 @@
-// Importando depdencias
+// Importando dependências
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
+
+// Importando os Styles
 import { RaceTrackStyle, RaceTrackContent, RaceTrackCenter, RaceTrackCity, RaceTrackCircuit, RaceTrackAboutInfo, RaceTrackTextInfo, RaceTrackContainerPilots, RaceTrackCardsRight } from '../styles/RacesTrackStyle'
+
+// Importando os Hooks
 import { Link, useParams } from 'react-router-dom';
+
 // Importando telas
 import Loading from "../components/Loading"; 
 import Error from "./Error"; 
 
 const RaceTrack = () => {
 
+    // Função para mudar idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);

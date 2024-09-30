@@ -15,19 +15,23 @@ import { LoginSignUpStyle, LoginSignUpLeft, LoginSignUpRight, LoginSignUpContain
 
 const SectionSignUp = () => {
 
+    // Navigate
     const navigate = useNavigate();
-    // Select Language
+
+    // Função para mudar idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
 
+    // Estado das váriaveis
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [username, setUsername] = useState('');
 
+    // Função de SignUp
     const onSignUp = async (event) => {
         event.preventDefault();
         handleSignUp(email, password, confirmPassword, username, t, navigate);
@@ -36,19 +40,19 @@ const SectionSignUp = () => {
     return (
         <>
         <LoginSignUpStyle>
-                {/* Left */}
+                {/* Esquerda */}
                 <LoginSignUpLeft></LoginSignUpLeft>
 
-                {/* Right */}
+                {/* Direita */}
                 <LoginSignUpRight>
                     <LoginSignUpContainer>
-                        {/* Top */}
+                        {/* Topo */}
                         <LoginSignUpTop>
                             <img src={LogoMahindra} alt='Logo Mahindra' />
                             <h2>{t('welcome')}</h2>
                         </LoginSignUpTop>
 
-                        {/* Mid */}
+                        {/* Meio */}
                         <LoginSignUpMid>
                             <form action='/login' method='POST' onSubmit={onSignUp}>
                                 <input type='text' name='username' placeholder={t('username')} value={username} onChange={(e) => setUsername(e.target.value)} required/>
@@ -61,7 +65,7 @@ const SectionSignUp = () => {
                             <p>{t('have-an-account')} <button><Link to ='/login'>{t('Login')}</Link></button></p>
                         </LoginSignUpMid>
 
-                        {/* End */}
+                        {/* Fim */}
                         <LoginSignUpBottom>
                             <button onClick={googleSignIn}><img src={LogoGoogle} alt='#' /> {t('signup-with-google')}</button>
                         </LoginSignUpBottom>                        

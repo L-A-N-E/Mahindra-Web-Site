@@ -1,7 +1,11 @@
-import styled from 'styled-components'; //Styled Components
-import Colors from '../constant/Colors'; //Var Colors 
-import Font from '../constant/Font'; //Var Fonts
+// Importando as dependências
+import styled from 'styled-components';
 
+// Importando as constantes
+import Colors from '../constant/Colors';
+import Font from '../constant/Font'; 
+
+// Seção Home - Estilo
 export const SectionHomeStyle = styled.section `
         background-color: ${Colors.black};
 
@@ -73,6 +77,7 @@ export const SectionHomeStyle = styled.section `
     }
 `
 
+// Imagem do Banner
 export const BannerImage = styled.aside `
     display: flex;
     align-items: center;
@@ -87,7 +92,7 @@ export const BannerImage = styled.aside `
     }
 `
 
-
+// Conteúdo do Banner
 export const BannerContent = styled.aside `
     display: flex;
     flex-direction: column;

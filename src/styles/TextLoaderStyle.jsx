@@ -1,12 +1,17 @@
+// Importando as dependências
 import styled, { keyframes } from 'styled-components';
+
+// Importando as constantes
 import Colors from '../constant/Colors';
 import Font from '../constant/Font';
 
+// Card
 export const Card = styled.div`
     background: transparent;
     width: auto;
 `;
 
+// Container Loader
 export const LoaderContainer = styled.div`
     color: ${Colors.white};
     font-weight: 500;
@@ -25,7 +30,7 @@ export const LoaderContainer = styled.div`
     }
 `;
 
-
+// Palavra Fixada
 export const WordFixed = styled.p`
     text-transform: uppercase;
     font-weight: ${Font.txt_100w};
@@ -36,12 +41,14 @@ export const WordFixed = styled.p`
     }
 `
 
+// Container das palavras
 export const WordsContainer = styled.div`
     overflow: hidden;
     position: relative;
     margin-left: 10px;
 `;
 
+// Efeito de FadeInOut
 export const fadeInOut = keyframes`
     0% {
         opacity: 0;
@@ -57,6 +64,7 @@ export const fadeInOut = keyframes`
     }
 `;
 
+// Palavra
 export const Word = styled.p`
     display: block;
     text-align: center;

@@ -1,11 +1,16 @@
+// Importando as dependências
 import styled from 'styled-components';
+
+// Importando as constantes
 import Colors from '../constant/Colors';
 import Font from '../constant/Font';
-import Pilot1 from '../assets/home/pilots/pilot-1.png'
-import Pilot2 from '../assets/home/pilots/pilot-2.png'
 import Backgrounds from '../constant/Backgrounds';
 
+// Importando as imagens
+import Pilot1 from '../assets/home/pilots/pilot-1.png'
+import Pilot2 from '../assets/home/pilots/pilot-2.png'
 
+// RaceTrack - Estilo
 export const RaceTrackStyle = styled.main `
     height: calc(100dvh - 70px);
     width: 100%;
@@ -22,6 +27,7 @@ export const RaceTrackContent = styled.div `
     color: ${Colors.white};
 `
 
+// RaceTrack - Center
 export const RaceTrackCenter = styled.div`
     width: 80%;
     height: auto;
@@ -34,6 +40,7 @@ export const RaceTrackCenter = styled.div`
 
 `
 
+// RaceTrackCity
 export const RaceTrackCity = styled.div`
     text-align: center;
     text-transform: uppercase;
@@ -80,7 +87,6 @@ export const RaceTrackTextInfo = styled.div `
         font-size: ${Font.txt_1rem};
     }
 `
-
 
 // Coluna Direita
 export const RaceTrackContainerPilots = styled.div `

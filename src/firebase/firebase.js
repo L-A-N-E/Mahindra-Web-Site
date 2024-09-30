@@ -1,3 +1,4 @@
+// Importando do Firebase
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 import { getAuth } from 'firebase/auth';
@@ -18,7 +19,5 @@ const app = initializeApp(firebaseConfig);
 
 // Exporta os serviços
 const auth = getAuth(app);
-
 const db = getFirestore(app);
-
 export { app, auth, db };

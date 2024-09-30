@@ -1,9 +1,16 @@
+// Importando Hooks
 import React, { useEffect, useState } from 'react'
-import { PilotsStyle, PilotsContent, PilotImage, PilotInfo } from '../styles/PilotsStyle'
-import Loading from '../components/Loading'
+
+// Importando as dependências
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
+
+// Importando os Componentes
 import Error from '../routes/Error'
+import Loading from '../components/Loading'
+
+// Importando os Styles
+import { PilotsStyle, PilotsContent, PilotImage, PilotInfo } from '../styles/PilotsStyle'
 import { ButtonRedFullStyle } from '../styles/ButtonRedFullStyle'
 
 
@@ -27,7 +34,7 @@ const Pilots = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                // Fetching all pilots
+                // Fetching todos os pilotos
                 const pilotsResponse = await fetch('http://localhost:5000/pilots');
                 if (!pilotsResponse.ok) {
                     throw new Error('Erro ao buscar dados dos pilotos');
@@ -35,7 +42,7 @@ const Pilots = () => {
                 const pilotsData = await pilotsResponse.json();
                 setPilots(pilotsData);
                 
-                // Fetching specific pilot info
+                // Fetching informação específica do piloto
                 const pilotResponse = await fetch(`http://localhost:5000/pilots?slug=${slug}`);
                 if (!pilotResponse.ok) {
                     throw new Error('Erro ao buscar dados do piloto');
@@ -73,6 +80,7 @@ const Pilots = () => {
         return <Error/>;
     }
 
+    // Função para mudar de idioma
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
 

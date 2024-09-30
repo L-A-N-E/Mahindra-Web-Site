@@ -1,8 +1,11 @@
+// Importando as dependências
 import styled from 'styled-components';
+
+// Importando as constantes
 import Colors from '../constant/Colors';
 import Backgrounds from '../constant/Backgrounds';
 
-
+// Pilotos - Estilo
 export const PilotsStyle = styled.main `
     height: auto;
     display: flex;
@@ -11,6 +14,7 @@ export const PilotsStyle = styled.main `
     background-image: ${Backgrounds.background_dark_gray_To_red};
 `
 
+// Pilotos - Conteúdo
 export const PilotsContent = styled.div `
     width: 100%;
     height: 100%;
@@ -26,6 +30,7 @@ export const PilotsContent = styled.div `
     }
 `
 
+// Pilotos - Imagem
 export const PilotImage = styled.div `
     width: 50%;
     height: 100%;
@@ -42,6 +47,7 @@ export const PilotImage = styled.div `
     }
 `
 
+// Pilotos - Info
 export const PilotInfo = styled.div `
     width: 50%;
     display: flex;

@@ -1,7 +1,11 @@
+// Importando as dependências
 import styled from 'styled-components';
+
+// Importando as constantes
 import Colors from '../constant/Colors';
 import Font from '../constant/Font';
 
+// Botão - Estilizado
 export const ButtonRedStyle = styled.button `
     width: 10em;
     position: relative;

@@ -1,8 +1,14 @@
-import styled from 'styled-components'  //Styled Components
-import Colors from '../constant/Colors' //Var Colors
-import Font from '../constant/Font' //Var Fonts
-import backgroundAbout from '../assets/home/about/background.png' //Background Section
+// Importando as dependências
+import styled from 'styled-components'  
 
+// Importando as constantes
+import Colors from '../constant/Colors' 
+import Font from '../constant/Font' 
+
+// Importando as imagens
+import backgroundAbout from '../assets/home/about/background.png' 
+
+// Seção About Style
 export const SectionAboutStyle = styled.section `
     width: 100%;
     height: 100dvh;
@@ -19,6 +25,7 @@ export const SectionAboutStyle = styled.section `
     }
 `
 
+// Container do About
 export const AboutContainer = styled.section`
     width: 50%;
     height: 50%;
@@ -31,6 +38,7 @@ export const AboutContainer = styled.section`
     }
 `
 
+// Conteúdo do About
 export const AboutContent = styled.section`
     display: flex;
     flex-direction: column;

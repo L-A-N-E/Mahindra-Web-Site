@@ -1,7 +1,9 @@
-import styled from 'styled-components'; // Styled Components
-import Colors from '../constant/Colors'; // Var Colors
-import Font from '../constant/Font'; // Var Fonts
-import Arrow from '../assets/footer/arrow.svg'; // Arrow
+// Importando as dependências
+import styled from 'styled-components'; 
+
+// Importando as constantes
+import Colors from '../constant/Colors'; 
+import Font from '../constant/Font'; 
 
 // Container Principal Nav
 export const NavStyle = styled.header`
@@ -17,6 +19,7 @@ export const NavStyle = styled.header`
     padding: 1rem 3rem;
 `;
 
+// Logo do Nav
 export const NavLogo = styled.div `
     img {
         height: 30px;
@@ -35,6 +38,7 @@ export const NavLogo = styled.div `
     }
 `
 
+// Desktop do Nav
 export const NavDesktop = styled.div `
     display: flex;
     width: 50%;
@@ -43,6 +47,7 @@ export const NavDesktop = styled.div `
     }
 `
 
+// Nav Items Desktop
 export const NavItemsDesktop = styled.nav `
     display: flex;
     width: 100%;
@@ -62,12 +67,12 @@ export const NavItemsDesktop = styled.nav `
     }
 `
 
-export const NavDesktopUl = styled.ul `
-    
+// Nav Desktop Ul
+export const NavDesktopUl = styled.ul `    
 `
 
+// Nav Items Effect
 export const NavItemsEffect = styled.ul `
-
     li {
         position: relative; 
         display: inline-block;
@@ -105,9 +110,7 @@ export const NavItemsEffect = styled.ul `
     }
 `
 
-
-
-
+// Nav Desktop Languages
 export const NavDesktopLanguages = styled.div `
     cursor: pointer;
 
@@ -163,36 +166,36 @@ export const NavHamburgerMenu = styled.div`
 
 // Criando Menu Hamburguer
 export const NavMenu = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
 
-  span {
+span {
     width: 20px;
     height: 1.5px;
     background-color: white;
     transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
-  }
+}
 
-  &.open span:nth-child(1) {
+&.open span:nth-child(1) {
     transform: rotate(45deg) translate(3px, 3px);
-  }
-  
-  &.open span:nth-child(2) {
+}
+
+&.open span:nth-child(2) {
     opacity: 0;
-  }
+}
 
-  &.open span:nth-child(3) {
+&.open span:nth-child(3) {
     transform: rotate(-45deg) translate(7px, -6px);
-  }
+}
 
-  @media (max-width: 900px) {
+@media (max-width: 900px) {
     display: flex;
-  }
-
+}
 `;
 
+// Nav Mobile
 export const NavMobile = styled.div `
     display: none;
     flex-direction: column;
@@ -213,6 +216,7 @@ export const NavMobile = styled.div `
     }
 `
 
+// Nav Items Mobile
 export const NavItemsMobile = styled.div `
     display: flex;
     width: 100%;
@@ -224,7 +228,7 @@ export const NavItemsMobile = styled.div `
     }
 `
 
-
+// Nav Mobile Ul
 export const NavMobileUl = styled.ul `
     list-style: none;
     display: flex;
@@ -248,6 +252,7 @@ export const NavMobileUl = styled.ul `
     }
 `
 
+// Nav Mobile Languages
 export const NavMobileLanguages = styled.div `
     display: flex;
     flex-direction: column;

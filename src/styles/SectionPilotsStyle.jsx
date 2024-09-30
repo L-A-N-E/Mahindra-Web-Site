@@ -1,4 +1,7 @@
+// Importando as dependências
 import styled from 'styled-components';
+
+// Importando as constantes
 import Colors from '../constant/Colors';
 
 // Seção Pilotos

@@ -14,7 +14,8 @@ import arrowFooter from '../assets/footer/arrow.svg'
 import logoMahindra from '../assets/header/logo/mahindra-logo-new.svg';
 
 const Footer = () => {
-  // Select Language
+
+  // Função para mudar idioma
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
@@ -25,13 +26,13 @@ const Footer = () => {
     <>
     <FooterStyle>
 
-            {/* Left Footer */}
+            {/* Footer - Esquerda */}
             <FooterContent>
               
               {/* Logo */}
               <FooterColumnInfo>  
 
-                {/* Info */}
+                {/* Informações */}
                 <FooterInfo>
                     <img src={logoMahindra} alt='' />
                     <h5>{t('rights')}</h5>
@@ -44,12 +45,13 @@ const Footer = () => {
 
               </FooterColumnInfo>
 
-              {/* Column 1 */}
+              {/* Coluna 1 */}
               <FooterColumn>
 
                 {/* Items */}
                 <FooterContainerItems>
-                  {/* News */}
+
+                  {/* Notícias */}
                   <Link to='https://www.mahindraracing.com/news' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
@@ -66,7 +68,7 @@ const Footer = () => {
                     </FooterItems>
                   </Link>
 
-                  {/* Partners */}
+                  {/* Parcerias */}
                   <Link to='https://www.mahindraracing.com/partners' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
@@ -78,7 +80,7 @@ const Footer = () => {
 
               </FooterColumn>
 
-              {/* Column 2 */}
+              {/* Coluna 2 */}
               <FooterColumn>
 
                 {/* Items */}
@@ -92,7 +94,7 @@ const Footer = () => {
                     </FooterItems>
                   </Link>
 
-                  {/* DRIVERS */}
+                  {/* Corredores */}
                   <Link to='https://www.mahindraracing.com/drivers' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />
@@ -101,7 +103,7 @@ const Footer = () => {
                   </Link>           
 
 
-                  {/* Calendar */}
+                  {/* Calendário */}
                   <Link to='https://www.mahindraracing.com/calendar' className='txt-none' target='blank'>
                     <FooterItems>
                       <img className='arrow-rotation' src={arrowFooter} alt='' />

@@ -1,8 +1,14 @@
+// Importando as dependências
 import styled from 'styled-components';
+
+// Importando as imagens
 import BackgroundEcotracer from '../assets/home/ecotracer/background.png'
+
+// Importando as constantes
 import Colors from '../constant/Colors';
 import Font from '../constant/Font';
 
+// Seção EcoTracer - Estilizado
 export const SectionEcotracerStyle = styled.section `
     height: 100dvh;
     width: 100%;
@@ -17,6 +23,7 @@ export const SectionEcotracerStyle = styled.section `
     }
 `
 
+// EcoTracer Conteúdp
 export const EcotracerContent = styled.section`
     width: 80%;
     display: flex;
@@ -30,6 +37,7 @@ export const EcotracerContent = styled.section`
     }
 `
 
+// EcoTracer Título
 export const EcotracerTitle = styled.div`
     display: flex;
     justify-content: center;
@@ -65,6 +73,7 @@ export const EcotracerTitle = styled.div`
     }
 `
 
+// EcoTracer - Parágrafo
 export const EcotracerParagraph = styled.div`
     p {
         font-size: ${Font.txt_16};

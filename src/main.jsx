@@ -4,7 +4,7 @@ import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from "react-router-dom" 
 import './i18n' 
 
-// Importando Rotas
+// Importando todas as Rotas
 import App from './App.jsx' 
 import Error from "./routes/Error" 
 import Home from "./routes/Home" 
@@ -22,24 +22,31 @@ import GlobalStyle from "./styles/GlobalStyle"
 
 // Criando Rotas
 const router = createBrowserRouter ([
+  // App e Error
   {path: '/', element: <App/>, errorElement: <Error/>,
 
     children:[
+      // Home
       {path: '/', element: <Home/>}, 
+      // SignUp
       {path: '/sign-up', element: <SignUp/>}, 
-      {path: '/login', element: <Login/>}, 
+      // Login
+      {path: '/login', element: <Login/>},
+      // Races
       {path: '/races', element: <Races/>,}, 
-
+      // RaceTrack
       {path: '/race-track', element: <RaceTrack/>,
         children: [
+          // Pistas do RaceTrack
           {path: '/race-track/:slug', element: <RacesTracks/>} 
         ]},
-
+      // Pilotos
       {path: '/pilots', element: <Pilot/>, 
         children: [
+          // Pilotos especificos
           {path: '/pilots/:slug', element: <Pilots/>} 
         ]},
-
+      // App Mobile
       {path: '/app-mobile', element: <AppMobile/>}, 
     ]}
 ])

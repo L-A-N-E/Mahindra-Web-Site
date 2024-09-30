@@ -1,6 +1,10 @@
+// Importando as dependências
 import styled from 'styled-components';
+
+// Importando as constantes
 import Colors from '../constant/Colors';
 
+// Estilo do Loading
 export const LoadingStyle = styled.main`
     height: 100dvh;
     width: 100%;
@@ -11,6 +15,7 @@ export const LoadingStyle = styled.main`
     z-index: 99999;
 `
 
+// Loader
 export const Loader = styled.div `
     height: 2px;
     width: 300px;

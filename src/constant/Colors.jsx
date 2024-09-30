@@ -1,4 +1,4 @@
-// Var Colors
+// Cores
 const Colors = {
     red_1: '#E51635',
     red_hover: '#880000',

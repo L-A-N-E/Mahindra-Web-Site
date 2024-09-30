@@ -8,16 +8,20 @@ import { LoaderContainer, WordFixed, Word, WordsContainer, Card } from '../style
 
 const TextLoader = () => {
     
+    // Função para mudar de idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
     
+    // Lista de palavras para aparecer no menu com traduções
     const words = [t('racing'), t('rise'), t('experience'), t('atthetop')];
 
+    // UseState para trocar as palavras
     const [currentWord, setCurrentWord] = useState(0);
 
+    // UseEffect para trocar as palavras
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentWord((prevWord) => (prevWord + 1) % words.length);
@@ -28,6 +32,7 @@ const TextLoader = () => {
     return (
         <Card>
             <LoaderContainer>
+                {/* Palavra Fixada */}
                 <WordFixed>Mahindra</WordFixed> 
                 <WordsContainer>
                     <Word key={currentWord}>{words[currentWord]}</Word>

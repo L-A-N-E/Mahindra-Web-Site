@@ -1,22 +1,27 @@
-import React from 'react';
+// Importando componentes
 import SectionHome from '../components/home/SectionHome';
 import SectionAbout from '../components/home/SectionAbout';
 import SectionPilots from '../components/home/SectionPilots';
 import SectionEcotracer from '../components/home/SectionEcotracer';
+
+// Importando as dependências
+import React from 'react';
+
+// Importando o Style
 import { HomeStyle } from '../styles/HomeStyle'
 
 const Home = () => {
   return (
     <>
     <HomeStyle>
-      {/* Section Home */}
+      {/* Seção Home */}
       <SectionHome />
-      {/* Section About */}
+      {/* Seção About */}
       <SectionAbout />
     </HomeStyle>
-      {/* Section Pilots*/}
+      {/* Seção Pilots*/}
       <SectionPilots /> 
-      {/* Section Ecotracer */}
+      {/* Seção Ecotracer */}
       <SectionEcotracer />
     </>
   )

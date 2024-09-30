@@ -1,5 +1,7 @@
+// Importando as dependências
 import styled from 'styled-components';
 
+// Fundo do Mobile
 export const BackgroundAppMobile = styled.div`
 background-color:#fa0b21;
 h1, h2{
@@ -12,6 +14,7 @@ h1:hover, h2:hover{
 }
 `
 
+// Parte superior do Mobile
 export const TopAppMobile = styled.div`
     .top-section {
         display: flex;
@@ -70,7 +73,7 @@ export const TopAppMobile = styled.div`
     }
 }
 `
-
+// Parte da Seta
 export const ContainerArrow = styled.div`
 width:100%;
 height:auto;
@@ -78,7 +81,7 @@ display:flex;
 align-items:center;
 justify-content:center;
 `
-
+// Animação da Seta
 export const ArrowAnimated = styled.div`
 .center{ 
     height:200px;
@@ -119,7 +122,7 @@ export const ArrowAnimated = styled.div`
     }
 }
 `
-
+// Parte do meio do Mobile
 export const MidAppMobile = styled.div`
 width:100%;
 .middle-section{
@@ -310,7 +313,7 @@ width:100%;
     }
 }
 `
-
+// Parte debaixo do Mobile
 export const BotAppMobile = styled.div`
 width:100%;
 .final-section{
@@ -400,6 +403,7 @@ width:100%;
 }
 `
 
+// Botões
 export const Buttons=styled.div`
 button{
     padding: 1em 2em;

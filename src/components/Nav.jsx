@@ -12,11 +12,10 @@ import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
 const Nav = () => {
 
-    // Language Options Desktop
+    // Opções de Idioma Desktop
     const [showOptionsLanguage, setShowOptionsLanguageDesktop] = useState(false)
     
-    
-    // Language Options Mobile
+    // Opções de Idioma para Mobile
     const [showOptionsLanguageMobile, setShowOptionsLanguageMobile] = useState(false);
 
     // Menu Mobile
@@ -25,13 +24,13 @@ const Nav = () => {
         setShowMenu(!showMenu);
     };
 
-    // Change Language
+    // Função para mudar de idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
 
-    // Show Language Options Mobile
+    // Mostra as Opções de idioma no Mobile
     useEffect(() => {
         if(showOptionsLanguageMobile){
             setShowOptionsLanguageMobile(true)

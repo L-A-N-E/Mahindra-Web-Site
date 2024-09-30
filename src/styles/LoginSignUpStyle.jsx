@@ -1,7 +1,12 @@
-import styled from 'styled-components'; //Styled Components
-import Colors from '../constant/Colors'; //Var Colors 
-import Font from '../constant/Font';  //Var Fonts
-import Background from '../assets/login_signup/background.png' //Background Section
+// Importando os componentes
+import styled from 'styled-components';
+
+// Importando as constantes
+import Colors from '../constant/Colors'; 
+import Font from '../constant/Font'; 
+
+// Importando as imagens
+import Background from '../assets/login_signup/background.png' 
 
 // Login & Sign-Up
 export const LoginSignUpStyle = styled.section `        
@@ -10,7 +15,7 @@ export const LoginSignUpStyle = styled.section `
     display: flex;
 `
 
-// Div Left
+// Div Esquerda
 export const LoginSignUpLeft = styled.div `        
     background-image: url(${Background});
     background-position: center;
@@ -23,7 +28,7 @@ export const LoginSignUpLeft = styled.div `
     }
 `
 
-// Div Right
+// Div Direita
 export const LoginSignUpRight = styled.div `        
     background-color: ${Colors.black};
     height: 100%;
@@ -51,7 +56,7 @@ export const LoginSignUpContainer = styled.div`
     }
 `
 
-// Div Top
+// Div Topo
 export const LoginSignUpTop = styled.div`
     display: flex;
     flex-direction: column;

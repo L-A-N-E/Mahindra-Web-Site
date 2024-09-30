@@ -21,7 +21,7 @@ import TextLoader from '../TextLoader'
 
 const SectionHome = () => {
 
-  // Select Language
+  // Função para mudar idioma
   const { t, i18n } = useTranslation();
   const changeLanguage = (lng) => {
       i18n.changeLanguage(lng);
@@ -48,6 +48,7 @@ const SectionHome = () => {
   return (
     <>
       <SectionHomeStyle>
+      {/* Swiper do Home */}
       <Swiper
         ref={swiperRef}
         loop={true}
@@ -64,12 +65,12 @@ const SectionHome = () => {
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
       >
-        {/* Banner 1 */}
+        {/* Banner 1 - Text Loader */}
         <SwiperSlide className='b1'>
           <TextLoader />
         </SwiperSlide>
 
-        {/* Banner 2 */}
+        {/* Banner 2 - TRacer App */}
         <SwiperSlide className='b2'>
           <BannerImage>
             <img src={TRacer} alt="TRacer APP" />
@@ -82,7 +83,7 @@ const SectionHome = () => {
           </BannerContent>
         </SwiperSlide>
 
-        {/* Banner 3 */}
+        {/* Banner 3 - Trackvision */}
         <SwiperSlide className='b3'>
           <BannerContent>
             <h1>{t("descubra")}</h1>

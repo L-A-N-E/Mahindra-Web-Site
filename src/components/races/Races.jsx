@@ -17,12 +17,15 @@ import Arrow from '../../assets/footer/arrow.svg'
 
 
 const SectionRaces = () => {
+
+    // Função para mudar idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
 
+    // Função para pegar dados das corridas
     const [races, setRaces] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/races')
@@ -59,17 +62,17 @@ const SectionRaces = () => {
                     {/* Slides */}
                     {races.map((race) => (
                         <SwiperSlide key={race.id}>
-                            {/* Main */}
+                            {/* Principal */}
                             <RaceContainer>
-                                {/* Div Top */}
+                                {/* Div Superior */}
                                 <RaceTop>
-                                    {/* Info */}
+                                    {/* Informação */}
                                     <RaceInfo>
                                         {/* Flag */}
                                         <RaceFlag>
                                             <img className='flag' src={race.country} alt={`${race.city} Flag`} />
                                         </RaceFlag>
-                                        {/* Name & Data */}
+                                        {/* Nome & Data */}
                                         <RaceNameData>
                                             <h3 className='data'>{race.data}</h3>
                                             <h3 className='name'>{t(race.slug)}</h3>
@@ -77,9 +80,9 @@ const SectionRaces = () => {
                                     </RaceInfo>
                                 </RaceTop>
 
-                                {/* Div Bottom */}
+                                {/* Div Inferior */}
                                 <RaceBottom>
-                                    {/* Title */}
+                                    {/* Título */}
                                     <RaceMainText>
                                         <img src={race.txt} alt={`${race.city} Flag`} />
                                     </RaceMainText>

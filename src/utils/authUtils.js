@@ -1,9 +1,9 @@
+// Importando as dependências
 import { signOut, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { auth, db } from '../firebase/firebase';
 import { doc, setDoc, collection, query, where, getDocs } from 'firebase/firestore';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
-
 
 const MySwal = withReactContent(Swal);
 
@@ -26,7 +26,7 @@ export const handleAuthentication = async (email, password, isLogin, user, t, na
             confirmButtonColor:'#E51635'
           }).then((result) => {
             if (result.isConfirmed) {
-              //Recarrega a página
+              // Recarrega a página
               window.location.href='/';
             }})
 
@@ -41,7 +41,7 @@ export const handleAuthentication = async (email, password, isLogin, user, t, na
             confirmButtonColor:'#E51635'
           }).then((result) => {
             if (result.isConfirmed) {
-              //Recarrega a página
+              // Recarrega a página
               window.location.href='/';
             }})
         }
@@ -62,10 +62,10 @@ export const handleAuthentication = async (email, password, isLogin, user, t, na
 export const googleSignIn = (t, navigate) => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider).then((result) => {
-      // This gives you a Google Access Token. You can use it to access the Google API.
+      // Google Acess Token para o Google API
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
-      // The signed-in user info.
+      // Informações do usuário.
       const user = result.user;
       saveUserDataToFirestore(user.uid, user.displayName, user.email)
       MySwal.fire({
@@ -77,18 +77,16 @@ export const googleSignIn = (t, navigate) => {
         confirmButtonColor:'#E51635'
       }).then((result) => {
         if (result.isConfirmed) {
-          //Recarrega a página
+          // Recarrega a página
           window.location.href='/';
         }})
     }).catch((error) => {
-      // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
-      // The email of the user's account used.
+      // O email do User
       const email = error.customData.email;
-      // The AuthCredential type that was used.
+      // O tipo de AuthCredential que foi usado
       const credential = GoogleAuthProvider.credentialFromError(error);
-      // Handle Errors
       MySwal.fire({
         title: t('title-error'),
         icon:'error',
@@ -100,7 +98,7 @@ export const googleSignIn = (t, navigate) => {
     });
   }
 
-// Função para fazer o cadastro
+// Função para fazer o SignUp
 export const handleSignUp = async (email, password, confirmPassword, username, t, navigate) => {
   if (password !== confirmPassword) {
     MySwal.fire({
@@ -147,7 +145,7 @@ export const handleSignUp = async (email, password, confirmPassword, username, t
       confirmButtonColor:'#E51635'
     }).then((result) => {
       if (result.isConfirmed) {
-        //Recarrega a página
+        // Recarrega a página
         window.location.href='/';
       }})
     
@@ -162,10 +160,6 @@ export const handleSignUp = async (email, password, confirmPassword, username, t
     });
   }
 };
-
-
-    
-
 
 // Checa se o username já existe
 export const checkUsernameExists = async (username) => {

@@ -1,9 +1,12 @@
+// Importando as dependências
 import styled from 'styled-components';
+
+// Importando as constantes
 import Font from '../constant/Font'
 import Colors from '../constant/Colors'
 import Backgrounds from '../constant/Backgrounds';
 
-
+// Estilo do Race
 export const RaceStyle = styled.section `
     display: flex;
     align-items: center;
@@ -40,6 +43,7 @@ export const RaceStyle = styled.section `
         }
 `
 
+// Race - Container
 export const RaceContainer = styled.div `
     display: flex;
     flex-direction: column;
@@ -51,11 +55,13 @@ export const RaceContainer = styled.div `
     box-shadow: 0 32px 23.5px -17px ${Colors.shadow};
 `
 
+// Race - Top
 export const RaceTop = styled.div `
     width: 100%;
     height: 50px;
 `
 
+// Race - Info
 export const RaceInfo = styled.div `
     display: flex;
     width: 100%;
@@ -63,12 +69,14 @@ export const RaceInfo = styled.div `
     gap: 1rem;
 `
 
+// Race - Flag
 export const RaceFlag = styled.div `
     .flag{
         height: 50px;
     }
 `
 
+// Race - NameData
 export const RaceNameData = styled.div `
     display: flex;
     flex-direction: column;
@@ -89,6 +97,7 @@ export const RaceNameData = styled.div `
     }
 `
 
+// Race - Bottom
 export const RaceBottom = styled.div `
     display: flex;
     flex-direction: column;
@@ -99,6 +108,7 @@ export const RaceBottom = styled.div `
     background: linear-gradient(328deg, rgba(23,23,23,1) 0%, rgba(71,71,71,1) 50%, rgba(23,23,23,1) 100%);
 `
 
+// Race - Texto Principal
 export const RaceMainText = styled.div`
     display: flex;
     flex-direction: column;
@@ -110,6 +120,7 @@ export const RaceMainText = styled.div`
     }
 `
 
+// Race - Veja Mais
 export const RaceSeeMore = styled.div `
     display: flex;
     gap: 0.3rem;
@@ -125,6 +136,7 @@ export const RaceSeeMore = styled.div `
     }
 `
 
+// Race - Botão
 export const RaceButton = styled.button `
     cursor:pointer;
     background: transparent;

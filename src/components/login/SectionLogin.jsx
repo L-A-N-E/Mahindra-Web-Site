@@ -15,22 +15,27 @@ import LogoGoogle from '../../assets/login_signup/logo-google.svg'
 
 const SectionLogin = () => {
 
-    const { t, i18n } = useTranslation();    
+    // Tradução
+    const { t, i18n } = useTranslation();   
+    // Navigate
     const navigate = useNavigate();
+
+    // Estado das Variáveis
     const [user, setUser] = useState(null);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(true);
     
+    // Função para mudar idioma
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
-    
+    // Função para Login
     const onLoginPress = (event) => {
         event.preventDefault();
         handleAuthentication(email, password, isLogin, user, t, navigate);
     };
-    
+    // Função para SignIn com PopUp
     const handleSignInWithPopUp = (event) => {
         event.preventDefault();
         googleSignIn(t, navigate)

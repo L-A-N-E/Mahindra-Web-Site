@@ -9,18 +9,20 @@ import { SectionAboutStyle, AboutContainer, AboutContent } from '../../styles/Se
 
 
 const SectionAbout = () => {
-   // Select Language
+
+    // Função para mudar idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
+
   return (
     <>
     <SectionAboutStyle>
           {/* Container */}
           <AboutContainer>
-            {/* Content */}
+            {/* Conteúdo */}
             <AboutContent>
               <h1>{t('about')}</h1>
               <p>{t('text-about')}</p>

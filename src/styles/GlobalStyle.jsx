@@ -1,9 +1,12 @@
-import { createGlobalStyle } from 'styled-components'; //Global Styles
+// Importando as dependências
+import { createGlobalStyle } from 'styled-components';
+
+// Importando as constantes
 import Colors from '../constant/Colors';
 
 const GlobalStyle = createGlobalStyle `
 
-    // Reset
+    /* Reset */
     *{
         margin: 0;
         padding: 0;
@@ -11,30 +14,30 @@ const GlobalStyle = createGlobalStyle `
         font-family: "Montserrat", sans-serif;
     }
 
-    // Reset Link
+    /* Reset Link */
     .txt-none {
         text-decoration: none;
         
     }
 
-    // Scrollbar
+    /* Scrollbar */
     ::-webkit-scrollbar {
         width: 5px;
         height: 5px;
     }
 
-    // Scrollbar Color 
+    /* Scrollbar Color  */
     ::-webkit-scrollbar-thumb {
         background-color: ${Colors.red_1};
         border-radius: 6px;
     }
 
-    // Scrollbar Background 
+    /* Scrollbar Background */
     ::-webkit-scrollbar-track {
         background-color: ${Colors.black};
     }
 
-    // Scrollbar Hover
+    /* Scrollbar Hover */
     ::-webkit-scrollbar-thumb:hover {
         background-color: ${Colors.red_hover};
     }

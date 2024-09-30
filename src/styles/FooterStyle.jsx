@@ -1,8 +1,11 @@
-import styled from 'styled-components'; // Styled Components
-import Colors from '../constant/Colors'; // Var Colors
-import Font from '../constant/Font'; // Var Fonts
+// Importando as dependências
+import styled from 'styled-components'; 
 
-// Footer Style
+// Importando as constantes
+import Colors from '../constant/Colors'; 
+import Font from '../constant/Font'; 
+
+// Estilo do Footer
 export const FooterStyle = styled.footer `
     display: flex;
     height: 400px;
@@ -13,7 +16,7 @@ export const FooterStyle = styled.footer `
     background-color: ${Colors.black};
 `
 
-// All Content
+// Estilo do Conteúdo do Footer
 export const FooterContent = styled.div `
     display: flex;
     width: 70%;
@@ -33,7 +36,7 @@ export const FooterContent = styled.div `
     }
 `
 
-// Column Info
+// Informações no Footer
 export const FooterColumnInfo = styled.div `
     display: flex;
     align-items: start;
@@ -45,7 +48,7 @@ export const FooterColumnInfo = styled.div `
         text-align: center;
         padding: 1rem;
     }
-    `
+`
 
 // Logo | All Rights Reserved | Lane
 export const FooterInfo = styled.div `
@@ -72,10 +75,9 @@ export const FooterInfo = styled.div `
             width: 200px;
         }
     }
-    `
+`
 
-
-// Columns Items
+// Items das Colunas
 export const FooterColumn = styled.div  `
     display: flex;
     align-items: start;
@@ -86,14 +88,14 @@ export const FooterColumn = styled.div  `
         justify-content: space-around;
     }
     
-    `
+`
 
-// Container Items
+// Container
 export const FooterContainerItems = styled.div `
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    `
+`
 
 // Items
 export const FooterItems = styled.div `

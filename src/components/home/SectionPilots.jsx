@@ -12,14 +12,14 @@ import NyckdeVries from '../../assets/home/pilots/pilot-2.png'
 
 const SectionPilots = () => {
 
-    // Select Language
+    // Função para mudar idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
         setShowLanguages(false);
     };
 
-    // Select Pilot
+    // Selecionar Piloto
     const [pilots, setPilots] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/pilots')
@@ -32,7 +32,8 @@ const SectionPilots = () => {
         <>
             <SectionPilotsStyle>
                 <PilotsContainer>
-                    {/* Pilot 1 */}
+
+                    {/* Pilot 1 - Edoardo Mortara*/}
                     <PilotsCard>
                         <Link to='pilots/edoardo-mortara'>
                             <div>
@@ -41,7 +42,7 @@ const SectionPilots = () => {
                         </Link>
                     </PilotsCard>
 
-                    {/* Pilot 2 */}
+                    {/* Pilot 2 - Nicky de Vries*/}
                     <PilotsCard>
                         <Link to='pilots/nyck-de-vries'>
                             <div>
@@ -49,6 +50,7 @@ const SectionPilots = () => {
                             </div>
                         </Link>
                     </PilotsCard>
+
                 </PilotsContainer>
             </SectionPilotsStyle>
         </>

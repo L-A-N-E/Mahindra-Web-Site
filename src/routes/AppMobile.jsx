@@ -1,40 +1,48 @@
+// Importando as imagens
 import image1 from '../assets/app_mobile/celularObliquo.png'
-import image2 from '../assets/app_mobile/celularReto.png'
 
-
+// Importando os componentes
 import { BackgroundAppMobile, TopAppMobile, ArrowAnimated, ContainerArrow, MidAppMobile, BotAppMobile, Buttons} from '../styles/AppMobileStyle';
+
+// Importando as dependências
 import { Link } from 'react-router-dom';
+
+// Importando os Hooks
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'react-i18next';
 
 function App() {
 
+    // Função para mudar idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
         i18n.changeLanguage(lng);
     };
 
+    // Função para mudar o Login
     const handleLinkClickLogin = (e) => {
-        e.preventDefault(); // Evita o comportamento padrão de redirecionar
-        window.open("/login", "_blank"); // Abre a rota em uma nova aba
+        e.preventDefault(); 
+        window.open("/login", "_blank"); 
     };
     const handleLinkClickSignUp = (e) => {
-        e.preventDefault(); // Evita o comportamento padrão de redirecionar
-        window.open("/sign-up", "_blank"); // Abre a rota em uma nova aba
+        e.preventDefault(); 
+        window.open("/sign-up", "_blank"); 
     };
 
-const {ref:cellImage, inView:cellVisible} = useInView({
-    triggerOnce:true
-});
+    // Animações usando o React-Intersection-Observer
+    const {ref:cellImage, inView:cellVisible} = useInView({
+        triggerOnce:true
+    });
 
-const {ref:cellText, inView:textVisible} = useInView({
-    triggerOnce:true
-});
+    const {ref:cellText, inView:textVisible} = useInView({
+        triggerOnce:true
+    });
 
 
 return (
     <>
     <BackgroundAppMobile>
+        {/* Parte de cima do mobile */}
         <TopAppMobile>
             <div className="top-section">
                 <div className="titulo-wrapper">
@@ -51,6 +59,7 @@ return (
             </div>
         </TopAppMobile>        
 
+        {/* Container  */}
         <ContainerArrow>
             <ArrowAnimated>
                 <div className="center">
@@ -60,6 +69,7 @@ return (
             </ArrowAnimated>
         </ContainerArrow>
 
+        {/* Parte do meio do mobile */}
         <MidAppMobile>
             <div className="middle-section">
             <div className='card' ref={cellText}>
@@ -122,6 +132,7 @@ return (
             </div>
         </MidAppMobile>
 
+        {/* Parte de baixo do mobile */}
         <BotAppMobile>
             <div className="final-section">
                 <h1>{t('download-faca')}</h1>
