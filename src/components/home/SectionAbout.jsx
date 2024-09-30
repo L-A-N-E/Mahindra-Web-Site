@@ -2,6 +2,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { useInView } from 'react-intersection-observer';
 
 // Importando Styles
 import { ButtonRedFullStyle } from '../../styles/ButtonRedFullStyle'
@@ -10,6 +11,12 @@ import { SectionAboutStyle, AboutContainer, AboutContent } from '../../styles/Se
 
 const SectionAbout = () => {
 
+    // React intersection observer para animacao
+    const {ref:textAbout, inView:textAboutVisible} = useInView({
+      triggerOnce:true,
+      threshold:0.3
+    });
+
     // Função para mudar idioma
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
@@ -17,17 +24,18 @@ const SectionAbout = () => {
         setShowLanguages(false);
     };
 
+
   return (
     <>
     <SectionAboutStyle>
           {/* Container */}
           <AboutContainer>
             {/* Conteúdo */}
-            <AboutContent>
-              <h1>{t('about')}</h1>
-              <p>{t('text-about')}</p>
-              <Link to='https://www.mahindra.com/about-us' target='blank'>
-                <ButtonRedFullStyle>{t('more')}</ButtonRedFullStyle>
+            <AboutContent ref={textAbout}>
+              <h1 className={textAboutVisible ? 'text-animate' : ''}>{t('about')}</h1>
+              <p className={textAboutVisible ? 'text-animate' : ''}>{t('text-about')}</p>
+              <Link to='https://www.mahindra.com/about-us' target='blank' className={textAboutVisible ? 'text-animate' : ''}>
+                <ButtonRedFullStyle className={textAboutVisible ? 'text-animate' : ''}>{t('more')}</ButtonRedFullStyle>
               </Link>
             </AboutContent>
           </AboutContainer>

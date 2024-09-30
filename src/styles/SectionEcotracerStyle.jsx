@@ -35,6 +35,21 @@ export const EcotracerContent = styled.section`
     @media (max-width: 600px) {
         width: 100%;
     }
+
+    .text-animate{
+            animation: subir 1.5s ease-in forwards;
+        }
+        @keyframes subir {
+            0% {
+                transform: translateY(100%);
+                opacity:0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity:1; 
+            }
+        }
+
 `
 
 // EcoTracer Título

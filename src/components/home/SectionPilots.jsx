@@ -46,7 +46,7 @@ const SectionPilots = () => {
                     <PilotsCard>
                         <Link to='pilots/nyck-de-vries'>
                             <div>
-                                <img src={NyckdeVries} alt="Nyck de Vries" />
+                                <img src={NyckdeVries} alt="Nyck de Vries"/>
                             </div>
                         </Link>
                     </PilotsCard>

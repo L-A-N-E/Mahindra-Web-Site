@@ -32,6 +32,7 @@ export const PilotsCard = styled.div`
         justify-content: center;
         align-items: end;
         cursor: pointer;
+        transition:2s ease-in-out;
 
         img {
             width: 100%;

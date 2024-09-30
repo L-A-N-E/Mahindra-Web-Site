@@ -1,9 +1,8 @@
-// Importando Hooks
-import React, { useEffect, useState } from 'react'
-
 // Importando as dependências
+import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useInView } from 'react-intersection-observer';
 
 // Importando os Componentes
 import Error from '../routes/Error'
@@ -19,6 +18,10 @@ const Pilots = () => {
     const { slug } = useParams();
 
     const { t, i18n } = useTranslation();
+
+    const {ref:pilot, inView:pilotVisible} = useInView({
+        triggerOnce:true
+    });
 
     // Hook useNavigate - Para navegação entre rotas
     const navigate = useNavigate();
@@ -90,8 +93,8 @@ const Pilots = () => {
         <>
         <PilotsStyle>
             <PilotsContent>
-                <PilotImage>
-                    <img src={pilotInfo.image} alt={pilotInfo.name} />
+                <PilotImage ref={pilot} >
+                    <img src={pilotInfo.image} alt={pilotInfo.name} className={pilotVisible ? 'animate-img' : ''}/>
                 </PilotImage>
 
                 <PilotInfo>
