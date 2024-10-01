@@ -19,6 +19,7 @@ import Pilots from './routes/Pilots.jsx'
 
 // Importando GlobalStyle
 import GlobalStyle from "./styles/GlobalStyle" 
+import './index.css'
 
 // Criando Rotas
 const router = createBrowserRouter ([
