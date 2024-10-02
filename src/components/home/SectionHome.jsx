@@ -78,7 +78,7 @@ const SectionHome = () => {
           </BannerImage>
           <BannerContent>
             <h1>{t("acesso")}</h1>
-            <Link to='/login'>
+            <Link to='/app-mobile'>
               <ButtonRedStyle>{t('now')}</ButtonRedStyle>
             </Link>
           </BannerContent>
