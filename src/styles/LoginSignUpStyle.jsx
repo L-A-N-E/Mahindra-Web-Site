@@ -10,17 +10,17 @@ import Background from '../assets/login_signup/background.png'
 
 // Login & Sign-Up
 export const LoginSignUpStyle = styled.section `        
-    height: calc(100dvh - 70px);
+    height: auto;
     width: 100%;
     display: flex;
 `
 
 // Div Esquerda
-export const LoginSignUpLeft = styled.div `        
+export const LoginSignUpLeft = styled.div `     
     background-image: url(${Background});
     background-position: center;
     background-size: cover;
-    height: 100%;
+    height: auto;
     width: 40%;
     
     @media (max-width: 1000px) {

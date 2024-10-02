@@ -1,14 +1,14 @@
 import { useEffect, useRef, useState } from "react"
+import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
-// Avtar with darpdown menu
-const AvatarMenue = () => {
+// Avatar Usuário
+const AvatarUser = () => {
 
     const [state, setState] = useState(false)
     const profileRef = useRef()
 
     const navigation = [
         { title: "Dashboard", path: "javascript:void(0)" },
-        { title: "Analytics", path: "javascript:void(0)" },
         { title: "Profile", path: "javascript:void(0)" },
         { title: "Settings", path: "javascript:void(0)" },
     ]
@@ -51,33 +51,27 @@ const AvatarMenue = () => {
     )
 }
 
+// Nav
 export const Nav = () => {
 
     const [state, setState] = useState(false)
 
-    // Replace javascript:void(0) paths with your paths
     const navigation = [
-        { title: "Pro version", path: "javascript:void(0)" },
-        { title: "Upgrade", path: "javascript:void(0)" },
-        { title: "Support", path: "javascript:void(0)" },
+        { title: "Home", path: "/" },
+        { title: "Races", path: "/races" },
+        { title: "App Mobile", path: "/app-mobile" },
+        { title: "TrackVision", path: "/trackvision" },
     ]
 
-    const submenuNav = [
-        { title: "Overview", path: "javascript:void(0)" },
-        { title: "Integration", path: "javascript:void(0)" },
-        { title: "Billing", path: "javascript:void(0)" },
-        { title: "Transactions", path: "javascript:void(0)" },
-        { title: "Plans", path: "javascript:void(0)" },
-    ]
 
 
     return (
         <header className="text-base lg:text-sm">
             <div className={`bg-white items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
-                    <a href="javascript:void(0)">
+                    <a href="">
                         <img
-                            src="https://www.floatui.com/logo.svg"
+                            src={Logo}
                             width={120}
                             height={50}
                             alt="Float UI logo"
@@ -127,7 +121,7 @@ export const Nav = () => {
                                 )
                             })
                         }
-                        <AvatarMenue />
+                        <AvatarUser />
                     </ul>
                 </div>
             </div>
