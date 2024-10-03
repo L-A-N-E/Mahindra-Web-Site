@@ -12,7 +12,7 @@ export const SectionHomeStyle = styled.section `
 
         .swiper {
             width: 100%;
-            height: 100dvh ;
+            height: calc(100dvh - 58px) ;
             cursor: grab;
 
             &.grabbing {

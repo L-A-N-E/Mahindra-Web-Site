@@ -102,7 +102,7 @@ export const Nav = () => {
                 <div className={`nav-menu flex-1 pb-28 mt-8 overflow-y-auto max-h-screen lg:block lg:overflow-visible lg:pb-0 lg:mt-0 ${state ? "" : "hidden"}`}>
                     <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0 ">
                         <div className='flex-1 items-center justify-start pb-4 lg:flex lg:pb-0'>
-                            
+                        
                         </div>
 
                         {/* Itens Nav */}
