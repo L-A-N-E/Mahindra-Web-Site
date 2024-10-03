@@ -8,10 +8,11 @@ import Font from '../constant/Font';
 // Seção Home - Estilo
 export const SectionHomeStyle = styled.section `
         background-color: ${Colors.black};
+        z-index: 1;
 
         .swiper {
             width: 100%;
-            height: 100dvh ;
+            height: calc(100dvh - 58px) ;
             cursor: grab;
 
             &.grabbing {
