@@ -8,9 +8,8 @@ const AvatarUser = () => {
     const profileRef = useRef()
 
     const navigation = [
-        { title: "Dashboard", path: "javascript:void(0)" },
-        { title: "Profile", path: "javascript:void(0)" },
-        { title: "Settings", path: "javascript:void(0)" },
+        { title: "Dashboard", path: "/dashboard" },
+        { title: "Profile", path: "/profile" },
     ]
 
 
@@ -22,7 +21,7 @@ const AvatarUser = () => {
     }, [])
 
     return (
-        <div className="relative border-t lg:border-none">
+        <div className="relative border-t lg:border-none z-50">
             <div className="">
                 <button ref={profileRef} className="hidden w-10 h-10 outline-none rounded-full ring-offset-2 ring-gray-200 lg:focus:ring-2 lg:block"
                     onClick={() => setState(!state)}
@@ -33,6 +32,8 @@ const AvatarUser = () => {
                     />
                 </button>
             </div>
+
+            {/* Itens */}
             <ul className={`bg-white top-14 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
                 {
                     navigation.map((item, idx) => (
@@ -43,6 +44,8 @@ const AvatarUser = () => {
                         </li>
                     ))
                 }
+
+                {/* Logout */}
                 <button className="block w-full text-justify text-gray-600 hover:text-gray-900 border-t py-3 lg:hover:bg-gray-50 lg:p-3">
                     Logout
                 </button>
@@ -66,8 +69,8 @@ export const Nav = () => {
 
 
     return (
-        <header className="text-base lg:text-sm">
-            <div className={`bg-white items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
+        <header className="text-base lg:text-sm z-50 bg-black">
+            <div className={`bg-black items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
                     <a href="">
                         <img
@@ -78,7 +81,7 @@ export const Nav = () => {
                         />
                     </a>
                     <div className="lg:hidden">
-                        <button className="text-gray-500 hover:text-gray-800"
+                        <button className="text-white"
                             onClick={() => setState(!state)}
                         >
                             {
@@ -97,24 +100,17 @@ export const Nav = () => {
                     </div>
                 </div>
                 <div className={`nav-menu flex-1 pb-28 mt-8 overflow-y-auto max-h-screen lg:block lg:overflow-visible lg:pb-0 lg:mt-0 ${state ? "" : "hidden"}`}>
-                    <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0">
-                        <form onSubmit={(e) => e.preventDefault()} className='flex-1 items-center justify-start pb-4 lg:flex lg:pb-0'>
-                            <div className="flex items-center gap-1 px-2 border rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                                </svg>
-                                <input
-                                    type="text"
-                                    placeholder="Search"
-                                    className="w-full px-2 py-2 text-gray-500 bg-transparent rounded-md outline-none"
-                                />
-                            </div>
-                        </form>
+                    <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0 ">
+                        <div className='flex-1 items-center justify-start pb-4 lg:flex lg:pb-0'>
+                            
+                        </div>
+
+                        {/* Itens Nav */}
                         {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx}>
-                                        <a href={item.path} className="block text-gray-700 hover:text-gray-900">
+                                        <a href={item.path} className="block text-white uppercase text-xs hover:text-red-600 transition-all">
                                             {item.title}
                                         </a>
                                     </li>

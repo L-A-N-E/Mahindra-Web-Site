@@ -8,6 +8,7 @@ import Font from '../constant/Font';
 // Seção Home - Estilo
 export const SectionHomeStyle = styled.section `
         background-color: ${Colors.black};
+        z-index: 1;
 
         .swiper {
             width: 100%;
