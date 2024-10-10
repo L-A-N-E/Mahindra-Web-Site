@@ -1,15 +1,17 @@
 import { useEffect, useRef, useState } from "react"
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
+import User from '../assets/header/user/user.png'
 // Avatar Usuário
-const AvatarUser = () => {
+const Language = () => {
 
     const [state, setState] = useState(false)
     const profileRef = useRef()
 
     const navigation = [
-        { title: "Dashboard", path: "/dashboard" },
-        { title: "Profile", path: "/profile" },
+        { title: "Portugues", onClick:{} },
+        { title: "Ingles", onClick:{} },
+        { title: "Espanhol", onClick:{} },
     ]
 
 
@@ -23,11 +25,56 @@ const AvatarUser = () => {
     return (
         <div className="relative border-t lg:border-none z-50">
             <div className="">
-                <button ref={profileRef} className="hidden w-10 h-10 outline-none rounded-full ring-offset-2 ring-gray-200 lg:focus:ring-2 lg:block"
+                <button ref={profileRef} className="hidden outline-none uppercase text-white lg:focus:ring-2 lg:block"
+                    onClick={() => setState(!state)}
+                >
+                    Language
+                </button>
+            </div>
+
+            {/* Itens */}
+            <ul className={`bg-white top-14 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
+                {
+                    navigation.map((item, idx) => (
+                        <li key={idx}>
+                            <a className="block text-gray-600 cursor-pointer hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3">
+                                {item.title}
+                            </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    )
+}
+
+// Avatar Usuário
+const AvatarUser = () => {
+
+    const [state, setState] = useState(false)
+    const profileRef = useRef()
+
+    const navigation = [
+        { title: "Login", path: "/login" },
+        { title: "Sign-Up", path: "/sign-up" },
+    ]
+
+
+    useEffect(() => {
+        const handleDropDown = (e) => {
+            if (!profileRef.current.contains(e.target)) setState(false)
+        }
+        document.addEventListener('click', handleDropDown)
+    }, [])
+
+    return (
+        <div className="relative border-t lg:border-none z-50">
+            <div className="">
+                <button ref={profileRef} className="hidden w-10 h-10 outline-none rounded-full ring-offset-2 bg-white lg:focus:ring-2 lg:block"
                     onClick={() => setState(!state)}
                 >
                     <img
-                        src="https://api.uifaces.co/our-content/donated/xZ4wg2Xj.jpg"
+                        src={User}
                         className="w-full h-full rounded-full"
                     />
                 </button>
@@ -45,10 +92,10 @@ const AvatarUser = () => {
                     ))
                 }
 
-                {/* Logout */}
+                {/* Logout
                 <button className="block w-full text-justify text-gray-600 hover:text-gray-900 border-t py-3 lg:hover:bg-gray-50 lg:p-3">
                     Logout
-                </button>
+                </button> */}
             </ul>
         </div>
     )
@@ -75,9 +122,9 @@ export const Nav = () => {
                     <a href="">
                         <img
                             src={Logo}
-                            width={120}
+                            width={150}
                             height={50}
-                            alt="Float UI logo"
+                            alt="Logo TechMahindra"
                         />
                     </a>
                     <div className="lg:hidden">
@@ -100,11 +147,8 @@ export const Nav = () => {
                     </div>
                 </div>
                 <div className={`nav-menu flex-1 pb-28 mt-8 overflow-y-auto max-h-screen lg:block lg:overflow-visible lg:pb-0 lg:mt-0 ${state ? "" : "hidden"}`}>
-                    <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0 ">
-                        <div className='flex-1 items-center justify-start pb-4 lg:flex lg:pb-0'>
-                        
-                        </div>
-
+                    <ul className="items-center justify-start space-y-6 lg:flex lg:space-x-6 lg:space-y-0 ">
+                        <div className='flex-1 items-center justify-evenly pb-4 lg:flex lg:pb-0'>
                         {/* Itens Nav */}
                         {
                             navigation.map((item, idx) => {
@@ -117,6 +161,9 @@ export const Nav = () => {
                                 )
                             })
                         }
+                        </div>
+
+                        <Language/>
                         <AvatarUser />
                     </ul>
                 </div>
