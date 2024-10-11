@@ -1,17 +1,24 @@
 import { useEffect, useRef, useState } from "react"
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
+import { useTranslation } from 'react-i18next';
 
 import User from '../assets/header/user/user.png'
-// Avatar Usuário
+
+// Mudar Idioma
 const Language = () => {
 
     const [state, setState] = useState(false)
     const profileRef = useRef()
 
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     const navigation = [
-        { title: "Portugues", onClick:{} },
-        { title: "Ingles", onClick:{} },
-        { title: "Espanhol", onClick:{} },
+        { title: t('portuguese'), onClick: () => changeLanguage('pt') },
+        { title: t('english'), onClick: () => changeLanguage('en') },
+        { title: t('spanish'), onClick: () => changeLanguage('es') },
     ]
 
 
@@ -25,21 +32,21 @@ const Language = () => {
     return (
         <div className="relative border-t lg:border-none z-50">
             <div className="">
-                <button ref={profileRef} className="hidden outline-none uppercase text-white lg:focus:ring-2 lg:block"
-                    onClick={() => setState(!state)}
-                >
-                    Language
+                <button ref={profileRef} className="hidden outline-none uppercase text-white lg:focus:ring-2 lg:block" onClick={() => setState(!state)}>
+                    {t('language')}
                 </button>
             </div>
 
-            {/* Itens */}
-            <ul className={`bg-white top-14 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
+            {/* Idiomas */}
+            <ul className={`bg-white top-10 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
                 {
                     navigation.map((item, idx) => (
                         <li key={idx}>
-                            <a className="block text-gray-600 cursor-pointer hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3">
-                                {item.title}
-                            </a>
+                            <div className="block text-gray-600 hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3" >
+                                <button onClick={item.onClick}>
+                                    {item.title}
+                                </button>
+                            </div>
                         </li>
                     ))
                 }
@@ -58,7 +65,6 @@ const AvatarUser = () => {
         { title: "Login", path: "/login" },
         { title: "Sign-Up", path: "/sign-up" },
     ]
-
 
     useEffect(() => {
         const handleDropDown = (e) => {
@@ -80,8 +86,8 @@ const AvatarUser = () => {
                 </button>
             </div>
 
-            {/* Itens */}
-            <ul className={`bg-white top-14 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
+            {/* Itens Login & Sign-Up */}
+            <ul className={`bg-white top-12 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
                 {
                     navigation.map((item, idx) => (
                         <li key={idx}>
@@ -91,11 +97,6 @@ const AvatarUser = () => {
                         </li>
                     ))
                 }
-
-                {/* Logout
-                <button className="block w-full text-justify text-gray-600 hover:text-gray-900 border-t py-3 lg:hover:bg-gray-50 lg:p-3">
-                    Logout
-                </button> */}
             </ul>
         </div>
     )
@@ -104,13 +105,19 @@ const AvatarUser = () => {
 // Nav
 export const Nav = () => {
 
+    // Função para mudar de idioma
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     const [state, setState] = useState(false)
 
     const navigation = [
-        { title: "Home", path: "/" },
-        { title: "Races", path: "/races" },
-        { title: "App Mobile", path: "/app-mobile" },
-        { title: "TrackVision", path: "/trackvision" },
+        { title: t('home'), path: "/" },
+        { title: t('races'), path: "/races" },
+        { title: t('app-mobile'), path: "/app-mobile" },
+        { title: t('trackvision'), path: "/trackvision" },
     ]
 
 
@@ -149,6 +156,7 @@ export const Nav = () => {
                 <div className={`nav-menu flex-1 pb-28 mt-8 overflow-y-auto max-h-screen lg:block lg:overflow-visible lg:pb-0 lg:mt-0 ${state ? "" : "hidden"}`}>
                     <ul className="items-center justify-start space-y-6 lg:flex lg:space-x-6 lg:space-y-0 ">
                         <div className='flex-1 items-center justify-evenly pb-4 lg:flex lg:pb-0'>
+
                         {/* Itens Nav */}
                         {
                             navigation.map((item, idx) => {
