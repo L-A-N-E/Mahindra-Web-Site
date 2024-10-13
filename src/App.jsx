@@ -3,7 +3,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import { useState, useEffect  } from "react";
 
 // Importando Componentes
-import {Nav} from "./components/Nav"
+import Nav from "./components/Nav"
 import Footer from "./components/Footer" 
 import Loading from './components/Loading'
 

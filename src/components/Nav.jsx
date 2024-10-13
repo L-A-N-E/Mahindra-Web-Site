@@ -61,10 +61,13 @@ const AvatarUser = () => {
     const [state, setState] = useState(false)
     const profileRef = useRef()
 
-    const navigation = [
-        { title: "Login", path: "/login" },
-        { title: "Sign-Up", path: "/sign-up" },
-    ]
+    const isLoggedIn = true; // Verifica se o usuário está logado
+
+    const noLogged = [{ title: "Login", path: "/login" },{ title: "Sign-Up", path: "/sign-up" },] // Sem estar logado
+
+    const logged = [{ title: "Dashboard", path: "/dashboard" },{ title: "Profile", path: "/profile" }, {title: "Logout", path:"/"}]  // Logado
+
+    const navigationItems = isLoggedIn ? logged : noLogged; // Verifica quais opções mostrar ao usuário
 
     useEffect(() => {
         const handleDropDown = (e) => {
@@ -89,7 +92,7 @@ const AvatarUser = () => {
             {/* Itens Login & Sign-Up */}
             <ul className={`bg-white top-12 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
                 {
-                    navigation.map((item, idx) => (
+                    navigationItems.map((item, idx) => (
                         <li key={idx}>
                             <a className="block text-gray-600 hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3" href={item.path}>
                                 {item.title}
@@ -103,7 +106,7 @@ const AvatarUser = () => {
 }
 
 // Nav
-export const Nav = () => {
+const Nav = () => {
 
     // Função para mudar de idioma
     const { t, i18n } = useTranslation();
@@ -179,3 +182,5 @@ export const Nav = () => {
         </header>
     )
 }
+
+export default Nav
