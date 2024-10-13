@@ -2,55 +2,52 @@ import React from "react";
 
 const Pricing = () => {
     return (
-        <section className="bg-gray-900">
+        <section className="bg-black">
             <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
                 <div className="mx-auto max-w-screen-md text-center mb-8 lg:mb-12">
                     <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
-                        Designed for business teams like yours
-                    </h2>
+                        Escolha um <strong className="text-red-600">PLANO</strong>
+                    </h2> 
                     <p className="mb-5 font-light text-gray-500 sm:text-xl dark:text-gray-400">
-                        Here at Flowbite we focus on markets where technology, innovation,
-                        and capital can unlock long-term value and drive economic growth.
+                        Ideal para entusiastas de Automobilismo! <br /> Escolha plano para uma experiência mais completa e única!
                     </p>
                 </div>
 
                 <div className="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
                     {/* Pricing Card */}
                     <PricingCard
-                        title="Starter"
-                        price="$29"
-                        description="Best option for personal use & for your next project."
+                        title="LOW CHARGE"
+                        price="R$ 0"
+                        description="Ideal para entusiastas de Automobilismo!"
                         features={[
-                            "Individual configuration",
-                            "No setup, or hidden fees",
-                            "Team size: 1 developer",
-                            "Premium support: 6 months",
-                            "Free updates: 6 months",
+                            "Montar Equipe",
+                            "Mercado fecha 1 hora antes da largada",
+                            "Criação de até 1 Club",
                         ]}
                     />
                     <PricingCard
                         className=""
-                        title="Company"
-                        price="$99"
-                        description="Relevant for multiple users, extended & premium support."
+                        title="HIGH VOLTAGE"
+                        price="R$ 29,90"
+                        description="Ideal para entusiastas de Automobilismo!"
                         features={[
-                            "Individual configuration",
-                            "No setup, or hidden fees",
-                            "Team size: 10 developers",
-                            "Premium support: 24 months",
-                            "Free updates: 24 months",
+                            "Montar Equipe",
+                            "Mercado fecha 30 minutos antes da largada",
+                            "Criação de até 3 Club",
+                            "Acesso ao TrackVision",
                         ]}
                     />
                     <PricingCard
-                        title="Enterprise"
-                        price="$499"
-                        description="Best for large scale uses and extended redistribution rights."
+                        title="MAX POWER"
+                        price="R$ 49,90"
+                        description="Ideal para entusiastas de Automobilismo!"
                         features={[
-                            "Individual configuration",
-                            "No setup, or hidden fees",
-                            "Team size: 100+ developers",
-                            "Premium support: 36 months",
-                            "Free updates: 36 months",
+                            "Montar Equipe",
+                            "Mercado fecha 1 minuto antes da largada",
+                            "Criação de até 10 Club",
+                            "Acesso ao TrackVision",
+                            "Bonificação de pontuação",
+                            "Acesso a transmissão Ao Vivo de cada circuito",
                         ]}
                     />
                 </div>
@@ -88,12 +85,9 @@ const PricingCard = ({ title, price, description, features }) => {
                     </li>
                 ))}
             </ul>
-            <a
-                href="#"
-                className="text-white bg-red-950 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:text-white dark:focus:ring-primary-900"
-            >
-                Get started
-            </a>
+            <button className="text-white bg-red-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center">
+                Garantir Acesso
+            </button>
         </div>
     );
 };
