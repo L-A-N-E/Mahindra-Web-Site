@@ -51,10 +51,11 @@ const router = createBrowserRouter ([
         ]},
       // App Mobile
       {path: '/app-mobile', element: <AppMobile/>,
-        children: [
-          {path: '/app-mobile/pricing', element: <Pricing/>}
-        ]},
+      },
       
+      // Pricing
+      {path: '/pricing', element: <Pricing/>},
+
       // TrackVision
       {path: '/trackvision', element: <Trackvision/>},
     ]}
