@@ -16,6 +16,8 @@ import Races from './routes/Races'
 import RaceTrack from './routes/RaceTrack.jsx' 
 import RacesTracks from './routes/RacesTracks.jsx' 
 import Pilots from './routes/Pilots.jsx'
+import Trackvision from './routes/Trackvision.jsx'
+import Pricing from './routes/Pricing.jsx'
 
 // Importando GlobalStyle
 import GlobalStyle from "./styles/GlobalStyle" 
@@ -48,7 +50,14 @@ const router = createBrowserRouter ([
           {path: '/pilots/:slug', element: <Pilots/>} 
         ]},
       // App Mobile
-      {path: '/app-mobile', element: <AppMobile/>}, 
+      {path: '/app-mobile', element: <AppMobile/>,
+      },
+      
+      // Pricing
+      {path: '/pricing', element: <Pricing/>},
+
+      // TrackVision
+      {path: '/trackvision', element: <Trackvision/>},
     ]}
 ])
 
