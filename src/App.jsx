@@ -28,7 +28,7 @@ function App() {
       {loading ? (<Loading />) : 
       ( <>
           <Nav/>
-          <Outlet />
+          <Outlet/>
           <Footer/>
         </>
       )}

@@ -30,22 +30,22 @@ const Language = () => {
     }, [])
 
     return (
-        <div className="relative border-t lg:border-none z-50">
+        <div className="relative lg:border-none z-50 flex justify-center">
             <div className="">
-                <button ref={profileRef} className="hidden outline-none uppercase text-white lg:focus:ring-2 lg:block" onClick={() => setState(!state)}>
+                <button ref={profileRef} className="outline-none uppercase text-white lg:focus:ring-2 lg:block" onClick={() => setState(!state)}>
                     {t('language')}
                 </button>
             </div>
 
             {/* Idiomas */}
-            <ul className={`bg-white top-10 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
+            <ul className={`bg-zinc-900 top-10 right-0 mt-6 space-y-6 lg:absolute lg:border-none lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
                 {
                     navigation.map((item, idx) => (
                         <li key={idx}>
-                            <div className="block text-gray-600 hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3" >
-                                <button onClick={item.onClick}>
+                            <div onClick={item.onClick} className="block text-white hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3 transition-all duration-150 ease-in-out" >
+                                <p className="cursor-pointer">
                                     {item.title}
-                                </button>
+                                </p>
                             </div>
                         </li>
                     ))
@@ -77,9 +77,9 @@ const AvatarUser = () => {
     }, [])
 
     return (
-        <div className="relative border-t lg:border-none z-50">
+        <div className="relative lg:border-none z-50 flex  justify-center">
             <div className="">
-                <button ref={profileRef} className="hidden w-10 h-10 outline-none rounded-full ring-offset-2 bg-white lg:focus:ring-2 lg:block"
+                <button ref={profileRef} className="w-10 h-10 outline-none rounded-full ring-offset-2 bg-white lg:focus:ring-2 lg:block"
                     onClick={() => setState(!state)}
                 >
                     <img
@@ -90,7 +90,7 @@ const AvatarUser = () => {
             </div>
 
             {/* Itens Login & Sign-Up */}
-            <ul className={`bg-white top-12 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'lg:hidden'}`}>
+            <ul className={`bg-white top-12 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
                 {
                     navigationItems.map((item, idx) => (
                         <li key={idx}>
@@ -126,8 +126,8 @@ const Nav = () => {
 
 
     return (
-        <header className="text-base lg:text-sm z-50 bg-black">
-            <div className={`bg-black items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
+        <header className="text-base lg:text-sm z-[9999] bg-black">
+            <div className={`bg-black z-[99999] items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
                     <a href="">
                         <img
@@ -165,7 +165,7 @@ const Nav = () => {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx}>
-                                        <a href={item.path} className="block text-white uppercase text-xs hover:text-red-600 transition-all">
+                                        <a href={item.path} className="block text-white uppercase text-xs hover:text-red-600 transition-all text-center">
                                             {item.title}
                                         </a>
                                     </li>
