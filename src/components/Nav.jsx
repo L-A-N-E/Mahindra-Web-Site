@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from "react"
-import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 import { useTranslation } from 'react-i18next';
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 import User from '../assets/header/user/user.png'
+import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
 // Mudar Idioma
 const Language = () => {
@@ -59,13 +60,25 @@ const Language = () => {
 const AvatarUser = () => {
 
     const [state, setState] = useState(false)
+    const [isLoggedIn, setIsLoggedIn] = useState(null)
     const profileRef = useRef()
 
-    const isLoggedIn = true; // Verifica se o usuário está logado
+    const handleLogOut = async () => {
+        try{
+            await signOut(auth)
+            console.log("User Logout")
+        }catch(error){
+            console.error("Erro: ", error)
+        } finally{
+            window.location.href='/login';
+        }
+    }
+
+    const auth = getAuth()
 
     const noLogged = [{ title: "Login", path: "/login" },{ title: "Sign-Up", path: "/sign-up" },] // Sem estar logado
 
-    const logged = [{ title: "Dashboard", path: "/dashboard" },{ title: "Profile", path: "/profile" }, {title: "Logout", path:"/"}]  // Logado
+    const logged = [{ title: "Dashboard", path: "/dashboard" },{ title: "Profile", path: "/profile" }, {title: "Logout", onClick: () => handleLogOut() }]  // Logado
 
     const navigationItems = isLoggedIn ? logged : noLogged; // Verifica quais opções mostrar ao usuário
 
@@ -74,7 +87,15 @@ const AvatarUser = () => {
             if (!profileRef.current.contains(e.target)) setState(false)
         }
         document.addEventListener('click', handleDropDown)
-    }, [])
+    }, []);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+            setIsLoggedIn(currentUser);
+        });
+
+        return () => unsubscribe();
+    }, [auth]);
 
     return (
         <div className="relative lg:border-none z-50 flex  justify-center">
@@ -94,7 +115,7 @@ const AvatarUser = () => {
                 {
                     navigationItems.map((item, idx) => (
                         <li key={idx}>
-                            <a className="block text-gray-600 hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3" href={item.path}>
+                            <a className="block text-gray-600 hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3" href={item.path} onClick={item.onClick}>
                                 {item.title}
                             </a>
                         </li>
