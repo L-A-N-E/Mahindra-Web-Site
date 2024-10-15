@@ -4,12 +4,14 @@ import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 
 import User from '../assets/header/user/user.png'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/firebase";
 
 // Mudar Idioma
 const Language = () => {
 
-    const [state, setState] = useState(false)
-    const profileRef = useRef()
+    const [state, setState] = useState(false);
+    const profileRef = useRef();
 
     const { t, i18n } = useTranslation();
     const changeLanguage = (lng) => {
@@ -59,8 +61,10 @@ const Language = () => {
 // Avatar Usuário
 const AvatarUser = () => {
 
-    const [state, setState] = useState(false)
-    const [isLoggedIn, setIsLoggedIn] = useState(null)
+    const [state, setState] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(null);
+    const [userData, setUserData] = useState({});
+
     const profileRef = useRef()
 
     const handleLogOut = async () => {
@@ -90,8 +94,18 @@ const AvatarUser = () => {
     }, []);
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+        const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
+            
             setIsLoggedIn(currentUser);
+
+            if(currentUser){
+                const uid = currentUser.uid;
+                const docRef = doc(db, "users", uid);
+                const docSnap = await getDoc(docRef);
+                setUserData(docSnap.data());
+                console.log(userData)
+            }
+
         });
 
         return () => unsubscribe();
@@ -104,7 +118,7 @@ const AvatarUser = () => {
                     onClick={() => setState(!state)}
                 >
                     <img
-                        src={User}
+                        src={userData.avatarImg || User}
                         className="w-full h-full rounded-full"
                     />
                 </button>
