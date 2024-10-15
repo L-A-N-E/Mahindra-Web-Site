@@ -41,8 +41,8 @@ const Language = () => {
             <ul className={`bg-zinc-900 top-10 right-0 mt-6 space-y-6 lg:absolute lg:border-none lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
                 {
                     navigation.map((item, idx) => (
-                        <li key={idx}>
-                            <div onClick={item.onClick} className="block text-white hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3 transition-all duration-150 ease-in-out" >
+                        <li key={idx} onClick={item.onClick}>
+                            <div className="block text-white hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3 transition-all duration-150 ease-in-out" >
                                 <p className="cursor-pointer">
                                     {item.title}
                                 </p>

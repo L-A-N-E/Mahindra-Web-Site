@@ -7,8 +7,10 @@ import Font from '../constant/Font'
 
 // Fundo do Mobile
 export const BackgroundAppMobile = styled.div`
-    background: rgb(0,0,0);
-    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(106,15,28,1) 100%);
+    /* background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(106,15,28,1) 100%); */
+
+    background-color: ${Colors.dark_gray};
 `
 
 // Parte superior do Mobile

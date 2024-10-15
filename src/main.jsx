@@ -18,6 +18,8 @@ import RacesTracks from './routes/RacesTracks.jsx'
 import Pilots from './routes/Pilots.jsx'
 import Trackvision from './routes/Trackvision.jsx'
 import Pricing from './routes/Pricing.jsx'
+import Profile from './routes/Profile.jsx'
+
 
 // Importando GlobalStyle
 import GlobalStyle from "./styles/GlobalStyle" 
@@ -58,6 +60,10 @@ const router = createBrowserRouter ([
 
       // TrackVision
       {path: '/trackvision', element: <Trackvision/>},
+
+      // Profile
+      {path: '/profile', element: <Profile/>},
+
     ]}
 ])
 
