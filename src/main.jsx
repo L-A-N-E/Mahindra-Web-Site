@@ -19,7 +19,7 @@ import Pilots from './routes/Pilots.jsx'
 import Trackvision from './routes/Trackvision.jsx'
 import Pricing from './routes/Pricing.jsx'
 import Profile from './routes/Profile.jsx'
-
+import Dashboard from './routes/Dashboard.jsx'
 
 // Importando GlobalStyle
 import GlobalStyle from "./styles/GlobalStyle" 
@@ -63,6 +63,9 @@ const router = createBrowserRouter ([
 
       // Profile
       {path: '/profile', element: <Profile/>},
+      
+      // Dashboard
+      {path: '/dashboard', element: <Dashboard/>},
 
     ]}
 ])
