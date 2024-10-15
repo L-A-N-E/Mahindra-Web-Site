@@ -3,7 +3,7 @@ import Colors from '../constant/Colors';
 import Font from '../constant/Font'
 
 
-export const TrackvisionStyle = styled.section`
+export const SolutionStyle = styled.section`
     height: auto;
     background-color: ${Colors.black};
     display: flex;

@@ -1,7 +1,8 @@
 import React from 'react'
-import { TrackvisionStyle, LeftDivStyle, RightDivStyle, InfoSolution, ContainerInfoSolution } from '../styles/TrackvisionStyle'
+import { SolutionStyle, LeftDivStyle, RightDivStyle, InfoSolution, ContainerInfoSolution } from '../styles/SolutionStyle'
 import trackvision from '../assets/home/banners/trackvision.png'
 
+// Itens TrackVision
 const ItemSolution = () => {
     const trackvisionItems = [
         {
@@ -35,9 +36,10 @@ const ItemSolution = () => {
 }
 
 
+// Componente TrackVision
 const Trackvision = () => {
     return (
-        <TrackvisionStyle>
+        <SolutionStyle>
             <LeftDivStyle>
                 <img src={trackvision} alt="TrackVision" />
             </LeftDivStyle>
@@ -45,7 +47,7 @@ const Trackvision = () => {
             <RightDivStyle>
                 <ItemSolution />
             </RightDivStyle>
-        </TrackvisionStyle>
+        </SolutionStyle>
     )
 }
 
