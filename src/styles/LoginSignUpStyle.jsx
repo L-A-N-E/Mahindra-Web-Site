@@ -10,7 +10,7 @@ import Background from '../assets/login_signup/background.png'
 
 // Login & Sign-Up
 export const LoginSignUpStyle = styled.section `        
-    height: auto;
+    min-height: 100dvh;
     width: 100%;
     display: flex;
 `
@@ -31,7 +31,7 @@ export const LoginSignUpLeft = styled.div `
 // Div Direita
 export const LoginSignUpRight = styled.div `        
     background-color: ${Colors.black};
-    height: 100%;
+    min-height: 100dvh;
     width: 60%;
     display: flex;
     align-items: center;

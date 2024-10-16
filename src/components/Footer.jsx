@@ -7,7 +7,7 @@ import { useTranslation } from 'react-i18next'
 import { FooterStyle, FooterContent, FooterColumnInfo, FooterInfo, FooterColumn, FooterContainerItems, FooterItems } from '../styles/FooterStyle';
 
 // Importando Componentes
-import Medias from './Medias';
+import Midias from './Midias';
 
 // Importando Imagens
 import arrowFooter from '../assets/footer/arrow.svg'
@@ -38,8 +38,8 @@ const Footer = () => {
                     <h5>{t('rights')}</h5>
                     <h5>LANE</h5>
                     <div>
-                      <Medias>
-                      </Medias>
+                      <Midias>
+                      </Midias>
                     </div>
                 </FooterInfo>
 
