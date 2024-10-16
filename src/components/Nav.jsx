@@ -1,59 +1,7 @@
 import { useEffect, useRef, useState } from "react"
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 import { useTranslation } from 'react-i18next';
-
 import User from '../assets/header/user/user.png'
-
-// Mudar Idioma
-const Language = () => {
-
-    const [state, setState] = useState(false)
-    const profileRef = useRef()
-
-    const { t, i18n } = useTranslation();
-    const changeLanguage = (lng) => {
-        i18n.changeLanguage(lng);
-    };
-
-    const navigation = [
-        { title: t('portuguese'), onClick: () => changeLanguage('pt') },
-        { title: t('english'), onClick: () => changeLanguage('en') },
-        { title: t('spanish'), onClick: () => changeLanguage('es') },
-    ]
-
-
-    useEffect(() => {
-        const handleDropDown = (e) => {
-            if (!profileRef.current.contains(e.target)) setState(false)
-        }
-        document.addEventListener('click', handleDropDown)
-    }, [])
-
-    return (
-        <div className="relative lg:border-none z-50 flex justify-center">
-            <div className="">
-                <button ref={profileRef} className="outline-none uppercase text-white lg:focus:ring-2 lg:block" onClick={() => setState(!state)}>
-                    {t('language')}
-                </button>
-            </div>
-
-            {/* Idiomas */}
-            <ul className={`bg-zinc-900 top-10 right-0 mt-6 space-y-6 lg:absolute lg:border-none lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
-                {
-                    navigation.map((item, idx) => (
-                        <li key={idx} onClick={item.onClick}>
-                            <div className="block text-white hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3 transition-all duration-150 ease-in-out" >
-                                <p className="cursor-pointer">
-                                    {item.title}
-                                </p>
-                            </div>
-                        </li>
-                    ))
-                }
-            </ul>
-        </div>
-    )
-}
 
 // Avatar Usuário
 const AvatarUser = () => {
@@ -90,13 +38,64 @@ const AvatarUser = () => {
             </div>
 
             {/* Itens Login & Sign-Up */}
-            <ul className={`bg-white top-12 right-0 mt-6 space-y-6 lg:absolute lg:border lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
+            <ul className={`bg-[#080808] top-12 right-0 mt-6 space-y-6 lg:absolute lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
                 {
                     navigationItems.map((item, idx) => (
                         <li key={idx}>
-                            <a className="block text-gray-600 hover:text-gray-900 lg:hover:bg-gray-50 lg:p-3" href={item.path}>
+                            <a className="block text-white lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out" href={item.path}>
                                 {item.title}
                             </a>
+                        </li>
+                    ))
+                }
+            </ul>
+        </div>
+    )
+}
+
+// Mudar Idioma
+const Language = () => {
+
+    const [state, setState] = useState(false)
+    const profileRef = useRef()
+
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
+    const navigation = [
+        { title: t('portuguese'), onClick: () => changeLanguage('pt') },
+        { title: t('english'), onClick: () => changeLanguage('en') },
+        { title: t('spanish'), onClick: () => changeLanguage('es') },
+    ]
+
+
+    useEffect(() => {
+        const handleDropDown = (e) => {
+            if (!profileRef.current.contains(e.target)) setState(false)
+        }
+        document.addEventListener('click', handleDropDown)
+    }, [])
+
+    return (
+        <div className="relative lg:border-none z-50 flex justify-center">
+            <div className="">
+                <button ref={profileRef} className="block text-white uppercase text-xs text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full" onClick={() => setState(!state)}>
+                    {t('language')}
+                </button>
+            </div>
+
+            {/* Idiomas */}
+            <ul className={`bg-zinc-900 top-10 right-0 mt-6 space-y-6 lg:absolute lg:border-none lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
+                {
+                    navigation.map((item, idx) => (
+                        <li key={idx} onClick={item.onClick}>
+                            <div className="block text-white bg-[#080808] lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out" >
+                                <p className="cursor-pointer">
+                                    {item.title}
+                                </p>
+                            </div>
                         </li>
                     ))
                 }
@@ -165,7 +164,7 @@ const Nav = () => {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx}>
-                                        <a href={item.path} className="block text-white uppercase text-xs hover:text-red-600 transition-all text-center">
+                                        <a href={item.path} className="block text-white uppercase text-xs text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full">
                                             {item.title}
                                         </a>
                                     </li>

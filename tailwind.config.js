@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       minHeight: {
-        '100dvh': '100dvh', // Adiciona a classe min-h-100dvh
+        '100dvh': '100dvh',
       },
     },
   },
