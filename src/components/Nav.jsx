@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { useTranslation } from 'react-i18next';
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
+
 import User from '../assets/header/user/user.png'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
@@ -132,7 +133,7 @@ const AvatarUser = () => {
                 {
                     navigationItems.map((item, idx) => (
                         <li key={idx}>
-                            <a className="block text-white lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out cursor-pointer" href={item.path}>
+                            <a className="block text-white lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out cursor-pointer" href={item.path} onClick={item.onClick}>
                                 {item.title}
                             </a>
                         </li>
