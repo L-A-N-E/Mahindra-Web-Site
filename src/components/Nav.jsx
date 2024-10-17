@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react"
 import { useTranslation } from 'react-i18next';
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { doc, getDoc } from "firebase/firestore";
 
 import User from '../assets/header/user/user.png'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
-import { doc, getDoc } from "firebase/firestore";
+
 import { db } from "../firebase/firebase";
 
 // Mudar Idioma
@@ -67,6 +68,8 @@ const AvatarUser = () => {
 
     const profileRef = useRef()
 
+    const auth = getAuth()
+
     const handleLogOut = async () => {
         try{
             await signOut(auth)
@@ -77,8 +80,6 @@ const AvatarUser = () => {
             window.location.href='/login';
         }
     }
-
-    const auth = getAuth()
 
     const noLogged = [{ title: "Login", path: "/login" },{ title: "Sign-Up", path: "/sign-up" },] // Sem estar logado
 
