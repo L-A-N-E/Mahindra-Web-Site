@@ -20,9 +20,9 @@ const Pricing = () => {
                         price="R$ 0"
                         description="Ideal para entusiastas de Automobilismo!"
                         features={[
-                            "Montar Equipe",
+                            "Monte sua Equipe",
                             "Mercado fecha 1 hora antes da largada",
-                            "Criação de até 1 Club",
+                            "Crie até 1 Club",
                         ]}
                     />
                     <PricingCard
@@ -30,10 +30,11 @@ const Pricing = () => {
                         price="R$ 29,90"
                         description="Ideal para entusiastas de Automobilismo!"
                         features={[
-                            "Montar Equipe",
+                            "Monte sua Equipe",
+                            "Jogue sem Anúncios",
                             "Mercado fecha 30 minutos antes da largada",
-                            "Criação de até 3 Club",
-                            "Acesso ao TrackVision",
+                            "Crie até 3 Club's",
+                            "Acesse o TrackVision",
                         ]}
                     />
                     <PricingCard
@@ -41,12 +42,13 @@ const Pricing = () => {
                         price="R$ 49,90"
                         description="Ideal para entusiastas de Automobilismo!"
                         features={[
-                            "Montar Equipe",
+                            "Monte sua Equipe",
+                            "Jogue sem Anúncios",
                             "Mercado fecha 1 minuto antes da largada",
-                            "Criação de até 10 Club",
-                            "Acesso ao TrackVision",
+                            "Crie até 10 Club's",
+                            "Acesse o TrackVision",
                             "Bonificação de pontuação",
-                            "Acesso a transmissão Ao Vivo de cada circuito",
+                            "Acesse a transmissão Ao Vivo de cada circuito",
                         ]}
                     />
                 </div>
