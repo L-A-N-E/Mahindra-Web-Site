@@ -12,13 +12,13 @@ export const RaceStyle = styled.section `
     align-items: center;
     justify-content: center;
     gap: 1.2rem;
-    height: calc(100dvh - 70px);
+    min-height: 100dvh;
     background-image: ${Backgrounds.background_dark_gray_to_red};
         
         /* Swiper */
         .swiper{
             width: 100%;
-            height: 500px;
+            height: 100%;
             
             /* Slides */
             .swiper-slide{
@@ -34,12 +34,20 @@ export const RaceStyle = styled.section `
                     width: 90%;
                     height: 400px;
                 }
+
+                @media (max-width: 400px) {
+                    height: 300px;
+                }
             }
             
             /* Next Slide */
             .swiper-slide-next, .swiper-slide-prev{
                 filter: blur(2px);
             }
+        }
+
+        .swiper-wrapper {
+
         }
 `
 
@@ -53,6 +61,10 @@ export const RaceContainer = styled.div `
     -webkit-box-shadow: 0 32px 23.5px -17px ${Colors.shadow};
     -moz-box-shadow: 0 32px 23.5px -17px ${Colors.shadow};
     box-shadow: 0 32px 23.5px -17px ${Colors.shadow};
+
+    @media (max-width: 450px) {
+        gap: 2.5rem;
+    }
 `
 
 // Race - Top
@@ -94,6 +106,10 @@ export const RaceNameData = styled.div `
         font-weight: ${Font.txt_700w};
         text-transform: uppercase;
         color: ${Colors.white};
+
+        @media (max-width: 320px) {
+            font-size: ${Font.txt_12};
+        }
     }
 `
 

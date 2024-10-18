@@ -61,18 +61,18 @@ const PricingCard = ({ title, price, description, features }) => {
 
     const title_color = {
         "LOW CHARGE":"red-600",
-        "HIGH VOLTAGE": "yellow-400",
+        "HIGH VOLTAGE": "yellow-500",
         "MAX POWER": "green-500"
     }
 
     return (
-        <div className="flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border border-gray-100 shadow dark:border-gray-800 xl:p-8 dark:bg-zinc-900 dark:text-white">
+        <div className="flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border border-gray-100 shadow dark:border-gray-800 xl:p-8 dark:bg-zinc-900">
             <h3 className={`mb-4 text-2xl font-semibold text-${title_color[title]}`}>{title}</h3>
             <p className="font-light text-gray-100 sm:text-lg dark:text-gray-400">
                 {description}
             </p>
             <div className="flex justify-center items-baseline my-8 ">
-                <span className="mr-2 text-5xl font-extrabold">{price}</span>   
+                <span className="mr-2 text-5xl font-extrabold text-white">{price}</span>   
             </div>
             <ul role="list" className="mb-8 space-y-4 text-left">
                 {features.map((feature, index) => (
@@ -89,7 +89,7 @@ const PricingCard = ({ title, price, description, features }) => {
                                 clipRule="evenodd"
                             ></path>
                         </svg>
-                        <span>{feature}</span>
+                        <span className="text-white">{feature}</span>
                     </li>
                 ))}
             </ul>
