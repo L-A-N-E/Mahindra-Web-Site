@@ -115,7 +115,15 @@
     "tempelhof-airport-street-circuit":"Circuito Callejero del Aeropuerto de Tempelhof",
     "shangai-street-circuit":"Circuito Callejero de Shanghái",
     "portland-international-raceway":"Autódromo Internacional de Portland",
-    "london-excel-circuit":"Circuito London Excel"
+    "london-excel-circuit":"Circuito London Excel",
+
+    "upload-avatar":"Carga de la foto de perfil realizada con éxito",
+    "remove-avatar":"Foto de perfil eliminada con éxito",
+    "error-avatar":"Error al eliminar la foto de perfil"
+    
+
+
+
 
 
 
