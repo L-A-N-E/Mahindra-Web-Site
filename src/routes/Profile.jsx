@@ -6,6 +6,11 @@ import { deleteObject, getDownloadURL, ref, uploadBytes } from 'firebase/storage
 // Importando config firebase
 import { db, storage } from '../firebase/firebase';
 
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+const MySwal = withReactContent(Swal);
+
 const Profile = () => {
     const [avatar, setAvatar] = useState(null);
     const [userData, setUserData] = useState({});
@@ -40,8 +45,17 @@ const Profile = () => {
                 await setDoc(docRef, { avatarImg: url }, { merge: true });
 
                 setAvatar(null);
-                alert("Upload successful!");
-                window.location.href = '/profile'
+                MySwal.fire({
+                    title: 'Upload Succesful',
+                    icon:'success',
+                    color:'#fff',
+                    background:'#171717',
+                    confirmButtonColor:'#E51635'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = '/profile'
+                    }}) 
+                
             }
         } catch (error) {
             console.error("Error uploading avatar: ", error);
@@ -63,8 +77,16 @@ const Profile = () => {
                 });
 
                 setAvatar(null);
-                alert("Avatar removed successfully!");
-                window.location.href = '/profile'
+                MySwal.fire({
+                    title: 'Avatar removed succesfully',
+                    icon:'success',
+                    color:'#fff',
+                    background:'#171717',
+                    confirmButtonColor:'#E51635'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = '/profile'
+                    }}) ;
             }
         } catch (error) {
             console.error("Error removing avatar: ", error);
