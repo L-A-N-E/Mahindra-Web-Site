@@ -28,7 +28,7 @@ const SectionRaces = () => {
     // Função para pegar dados das corridas
     const [races, setRaces] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/races')
+        fetch('https://api-tracer.vercel.app/races')
         .then((response) => response.json())
         .then((data) => setRaces(data))
     }, []);

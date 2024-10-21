@@ -38,7 +38,7 @@ const Pilots = () => {
         const fetchData = async () => {
             try {
                 // Fetching todos os pilotos
-                const pilotsResponse = await fetch('http://localhost:5000/pilots');
+                const pilotsResponse = await fetch('https://api-tracer.vercel.app/pilots');
                 if (!pilotsResponse.ok) {
                     throw new Error('Erro ao buscar dados dos pilotos');
                 }
@@ -46,7 +46,7 @@ const Pilots = () => {
                 setPilots(pilotsData);
                 
                 // Fetching informação específica do piloto
-                const pilotResponse = await fetch(`http://localhost:5000/pilots?slug=${slug}`);
+                const pilotResponse = await fetch('https://api-tracer.vercel.app/pilots');
                 if (!pilotResponse.ok) {
                     throw new Error('Erro ao buscar dados do piloto');
                 }
