@@ -9,6 +9,8 @@ import { db, storage } from '../firebase/firebase';
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
+import { ProfileStyle, ProfileContainer, ProfileSelectImage } from '../styles/ProfileStyle'
+
 const MySwal = withReactContent(Swal);
 
 const Profile = () => {
@@ -27,7 +29,7 @@ const Profile = () => {
             }
         });
 
-        return () => unsubscribe(); 
+        return () => unsubscribe();
     }, [auth]);
 
     const handleUpload = async () => {
@@ -47,15 +49,16 @@ const Profile = () => {
                 setAvatar(null);
                 MySwal.fire({
                     title: 'Upload Succesful',
-                    icon:'success',
-                    color:'#fff',
-                    background:'#171717',
-                    confirmButtonColor:'#E51635'
+                    icon: 'success',
+                    color: '#fff',
+                    background: '#171717',
+                    confirmButtonColor: '#E51635'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         window.location.href = '/profile'
-                    }}) 
-                
+                    }
+                })
+
             }
         } catch (error) {
             console.error("Error uploading avatar: ", error);
@@ -79,14 +82,15 @@ const Profile = () => {
                 setAvatar(null);
                 MySwal.fire({
                     title: 'Avatar removed succesfully',
-                    icon:'success',
-                    color:'#fff',
-                    background:'#171717',
-                    confirmButtonColor:'#E51635'
+                    icon: 'success',
+                    color: '#fff',
+                    background: '#171717',
+                    confirmButtonColor: '#E51635'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         window.location.href = '/profile'
-                    }}) ;
+                    }
+                });
             }
         } catch (error) {
             console.error("Error removing avatar: ", error);
@@ -95,40 +99,42 @@ const Profile = () => {
     };
 
     return (
-        <div className="bg-black overflow-hidden h-dvh flex-col flex justify-center">
-            <div>
-                <div className='flex gap-2'>
-                    <input 
-                        type="file" 
-                        onChange={(e) => setAvatar(e.target.files[0])} 
+        <ProfileStyle>
+            <ProfileContainer>
+                <ProfileSelectImage>
+                    <input
+                        type="file"
+                        onChange={(e) => setAvatar(e.target.files[0])}
                     />
-                    <button onClick={handleUpload} className='bg-white text-red-600'>Upload</button>
-                    <button onClick={handleRemove} className='bg-white text-red-600'>Remove</button>
+                    <button onClick={handleUpload}>Upload</button>
+                    <button onClick={handleRemove}>Remove</button>
+                </ProfileSelectImage>
+
+                {error && <p>{error}</p>}
+                <div>
+                    <h3>User Profile</h3>
+                    <p>This is some information about the user.</p>
                 </div>
-                {error && <p className="text-red-500">{error}</p>}
-                <div className="px-4 py-5 sm:px-6">
-                    <h3 className="text-lg leading-6 font-medium text-white">User Profile</h3>
-                    <p className="mt-1 max-w-2xl text-sm text-gray-100">This is some information about the user.</p>
-                </div>
-                <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
-                    <dl className="sm:divide-y sm:divide-gray-200">
-                        <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt className="text-sm font-medium text-gray-100">Username</dt>
-                            <dd className="mt-1 text-sm text-gray-400 sm:mt-0 sm:col-span-2">{userData.username}</dd>
+
+                <div>
+                    <dl>
+                        <div>
+                            <dt>Username</dt>
+                            <dd>{userData.username}</dd>
                         </div>
-                        <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt className="text-sm font-medium text-gray-100">Email address</dt>
-                            <dd className="mt-1 text-sm text-gray-400 sm:mt-0 sm:col-span-2">{userData.email}</dd>
+                        <div>
+                            <dt>Email address</dt>
+                            <dd>{userData.email}</dd>
                         </div>
-                        <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt className="text-sm font-medium text-gray-100">Formula E Favorite Team</dt>
-                            <dd className="mt-1 text-sm text-gray-400 sm:mt-0 sm:col-span-2">{userData.favoriteTeam}</dd>
+                        <div>
+                            <dt>Formula E Favorite Team</dt>
+                            <dd>{userData.favoriteTeam}</dd>
                         </div>
                     </dl>
                 </div>
-            </div>
-        </div>
+            </ProfileContainer>
+        </ProfileStyle>
     );
 };
 
-export default Profile;
+export default Profile

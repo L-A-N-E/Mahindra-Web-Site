@@ -59,7 +59,6 @@ const Language = () => {
     )
 }
 
-
 // Avatar Usuário
 const AvatarUser = () => {
 
