@@ -115,7 +115,11 @@
     "tempelhof-airport-street-circuit":"Tempelhof Airport Street Circuit",
     "shangai-street-circuit":"Shanghai Street Circuit",
     "portland-international-raceway":"Portland International Raceway",
-    "london-excel-circuit":"London Excel Circuit"
+    "london-excel-circuit":"London Excel Circuit",
+
+    "upload-avatar":"Profile picture upload completed successfully",
+    "remove-avatar":"Profile picture removed successfully",
+    "error-avatar":" Error removing profile picture"
 
 
 

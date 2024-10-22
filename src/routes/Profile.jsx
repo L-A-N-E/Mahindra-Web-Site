@@ -48,11 +48,11 @@ const Profile = () => {
 
                 setAvatar(null);
                 MySwal.fire({
-                    title: 'Upload Succesful',
-                    icon: 'success',
-                    color: '#fff',
-                    background: '#171717',
-                    confirmButtonColor: '#E51635'
+                    title: t('upload-avatar'),
+                    icon:'success',
+                    color:'#fff',
+                    background:'#171717',
+                    confirmButtonColor:'#E51635'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         window.location.href = '/profile'
@@ -81,11 +81,11 @@ const Profile = () => {
 
                 setAvatar(null);
                 MySwal.fire({
-                    title: 'Avatar removed succesfully',
-                    icon: 'success',
-                    color: '#fff',
-                    background: '#171717',
-                    confirmButtonColor: '#E51635'
+                    title: t('remove-avatar'),
+                    icon:'success',
+                    color:'#fff',
+                    background:'#171717',
+                    confirmButtonColor:'#E51635'
                 }).then((result) => {
                     if (result.isConfirmed) {
                         window.location.href = '/profile'
@@ -95,6 +95,16 @@ const Profile = () => {
         } catch (error) {
             console.error("Error removing avatar: ", error);
             setError("Failed to remove avatar.");
+            MySwal.fire({
+                title: t('error-avatar'),
+                icon:'error',
+                color:'#fff',
+                background:'#171717',
+                confirmButtonColor:'#E51635'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/profile'
+                }}) ;
         }
     };
 
