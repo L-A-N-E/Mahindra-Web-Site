@@ -61,7 +61,7 @@ const PricingCard = ({ title, price, description, features }) => {
 
     const title_color = {
         "LOW CHARGE":"red-600",
-        "HIGH VOLTAGE": "yellow-500",
+        "HIGH VOLTAGE": "white",
         "MAX POWER": "green-500"
     }
 
