@@ -46,11 +46,12 @@ const Pilots = () => {
                 setPilots(pilotsData);
                 
                 // Fetching informação específica do piloto
-                const pilotResponse = await fetch('https://api-tracer.vercel.app/pilots');
+                const pilotResponse = await fetch(`https://api-tracer.vercel.app/pilots?slug=${slug}`);
                 if (!pilotResponse.ok) {
                     throw new Error('Erro ao buscar dados do piloto');
                 }
                 const pilotData = await pilotResponse.json();
+                console.log(pilotData)
 
                 if (pilotData.length > 0) {
                     setPilotInfo(pilotData[0]);
@@ -72,6 +73,7 @@ const Pilots = () => {
         const currentIndex = pilots.findIndex(pilot => pilot.slug === slug); // Encontra o índice do piloto atual
         const nextIndex = (currentIndex + 1) % pilots.length; // Calcula o índice do próximo piloto
         const nextPilot = pilots[nextIndex]; // Obtém o próximo piloto
+
         navigate(`/pilots/${nextPilot.slug}`); // Navega para a rota do próximo piloto
     };
 

@@ -5,7 +5,7 @@ import backgroundprofile from '../assets/profile/bg-profile.png'
 export const ProfileStyle = styled.section`
     min-height: 100dvh;
     display: flex;
-    background-image: url(${backgroundprofile});
+    background-color: ${Colors.dark_gray};
     background-position: center;
     background-size: cover;
     align-items:center;
@@ -14,76 +14,45 @@ export const ProfileStyle = styled.section`
 
 export const ProfileContainer = styled.div`
     width: 90%;
-    background-color: ${Colors.black};
+    min-height: 500px;
+    background-color: ${Colors.gray};
     color:${Colors.white};
     padding: 4rem;
-    border: solid 1px ${Colors.red_hover};
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 `
 
 export const ProfileSelectImage = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+`;
+
+export const UserContainer = styled.div`
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
 
-    input[type="file"] {
-        margin-top: 1rem;
-        padding: 0.5rem;
-        background-color: ${Colors.red_hover};
-        border: none;
-        color: ${Colors.white};
-        border-radius: 5px;
-        cursor: pointer;
-    }
 `;
 
-export const ProfileAvatar = styled.div`
-    width: 150px;
-    height: 150px;
-    margin-bottom: 1rem;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: ${Colors.gray};
+export const UserProfile = styled.div`
+
+`;
+
+export const UserInfo = styled.div`
+    width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    align-items: center;
 `;
 
-export const UploadButton = styled.button`
-    padding: 0.5rem 1rem;
-    background-color: ${Colors.red_1};
-    color: ${Colors.white};
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0.5rem;
-
-    &:hover {
-        background-color: ${Colors.red_hover};
-    }
+export const UserText = styled.div`
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
 `;
-
-export const RemoveButton = styled(UploadButton)`
-    background-color: ${Colors.red_hover};
-
-    &:hover {
-        background-color: ${Colors.red_1};
-    }
-`;
-
-export const ProfileDetails = styled.div`
-    text-align: left;
-`;
-
-export const ErrorMessage = styled.p`
-    color: ${Colors.red_hover};
-`;
-

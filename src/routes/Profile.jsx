@@ -3,21 +3,33 @@ import React, { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc, setDoc, updateDoc, deleteField } from 'firebase/firestore';
 import { deleteObject, getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+
+import { useTranslation } from 'react-i18next';
+
 // Importando config firebase
 import { db, storage } from '../firebase/firebase';
 
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
 
-import { ProfileStyle, ProfileContainer, ProfileSelectImage } from '../styles/ProfileStyle'
+import { ProfileStyle, ProfileContainer, ProfileSelectImage, UserContainer, UserProfile, UserInfo, UserText } from '../styles/ProfileStyle'
 
 const MySwal = withReactContent(Swal);
 
 const Profile = () => {
+
+    const { t, i18n } = useTranslation();
+    
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
+    
     const [avatar, setAvatar] = useState(null);
     const [userData, setUserData] = useState({});
     const [error, setError] = useState(null);
     const auth = getAuth();
+
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
@@ -119,29 +131,29 @@ const Profile = () => {
                     <button onClick={handleUpload}>Upload</button>
                     <button onClick={handleRemove}>Remove</button>
                 </ProfileSelectImage>
-
                 {error && <p>{error}</p>}
-                <div>
-                    <h3>User Profile</h3>
-                    <p>This is some information about the user.</p>
-                </div>
 
-                <div>
-                    <dl>
-                        <div>
-                            <dt>Username</dt>
+                <UserContainer>
+                    <UserProfile>
+                        <h3>User Profile</h3>
+                        <p>This is some information about the user.</p>
+                    </UserProfile>
+                    
+                    <UserInfo>
+                        <UserText>
+                            <dt>Username: </dt>
                             <dd>{userData.username}</dd>
-                        </div>
-                        <div>
-                            <dt>Email address</dt>
+                        </UserText>
+                        <UserText>
+                            <dt>Email address: </dt>
                             <dd>{userData.email}</dd>
-                        </div>
-                        <div>
-                            <dt>Formula E Favorite Team</dt>
+                        </UserText>
+                        <UserText>
+                            <dt>Formula E Favorite Team: </dt>
                             <dd>{userData.favoriteTeam}</dd>
-                        </div>
-                    </dl>
-                </div>
+                        </UserText>
+                    </UserInfo>
+                </UserContainer>
             </ProfileContainer>
         </ProfileStyle>
     );
