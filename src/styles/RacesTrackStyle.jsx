@@ -12,7 +12,7 @@ import Pilot2 from '../assets/home/pilots/pilot-2.png'
 
 // RaceTrack - Estilo
 export const RaceTrackStyle = styled.main `
-    height: auto;
+    min-height: 100dvh;
     width: 100%;
     display: flex;
 `
