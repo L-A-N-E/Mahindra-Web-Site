@@ -35,7 +35,7 @@ const Language = () => {
 
     return (
         <div className="relative lg:border-none z-50 flex flex-col justify-center lg:flex">
-            <div className="flex items-center">
+            <div className="flex justify-center">
                 <button ref={profileRef} className="block text-white uppercase text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full text-xs" onClick={() => setState(!state)}>
                     {t('language')}
                 </button>
@@ -116,7 +116,7 @@ const AvatarUser = () => {
         <div className="relative lg:border-none z-50 flex flex-col lg:flex justify-center">
 
             {/* Avatar */}
-            <div className="">
+            <div className="flex w-full justify-center">
                 <button ref={profileRef} className="w-10 h-10 outline-none rounded-full ring-offset-2 bg-white lg:focus:ring-2 lg:block"
                     onClick={() => setState(!state)}
                 >

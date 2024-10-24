@@ -148,18 +148,22 @@ const Profile = () => {
                 <ProfileContent>
                     {/* Alterar imagem de perfil */}
                     <ProfileSelectImage>
-                        <InsertImage>
-                            <label>
-                                <span>Select File</span>
-                                <input
-                                    type="file"
-                                    onChange={(e) => setAvatar(e.target.files[0])}
-                                />
-                            </label>
-                        </InsertImage>
+                        <UserProfile>
+                            <h3>Change your avatar</h3>
+                            <p>Upload your image (png, jpg, jpeg)</p>
+                        </UserProfile>
                         <UploadRemoveImage>
-                            <button onClick={handleUpload}>Upload</button>
-                            <button onClick={handleRemove}>Remove</button>
+                            <button className='upload' onClick={handleUpload}>Upload</button>
+                            <InsertImage>
+                                <label>
+                                    <span>Select File</span>
+                                    <input
+                                        type="file"
+                                        onChange={(e) => setAvatar(e.target.files[0])}
+                                    />
+                                </label>
+                            </InsertImage>
+                            <button className='remove' onClick={handleRemove}>Remove</button>
                         </UploadRemoveImage>
                     </ProfileSelectImage>
                     {error && <p>{error}</p>}
@@ -179,13 +183,9 @@ const Profile = () => {
                                 <dd>{userData.email}</dd>
                             </UserText>
                             <UserText>
-                                <dt>Formula E Favorite Team: </dt>
-                                <dd>{userData.favoriteTeam}</dd>
-                            </UserText>
-                            <UserText>
                                 <Label>Formula E Favorite Team: </Label>
                                 <StyledSelect onChange={handleChange}>
-                                    <option value="#000">Choose a color...</option>
+                                    <option value="#000">Select your favorite team...</option>
                                     {options.map((option) => (
                                     <option key={option.value} value={option.value}>
                                         {option.label}

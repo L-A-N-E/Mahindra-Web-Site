@@ -2,6 +2,8 @@ import React from 'react'
 import { SolutionStyle, LeftDivStyle, RightDivStyle, InfoSolution, ContainerInfoSolution } from '../styles/SolutionStyle'
 import trackvision from '../assets/home/banners/trackvision.png'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { ButtonRedStyle } from '../styles/ButtonRedStyle'
 
 // Itens TrackVision
 const ItemSolution = () => {
@@ -40,6 +42,10 @@ const ItemSolution = () => {
                     <p className='ParagraphP'>{item.paragraph}</p>
                 </ContainerInfoSolution>
             ))}
+
+                <Link className='mt-6' to='https://20.206.249.122:8050/'>
+                    <ButtonRedStyle>Acesse</ButtonRedStyle>
+                </Link>
         </InfoSolution>
     );
 }

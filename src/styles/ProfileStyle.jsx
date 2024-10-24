@@ -46,7 +46,7 @@ export const ProfileContainer = styled.div`
 export const ProfileContent = styled.div`
     background-color: ${Colors.white};
     width: 100%;
-    min-height: 500px;
+    min-height: 600px;
     padding: 1rem 2rem;
     border-radius: 10px;
     display: flex;
@@ -57,6 +57,9 @@ export const ProfileContent = styled.div`
 
 export const ProfileSelectImage = styled.div`
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 `;
 
 export const InsertImage = styled.div `
@@ -66,15 +69,16 @@ export const InsertImage = styled.div `
     label {
         span {
             cursor: pointer;
-            border: solid 1px #ccc;
+            border: solid 1px ${Colors.black};
             border-radius: 10px;
-            padding: 0.4rem 1rem;
+            padding: 0.5rem 1rem;
             transition: all ease-in-out 300ms;
         }
 
         span:hover{
-            background-color: #ccc;
-            border: solid 1px #aaaaaa;
+            background-color: #000000;
+            border: solid 1px #ffffff;
+            color: ${Colors.white};
         }
 
         input {
@@ -87,6 +91,31 @@ export const UploadRemoveImage = styled.div `
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    gap: 1rem;
+
+    .upload {
+        padding: 0.4rem 1rem;
+        border-radius: 10px;
+        border: 1px solid ${Colors.green};
+        transition: all ease-in-out 300ms;
+    }
+
+    .upload:hover{
+        background-color: ${Colors.green};
+        color: ${Colors.white};
+    }
+
+    .remove {
+        padding: 0.4rem 1rem;
+        border-radius: 10px;
+        border: 1px solid ${Colors.red_hover};
+        transition: all ease-in-out 300ms;
+    }
+
+    .remove:hover{
+        background-color: ${Colors.red_hover};
+        color: ${Colors.white};
+    }
 `
 
 export const UserContainer = styled.div`
@@ -129,12 +158,14 @@ export const UserText = styled.div`
         font-size: ${Font.txt_14};
         font-weight: ${Font.txt_500w};
     }   
-`;
+    `;
 
 //  Seleção do Tema
 export const Label = styled.label`
-    font-size: 16px;
-    color: black;
+    font-size: ${Font.txt_14};
+    font-weight: ${Font.txt_500w};
+    color: ${Colors.black};
+    text-transform: uppercase;
 `
 
 export const StyledSelect = styled.select`
