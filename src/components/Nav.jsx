@@ -34,19 +34,19 @@ const Language = () => {
     }, [])
 
     return (
-        <div className="relative lg:border-none z-50 flex justify-center">
-            <div className="">
+        <div className="relative lg:border-none z-50 flex flex-col justify-center lg:flex">
+            <div className="flex items-center">
                 <button ref={profileRef} className="block text-white uppercase text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full text-xs" onClick={() => setState(!state)}>
                     {t('language')}
                 </button>
             </div>
 
             {/* Idiomas */}
-            <ul className={`bg-zinc-900 top-10 right-0 mt-6 space-y-6 lg:absolute lg:border-none lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
+            <ul className={`lg:bg-zinc-900 top-10 right-0 mt-6 space-y-6 lg:absolute lg:border-none lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
                 {
                     navigation.map((item, idx) => (
                         <li key={idx} onClick={item.onClick}>
-                            <div className="block text-white bg-[#080808] lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out" >
+                            <div className="block text-white lg:bg-[#080808] lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out" >
                                 <p className="cursor-pointer">
                                     {item.title}
                                 </p>
@@ -113,7 +113,7 @@ const AvatarUser = () => {
     }, [auth]);
 
     return (
-        <div className="relative lg:border-none z-50 flex  justify-center">
+        <div className="relative lg:border-none z-50 flex flex-col lg:flex justify-center">
 
             {/* Avatar */}
             <div className="">
@@ -128,7 +128,7 @@ const AvatarUser = () => {
             </div>
 
             {/* Itens */}
-            <ul className={`bg-[#080808] top-12 right-0 mt-6 space-y-6 lg:absolute lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
+            <ul className={`lg:bg-[#080808] top-12 right-0 mt-6 space-y-6 lg:absolute lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
                 {
                     navigationItems.map((item, idx) => (
                         <li key={idx}>

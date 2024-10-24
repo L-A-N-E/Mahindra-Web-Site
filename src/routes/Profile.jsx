@@ -146,6 +146,7 @@ const Profile = () => {
             {/* Conteudo */}
             <ProfileContainer bgColor={bgColor}>
                 <ProfileContent>
+                    {/* Alterar imagem de perfil */}
                     <ProfileSelectImage>
                         <InsertImage>
                             <label>
@@ -162,6 +163,7 @@ const Profile = () => {
                         </UploadRemoveImage>
                     </ProfileSelectImage>
                     {error && <p>{error}</p>}
+                    {/* Informações sobre o usuário */}
                     <UserContainer>
                         <UserProfile>
                             <h3>User Profile</h3>
@@ -181,7 +183,7 @@ const Profile = () => {
                                 <dd>{userData.favoriteTeam}</dd>
                             </UserText>
                             <UserText>
-                                <Label>Select a background color:</Label>
+                                <Label>Formula E Favorite Team: </Label>
                                 <StyledSelect onChange={handleChange}>
                                     <option value="#000">Choose a color...</option>
                                     {options.map((option) => (

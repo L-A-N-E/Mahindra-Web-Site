@@ -40,18 +40,25 @@ export const ProfileContainer = styled.div`
     flex-grow: 1;
     align-items: center;
     justify-content: center;
-    padding: 0 1rem;
+    padding: 1rem;
 `  
 
 export const ProfileContent = styled.div`
     background-color: ${Colors.white};
+    width: 100%;
+    min-height: 500px;
     padding: 1rem 2rem;
     border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 2rem;
 `
 
 export const ProfileSelectImage = styled.div`
-
+    width: 100%;
 `;
+
 export const InsertImage = styled.div `
     display: flex;
     justify-content: center;
@@ -59,7 +66,17 @@ export const InsertImage = styled.div `
     label {
         span {
             cursor: pointer;
+            border: solid 1px #ccc;
+            border-radius: 10px;
+            padding: 0.4rem 1rem;
+            transition: all ease-in-out 300ms;
         }
+
+        span:hover{
+            background-color: #ccc;
+            border: solid 1px #aaaaaa;
+        }
+
         input {
             display: none;
         }
@@ -67,7 +84,9 @@ export const InsertImage = styled.div `
 `
 
 export const UploadRemoveImage = styled.div `
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 `
 
 export const UserContainer = styled.div`
@@ -119,6 +138,7 @@ export const Label = styled.label`
 `
 
 export const StyledSelect = styled.select`
+    width: 100%;
     padding: 10px 20px;
     font-size: 16px;
     border: 2px solid #ccc;
