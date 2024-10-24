@@ -205,9 +205,11 @@ const Nav = () => {
                             navigation.map((item, idx) => {
                                 return (
                                     <li key={idx} className="mt-6 lg:mt-0">
-                                        <a href={item.path} className="block text-white uppercase text-xs text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full">
-                                            {item.title}
-                                        </a>
+                                        <Link to={item.path}>
+                                            <p className="block text-white uppercase text-xs text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full">
+                                                {item.title}
+                                            </p>
+                                        </Link>
                                     </li>
                                 )
                             })
