@@ -52,7 +52,7 @@ const RealTimeLapChart = () => {
                 });
 
                 setCurrentLap((prevLap) => prevLap + 1);
-            }, 300); // Atualiza a cada 3 segundos
+            }, 4000); // Atualiza a cada 4 segundos
 
             return () => clearInterval(interval);
         } else if (currentLap === maxVoltas) {
