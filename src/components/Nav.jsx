@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { useTranslation } from 'react-i18next';
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { doc, getDoc } from "firebase/firestore";
-
+import { Link } from "react-router-dom";
 import User from '../assets/header/user/user.png'
 import Logo from '../assets/header/logo/mahindra-logo-new.svg'
 
@@ -34,19 +34,19 @@ const Language = () => {
     }, [])
 
     return (
-        <div className="relative lg:border-none z-50 flex justify-center">
-            <div className="">
+        <div className="relative lg:border-none z-50 flex flex-col justify-center lg:flex">
+            <div className="flex justify-center">
                 <button ref={profileRef} className="block text-white uppercase text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full text-xs" onClick={() => setState(!state)}>
                     {t('language')}
                 </button>
             </div>
 
             {/* Idiomas */}
-            <ul className={`bg-zinc-900 top-10 right-0 mt-6 space-y-6 lg:absolute lg:border-none lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
+            <ul className={`lg:bg-zinc-900 top-10 right-0 mt-6 space-y-6 lg:absolute lg:border-none lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
                 {
                     navigation.map((item, idx) => (
                         <li key={idx} onClick={item.onClick}>
-                            <div className="block text-white bg-[#080808] lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out" >
+                            <div className="block text-white lg:bg-[#080808] lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out" >
                                 <p className="cursor-pointer">
                                     {item.title}
                                 </p>
@@ -58,7 +58,6 @@ const Language = () => {
         </div>
     )
 }
-
 
 // Avatar Usuário
 const AvatarUser = () => {
@@ -82,9 +81,15 @@ const AvatarUser = () => {
         }
     }
 
+    // Função para mudar de idioma
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+            i18n.changeLanguage(lng);
+        };
+
     const noLogged = [{ title: "Login", path: "/login" },{ title: "Sign-Up", path: "/sign-up" },] // Sem estar logado
 
-    const logged = [{ title: "Dashboard", path: "/dashboard" },{ title: "Profile", path: "/profile" }, {title: "Logout", onClick: () => handleLogOut() }]  // Logado
+    const logged = [{ title: t('dashboard'), path: "/dashboard" },{ title: t('profile'), path: "/profile" }, {title: "Logout", onClick: () => handleLogOut() }]  // Logado
 
     const navigationItems = isLoggedIn ? logged : noLogged; // Verifica quais opções mostrar ao usuário
 
@@ -114,10 +119,10 @@ const AvatarUser = () => {
     }, [auth]);
 
     return (
-        <div className="relative lg:border-none z-50 flex  justify-center">
+        <div className="relative lg:border-none z-50 flex flex-col lg:flex justify-center">
 
             {/* Avatar */}
-            <div className="">
+            <div className="flex w-full justify-center">
                 <button ref={profileRef} className="w-10 h-10 outline-none rounded-full ring-offset-2 bg-white lg:focus:ring-2 lg:block"
                     onClick={() => setState(!state)}
                 >
@@ -129,13 +134,15 @@ const AvatarUser = () => {
             </div>
 
             {/* Itens */}
-            <ul className={`bg-[#080808] top-12 right-0 mt-6 space-y-6 lg:absolute lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
+            <ul className={`lg:bg-[#080808] top-12 right-0 mt-6 space-y-6 lg:absolute lg:rounded-md lg:w-52 lg:shadow-md lg:space-y-0 lg:mt-0 ${state ? '' : 'hidden'}`}>
                 {
                     navigationItems.map((item, idx) => (
                         <li key={idx}>
-                            <a className="block text-white lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out cursor-pointer" href={item.path} onClick={item.onClick}>
-                                {item.title}
-                            </a>
+                            <Link to={item.path}>
+                                <p className="block text-white lg:hover:bg-[#171717] lg:p-3 transition-all duration-150 ease-in-out cursor-pointer" onClick={item.onClick}>
+                                    {item.title}
+                                </p>
+                            </Link>
                         </li>
                     ))
                 }
@@ -168,14 +175,14 @@ const Nav = () => {
         <header className="text-base lg:text-sm z-[9999] bg-black">
             <div className={`bg-black z-[99999] items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
-                    <a href="">
-                        <img
-                            src={Logo}
-                            width={150}
-                            height={50}
-                            alt="Logo TechMahindra"
-                        />
-                    </a>
+                        <Link to='/'>
+                            <img
+                                src={Logo}
+                                width={150}
+                                height={50}
+                                alt="Logo TechMahindra"
+                            />
+                        </Link>
                     <div className="lg:hidden">
                         <button className="text-white"
                             onClick={() => setState(!state)}
@@ -203,10 +210,12 @@ const Nav = () => {
                         {
                             navigation.map((item, idx) => {
                                 return (
-                                    <li key={idx}>
-                                        <a href={item.path} className="block text-white uppercase text-xs text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full">
-                                            {item.title}
-                                        </a>
+                                    <li key={idx} className="mt-6 lg:mt-0">
+                                        <Link to={item.path}>
+                                            <p className="block text-white uppercase text-xs text-center relative transition-all duration-1000 hover:border-b-2 border-transparent after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-red-600 after:transition-all after:duration-500 hover:after:w-full">
+                                                {item.title}
+                                            </p>
+                                        </Link>
                                     </li>
                                 )
                             })

@@ -1,24 +1,35 @@
 import React from 'react'
 import { SolutionStyle, LeftDivStyle, RightDivStyle, InfoSolution, ContainerInfoSolution } from '../styles/SolutionStyle'
 import trackvision from '../assets/home/banners/trackvision.png'
+import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
+import { ButtonRedStyle } from '../styles/ButtonRedStyle'
 
 // Itens TrackVision
 const ItemSolution = () => {
+
+    // Tradução
+    const { t, i18n } = useTranslation();   
+    // Função para mudar idioma
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
     const trackvisionItems = [
         {
             number: '1',
-            title: 'TrackVision',
-            paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quis cum dolores dolorum, corporis sed quia est alias explicabo sit tempore molestias at quasi porro totam dolorem error fugit incidunt.'
+            title: t('trackvision'),
+            paragraph: t('1-trackvision'),
         },
         {
             number: '2',
-            title: 'Entenda como funciona',
-            paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quis cum dolores dolorum, corporis sed quia est alias explicabo sit tempore molestias at quasi porro totam dolorem error fugit incidunt.'
+            title: t('2-titletrack'),
+            paragraph: t('2-trackvision'),
         },
         {
             number: '3',
-            title: 'Tenha acesso',
-            paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quis cum dolores dolorum, corporis sed quia est alias explicabo sit tempore molestias at quasi porro totam dolorem error fugit incidunt.'
+            title: t('3-titletrack'),
+            paragraph: t('3-trackvision'),
         }
     ];
 
@@ -31,6 +42,10 @@ const ItemSolution = () => {
                     <p className='ParagraphP'>{item.paragraph}</p>
                 </ContainerInfoSolution>
             ))}
+
+                <Link className='mt-6' to='https://20.206.249.122:8050/'>
+                    <ButtonRedStyle>Acesse</ButtonRedStyle>
+                </Link>
         </InfoSolution>
     );
 }

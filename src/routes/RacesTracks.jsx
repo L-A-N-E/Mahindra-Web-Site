@@ -35,7 +35,7 @@ const RaceTrack = () => {
         const fetchTrackInfo = async () => {
             try {
                 // Faz a requisição ao JSON usando o slug fornecido
-                const response = await fetch(`http://localhost:5000/races?slug=${slug}`);
+                const response = await fetch(`https://api-tracer.vercel.app/races?slug=${slug}`);
                 // Verifica se conseguiu uma resposta do JSON
                 if (!response.ok) {
                 throw new Error('Erro ao buscar dados');

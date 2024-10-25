@@ -18,7 +18,7 @@ export const LeftDivStyle = styled.div`
     min-height: (100dvh);
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 
     @media (max-width: 1000px) {
         width: 100%;
@@ -26,6 +26,7 @@ export const LeftDivStyle = styled.div`
 `
 
 export const RightDivStyle = styled.div`
+    margin-top: 2rem;
     width: 50%;
     min-height: (100dvh);
     background-color: ${Colors.black};

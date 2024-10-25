@@ -5,6 +5,10 @@
     "portuguese":"Português",
     "spanish":"Espanhol",
 
+    "dashboard":"Dashboard",
+    "profile":"Perfil",
+    "tracer":"TRacer",
+    "trackvision":"TrackVision",
     "home": "Home",
     "about": "Sobre",
     "pilots": "Pilotos",
@@ -116,5 +120,67 @@
     "tempelhof-airport-street-circuit":"Circuito de Rua do Aeroporto de Tempelhof",
     "shangai-street-circuit":"Circuito de Rua de Xangai",
     "portland-international-raceway":"Autódromo Internacional de Portland",
-    "london-excel-circuit":"Circuito London Excel"
+    "london-excel-circuit":"Circuito London Excel",
+
+    "upload-avatar":"Upload da foto de perfil feito com sucesso",
+    "remove-avatar":" Foto de perfil removida com sucesso",
+    "error-avatar":"Erro ao remover a foto de perfil",
+
+    "1-appmobile":"O TRacer é um aplicativo mobile projetado para oferecer uma experiência interativa e imersiva para os fãs da Fórmula E. Com o app, os usuários podem se conectar com o esporte de maneira única, acompanhando o desempenho dos pilotos em tempo real e competindo em uma plataforma gamificada. O TRacer não só aproxima os usuários da ação, mas também promove a competição saudável entre amigos e outros fãs da Fórmula E ao redor do mundo.",
+    "2-appmobile":"No app TRacer, os usuários podem selecionar dois pilotos para compor sua equipe em cada corrida. Conforme o desempenho dos pilotos na pista, os usuários acumulam pontos, criando uma experiência dinâmica e estratégica. Escolher bem sua equipe pode ser a chave para alcançar as melhores pontuações, transformando a simples observação das corridas em um jogo emocionante e envolvente.",
+    "3-appmobile":"Com o TRacer, jogar com amigos fica ainda mais divertido. O app permite criar ligas personalizadas, onde você pode desafiar seus amigos e acompanhar quem está à frente no placar. Compartilhe estratégias, discuta o desempenho dos pilotos e torne cada corrida uma competição não só nas pistas, mas também entre você e seus amigos, garantindo uma experiência social envolvente.",
+    "4-appmobile":"O TRacer oferece diversos planos de assinatura que permitem desbloquear funcionalidades exclusivas. Os usuários podem escolher entre diferentes níveis de acesso para aproveitar recursos como análises detalhadas dos pilotos, estatísticas em tempo real e competições premium. Cada plano foi pensado para atender às diferentes expectativas dos usuários, garantindo uma experiência personalizada e completa dentro do app.",
+
+    "1-titlemobile":"TRacer",
+    "2-titlemobile":"Escolha sua equipe",
+    "3-titlemobile":"Jogue com amigos",
+    "4-titlemobile":"Assinatura",
+
+    "1-trackvision":"O TrackVision é um dispositivo IoT integrado ao app TRacer, desenvolvido para capturar e analisar o desempenho dos pilotos em tempo real. Utilizando um sensor infravermelho, o dispositivo é capaz de registrar tempos de volta e dados críticos de performance, oferecendo uma visão completa do que acontece nas pistas. Com o TrackVision, você tem em mãos as informações mais precisas para entender e avaliar o desempenho dos pilotos e equipes da Fórmula E.",
+    "2-trackvision":"Posicionado na linha de largada ou em setores específicos da pista, o dispositivo utiliza tecnologia de ponta para capturar os tempos de cada volta e dados detalhados sobre o comportamento dos carros durante a corrida. Esses dados são processados e apresentados em gráficos dinâmicos e estáticos, acessíveis pelo app TRacer, oferecendo uma análise clara e detalhada do desempenho dos pilotos.",
+    "3-trackvision":"O acesso aos dados gerados pelo TrackVision é feito diretamente pelo app TRacer, onde você pode visualizar gráficos e métricas de performance em tempo real. Com uma interface intuitiva, o app facilita a interpretação dos dados, permitindo que você acompanhe os resultados em qualquer lugar. A integração entre o TrackVision e o app garante que os fãs e entusiastas da Fórmula E tenham as informações mais precisas ao seu alcance, otimizando a experiência de acompanhar as corridas.",
+    
+    "2-titletrack":"Entenda como funciona",
+    "3-titletrack":"Tenha acesso",
+
+    "choose":"Escolha um",
+    "plan":"Plano",
+
+    "sub-1-t-princing":"Ideal para entusiastas do automobilismo!",
+    "sub-2-t-princing":"Escolha o plano para uma experiência mais completa e única!",
+    
+    "price-low":"R$ 0",
+    "beneficio-low-1":"Monte sua Equipe",
+    "beneficio-low-2":"Mercado fecha 1 hora antes da largada",
+    "beneficio-low-3":"Crie até 1 Club",
+
+    "price-high":"R$ 29,90",
+    "beneficio-high-1":"Monte sua Equipe",
+    "beneficio-high-2":"Jogue sem Anúncios",
+    "beneficio-high-3":"Mercado fecha 30 minutos antes da largada",
+    "beneficio-high-4":"Crie até 3 Club's",
+    "beneficio-high-5":"Acesse o TrackVision",
+
+    "price-max":"R$ 49,90",
+    "beneficio-max-1":"Monte sua Equipe",
+    "beneficio-max-2":"Jogue sem Anúncios",
+    "beneficio-max-3":"Mercado fecha 1 minuto antes da largada",
+    "beneficio-max-4":"Crie até 10 Club's",
+    "beneficio-max-5":"Acesse o TrackVision",
+    "beneficio-max-6":"Bonificação de pontuação",
+    "beneficio-max-7":"Acesse a transmissão Ao Vivo de cada circuito",
+
+    "garantir-acesso": "Garantir Acesso",
+
+    "change-avatar": "Alterar seu avatar",
+    "upload-your-img": "Envie sua imagem (png, jpg, jpeg)",
+    "upload": "Enviar",
+    "select-file": "Selecionar Arquivo",
+    "remove": "Remover",
+
+    "user-profile": "Perfil do Usuário",
+    "user-info": "Aqui estão algumas informações sobre o usuário.",
+
+    "favorite-team": "Equipe Favorita da Fórmula E: ",
+    "select-team": "Selecione sua equipe favorita..."
 }

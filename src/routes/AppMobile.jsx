@@ -3,29 +3,36 @@ import React from 'react'
 import { SolutionStyle, LeftDivStyle, RightDivStyle, InfoSolution, ContainerInfoSolution } from '../styles/SolutionStyle'
 import { ButtonRedStyle } from '../styles/ButtonRedStyle'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 
 const ItemSolution = () => {
+    // Tradução
+    const { t, i18n } = useTranslation();
+    // Função para mudar idioma
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
     const trackvisionItems = [
         {
             number: '1',
-            title: 'TRacer',
-            paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quis cum dolores dolorum, corporis sed quia est alias explicabo sit tempore molestias at quasi porro totam dolorem error fugit incidunt.'
+            title: t('1-titlemobile'),
+            paragraph: t('1-appmobile'),
         },
         {
             number: '2',
-            title: 'Escolha sua Equipe',
-            paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quis cum dolores dolorum, corporis sed quia est alias explicabo sit tempore molestias at quasi porro totam dolorem error fugit incidunt.'
+            title: t('2-titlemobile'),
+            paragraph: t('2-appmobile'),
         },
         {
             number: '3',
-            title: 'Jogue com Amigos',
-            paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quis cum dolores dolorum, corporis sed quia est alias explicabo sit tempore molestias at quasi porro totam dolorem error fugit incidunt.'
+            title: t('3-titlemobile'),
+            paragraph: t('3-appmobile'),
         },
 
         {
             number: '4',
-            title: 'Assinatura',
-            paragraph: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quis cum dolores dolorum, corporis sed quia est alias explicabo sit tempore molestias at quasi porro totam dolorem error fugit incidunt.'
+            title: t('4-titlemobile'),
+            paragraph: t('4-appmobile'),
         }
     ];
 

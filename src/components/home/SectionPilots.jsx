@@ -22,7 +22,7 @@ const SectionPilots = () => {
     // Selecionar Piloto
     const [pilots, setPilots] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/pilots')
+        fetch('https://api-tracer.vercel.app/pilots')
         .then((response) => response.json())
         .then((data) => setPilots(data))
     }, []);

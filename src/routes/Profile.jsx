@@ -3,14 +3,48 @@ import React, { useEffect, useState } from 'react';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 import { doc, getDoc, setDoc, updateDoc, deleteField } from 'firebase/firestore';
 import { deleteObject, getDownloadURL, ref, uploadBytes } from 'firebase/storage';
+import { useTranslation } from 'react-i18next';
 // Importando config firebase
 import { db, storage } from '../firebase/firebase';
+import logoFormulaE from '../assets/profile/FE_logo.png'
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+
+import { ProfileStyle, ProfileTheme, ProfileContainer, ProfileContent, ProfileSelectImage, UploadRemoveImage, InsertImage, UserContainer, UserProfile, UserInfo, UserText, Label, StyledSelect } from '../styles/ProfileStyle'
+
+const MySwal = withReactContent(Swal);
 
 const Profile = () => {
+
+    const { t, i18n } = useTranslation();
     const [avatar, setAvatar] = useState(null);
     const [userData, setUserData] = useState({});
     const [error, setError] = useState(null);
     const auth = getAuth();
+
+    const [bgColor, setBgColor] = useState('#000'); // Cor inicial do fundo
+    // Mapeando as cores
+    const options = [
+        { value: '#ED3124', label: 'Andretti Formula E' },
+        { value: '#CBA65F', label: 'DS Penske' },
+        { value: '#00BE26', label: 'Envision Racing' },
+        { value: '#000000', label: 'Jaguar TCS Racing' },
+        { value: '#3c3c3c', label: 'Kiro Race Co' },
+        { value: '#194997', label: 'Lola Yamaha ABT Formula E Team' },
+        { value: '#E51635', label: 'Mahindra Racing' },
+        { value: '#001489', label: 'Maserati MSG Racing' },
+        { value: '#FF8000', label: 'NEOM McLaren Formula E Team' },
+        { value: '#C3002F', label: 'Nissan Formula E Team' },
+        { value: '#D5001C', label: 'TAG Heuer Porsche Formula E Team' },
+    ];
+
+    const changeLanguage = (lng) => {
+        i18n.changeLanguage(lng);
+    };
+
+    const handleChange = (e) => {
+        setBgColor(e.target.value); // Define a cor de fundo com base na opção selecionada
+    };
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
@@ -22,7 +56,7 @@ const Profile = () => {
             }
         });
 
-        return () => unsubscribe(); 
+        return () => unsubscribe();
     }, [auth]);
 
     const handleUpload = async () => {
@@ -40,8 +74,18 @@ const Profile = () => {
                 await setDoc(docRef, { avatarImg: url }, { merge: true });
 
                 setAvatar(null);
-                alert("Upload successful!");
-                window.location.href = '/profile'
+                MySwal.fire({
+                    title: t('upload-avatar'),
+                    icon: 'success',
+                    color: '#fff',
+                    background: '#171717',
+                    confirmButtonColor: '#E51635'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = '/profile'
+                    }
+                })
+
             }
         } catch (error) {
             console.error("Error uploading avatar: ", error);
@@ -63,50 +107,98 @@ const Profile = () => {
                 });
 
                 setAvatar(null);
-                alert("Avatar removed successfully!");
-                window.location.href = '/profile'
+                MySwal.fire({
+                    title: t('remove-avatar'),
+                    icon: 'success',
+                    color: '#fff',
+                    background: '#171717',
+                    confirmButtonColor: '#E51635'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = '/profile'
+                    }
+                });
             }
         } catch (error) {
             console.error("Error removing avatar: ", error);
             setError("Failed to remove avatar.");
+            MySwal.fire({
+                title: t('error-avatar'),
+                icon: 'error',
+                color: '#fff',
+                background: '#171717',
+                confirmButtonColor: '#E51635'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.location.href = '/profile'
+                }
+            });
         }
     };
 
     return (
-        <div className="bg-black overflow-hidden h-dvh flex-col flex justify-center">
-            <div>
-                <div className='flex gap-2'>
-                    <input 
-                        type="file" 
-                        onChange={(e) => setAvatar(e.target.files[0])} 
-                    />
-                    <button onClick={handleUpload} className='bg-white text-red-600'>Upload</button>
-                    <button onClick={handleRemove} className='bg-white text-red-600'>Remove</button>
-                </div>
-                {error && <p className="text-red-500">{error}</p>}
-                <div className="px-4 py-5 sm:px-6">
-                    <h3 className="text-lg leading-6 font-medium text-white">User Profile</h3>
-                    <p className="mt-1 max-w-2xl text-sm text-gray-100">This is some information about the user.</p>
-                </div>
-                <div className="border-t border-gray-200 px-4 py-5 sm:p-0">
-                    <dl className="sm:divide-y sm:divide-gray-200">
-                        <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt className="text-sm font-medium text-gray-100">Username</dt>
-                            <dd className="mt-1 text-sm text-gray-400 sm:mt-0 sm:col-span-2">{userData.username}</dd>
-                        </div>
-                        <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt className="text-sm font-medium text-gray-100">Email address</dt>
-                            <dd className="mt-1 text-sm text-gray-400 sm:mt-0 sm:col-span-2">{userData.email}</dd>
-                        </div>
-                        <div className="py-3 sm:py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
-                            <dt className="text-sm font-medium text-gray-100">Formula E Favorite Team</dt>
-                            <dd className="mt-1 text-sm text-gray-400 sm:mt-0 sm:col-span-2">{userData.favoriteTeam}</dd>
-                        </div>
-                    </dl>
-                </div>
-            </div>
-        </div>
+        <ProfileStyle>
+            {/* Tema */}
+            <ProfileTheme bgColor={bgColor}>
+                <img src={logoFormulaE} alt="Logo Formula E" />
+            </ProfileTheme>
+
+            {/* Conteudo */}
+            <ProfileContainer bgColor={bgColor}>
+                <ProfileContent>
+                    {/* Alterar imagem de perfil */}
+                    <ProfileSelectImage>
+                        <UserProfile>
+                            <h3>{t('change-avatar')}</h3>
+                            <p>{t('upload-your-img')}</p>
+                        </UserProfile>
+                        <UploadRemoveImage>
+                            <button className='upload' onClick={handleUpload}>{t('upload')}</button>
+                            <InsertImage>
+                                <label>
+                                    <span>{t('select-file')}</span>
+                                    <input
+                                        type="file"
+                                        onChange={(e) => setAvatar(e.target.files[0])}
+                                    />
+                                </label>
+                            </InsertImage>
+                            <button className='remove' onClick={handleRemove}>{t('remove')}</button>
+                        </UploadRemoveImage>
+                    </ProfileSelectImage>
+                    {error && <p>{error}</p>}
+                    {/* Informações sobre o usuário */}
+                    <UserContainer>
+                        <UserProfile>
+                            <h3>{t('user-profile')}</h3>
+                            <p>{t('user-info')}</p>
+                        </UserProfile>
+                        <UserInfo>
+                            <UserText>
+                                <dt>Username: </dt>
+                                <dd>{userData.username}</dd>
+                            </UserText>
+                            <UserText>
+                                <dt>Email: </dt>
+                                <dd>{userData.email}</dd>
+                            </UserText>
+                            <UserText>
+                                <Label>{t('favorite-team')}</Label>
+                                <StyledSelect onChange={handleChange}>
+                                    <option value="#000">{t('select-team')}</option>
+                                    {options.map((option) => (
+                                    <option key={option.value} value={option.value}>
+                                        {option.label}
+                                    </option>
+                                    ))}
+                                </StyledSelect>
+                            </UserText>
+                        </UserInfo>
+                    </UserContainer>
+                </ProfileContent>
+            </ProfileContainer>
+        </ProfileStyle>
     );
 };
 
-export default Profile;
+export default Profile
