@@ -175,14 +175,14 @@ const Nav = () => {
         <header className="text-base lg:text-sm z-[9999] bg-black">
             <div className={`bg-black z-[99999] items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${state ? "h-full fixed inset-x-0" : ""}`}>
                 <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
-                    <a href="">
-                        <img
-                            src={Logo}
-                            width={150}
-                            height={50}
-                            alt="Logo TechMahindra"
-                        />
-                    </a>
+                        <Link to='/'>
+                            <img
+                                src={Logo}
+                                width={150}
+                                height={50}
+                                alt="Logo TechMahindra"
+                            />
+                        </Link>
                     <div className="lg:hidden">
                         <button className="text-white"
                             onClick={() => setState(!state)}
