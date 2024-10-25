@@ -140,7 +140,7 @@ const Profile = () => {
         <ProfileStyle>
             {/* Tema */}
             <ProfileTheme bgColor={bgColor}>
-                <img src={logoFormulaE} alt="" />
+                <img src={logoFormulaE} alt="Logo Formula E" />
             </ProfileTheme>
 
             {/* Conteudo */}
@@ -149,8 +149,8 @@ const Profile = () => {
                     {/* Alterar imagem de perfil */}
                     <ProfileSelectImage>
                         <UserProfile>
-                            <h3>Change your avatar</h3>
-                            <p>Upload your image (png, jpg, jpeg)</p>
+                            <h3>{t('change-avatar')}</h3>
+                            <p>{t('upload-your-img')}</p>
                         </UserProfile>
                         <UploadRemoveImage>
                             <button className='upload' onClick={handleUpload}>{t('upload')}</button>
