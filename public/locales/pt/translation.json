@@ -5,6 +5,8 @@
     "portuguese":"Português",
     "spanish":"Espanhol",
 
+    "dashboard":"Dashboard",
+    "profile":"Perfil",
     "tracer":"TRacer",
     "trackvision":"TrackVision",
     "home": "Home",
@@ -139,5 +141,46 @@
     "3-trackvision":"O acesso aos dados gerados pelo TrackVision é feito diretamente pelo app TRacer, onde você pode visualizar gráficos e métricas de performance em tempo real. Com uma interface intuitiva, o app facilita a interpretação dos dados, permitindo que você acompanhe os resultados em qualquer lugar. A integração entre o TrackVision e o app garante que os fãs e entusiastas da Fórmula E tenham as informações mais precisas ao seu alcance, otimizando a experiência de acompanhar as corridas.",
     
     "2-titletrack":"Entenda como funciona",
-    "3-titletrack":"Tenha acesso"
+    "3-titletrack":"Tenha acesso",
+
+    "choose":"Escolha um",
+    "plan":"Plano",
+
+    "sub-1-t-princing":"Ideal para entusiastas do automobilismo!",
+    "sub-2-t-princing":"Escolha o plano para uma experiência mais completa e única!",
+    
+    "price-low":"R$ 0",
+    "beneficio-low-1":"Monte sua Equipe",
+    "beneficio-low-2":"Mercado fecha 1 hora antes da largada",
+    "beneficio-low-3":"Crie até 1 Club",
+
+    "price-high":"R$ 29,90",
+    "beneficio-high-1":"Monte sua Equipe",
+    "beneficio-high-2":"Jogue sem Anúncios",
+    "beneficio-high-3":"Mercado fecha 30 minutos antes da largada",
+    "beneficio-high-4":"Crie até 3 Club's",
+    "beneficio-high-5":"Acesse o TrackVision",
+
+    "price-max":"R$ 49,90",
+    "beneficio-max-1":"Monte sua Equipe",
+    "beneficio-max-2":"Jogue sem Anúncios",
+    "beneficio-max-3":"Mercado fecha 1 minuto antes da largada",
+    "beneficio-max-4":"Crie até 10 Club's",
+    "beneficio-max-5":"Acesse o TrackVision",
+    "beneficio-max-6":"Bonificação de pontuação",
+    "beneficio-max-7":"Acesse a transmissão Ao Vivo de cada circuito",
+
+    "garantir-acesso": "Garantir Acesso",
+
+    "change-avatar": "Alterar seu avatar",
+    "upload-your-img": "Envie sua imagem (png, jpg, jpeg)",
+    "upload": "Enviar",
+    "select-file": "Selecionar Arquivo",
+    "remove": "Remover",
+
+    "user-profile": "Perfil do Usuário",
+    "user-info": "Aqui estão algumas informações sobre o usuário.",
+
+    "favorite-team": "Equipe Favorita da Fórmula E: ",
+    "select-team": "Selecione sua equipe favorita..."
 }

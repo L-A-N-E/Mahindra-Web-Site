@@ -5,6 +5,8 @@
     "portuguese":"Portugués",
     "spanish":"Espanol",
 
+    "dashboard":"Dashboard",
+    "profile":"Perfil",
     "tracer":"TRacer",
     "trackvision":"TrackVision",
     "home": "Inicio",
@@ -138,7 +140,49 @@
     "3-trackvision":"El acceso a los datos generados por TrackVision se realiza directamente a través de la aplicación TRacer, donde puedes visualizar gráficos y métricas de rendimiento en tiempo real. Con una interfaz intuitiva, la aplicación facilita la interpretación de los datos, lo que te permite seguir los resultados desde cualquier lugar. La integración entre TrackVision y la aplicación garantiza que los aficionados y entusiastas de la Fórmula E tengan la información más precisa al alcance de su mano, optimizando la experiencia de seguir las carreras.",
 
     "2-titletrack":"Comprende Cómo Funciona",
-    "3-titletrack":"Accede a la Información"
+    "3-titletrack":"Accede a la Información",
+
+    "choose": "Elige Uno",
+    "plan": "Plan",
+
+    "sub-1-t-princing":"¡Ideal para entusiastas del automovilismo!",
+    "sub-2-t-princing":"¡Elige el plan para una experiencia más completa y única!",
+
+    "price-low":"$0",
+    "beneficio-low-1": "Arma tu Equipo",
+    "beneficio-low-2": "El mercado cierra 1 hora antes de la salida",
+    "beneficio-low-3": "Crea hasta 1 Club",
+
+    "price-high":"$100,00",
+    "beneficio-high-1": "Arma tu Equipo",
+    "beneficio-high-2": "Juega sin Anuncios",
+    "beneficio-high-3": "El mercado cierra 30 minutos antes de la salida",
+    "beneficio-high-4": "Crea hasta 3 Clubs",
+    "beneficio-high-5": "Accede a TrackVision",
+
+    "price-max":"$170,00",
+    "beneficio-max-1": "Arma tu Equipo",
+    "beneficio-max-2": "Juega sin Anuncios",
+    "beneficio-max-3": "El mercado cierra 1 minuto antes de la salida",
+    "beneficio-max-4": "Crea hasta 10 Clubs",
+    "beneficio-max-5": "Accede a TrackVision",
+    "beneficio-max-6": "Bonificación de Puntuación",
+    "beneficio-max-7": "Accede a la Transmisión en Vivo de cada circuito",
+
+    "garantir-acesso": "Garantizar Acceso",
+
+    "change-avatar": "Cambia tu avatar",
+    "upload-your-img": "Sube tu imagen (png, jpg, jpeg)",
+    "upload": "Subir",
+    "select-file": "Seleccionar Archivo",
+    "remove": "Eliminar",
+
+    "user-profile": "Perfil del Usuario",
+    "user-info": "Aquí hay información sobre el usuario.",
+
+    "favorite-team": "Equipo Favorito de Fórmula E: ",
+    "select-team": "Selecciona tu equipo favorito..."
+
 
 
 }

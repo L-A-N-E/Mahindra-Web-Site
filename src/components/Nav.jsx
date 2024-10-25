@@ -81,9 +81,15 @@ const AvatarUser = () => {
         }
     }
 
+    // Função para mudar de idioma
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lng) => {
+            i18n.changeLanguage(lng);
+        };
+
     const noLogged = [{ title: "Login", path: "/login" },{ title: "Sign-Up", path: "/sign-up" },] // Sem estar logado
 
-    const logged = [{ title: "Dashboard", path: "/dashboard" },{ title: "Profile", path: "/profile" }, {title: "Logout", onClick: () => handleLogOut() }]  // Logado
+    const logged = [{ title: t('dashboard'), path: "/dashboard" },{ title: t('profile'), path: "/profile" }, {title: "Logout", onClick: () => handleLogOut() }]  // Logado
 
     const navigationItems = isLoggedIn ? logged : noLogged; // Verifica quais opções mostrar ao usuário
 
